@@ -1,0 +1,14 @@
+﻿/*以下是内页样式*/
+#nei_body{width:1002px; background-color:#FFF; margin:0 auto;}
+#nei_content{height:500px; line-height:24px;text-align:left;vertical-align:top; }
+.nei_title{ height:30px; width:984px; margin:0 auto; border:solid 1px #ccc; background-image:url(/images/bg4.jpg); }
+#nei_tbcenter{ margin:0 auto 2px auto; }
+#nei_content_left{height:700px; width:700px; border-right:0; text-align:left; vertical-align:top; }
+#nei_content_right{ width:283px; background-color:#F3F6FB  }
+.nei_rightList{ width:270px; margin-top:5px; margin-bottom:5px;}
+#nei_tbtitle{ margin: 0 auto 2px auto;}
+.c_title{ height:30px; background-color:#FFF; border:solid 1px #CCC; }
+.nei_Right_Content{height:230px; border:solid 1px #CCC; background-color:#FFF; text-align:left; vertical-align:top;}
+.nei_gb_banner{ margin:5px auto 0 auto;}
+.bgwhite{background-color:White;}
+#nei_content_left a{display:block-inline; margin:5px;}

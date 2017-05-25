@@ -1,0 +1,126 @@
+﻿/*以下是内页样式*/
+#nei_body{width:1002px; background-color:#FFF; margin:0 auto;}
+#nei_content{height:500px; line-height:24px;text-align:left;vertical-align:top; }
+.nei_title{ height:30px; width:984px; margin:0 auto; border:solid 1px #ccc; background-image:url(/images/bg4.jpg); }
+#nei_tbcenter{ margin:0 auto 2px auto; }
+#nei_content_left{height:700px; width:700px; border-right:0; text-align:left; vertical-align:top; }
+#nei_content_right{ width:283px; background-color:#F3F6FB  }
+.nei_rightList{ width:270px; margin-top:5px; margin-bottom:5px;}
+#nei_tbtitle{ margin: 0 auto 2px auto;}
+.c_title{ height:30px; background-color:#FFF; border:solid 1px #CCC; }
+.nei_Right_Content{height:230px; border:solid 1px #CCC; background-color:#FFF; text-align:left; vertical-align:top;}
+.nei_gb_banner{ margin:5px auto 0 auto;}
+.bgwhite{background-color:White;}
+/*新闻详细页面样式*/
+.tb_title{ width:98%; margin:2px auto;}
+#td_title{ height:37px; border-bottom:dotted 1px #ccc; text-align:center; font-weight:bolder; font-size:16px; color:#0B5C87;}
+#td_date{ height:30px;border:0; text-align:center;}
+.td_brief{border:solid 1px #ccc; background-color:#F7FCFF; padding:3px 3px 3px 3px; line-height:20px;}
+#td_content{ height:620px; vertical-align:top; text-align:left; line-height:22px; padding:3px; border-bottom:dotted 1px #ccc; table-layout:fixed; overflow:hidden;}
+#bottomoption { border:solid 1px #F7FCFF;}
+
+/*教程章节页面样式*/
+.td_brief_all{border:solid 1px #ccc; background-color:#F7FCFF; padding:3px 3px 3px 3px; line-height:20px;}
+.td_brief{border:solid 1px #ccc; background-color:#F7FCFF; padding:3px 3px 3px 3px; line-height:20px; width:228px;}
+.font14{ color:#084675; font-size:14px; font-weight:bolder}
+.fontred{ color:#851628;}
+/*教程观看页面*/
+#TutorialsView{ margin:0 auto;}
+.nei_tbcenter{ margin:0 auto 2px auto; }
+#RelationList{ list-style:none;}
+#RelationList li{ float:left; width:226px;}
+.bbstable{ width:98%; border-collapse:collapse; margin:5px auto; color:#00517C}
+.bbstable a{color:#00517C}
+.bbstablePager{ width:98%; border-collapse:collapse; margin:0px auto;}
+.bbstable td{ border:solid 1px #8FC002; height:24px; background-color:White;}
+.bbstable td.height60{ border:solid 1px 8FC002; height:24px; background-color:White; height:60px;}
+.bbstablePager td{ border:solid 1px #ccc; height:24px; background-color:White;}
+#relation{ margin-top:2px;}
+#replay{ margin-top:2px;}
+#nei_content_left{ background-color:#F3F6FB;}
+._bbstitle{ border:0; width:100%}
+._bbstitle td{ border:0;}
+.width20{ width:20px;}
+.width30{ width:30px;}
+.width40{ width:40px;}
+.width50{ width:50px;}
+.width60{ width:60px;}
+.width70{ width:70px;}
+.width71{ width:71px;}
+.width72{ width:72px;}
+.width73{ width:73px;}
+.width74{ width:74px;}
+.width75{ width:75px;}
+.width80{ width:80px;}
+.width90{ width:90px;}
+.width100{ width:100px;}
+.width110{ width:110px;}
+.width120{ width:120px;}
+.width130{ width:130px;}
+.width140{ width:140px;}
+.width150{ width:150px;}
+.width160{ width:160px;}
+.width170{ width:170px;}
+.width180{ width:180px;}
+.width200{ width:200px;}
+.width300{ width:300px;}
+.width400{ width:400px;}
+.paddleft1{ padding-left:1px;}
+.paddleft2{ padding-left:2px;}
+.paddleft3{ padding-left:3px;}
+.paddleft4{ padding-left:4px;}
+.paddleft5{ padding-left:5px;}
+.paddleft6{ padding-left:6px;}
+.paddleft7{ padding-left:7px;}
+.paddleft8{ padding-left:8px;}
+.paddleft9{ padding-left:9px;}
+.paddleft10{ padding-left:10px;}
+.paddleft11{ padding-left:11px;}
+.paddleft12{ padding-left:12px;}
+.paddleft13{ padding-left:13px;}
+.paddleft14{ padding-left:14px;}
+.paddleft15{ padding-left:15px;}
+.paddingtop1{ padding-top:1px}
+.paddingtop2{ padding-top:2px}
+.paddingtop3{ padding-top:3px}
+.paddingtop4{ padding-top:4px}
+.paddingtop5{ padding-top:5px}
+.paddingtop6{ padding-top:6px}
+.paddingtop7{ padding-top:7px}
+.paddingtop8{ padding-top:8px}
+.paddingtop9{ padding-top:9px}
+.paddingtop10{ padding-top:10px}
+.height18{ height:18px;}
+.height19{ height:19px;}
+.height20{ height:20px;}
+.height21{ height:21px;}
+.height22{ height:22px;}
+.height23{ height:23px;}
+.height24{ height:24px;}
+.height25{ height:25px;}
+.height26{ height:26px;}
+.height27{ height:27px;}
+.height28{ height:28px;}
+.height29{ height:29px;}
+.height30{ height:30px;}
+.height31{ height:31px;}
+.height32{ height:32px;}
+.height33{ height:33px;}
+.height34{ height:34px;}
+.height35{ height:35px;}
+.height36{ height:36px;}
+.height37{ height:37px;}
+.height38{ height:38px;}
+.height39{ height:39px;}
+.height40{ height:40px;}
+.height41{ height:41px;}
+.height50{ height:50px;}
+.height60{ height:60px;}
+.height70{ height:70px;}
+.height80{ height:80px;}
+.height90{ height:90px;}
+.height100{ height:100px;}
+.height150{ height:150px;}
+.height160{ height:160px;}
+.height170{ height:170px;}
+.height180{ height:180px;}

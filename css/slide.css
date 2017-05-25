@@ -1,0 +1,45 @@
+#slide-box {
+	POSITION: relative; WIDTH:710px; HEIGHT: 326px
+}
+#slide-box .corner {
+	 DISPLAY: block; HEIGHT: 0px; CLEAR: both; OVERFLOW: hidden;
+}
+#slide-box .slide-content {
+	 BACKGROUND: #fff; 
+}
+#slide-box .JQ-slide-content {
+	POSITION: absolute
+}
+#slide-box .JQ-slide-nav A {
+	Z-INDEX: 99; POSITION: absolute; WIDTH: 37px; DISPLAY: block; HEIGHT: 65px; COLOR: #b4b4b4; TOP: 205px; TEXT-DECORATION: none
+}
+#slide-box .JQ-slide-nav SPAN {
+	TEXT-ALIGN: center; WIDTH: 37px; DISPLAY: block; FONT: 700 53px arial; BACKGROUND: #E2E2E2; HEIGHT: 65px; CURSOR: pointer
+}
+#slide-box .JQ-slide-nav .corner {
+	BORDER-BOTTOM-COLOR:#E2E2E2; BORDER-TOP-COLOR: #E2E2E2; BORDER-RIGHT-COLOR: #E2E2E2; BORDER-LEFT-COLOR: #E2E2E2
+}
+#slide-box .JQ-slide-nav .prev {
+	LEFT: 0px;top:143px;
+}
+#slide-box .JQ-slide-nav .next {
+	RIGHT: 0px;top:143px;
+}
+#slide-box .wrap {
+	POSITION: relative; WIDTH: 710px; HEIGHT:326px; OVERFLOW: hidden
+}
+#slide-box UL {
+	WIDTH: 10000px
+}
+#slide-box LI {
+	WIDTH: 710px; FLOAT: left; HEIGHT: 326px;
+}
+#slide-box LI IMG {
+	WIDTH: 710px; HEIGHT: 326px;
+}
+#slide-box .JQ-slide-nav A:hover {
+	COLOR: #f43d1e
+}
+#slide-box .JQ-slide-nav A:hover SPAN {
+	COLOR: #f43d1e
+}

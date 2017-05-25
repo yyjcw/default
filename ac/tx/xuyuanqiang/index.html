@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=zh-CN xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>网站开发视频教程</TITLE>
+<meta name="keywords" content="夜鹰教程网,私人网站建设,软件开发,网站开发,网页设计,视频教程,.Net,C#,VS2008,MSsql,Flash,Flex,Js,Jq,java,c,c++,asp,ps,21视频教程网,辅导毕业设计" />
+<meta name="description" content="原创asp.net视频教程,高清完整版系列视频教程,具有连贯性，视频教程附带源码。" />
+<meta name="author" content="夜鹰教程网" />
+<meta name="Copyright" content="www.yyjcw.com" />
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<style type="text/css">
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-size:12px;font-family:Arial, Helvetica, sans-serif; margin:0 auto; }
+
+.box-yyjcw{border: #d8d8d8 1px solid; padding:10px; background:url(images/wall_bg.png) repeat-y center top; OVERFLOW: hidden;WIDTH: 934px; POSITION: relative; HEIGHT: 500px; margin:20px auto;}
+.wall_paste {border: #c1c1c1 1px solid;  BACKGROUND: url(images/wall_icon.png) #fafcfd no-repeat left top; OVERFLOW: hidden;WIDTH: 169px; CURSOR: move; BORDER-BOTTOM: #c1c1c1 1px solid; POSITION: absolute; HEIGHT: 167px}
+.sentto {PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; WIDTH: 130px; COLOR: #2b2b2b; PADDING-TOP: 12px; HEIGHT: 20px; TEXT-ALIGN: center}
+.wall_close {FLOAT: right; MARGIN: 7px 7px 0px 0px}
+.wall_subcont {PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 4px; OVERFLOW: hidden; COLOR: #2b2b2b; LINE-HEIGHT: 20px; PADDING-TOP: 0px}
+.wall_subcont a{ text-decoration:none; color:#990000; }
+p.from{ padding:6px 20px 6px 20px; BACKGROUND: url(images/wall_point.png) repeat-x left top; PADDING-BOTTOM: 6px; COLOR: #8f8f8f; LINE-HEIGHT: 18px; }
+</style>
+</HEAD>
+<body>
+
+<div class="box-yyjcw" id="msgList"></div>
+
+<script language="javascript" src="js/yyjcw20120229.js" type="text/javascript"></script>
+<script language=javascript type=text/javascript>
+//<![CDATA[
+(function() {		 
+var doc = document.documentElement, htmlBody = $(document.body);
+// <summary>拖动处理类<summary>
+// <param name="element">可以拖动的元素</param>
+// <param name="trigger">拖动触发元素</param>
+function DragHandler(element, trigger) {
+	var wallBorder = {
+		x : 783,
+		y :351
+	}
+	var origPos = {
+		x : parseInt(element.style.left || 0) - htmlBody.scrollLeft,
+		y : parseInt(element.style.top || 0) - htmlBody.scrollTop
+	}, diffPos;
+	
+	var move = function(e) {
+		var newPos = {
+				x : Math.max(0, Math.min(Math.min(doc.scrollWidth - element.offsetWidth, e.pageX - diffPos.x),wallBorder.x)),
+				y : Math.max(0, Math.min(Math.min(doc.scrollHeight - element.offsetHeight, e.pageY - diffPos.y),wallBorder.y))
+			};
+		element.style.left = newPos.x + "px"; element.style.top = newPos.y + "px";
+		origPos = {
+			x : newPos.x - htmlBody.scrollLeft,
+			y : newPos.y - htmlBody.scrollTop
+		};
+		e.cancelBubble = true;
+	};
+	
+	var stopMove = function() {
+		if(element.releaseCapture) {
+			element.releaseCapture();  
+		} else if(window.captureEvents) {
+			window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);
+		}
+		NTES.event.removeEvent(htmlBody, "mousemove", move);
+		NTES.event.removeEvent(htmlBody, "mouseup", stopMove);
+	};
+	
+	if (trigger) {
+		NTES.event.addEvent(
+			trigger,
+			"mousedown",
+			function(e) {
+				if (element.setCapture) {
+					element.setCapture();
+				} else if(window.captureEvents) {
+					window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);
+				}
+				
+				diffPos = { x : e.pageX - element.offsetLeft, y : e.pageY - element.offsetTop };
+				NTES.event.addEvent(htmlBody, "mousemove", move);
+				NTES.event.addEvent(htmlBody, "mouseup", stopMove);
+				e.preventDefault();
+			}
+		);
+	}
+}
+// <summary>弹窗类</summary>
+// <param name="wrapper">弹窗的最外围元素</param>
+function Win(wrapper) {
+	
+	// <summary>隐藏窗口</summary>
+	this.hide = function() {
+		wrapper.style.visibility = "hidden";
+		return false;
+	};
+	
+	// 启用拖动功能
+	new DragHandler(wrapper, wrapper);
+	
+	NTES.event.addEvent(wrapper, "mousedown", function() {
+		this.style.zIndex = Win.maxLayer++;
+	});
+	
+	// 关闭窗口
+	$("a.wall_close", wrapper).addEvent("click", this.hide);
+};
+Win.maxLayer = 50;
+var MessageWall = function(boardId, threadId) {
+	
+	this.show = function(data, count) {
+		//往数组里面存储		
+		for (var i = data.length - 1, temp; i >= 1; i--) {
+			temp = data[i].body.split(/<br\s?\/?>/i);
+			if (temp.length <= 1) {
+				data[i].to = "";
+			} else {
+				data[i].to = temp[0];
+				temp.splice(0, 1);
+				data[i].body = temp.join("");
+				data[i].top = parseInt(Math.random() * (400 - 20 + 1) + 10);
+				data[i].left = parseInt(Math.random() * (700 - 30 + 1) + 100);
+			}
+		}
+		
+		$("#msgList").innerHTML = NTES.util.parseTpl('<#\
+		for (var i = 0, len = data.length; i < len; i++) {\
+    #>\
+		<div class="wall_paste" style="left:<#=data[i].left#>px;top:<#=data[i].top#>px;">\
+            <a href="###" class="wall_close"><img src="images/close.png" /></a>\
+            <span class="sentto"><#=data[i].to#></span>\
+            <p class="wall_subcont"><#=data[i].body#></p>\
+            <p class="from"><#=data[i].ptime#><br /><#=data[i].nickname#></p>\
+		</div>\
+    <#\
+    	}\
+    #>', { data : data });
+		var msgs = $("#msgList > div");
+		for (var i = msgs.length - 1; i >= 0; i--) {
+			new Win(msgs[i]);
+		}
+	};
+	
+};
+var data = [		
+			{ nickname : '网友：莫可&咪咪', ptime : '2011-11-01 10:18:07', body : ' 网络语言<br>祝愿<a href=\"http://www.yyjcw.com/tuangou.html\" target=\"_blank\">夜鹰教程</a>越办越好，内容很详细，容易学懂。<a href=\"http://www.yyjcw.com/html/News/1317.html\" target=\"_blank\">《信息发布系统》</a>不错！' },
+			{ nickname : '网友：思念100%k', ptime : ' 2011-12-05 10:13:03', body : ' 网络语言<br>学会做<a href=\"http://www.yyjcw.com/html/News/1342.html\" target=\"_blank\">企业网站建设</a>了，非常感谢！' },
+			{ nickname : '网友：﹎嘫-.ìz唭順', ptime : '2012-11-01 10:16:08', body : ' 网络语言<br><a href=\"http://www.yyjcw.com/html/News/1334.html\" target=\"_blank\">动态生成静态</a>原来这么简单啊。' },
+			{ nickname : '网友：阿苏勒>帕苏尔', ptime : '2012-11-01 10:13:09', body : ' 网络语言<br>看了你们教程后搞定文件上传了。' },
+			{ nickname : '网友：游*牧人', ptime : '2012-11-01 10:11:07', body : ' 网络语言<br>正在学习Ajax，感觉你们教程很受用。' },
+			{ nickname : '网友：╰☆黑山老妖╰☆', ptime : '2012-11-01 10:13:06', body : ' 网络语言<br>一句话，受益匪浅。' },
+			{ nickname : '网友：伤心不哭99', ptime : '2012-11-01 10:15:07', body : ' 网络语言<br>权限这块很不错，不同人查看不同栏目。以前认为很难，现在我也会了' },
+			{ nickname : '网友：~》~路shang', ptime : '2012-11-01 10:10:02', body : ' 网络语言<br>购物车这套让我学到了很多东西，期待新教程。' },
+			{ nickname : '网友：Yㄖsinging ', ptime : '2012-11-01 10:12:01', body : ' 网络语言<br>有新教程了记得通知我。' },
+			{ nickname : '网友：不羁$的风', ptime : '2012-11-01 10:12:02', body : ' 网络语言<br>偶然发现了夜鹰教程，学习进步很快，非常感谢，终于找到适合我自己的教程了。' },
+			{ nickname : '网友：成都网站建设', ptime : '2012-11-01 10:11:05', body : ' 网络语言<br>祝愿夜鹰教程越办越好，真的很感谢。' }
+        			
+	];
+var msgWall = new MessageWall("夜鹰教程网", "http://www.yyjcw.com");
+msgWall.show(data, 3);
+})();
+//]]>
+</script>
+</BODY>
+</HTML>

@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>asp.net视频教程</title>
+<meta http-equiv="content-type" content="text/html;charset=gb2312">
+<style type="text/css">
+.sv3 dl,.sv3 dt,.sv3 dd{
+	padding:0;
+	margin:0;
+}
+.sv3{
+	width:240px;
+	border:1px solid #BFC7D9;
+}
+.sv3 dl{
+	width:240px;
+	height:380px;
+	background:#EDF5FF;
+	overflow:hidden;
+}
+.sv3 dt{
+	padding:5px 10px;
+	height:13px;
+	font-size:13px;
+	color:#000;
+	background:#E5ECF9;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #BFC7D9;
+}
+.sv3 dl.on dt{
+	background:#3366CC;
+	color:#FFF;
+	font-weight:bold;
+}
+.sv3 dd{
+	padding:10px;
+	color:#333;
+	font-size:12px;
+	line-height:1.5em;
+}
+.sv3 dd a:link,
+.sv3 dd a:visited,
+.sv3 dd a:hover,
+.sv3 dd a:active{
+	color:#333;
+	display:block;
+	text-align:right;
+}
+</style>
+</head>
+<body>
+<h3>夜鹰教程网 高清原创视频教程</h3>
+
+<div id="idSlideView3" class="sv3">
+  <dl class="on">
+    <dt>最新教程</dt>
+    <dd> 内容一 </dd>
+  </dl>
+  <dl>
+    <dt> 推荐教程</dt>
+    <dd> 内容二 </dd>
+  </dl>
+  <dl>
+    <dt> 全部教程 </dt>
+    <dd> 内容三 </dd>
+  </dl>
+  <dl>
+    <dt> 常见问题 </dt>
+    <dd> 内容四</dd>
+  </dl>
+  <dl>
+    <dt> 工具下载 </dt>
+    <dd> VS2010下载、VS2008下载、SQL2005下载、SQL2000、SQL2008代码生成器下载、CSS手册下载、jquery手册下载、jdk下载、mysql下载、tomcat下载、Eclipse下载 </dd>
+  </dl>
+</div>
+<script language="javascript">
+function SlideView(e){
+   for(var r=document.getElementById(e).getElementsByTagName('dl'),c=clearInterval,i=-1,p=r[0],j; j=r[++i];){
+       j.style.height=(i?24:379)+'px';
+       j.onmouseover=function(){clearTimeout(j);var i=this;j=setTimeout(function(){if(p!=i)_(p,379,24)(p=i,24,379)},200)};
+   }
+   function _(el,f,t){
+       c(el.$1);el.className=f>t?'':'on';
+       return el.$1=setInterval(function(){el.style.height=(f+=Math[f>t?'floor':'ceil']((t-f)*.3))+'px';if (f==t)c(el.$1)},10),_
+   }
+};
+new SlideView( "idSlideView3");
+</script>
+
+</body>
+</html>

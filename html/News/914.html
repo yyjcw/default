@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ASP.NET2.0应用中定制安全凭证之实践篇_vs2015_vs2006_vs2010_vs2012_vs2013_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="ASP.NET2.0应用中定制安全凭证之实践篇" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; vs2015_vs2006_vs2010_vs2012_vs2013
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        ASP.NET2.0应用中定制安全凭证之实践篇
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/26 19:40:56
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        ASP.NET2.0应用中定制安全凭证之实践篇
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <span id="zoom" class="mainfont">&nbsp;
+<p><strong>一、方案架构<br />
+<br />
+</strong>　　本方案架构很简单&mdash;&mdash;它用一个Web服务来包装ASP.NET 2.0提供者并且为远程客户暴露该凭证管理，你甚至还能在该架构中加上一些失去的功能。然后，在提供一个丰富的用户接口和全面凭证管理经验的同时，使用一个Windows表单应用程序来消费该Web服务。该Web服务配置文件将包含特定于该凭证存储的指令。然而，这的确意味着所有由该Web服务管理的应用程序都将可以共享这些指令。<br />
+<br />
+　　尽管你能够从头到尾地构建该Web服务，也就是说，首先用静态方法Roles和Membership来包装它们并定义该Web服务，我却更喜欢一种契约驱动的方法：首先设计执行各种操作的最好接口将是什么，并且直到需要时才考虑怎样实现它们。这样做可以确保由Web服务暴露的接口支持所有要求的管理功能并且还将减少该客户应用程序与任何实现细节(例如包装提供者)之间的耦合。<br />
+<br />
+　　ASP.NET 2.0的一个更好的特点是它支持Web服务接口，你可以定义并且让该Web服务暴露逻辑接口，就象类的表现一样。为此，你需要用WebServiceBinding属性修饰你的接口并且经由WebMethod属性来暴露单个的接口方法。然后，你将有一个派生于这个接口的类并实现该接口，而且编译器将要求你支持该接口的所有方法。<br />
+<br />
+　　为了管理和交互于凭证存储和Web服务配置，我定义了5个接口-IApplicationManager，IMembershipManager，IPasswordManager，IroleManager和IUserManager。<br />
+<br />
+　　(一) IApplicationManager<br />
+<br />
+　　该IApplicationManager接口显示于所附源码中的列表2，允许管理员删除一指定的应用程序-也就是说，从数据库中删除所有到它的参考并且删除它的所有用户和角色。IApplicationManager允许从存储中删除所有的应用程序，并且它能返回在该存储中的所有应用程序的一个列表。注意，这个接口作为一个内部的接口被定义-public或internal可见性修饰词对Web服务接口都是无意义的。该接口上的每个方法用WebMethod属性加以修饰并有一个该方法的简短描述。此外，存取凭证存储的所有方法都被设置为使用事务处理。这样以来，两种操作-如删除一应用程序和创建一用户将在彼此完全隔离的情况下执行，从而保证了如删除所有用户等复杂操作的原子性。.NET 2.0中的Web服务只能启动一个新事务，而且它是由WebMethod属性的TransactionOption属性来控制的。最后一点是把WebServiceBinding属性应用于接口上。这就指定该接口是一个客户和服务都能绑定到的Web服务接口。为了把该接口以一个WSDL契约方式暴露给外界，你需要使用一个shim类。这个shim类的设计是必要的，因为你不能把一个接口作为一Web服务暴露，而且你也不能在其上应用WebService属性。这个shim类还将经由WebService属性为该接口命名空间定义。下面的代码显示了IApplicationManagerShim抽象类的定义。<br />
+<br />
+<code>[WebService(Name=&quot;IApplicationManager&quot;,<br />
+Namespace=&quot;http://CredentialsServices&quot;,<br />
+Description=&quot;IApplicationManager is used to manage <br />
+applications. This web service is only <br />
+the definition of the interface. You <br />
+cannot invoke method calls on it.&quot;)]<br />
+abstract class IApplicationManagerShim : IApplicationManager｛<br />
+　public abstract void DeleteApplication(string application);<br />
+　public abstract string[] GetApplications();<br />
+　public abstract void DeleteAllApplications();<br />
+｝ </code><br />
+　　因为IApplicationManagerShim是一个类，所以你可以把它暴露为一个Web服务。因为它是一抽象类且所有方法被定义为抽象方法，所以不需要（也不能）实现任何方法。为了使其看起来就象该接口，IapplicationManagerShim把WebService属性的属性名设置为IApplicationManager(代替缺省的类名)。现在，你可以使用IApplicationManager.asmx文件来暴露该接口。 <br />
+<br />
+<code>＜%@ WebService Language=&quot;C#&quot; <br />
+CodeBehind=&quot;~/App_Code/IApplicationManagerShim.cs&quot;<br />
+Class=&quot;IApplicationManagerShim&quot;%＞</code><br />
+　　现在，如果你浏览到IApplicationManager.asmx页面，你就会看到该接口定义。你可以使用WSDL.exe的serverInterface选项来把接口定义输入到客户端或任何其它想绑定到该接口定义上的服务。<br />
+<br />
+　　(二) IMembershipManager<br />
+<br />
+　　IMembershipManager接口(见所附源码中的列表3)允许你管理用户帐户的所有方面-创建和删除用户帐户，更新用户帐户，检索用户帐户细节以及检索在一应用程序中的所有用户。<br />
+<br />
+　　(三) IRoleManager<br />
+<br />
+　　IRoleManager接口允许你管理逻辑角色的所有方面-创建和删除角色，从角色中增加和删除用户以及检索在一应用程序中的所有角色。<br />
+<br />
+<code>[WebServiceBinding(&quot;IRoleManager&quot;)]<br />
+interface IRoleManager｛<br />
+[WebMethod(...)]<br />
+void CreateRole(string application,string role);<br />
+[WebMethod(...)]<br />
+bool DeleteRole(string application,string role,bool throwOnPopulatedRole);<br />
+[WebMethod(...)]<br />
+void AddUserToRole(string application,string userName, string role);<br />
+[WebMethod(...)]<br />
+void DeleteAllRoles(string application,bool throwOnPopulatedRole);<br />
+[WebMethod(...)]<br />
+string[] GetAllRoles(string application);<br />
+[WebMethod(...)]<br />
+string[] GetRolesForUser(string application,string userName);<br />
+[WebMethod(...)]<br />
+string[] GetUsersInRole(string application, string role);<br />
+[WebMethod(...)]<br />
+void RemoveUserFromRole(string application,string userName, string roleName);<br />
+//更多成员<br />
+｝</code><br />
+　　(四) IPasswordManager<br />
+<br />
+　　这个IPasswordManager接口主要提供与应用程序口令策略相关的只读信息。<br />
+<br />
+<code>[WebServiceBinding(&quot;IPasswordManager&quot;)]<br />
+interface IPasswordManager｛<br />
+[WebMethod(...)]<br />
+bool EnablePasswordReset(string application);<br />
+[WebMethod(...)]<br />
+bool EnablePasswordRetrieval(string application);<br />
+[WebMethod(...)]<br />
+string GeneratePassword(string application,int length,<br />
+int numberOfNonAlphanumericCharacters);<br />
+[WebMethod(...)]<br />
+bool RequiresQuestionAndAnswer(string application);<br />
+[WebMethod(...)]<br />
+string ResetPassword(string application,string userName);<br />
+[WebMethod(...)]<br />
+string GetPassword(string application,string userName,string passwordAnswer);<br />
+[WebMethod(...)]<br />
+void ChangePassword(string application,string userName,string newPassword);<br />
+//更多成员<br />
+｝ </code><br />
+　　典型地，该策略存储在应用程序的配置文件中。该策略包括是否启动口令重置和检索，口令强度和口令回答策略等。你也可以使用IpasswordManager来生成一相应于该口令强度策略的新口令。另外，IpasswordManager可用于重置、改变或检索一指定用户的口令。<br />
+<br />
+　　(五) IUserManager<br />
+<br />
+　　IUserManager接口允许校验用户凭证，检索角色身份以及获取指定用户是其成员之一的所有角色。该接口用于测试和分析目的。 <br />
+<br />
+<code>[WebServiceBinding(&quot;IUserManager&quot;)]<br />
+public interface IUserManager｛<br />
+[WebMethod(...)]<br />
+bool Authenticate(string applicationName,string userName, string password);<br />
+[WebMethod(...)]<br />
+bool IsInRole(string applicationName,string userName, string role);<br />
+[WebMethod(...)]<br />
+string[] GetRoles(string applicationName,string userName);<br />
+｝</code></p>
+<p><code>　<strong>二、AspNetSqlProviderService Web服务</strong><br />
+<br />
+　　显示在所附源码中的列表4中的AspNetSqlProviderService类实现了五个Web接口。其过程就象实现任何其它接口一样-你可以隐式或显式地派生并实现方法(见列表4)。我是通过把这些实现简单地代理到提供者的适当的方法来实现该Web接口上的大多数方法的。在每一次使用角色或身份之前，你必须为之作好准备-通过设置要使用的应用程序名。例如，为了实现IRoleManager.CreateRole()，你将需要建立：<br />
+<br />
+<code>void IRoleManager.CreateRole(string application,string role)｛<br />
+Roles.ApplicationName = application;<br />
+Roles.CreateRole(role);<br />
+｝</code><br />
+　　其中的一些方法在调用该提供者前后还要求一点工作。例如，如果启动口令检索，你只能检索用户口令，而AspNetSqlProviderService则用于判定它。<br />
+<br />
+<code>string IPasswordManager.GetPassword(string application,string userName,<br />
+string passwordAnswer)｛<br />
+Membership.ApplicationName = application;<br />
+Debug.Assert(Membership.EnablePasswordRetrieval);<br />
+MembershipUser membershipUser =Membership.GetUser(userName);<br />
+return membershipUser.GetPassword(passwordAnswer);<br />
+｝</code><br />
+　　然而，还有一些方法并没有得到提供者的直接支持。有两种可能的解决办法-第一种是尝试并使用提供者的其它方法来完成所希望的操作。第二种是直接执行aspnetdb数据库。两种方法都存在利弊。例如，可以考虑实现MembershipManager.DeleteAllUsers()方法。你可以对该应用程序中的每个用户调用身份提供者的DeleteUser()方法，如列表4所示。首先你要调用IMembershipManager.GetAllUsers()方法来得到应用程序中的所有用户。这就是你通过实现该接口的类来使用该接口方法的显式实现方式。然后，你可以定义一个匿名方法来删除用户，把该匿名方法赋值到一个Action＜string＞代理，并且使用Array类的静态方法ForEach＜T＞()删除每个用户。<br />
+<br />
+<code>public delegate void Actionpublic abstract class Array : ...<br />
+｛ <br />
+public static void ForEach＜T＞(T[] array,Action＜T＞ action);<br />
+｝</code><br />
+　　第一种方法的优点是任何与删除一个用户相关的内部活动（如也删除所有的角色身份)仍旧被执行。其不足是，你需要对该数据库做更多的调用。<br />
+<br />
+　　正如刚才提到的，第二种方法是直接对aspnetdb数据库编程。当提供者没有提供任何方式来完成此任务时，这是最有用的。例如，提供者并不支持删除一应用程序，更不说删除所有的应用程序了。尽管你可以编写一个存储过程来做这件事情，但我的另一个目标是不动用aspnetdb，而是使用原始SQL命令来实现IApplicationManager.DeleteApplication()和IApplicationManager.DeleteAllApplications()。我已用一个AspNetDbTablesAdapter助理类(在此没有显示)包装了这些命令。直接访问数据库的优点是你仅执行一个命令；不足之处是，如果要改变数据库模式，你将需要更改你的代码。假定如删除所有的用户或一应用程序等操作是一般不涉及的并且超级用户的数目经常很小，那么我想最好尽可能让AspNetSqlProviderService使用ASP.NET 2.0提供者。<br />
+<br />
+　　(一) 设置服务<br />
+<br />
+　　由AspNetSqlProviderService Web服务使用的Web.Config文件中的设置影响它管理的所有应用程序。特别地，如口令策略这样的设置适用于所有的应用程序。该服务使用默认提供者(SQL SERVER)，因此如果缺省的连接字符串(在文件machine.config中维护)已经足够的话，就不需要指定一个提供者甚至一个连接字符串。如果你需要一个不同的连接字符串，你需要包括一个connectionStrings标签(见所附源码中的列表5)。另外，为了使用Roles类，你必须通过下列指令来启动基于角色的安全。<br />
+<br />
+<code>＜roleManager enabled=&quot;true&quot; /＞</code><br />
+　　(二) 保护服务<br />
+<br />
+　　尽管其凭证由AspNetSqlProviderService Web服务来管理的应用程序可能是基于互联网或基于内部网的，但是服务本身是被设计由一个管理员通过本地内部网来存取的。你应该认证和授权到该服务的调用。另外，你还应该通过加密通讯来提供秘密服务。这是要求的，因为该服务要处理如用户名和口令等敏感信息。保证秘密的最容易的方法是使用HTTPS。AspNetSqlProviderService在它的构造器中经由静态VerifySecureConnection()助理方法来进行验证是否使用了一个安全连接。VerifySecureConnection()使用当前请求的IsSecureConnection属性。为了支持开发或该服务的其它类型的非生产性发布，VerifySecureConnection()方法用Conditional属性加以修饰。只有定义编译符号HTTPS时该方法才会起作用。关于认证该服务的用户，既然Web服务是一本地内部网服务，那么使用Windows认证就不会有任何错误了。我选择了使用集成的Windows认证-这将省去了用户必须明确地登录的麻烦。集成的认证的另外一个优点是，它用一种专利方式来散列化发送过去的凭证。<br />
+<br />
+　　为了配置集成的Windows认证，转到在IIS下的AspNetSqlProviderService Web服务属性，选择目录安全选项卡，并且点击&quot;Edit&hellip;&quot;按钮。不选择&quot;Anonymous access&quot;复选框并且保证选中&quot;Integrated Windows authentication&quot;复选框。AspNetSqlProviderService类被配置以要求认证（见列表4）-它使用PrincipalPermission属性并把被认证的属性设计为true。<br />
+<br />
+<code>[PrincipalPermission(SecurityAction.Demand,...,Authenticated=true)]</code><br />
+　　一旦调用者通过IIS被认证，该服务缺省地将在IIS中以配置的身份仍旧运行。我想以调用者身份运行该服务。为此，Web.Config文件(见列表5)包含了一个identity标签-它把impersonate属性设置为true。<br />
+<br />
+<code>＜identity impersonate=&quot;true&quot;/＞</code><br />
+　　然后，你需要使用SQL SERVER管理工具来允许Web服务的调用者从aspnetdb数据库中进行读和写。<br />
+<br />
+　　保护该Web服务的另一个重要地方是授权。我想要验证只有Windows超级用户组的成员才能存取这一服务。为此，AspNetSqlProviderService类上的PrincipalPermission属性要求只有超级用户角色的成员才被允许使用该服务。 <br />
+<br />
+<code>[PrincipalPermission(SecurityAction.Demand,<br />
+Role = &quot;Administrators&quot;,...)]</code><br />
+　　你可以用任何其它组（该服务的实际用户应该是其中的一员）来替换&quot;Administrators&quot;。<br />
+<br />
+　　PrincipalPermission属性使用依附于该线程的安全负责人（principal）来验证调用者是否的确是指定角色中的一员。在依赖于NT组（如超级用户）时，这将强制你使用一个WindowsPrincipal的实例。<br />
+<br />
+<code>public class WindowsPrincipal : IPrincipal｛<br />
+　public WindowsPrincipal(WindowsIdentity ntIdentity);<br />
+　public virtual bool IsInRole(string role);<br />
+　//其它成员部分<br />
+｝</code><br />
+　　问题在于，为了使用Roles类，AspNetSqlProviderService Web.Config文件必须启动基于角色的安全策略。<br />
+<br />
+<code>＜roleManager enabled=&quot;true&quot; /＞</code><br />
+　　这反过来使得ASP.NET 2.0把一不同的principal依附到HttpContext和线程上，当然还有RolePrincipal类。<br />
+<br />
+<code>public sealed class RolePrincipal : IPrincipal｛...｝</code><br />
+　　在NT超级用户角色中试图使用RolePrincipal和过分要求的身份将会失败，因为它将存取aspnetdb而不是Windows组来查找它。为补偿这一点，你必须手工地交换这些负责人并且在每次请求时把WindowsPrincipal的一个实例依附到该线程上。为此，最容易的办法是把一个Global.asax文件添加到该Web服务工程-通过指定在Global.cs文件中的Global类为类后的代码。<br />
+<br />
+<code>＜%@ Application Language=&quot;C#&quot; CodeBehind =&quot;Global.cs&quot; Inherits = &quot;Global&quot;%＞</code><br />
+　　这个Global类为应用程序授权请求提供一个处理器。<br />
+<br />
+<code>public class Global : HttpApplication｛<br />
+　protected void Application_AuthorizeRequest(object sender, EventArgs e)｛<br />
+　　if(HttpContext.Current.User.Identity.IsAuthenticated)｛<br />
+　　　WindowsIdentity identity = HttpContext.Current.User.Identity as WindowsIdentity;<br />
+　　　Debug.Assert(identity != null);<br />
+　　　WindowsPrincipal principal;<br />
+　　　principal = new WindowsPrincipal(identity);<br />
+　　　Thread.CurrentPrincipal = principal;<br />
+　　｝<br />
+　｝　<br />
+｝</code><br />
+　　如果调用者被认证，那么你需要实例化一新的WindowsPrincipal对象并且把它依附于当前线程。WindowsPrincipal构造器需要一个WindowsIdentity的实例。幸好，因为该服务正在使用Windows集成的认证，在成功认证后，与当前HTTP上下文相联系的身份已经是WindowsIdentity类型了，因此你可以只取得这个实例。</code></p>
+<p><code><strong>三、凭证管理器应用程序<br />
+<br />
+</strong>　　本文相应的源代码包含了这个凭证管理器应用程序-一个具有丰富的用户接口的Windows表单应用程序，它使用在上一步描述的Web服务接口来为任何数目的应用程序管理安全凭证存储。<br />
+<br />
+　　该应用程序导入五个Web接口定义，并且它独占地使用那些接口。该应用程序有一个称为AspNetSqlProviderService的Web服务代理类-它用于定位该服务。你需要从导入的接口手工地把它添加到该服务上。<br />
+<br />
+</code><br />
+<code>partial class AspNetSqlProviderService : <br />
+SoapHttpClientProtocol,IMembershipManager,<br />
+IUserManager,IPasswordManager,<br />
+IApplicationManager,IRoleManager<br />
+｛<br />
+　public AspNetSqlProviderService ()｛<br />
+　　Credentials = CredentialCache.DefaultCredentials;<br />
+　　Url = Settings.Default.AspNetSqlProviderService ;<br />
+　｝<br />
+　//其它的执行<br />
+｝</code><br />
+　　为了支持集成的Windows认证，这个代理类的构造器使用CredentialCache的静态属性DefaultCredentials设置凭证属性-它只是简单地读取当前线程的安全标志。另外，这个构造器还使用设计器生成的Settings类从应用程序配置类中读取Web服务地址。<br />
+<br />
+<br />
+　　这个应用程序的使用相当直观，所以我只介绍一下主要屏幕和选项。Applications选项卡(见图4)允许你选择要配置的应用程序。<br />
+<br />
+　　在此，选择一应用程序将影响所有其它的选项卡。你可以创建和删除一个应用程序或删除所有应用程序。Users选项卡列举出在选择的应用程序中的所有用户。<br />
+<br />
+　　你可以创建或删除一用户。如果你删除一用户但是不选择&quot;All Data&quot;复选框的话，它将删除该用户但是维持它的角色身份信息。你可以更新一用户帐户或删除所有用户。根据从AspNetSqlProviderService Web服务返回的口令策略的不同，你能够或不能够改变或重置口令，而且可以或不可以需要回答该口令。在Users选项卡的按钮和它所显示的对话框也相应地启动或禁止。<br />
+<br />
+　　在Users选项卡的右边是统计信息，如当前用户的在线数。Roles选项卡允许你把角色添加到应用程序。<br />
+<br />
+<code></code><br />
+　　当删除一个角色时，如果你选择了&quot;Fail if populated&quot;复选框，那么如果它有任何成员的话，就不会让你删掉该角色。左边的列表视图显示在该应用程序中的所有用户。你可以从一个角色添加或删除一用户，或从所有角色中删除一用户。在底部，&quot;Users in role&quot;列表框显示了在上面选定的角色中的所有用户，而&quot;Roles for User&quot;列表框显示了在上面选定的用户中的所有角色(见《<font color="#1a1ae6">理论篇</font>》之图3)。<br />
+<br />
+　　Passwords选项卡显示在图7中，它列出已配置的口令策略并且允许你生成一与指定的口令强度策略相匹配的新口令。<br />
+<br />
+</p>
+<p>&nbsp;</p>
+<table border="0" width="90%" align="center">
+    <tbody>
+        <tr>
+            <td><code>。</code><br />
+            　　该选项卡让你选择要使用的Web服务。一旦启动，凭证管理器应用程序即从应用程序配置文件中读取这个地址。这个选项卡显示被选择的Web服务。如果地址是无效的，也就是说，该服务不支持所有要求的功能，那么在应用程序中的所有控件都将为空且是禁止的。你可以提供一个不同的地址，而下面的Web浏览器控件将会显示这一服务。然而，如果该服务支持要求的Web方法(一有效的Web服务)的话，你可以只选择一个Web服务地址(通过点击Select按钮)。如果该服务是无效的，那么将禁止Select按钮。<br />
+            <br />
+            　　不幸的是，在.NET 2.0中没有提供校验某服务是否支持一特别绑定或Web接口的内置支持，因此我不得不手工实现。所附源码中的列表6显示出RefreshSelectButton()和ContainsInterface()助理方法。RefreshSelectButton()首先禁止Select按钮和相匹配的菜单项。然后，验证指定的地址是一个.NET Web服务的地址。然后，它存取显示在Web浏览器控件中的页面的内容并且验证它包含支持所有的接口的方法。为此，它要调用ContainsInterface()方法并把页面的内容和要验证的接口类型提供给它。ContainsInterface()验证该类型是一个接口的类型并且获得一个MethodInfo对象数组-标记在该接口上的每个方法。然后，它定义一个接收单个实例MethodInfo的匿名方法并且使用字符串类的Contains()方法来验证该内容包含那个方法。ContainsInterface()使用该数组类的静态TrueForAll＜T＞()方法。<br />
+            <br />
+            <code>public delegate bool Predicatepublic abstract class Array : ...<br />
+            ｛ <br />
+            　public static bool TrueForAll&lt;<br />
+            　T＞(T[] array,Predicate&lt;<br />
+            　T＞ match);<br />
+            ｝</code><br />
+            　　ContainsInterface()提供给TrueForAll()一个MethodInfo对象数组和匿名方法形式的Predicate。只有在该内容中找到所有的方法时，TrueForAll＜T＞()才返回true。<br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+</span>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('ASP.NET2.0应用中定制安全凭证之实践篇_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/933.html">用DW MX打造基于ACCESS的ASP.NET留…</a>&nbsp;&nbsp;下一条： <a href="/html/News/913.html">ASP.NET中对文件的操作</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET 4.0尚未在 Web 服务器上注册 解决方法" >ASP.NET 4.0尚未在 Web 服务器…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,ses…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual Studio 2015新增安卓模拟器" >微软为Visual Studio 2015新增…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/743.html" title="一个关于天气预报的WebService【C#版】">一个关于天气预报的WebService【C…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/777.html" title="VS2010最大的新特点是并行编程的进展">VS2010最大的新特点是并行编程的进…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1244.html" title="TextBox控件：asp.net中如何为密码输入框赋值">TextBox控件：asp.net中如何为密码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1184.html" title="Web服务调用实例：实现天气预报的查询&nbsp;">Web服务调用实例：实现天气预报的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/659.html" title="ASP.NET程序员面试试题(130道题)">ASP.NET程序员面试试题(130道题)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/208.html" title="ASP.NET教程:调用WebService的源码">ASP.NET教程:调用WebService的源码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/299.html" title="网站开发全程设计">网站开发全程设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/625.html" title="据说这套.net面试题很多网络公司都用">据说这套.net面试题很多网络公司都…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1240.html" title="考考你：C#常见题型及部分答案">考考你：C#常见题型及部分答案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/497.html" title="原创：.net读取数据库sql2000">原创：.net读取数据库sql2000</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1245.html" title="伪静态URL重写配置">伪静态URL重写配置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1093.html" title="配置web.config代码asp.net3.5个性化用户">配置web.config代码asp.net3.5个性…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1291.html" title="使用线程池提高性能&nbsp;Socket网络编程学习笔记（6）">使用线程池提高性能 Socket网络编…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/614.html" title="ASP.NET（C#）GridView表头的增加">ASP.NET（C#）GridView表头的增加…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1129.html" title="如何找到正确的学习方向【.NET版】">如何找到正确的学习方向【.NET版】…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET&nbsp;4.0尚未在&nbsp;Web&nbsp;服务器上注册&nbsp;解决方法" >ASP.NET 4.0尚未在 Web 服务器上注…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,session…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的解决…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web&nbsp;Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web Dep…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开文件…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual&nbsp;Studio&nbsp;2015新增安卓模拟器" >微软为Visual Studio 2015新增安卓…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1605.html" title="&nbsp;用C#抓取需要登录的页面数据" > 用C#抓取需要登录的页面数据</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1588.html" title="VS2015新功能" >VS2015新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1584.html" title="VS2015安装图解教程" >VS2015安装图解教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1565.html" title="vs2015新功能介绍" >vs2015新功能介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1564.html" title="vs2015安装图解" >vs2015安装图解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1562.html" title="c#生成二维码和打印" >c#生成二维码和打印</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "914" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>mui学习笔记（六）解决窗体切换白屏和区域滚动提出的双webview模式_移动框架MUI_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="首先我们要了解mui为了解决窗体切换白屏和区域滚动提出的双webview模式。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 移动框架MUI
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        mui学习笔记（六）解决窗体切换白屏和区域滚动提出的双webview模式
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2016/11/20 9:43:35
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        首先我们要了解mui为了解决窗体切换白屏和区域滚动提出的双webview模式。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><span style="font-size: 20px; color: rgb(192, 0, 0);">移动webapp开发相关视频教程咨询加QQ：1416759661</span></p><p><br/></p><p>首先我们要了解mui为了解决窗体切换白屏和区域滚动提出的双webview模式。</p><p>页面初始化</p><p><br/></p><p>mui框架将很多功能配置都集中在mui.init方法中，要使用某项功能，只需要在mui.init方法中完成对应参数配置即可，目前支持在mui.init方法中配置的功能包括：创建子页面、关闭页面、手势事件配置、预加载、下拉刷新、上拉加载、设置系统状态栏背景颜色。mui需要在页面加载时初始化很多基础控件,如监听返回键,因此务必在每个页面中调用.</p><p>以下是可以配置的参数：</p><p><br/></p><p>mui.init({ &nbsp; &nbsp;//子页面</p><p>&nbsp; &nbsp; subpages: [{ &nbsp; &nbsp; &nbsp; &nbsp;//...</p><p>&nbsp; &nbsp; }], &nbsp; &nbsp;//预加载</p><p>&nbsp; &nbsp; preloadPages:[ &nbsp; &nbsp; &nbsp; &nbsp;//...</p><p>&nbsp; &nbsp; &nbsp;], &nbsp; &nbsp;//下拉刷新、上拉加载</p><p>&nbsp; &nbsp; &nbsp;pullRefresh : { &nbsp; &nbsp; &nbsp; //...</p><p>&nbsp; &nbsp; }, &nbsp; &nbsp;//手势配置</p><p>&nbsp; &nbsp; &nbsp; gestureConfig:{ &nbsp; &nbsp; &nbsp; //...</p><p>&nbsp; &nbsp; }, &nbsp; &nbsp;//侧滑关闭</p><p>&nbsp; &nbsp; swipeBack:true, //Boolean(默认false)启用右滑关闭功能</p><p><br/></p><p>&nbsp; &nbsp; //监听Android手机的back、menu按键</p><p>&nbsp; &nbsp; keyEventBind: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; backbutton: false, &nbsp;//Boolean(默认truee)关闭back按键监听</p><p>&nbsp; &nbsp; &nbsp; &nbsp; menubutton: false &nbsp; //Boolean(默认true)关闭menu按键监听</p><p>&nbsp; &nbsp; }, &nbsp; &nbsp;//处理窗口关闭前的业务</p><p>&nbsp; &nbsp; beforeback: function() { &nbsp; &nbsp; &nbsp; &nbsp;//... //窗口关闭前处理其他业务详情点击 ↑ &quot;关闭页面&quot;链接查看</p><p>&nbsp; &nbsp; }, &nbsp; &nbsp;//设置状态栏颜色</p><p>&nbsp; &nbsp; statusBarBackground: &#39;#9defbcg&#39;, //设置状态栏颜色,仅iOS可用</p><p>&nbsp; &nbsp; preloadLimit:5//预加载窗口数量限制(一旦超出,先进先出)默认不限制})</p><p>在app开发中，若要使用HTML5+扩展api，必须等plusready事件发生后才能正常使用，mui将该事件封装成了mui.plusReady()方法，涉及到HTML5+的api，建议都写在mui.plusReady方法中。</p><p>如下为打印当前页面URL的示例：</p><p>mui.plusReady(function(){ &nbsp; &nbsp; console.log(&quot;当前页面URL：&quot;+plus.webview.currentWebview().getURL());</p><p>});</p><p>创建子页面</p><p><br/></p><p>在mobile app开发过程中，经常遇到卡头卡尾的页面，此时若使用局部滚动，在android手机上会出现滚动不流畅的问题；&nbsp;</p><p>mui的解决思路是：将需要滚动的区域通过单独的webview实现，完全使用原生滚动。</p><p>具体做法则是：将目标页面分解为主页面和内容页面，主页面显示卡头卡尾区域，比如顶部导航、底</p><p>部选项卡等；内容页面显示具体需要滚动的内容，然后在主页面中调用mui.init方法初始化内容页面。</p><p>mui.init({</p><p>&nbsp; &nbsp; subpages:[{</p><p>&nbsp; &nbsp; &nbsp; url:your-subpage-url,//子页面HTML地址，支持本地地址和网络地址</p><p>&nbsp; &nbsp; &nbsp; id:your-subpage-id,//子页面标志</p><p>&nbsp; &nbsp; &nbsp; styles:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; top:subpage-top-position,//子页面顶部位置</p><p>&nbsp; &nbsp; &nbsp; &nbsp; bottom:subpage-bottom-position,//子页面底部位置</p><p>&nbsp; &nbsp; &nbsp; &nbsp; width:subpage-width,//子页面宽度，默认为100%</p><p>&nbsp; &nbsp; &nbsp; &nbsp; height:subpage-height,//子页面高度，默认为100%</p><p>&nbsp; &nbsp; &nbsp; &nbsp; ......</p><p>&nbsp; &nbsp; &nbsp; },</p><p>&nbsp; &nbsp; &nbsp; extras:{}//额外扩展参数</p><p>&nbsp; &nbsp; }]</p><p>&nbsp; });</p><p>参数说明：</p><p><br/></p><p>styles:表示窗口属性，参考5+规范中的WebviewStyle；特别注意，height和width两个属性,即使不设置，也默认按100%计算；因此若设置了top值为非&quot;0px&quot;的情况，建议同时设置bottom值，否则5+ runtime根据高度100%计算，可能会造成页面真实底部位置超出屏幕范围的情况；left、right同理。</p><p>示例：Hello mui的首页其实就是index.html加list.html合并而成的，如下：</p><p><br/></p><p>index.html的作用就是显示固定导航，list.html显示具体列表内容，列表项的滚动是在list.html所在webview中使用原生滚动，既保证了滚动条不会穿透顶部导航，符合app的体验，也保证了列表流畅滚动，解决了区域滚动卡顿的问题。 list.html就是index.html的子页面，创建代码比较简单，如下：</p><p>mui.init({</p><p>&nbsp; &nbsp; subpages:[{</p><p>&nbsp; &nbsp; &nbsp; url:&#39;list.html&#39;,</p><p>&nbsp; &nbsp; &nbsp; id:&#39;list.html&#39;,</p><p>&nbsp; &nbsp; &nbsp; styles:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; top:&#39;45px&#39;,//mui标题栏默认高度为45px；</p><p>&nbsp; &nbsp; &nbsp; &nbsp; bottom:&#39;0px&#39;//默认为0px，可不定义；</p><p>&nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }]</p><p>});</p><p>打开新页面</p><p><br/></p><p>做web app，一个无法避开的问题就是转场动画；web是基于链接构建的，从一个页面点击链接跳转到另一个页面，如果通过有刷新的打开方式，用户要面对一个空白的页面等待；如果通过无刷新的方式，用Javascript移入DOM节点（常见的SPA解决方案），会碰到很高的性能挑战：DOM节点繁多，页面太大，转场动画不流畅甚至导致浏览器崩溃； mui的解决思路是：单webview只承载单个页面的dom，减少dom层级及页面大小；页面切换使用原生动画，将最耗性能的部分交给原生实现。</p><p>mui.openWindow({</p><p>&nbsp; &nbsp; url:new-page-url,</p><p>&nbsp; &nbsp; id:new-page-id,</p><p>&nbsp; &nbsp; styles:{</p><p>&nbsp; &nbsp; &nbsp; top:newpage-top-position,//新页面顶部位置</p><p>&nbsp; &nbsp; &nbsp; bottom:newage-bottom-position,//新页面底部位置</p><p>&nbsp; &nbsp; &nbsp; width:newpage-width,//新页面宽度，默认为100%</p><p>&nbsp; &nbsp; &nbsp; height:newpage-height,//新页面高度，默认为100%</p><p>&nbsp; &nbsp; &nbsp; ......</p><p>&nbsp; &nbsp; },</p><p>&nbsp; &nbsp; extras:{</p><p>&nbsp; &nbsp; &nbsp; .....//自定义扩展参数，可以用来处理页面间传值</p><p>&nbsp; &nbsp; },</p><p>&nbsp; &nbsp; createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示</p><p>&nbsp; &nbsp; show:{</p><p>&nbsp; &nbsp; &nbsp; autoShow:true,//页面loaded事件发生后自动显示，默认为true</p><p>&nbsp; &nbsp; &nbsp; aniShow:animationType,//页面显示动画，默认为”slide-in-right“；</p><p>&nbsp; &nbsp; &nbsp; duration:animationTime//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；</p><p>&nbsp; &nbsp; },</p><p>&nbsp; &nbsp; waiting:{</p><p>&nbsp; &nbsp; &nbsp; autoShow:true,//自动显示等待框，默认为true</p><p>&nbsp; &nbsp; &nbsp; title:&#39;正在加载...&#39;,//等待对话框上显示的提示内容</p><p>&nbsp; &nbsp; &nbsp; options:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; width:waiting-dialog-widht,//等待框背景区域宽度，默认根据内容自动计算合适宽度</p><p>&nbsp; &nbsp; &nbsp; &nbsp; height:waiting-dialog-height,//等待框背景区域高度，默认根据内容自动计算合适高度</p><p>&nbsp; &nbsp; &nbsp; &nbsp; ......</p><p>&nbsp; &nbsp; &nbsp; }</p><p>&nbsp; &nbsp; }</p><p>})</p><p>参数说明：</p><p><br/></p><p>styles:表示窗口参数，参考5+规范中的WebviewStyle；特别注意，height和width两个属性,即使不设置，也默认按100%计算；因此若设置了top值为非&quot;0px&quot;的情况，建议同时设置bottom值，否则5+ runtime根据高度100%计算，可能会造成页面真实底部位置超出屏幕范围的情况,left、right同理。</p><p>extras:新窗口的额外扩展参数，可用来处理页面间传值；例如：</p><p>var webview = mui.openWindow({</p><p>&nbsp; &nbsp; url:&#39;info.html&#39;,</p><p>&nbsp; &nbsp; extras:{</p><p>&nbsp; &nbsp; &nbsp; &nbsp; name:&#39;mui&#39;</p><p>&nbsp; &nbsp; }</p><p>});console.log(webview.name);</p><p>控制台会输出&quot;mui&quot;字符串；注意：扩展参数仅在打开新窗口时有效，若目标窗口为预加载页面，则通过mui.openWindow方法打开时传递的extras参数无效。</p><p>createNew:是否重复创建相同id的webview；为优化性能、避免app中重复创建webview，mui v1.7.0开始增加createNew参数，默认为false；判断逻辑如下：若createNew为true，则不判断重复，每次都新建webview；若为fasle，则先计算当前App中是否已存在同样id的webview，若存在则直接显示；否则新创建并根据show参数执行显示逻辑；该参数可能导致的影响：若业务写在plusReady事件中，而plusReady事件仅首次创建时会触发，则下次再次通过mui.openWindow方法打开同样webview时，是不会再次触发plusReady事件的，此时可通过自定义事件触发；案例参考：http://ask.dcloud.net.cn/question/6514;</p><p>show:表示窗口显示控制。autoShow：目标窗口loaded事件发生后，是否自动显示；若目标页面为预加载页面，则该参数无效；aniShow表示页面显示动画，比如从右侧划入、从下侧划入等，具体可参考5+规范中的AnimationTypeShow。</p><p>waiting:表示系统等待框；mui框架在打开新页面时等待框的处理逻辑为：显示等待框--&gt;创建目标页面webview--&gt;目标页面loaded事件发生--&gt;关闭等待框；因此，只有当新页面为新创建页面（webview）时，会显示等待框，否则若为预加载好的页面，则直接显示目标页面，不会显示等待框。waiting中的参数：autoShow表示自动显示等待框，默认为true，若为false，则不显示等待框；注意：若显示了等待框，但目标页面不自动显示，则需在目标页面中通过如下代码关闭等待框plus.nativeUI.closeWaiting();。title表示等待框上的提示文字，options表示等待框显示参数，比如宽高、背景色、提示文字颜色等，具体可参考5+规范中的WaitingOption。</p><p>示例1：Hello mui中，点击首页右上角的图标，会打开关于页面，实现代码如下：</p><p>//tap为mui封装的单击事件，可参考手势事件章节document.getElementById(&#39;info&#39;).addEventListener(&#39;tap&#39;, function() { &nbsp;//打开关于页面</p><p>&nbsp; mui.openWindow({</p><p>&nbsp; &nbsp; url: &#39;examples/info.html&#39;,</p><p>&nbsp; &nbsp; id:&#39;info&#39;</p><p>&nbsp; });</p><p>});</p><p>因没有传入styles参数，故默认全屏显示；也没有传入show参数，故使用slide-in-right动画，新页面从右侧滑入。</p><p>示例2：从A页面打开B页面，B页面为一个需要从服务端加载的列表页面，若在B页面loaded事件发生时就将其显示出来，因服务器数据尚未加载完毕，列表页面为空，用户体验不好；可通过如下方式改善用户体验（最好的用户体验应该是通过预加载的方式）</p><p>第一步，B页面loaded事件发生后，不自动显示</p><p>//A页面中打开B页面，设置show的autoShow为false，则B页面在其loaded事件发生后，不会自动显示；mui.openWindow({</p><p>&nbsp; &nbsp; url: &#39;B.html&#39;,</p><p>&nbsp; &nbsp; show:{</p><p>&nbsp; &nbsp; &nbsp; autoShow:false</p><p>&nbsp; &nbsp; }</p><p>});</p><p>第二步，在B页面获取列表数据后，再关闭等待框、显示B页面</p><p>//B页面onload从服务器获取列表数据；window.onload = function(){ &nbsp;//从服务器获取数据</p><p>&nbsp; .... &nbsp;//业务数据获取完毕，并已插入当前页面DOM；</p><p>&nbsp; //注意：若为ajax请求，则需将如下代码放在处理完ajax响应数据之后；</p><p>&nbsp; mui.plusReady(function(){ &nbsp; &nbsp;//关闭等待框</p><p>&nbsp; &nbsp; plus.nativeUI.closeWaiting(); &nbsp; &nbsp;//显示当前页面</p><p>&nbsp; &nbsp; mui.currentWebview.show();</p><p>&nbsp; });</p><p>}</p><p>关闭页面</p><p><br/></p><p>mui框架将窗口关闭功能封装在mui.back方法中，具体执行逻辑是：若当前webview为预加载页面，则hide当前webview；否则，close当前webview。</p><p>在mui框架中，有三种操作会触发页面关闭（执行mui.back方法）。</p><p>点击包含.mui-action-back类的控件</p><p>在页面上，向右快速滑动</p><p>Android手机按下back按键</p><p>hbuilder中敲mheader生成的代码块，会自动生成带有返回导航箭头的标题栏，点击返回箭头可关闭当前页面，原因就是因为该返回箭头包含.mui-action-back类，代码如下：</p><p>&lt;header class=&quot;mui-bar mui-bar-nav&quot;&gt;</p><p>&nbsp; &nbsp; &lt;a class=&quot;mui-action-back mui-icon mui-icon-left-nav mui-pull-left&quot;&gt;&lt;/a&gt;</p><p>&nbsp; &nbsp; &lt;h1 class=&quot;mui-title&quot;&gt;标题&lt;/h1&gt;&lt;/header&gt;</p><p>若希望在顶部导航栏之外的其它区域添加关闭页面的控件，只需要在对应控件上添加.mui-action-back类即可，如下为一个关闭按钮示例：</p><p>&lt;button type=&quot;button&quot; class=&#39;mui-btn mui-btn-danger mui-action-back&#39;&gt;关闭&lt;/button&gt;</p><p>mui框架封装的页面右滑关闭功能，默认未启用，若要使用右滑关闭功能，需要在mui.init();方法中设置swipeBack参数，如下：</p><p>mui.init({</p><p>&nbsp; &nbsp; swipeBack:true //启用右滑关闭功能});</p><p>mui框架默认会监听Android手机的back按键，然后执行页面关闭逻辑； 若不希望mui自动处理back按键，可通过如下方式关闭mui的back按键监听；</p><p>mui.init({</p><p>&nbsp; &nbsp; keyEventBind: {</p><p>&nbsp; &nbsp; &nbsp; &nbsp; backbutton: false &nbsp;//关闭back按键监听</p><p>&nbsp; &nbsp; }</p><p>});</p><p>除了如上三种操作外，也可以直接调用mui.back()方法，执行窗口关闭逻辑；mui.back()仅处理窗口逻辑，若希望在窗口关闭之前再处理一些其它业务逻辑，则可将业务逻辑抽象成一个具体函数，然后注册为mui.init方法的beforeback参数;beforeback的执行逻辑为：</p><p>执行beforeback参数对应的函数若返回false，则不再执行mui.back()方法；否则（返回true或无返回值），继续执行mui.back()方法；</p><p>示例：从列表打开详情页面，从详情页面再返回后希望刷新列表界面，此时可注册beforeback参数，然后通过自定义事件通知列表页面刷新数据，示例代码如下：</p><p>mui.init({</p><p>&nbsp; &nbsp; beforeback: function(){ &nbsp; &nbsp; &nbsp; &nbsp;//获得列表界面的webview</p><p>&nbsp; &nbsp; &nbsp; &nbsp; var list = plus.webview.getWebviewById(&#39;list&#39;); &nbsp; &nbsp; &nbsp; &nbsp;//触发列表界面的自定义事件（refresh）,从而进行数据刷新</p><p>&nbsp; &nbsp; &nbsp; &nbsp; mui.fire(list,&#39;refresh&#39;); &nbsp; &nbsp; &nbsp; &nbsp;//返回true，继续页面关闭逻辑</p><p>&nbsp; &nbsp; &nbsp; &nbsp; return true;</p><p>&nbsp; &nbsp; }</p><p>});</p><p>注意：beforeback的执行返回必须是同步的（阻塞模式），若使用nativeUI这种异步js（非阻塞模式），则可能会出现意想不到的结果；比如：通过plus.nativeUI.confirm()弹出确认框，可能用户尚未选择，页面已经返回了（beforeback同步执行完毕，无返回值，继续执行mui.back()方法，nativeUI不会阻塞js进程）：在这种情况下，若要自定义业务逻辑，就需要复写mui.back方法了；如下为一个自定义示例，每次都需要用户确认后，才会关闭当前页面。</p><p>//备份mui.back，mui.back已将窗口关闭逻辑封装的比较完善（预加载及父子窗口），因此最好复用mui.backvar old_back = mui.back;</p><p>mui.back = function(){ &nbsp;var btn = [&quot;确定&quot;,&quot;取消&quot;];</p><p>&nbsp; mui.confirm(&#39;确认关闭当前窗口？&#39;,&#39;Hello MUI&#39;,btn,function(e){ &nbsp; &nbsp;if(e.index==0){ &nbsp; &nbsp; &nbsp; &nbsp;//执行mui封装好的窗口关闭逻辑；</p><p>&nbsp; &nbsp; &nbsp; &nbsp; old_back();</p><p>&nbsp; &nbsp; }</p><p>&nbsp; });</p><p>}</p><p>注意：自定义关闭逻辑时，一定要重写mui.back，不能简单通过addEventListener增加back按键监听， 因为addEventListener只会增加新的执行逻辑，老的监听逻辑依然会执行；</p><p><span style="color: rgb(192, 0, 0); font-size: 20px;">移动webapp开发相关视频教程咨询加QQ：1416759661</span></p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('mui学习笔记（六）解决窗体切换白屏和区域滚动提出的双webview模式_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条：已经是第一条了&nbsp;&nbsp;下一条： <a href="/html/News/1815.html">mui学习笔记（五）webview基本知识</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1816.html" title="mui学习笔记（六）解决窗体切换白屏和区域滚动提出的双webview模式" >mui学习笔记（六）解决窗体切…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1815.html" title="mui学习笔记（五）webview基本知识" >mui学习笔记（五）webview基本…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1814.html" title="mui学习笔记（四）html5+是什么" >mui学习笔记（四）html5+是什…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1813.html" title="mui学习笔记（三）学习路线" >mui学习笔记（三）学习路线</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1812.html" title="mui学习笔记(二)-资源下载" >mui学习笔记(二)-资源下载</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1811.html" title="mui学习笔记（一）前言" >mui学习笔记（一）前言</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1724.html" title="HBuilder、HTML5plus runtime、mui框架介绍" >HBuilder、HTML5plus runtime…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1816.html" title="mui学习笔记（六）解决窗体切换白屏和区域滚动提出的双webview模式">mui学习笔记（六）解决窗体切换白…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1815.html" title="mui学习笔记（五）webview基本知识">mui学习笔记（五）webview基本知识…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1814.html" title="mui学习笔记（四）html5+是什么">mui学习笔记（四）html5+是什么</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1813.html" title="mui学习笔记（三）学习路线">mui学习笔记（三）学习路线</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1812.html" title="mui学习笔记(二)-资源下载">mui学习笔记(二)-资源下载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1811.html" title="mui学习笔记（一）前言">mui学习笔记（一）前言</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1724.html" title="HBuilder、HTML5plus&nbsp;runtime、mui框架介绍">HBuilder、HTML5plus runtime、mu…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1816.html" title="mui学习笔记（六）解决窗体切换白屏和区域滚动提出的双webview模式" >mui学习笔记（六）解决窗体切换白…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1815.html" title="mui学习笔记（五）webview基本知识" >mui学习笔记（五）webview基本知识…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1814.html" title="mui学习笔记（四）html5+是什么" >mui学习笔记（四）html5+是什么</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1813.html" title="mui学习笔记（三）学习路线" >mui学习笔记（三）学习路线</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1812.html" title="mui学习笔记(二)-资源下载" >mui学习笔记(二)-资源下载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1811.html" title="mui学习笔记（一）前言" >mui学习笔记（一）前言</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1724.html" title="HBuilder、HTML5plus&nbsp;runtime、mui框架介绍" >HBuilder、HTML5plus runtime、mu…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1816" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

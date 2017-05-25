@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FLASH音乐播放器_技术辅导_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="工具:FLASHMX&nbsp;2004+记事本&nbsp;" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 技术辅导
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        FLASH音乐播放器
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/28 13:05:44
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        工具:FLASHMX&nbsp;2004+记事本&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        工具:FLASHMX 2004+记事本 <br />
+<br />
+首先,先用记事本编辑一个XML文件,内容如下: <br />
+<br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;GB2312&quot;?&gt; <br />
+&lt;data&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;A DISTANCE THERE IS&lt;/title&gt; <br />
+&lt;name&gt;distance.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;LOVE IN DECEMBER&lt;/title&gt; <br />
+&lt;name&gt;love.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;THANK YOU&lt;/title&gt; <br />
+&lt;name&gt;thanku.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;ESTRANGED&lt;/title&gt; <br />
+&lt;name&gt;estranged.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;NOTHING ELSE MATTERS&lt;/title&gt; <br />
+&lt;name&gt;matters.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;HELLO LITTLE STAR&lt;/title&gt; <br />
+&lt;name&gt;hello.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;DAS SCHWEIGEN&lt;/title&gt; <br />
+&lt;name&gt;das.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;SHEETA'S DECISION&lt;/title&gt; <br />
+&lt;name&gt;sheeta.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;BGM&lt;/title&gt; <br />
+&lt;name&gt;bgm01.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;song&gt; <br />
+&lt;title&gt;SHOW ME&lt;/title&gt; <br />
+&lt;name&gt;showme.mp3&lt;/name&gt; <br />
+&lt;/song&gt; <br />
+&lt;/data&gt; <br />
+title是歌曲的名字,而name是mp3的文件名,以后需要修改的话就按照格式修改或添加就行了,当然也可以用ASP,PHP之类的程序来生成...由于是个简单的东西,所以没用上ID3.也算偷懒吧,呵呵,要注意文件一定要和XML放在同个目录下,否则会出错. <br />
+当然,只要不嫌麻烦的话,你也可以在FLASH里多加个MP3路径,或是本地路径什么的. <br />
+<br />
+做好了保存成list.xml,建立个music的目录,把MP3文件和XML文件丢里面,上一级目录就放FLASH吧. <br />
+<br />
+抽根烟休息一会儿...To be continued... <br />
+大家看看这个图片,作为MP3的背景图,当然你有更漂亮或需要更多功能的也可以换进去. <br />
+<br />
+<br />
+<br />
+我FLASH设置的大小为320*60,就比图片稍大一点点,让我们开始写AS吧! <br />
+<br />
+Frame 1: <br />
+<br />
+第一步: <br />
+<br />
+//定义XML和数组 <br />
+var myXML = new XML(); <br />
+var mp3total = new Array(); <br />
+var mp3name = new Array(); <br />
+var mp3 = new Array(); <br />
+//定义s为声音类 <br />
+var s = new Sound(); <br />
+//定义MP3和XML的路径 <br />
+var url = &quot;music/&quot;; <br />
+//定义歌曲ID,也就是第几第几首 <br />
+var id = 0; <br />
+//定义已播放时间,在后面的播放/暂停按钮里会用得着的 <br />
+var played = 0; <br />
+//定义停止按钮参数,判断是否未停止播放,也就是说key==true时暂停按钮可以按...(好像弄反了) <br />
+var key = true; <br />
+//定义暂停按钮参数,判断是否已经暂停播放 <br />
+var paused = false; <br />
+<br />
+定义完了上面的内容后,让我们进行下一步... <br />
+<br />
+第二步: <br />
+<br />
+//定义预读函数 <br />
+function preloading() { <br />
+//给preload赋予enterframe事件,preload就是进度条,后面会给大家解释... <br />
+preload.onEnterFrame = function() { <br />
+//取得MP3的总字节数和已下载字节数 <br />
+var loaded = s.getBytesLoaded(); <br />
+var total = s.getBytesTotal(); <br />
+//进度条显示的长度,取160的原因是因为最大长度有160...-___-b <br />
+//----- qhwa 注：用_xscale可以更简单、通用些 <br />
+this._width = loaded / total * 160; <br />
+if (loaded == total) { <br />
+//下载完成后删除enterframe事件 <br />
+delete this.onEnterFrame; <br />
+} <br />
+}; <br />
+} <br />
+<br />
+<br />
+这里相信用不着做多少解释了...做过FLASH LOADING的朋友们应该都用过,这里只不过是把影片的LOADING换成MP3的LOADING而已 <br />
+<br />
+现在开始第三步: <br />
+//播放声音函数 <br />
+function loadsound(x) { <br />
+//把已播放时间设置为0,用处上面说过了..-___-b <br />
+played = 0; <br />
+//为暂停和停止按钮变量重新赋值 <br />
+paused = false; <br />
+key = true; <br />
+//这里重复s = new Sound()是为了让声音已播放的毫秒数(position)重置为0,我找不到更好的解决办法,还望大虾们指教... <br />
+s = new Sound(); <br />
+//读取MP3,url上面定义过了,是MP3的路径,x是函数里的参数,这里的x代表歌曲的MP3名,后面的true是让声音以数据流的格式播放 <br />
+s.loadSound(url + x, true); <br />
+//trackname是显示歌曲名的文本框,id已经被定义为歌曲的序列号,由于是从0开始的,所以在这里要+1,总不能让第一首显示为0吧...中间冒号里的内容是隔开序列号与MP3的曲名,你可以换成自己喜欢的符号.后面的mp3name[id]就是加载进数组里的MP3歌名了,下面一个函数里会做解释 <br />
+trackname = (id + 1) + &quot;. - &quot; + mp3name[id]; <br />
+//开始播放音乐... <br />
+s.start(); <br />
+//onSoundComplete的作用是声音停止播放时调用后面的函数 <br />
+s.onSoundComplete = function() { <br />
+//又是个条件表达式,解释起来真烦...这东西一般是懒人才用的,比如说我...-___-b,写成if大家会容易看明白些...这里是让判断问号(?)前面的(id == mp3total.length - 1)是否成立,成立的话id赋值为0,否则id赋值为id + 1 <br />
+id = (id == mp3total.length - 1) ? 0 : (id + 1); <br />
+//执行loadsound函数,也就是现在的函数再执行一次,小括号里面参数是给函数里的x赋值为mp3[id],也就是歌曲名,mp3这个数组在下面解释... <br />
+loadsound(mp3[id]); <br />
+//大括号就用不着解释了吧? <br />
+}; <br />
+//mix就是在右边乱蹦乱跳的东西,现在我没办法拿到MP3各个频率的音高,只能用个假的来代替,呵呵 <br />
+mix.gotoAndStop(1); <br />
+//执行preloading函数 <br />
+preloading(); <br />
+} <br />
+<br />
+打了好多字哦,有点累了,写完下面的再休息 <br />
+第四步: <br />
+<br />
+//这个这个...大家还是翻翻以前的帖子或是看看帮助吧,反正在FLASH里用XML基本都会用到这两个东西 <br />
+myXML.ignoreWhite = true; <br />
+System.useCodepage = true; <br />
+//XML开始读取的时候执行下面的函数 <br />
+myXML.onLoad = function(success) { <br />
+if (success) { <br />
+//读取成功就开始分析XML,parseXML函数在下面解释... <br />
+parseXML(); <br />
+} else { <br />
+//这个..我不说了好不好? <br />
+trace(&quot;载入失败&quot;); <br />
+} <br />
+}; <br />
+//分析XML <br />
+function parseXML() { <br />
+//取得MP3的总数,关于这方面的资料大家翻翻以前的帖子或是到置顶帖里能找得到的,找不到你们问版主好了 <br />
+mp3total = myXML.firstChild.childNodes; <br />
+//建立for循环 <br />
+for (var i = 0; i &lt; mp3total.length; i++) { <br />
+//把MP3的歌曲名放到mp3name的数组里 <br />
+mp3name<span style="FONT-STYLE: italic"><wbr></wbr> = mp3total<span style="FONT-STYLE: italic"><wbr></wbr>.childNodes[0].firstChild.nodeValue; <br />
+//和上面道理差不多,只不过这里是放mp3的文件名 <br />
+mp3<span style="FONT-STYLE: italic"><wbr></wbr> = mp3total<span style="FONT-STYLE: italic"><wbr></wbr>.childNodes[1].firstChild.nodeValue; <br />
+} <br />
+//.........(你就当我哑了) <br />
+play(); <br />
+} <br />
+//读取XML <br />
+myXML.load(url + &quot;list.xml&quot;); <br />
+stop(); <br />
+<br />
+Frame N <br />
+这里也就是随便第几祯都行了,你喜欢弄多长就弄多长...中间可以随便加些乱七八糟效果什么的 <br />
+<br />
+开始定义按钮...我这里一共放了四个按钮,btn1,btn2,btn3,btn4,分别是上一首,停止,播放/暂停,下一首,把它们放到合适的地方,图上画着的,看不懂画什么的多研究下其他播放器. <br />
+<br />
+开始给它们加上鼠标事件... <br />
+<br />
+上一首的按钮 <br />
+btn1 <br />
+btn1.onPress = function() { <br />
+//和前面一样是一个条件表达式,大家看看前面的解释 <br />
+id = id == 0 ? mp3total.length - 1 : id - 1; <br />
+//好象上面也解释过了... <br />
+loadsound(mp3[id]); <br />
+}; <br />
+<br />
+停止按钮 <br />
+btn2 <br />
+btn2.onPress = function() { <br />
+//判断这个按钮是否可以按下去.呵呵,可以按的话,就执行里面的东西 <br />
+if (key) { <br />
+//停止声音,不停的话也不叫停止按钮了... <br />
+s.stop(); <br />
+//trackname里面显示STOP <br />
+trackname = &quot;STOP&quot;; <br />
+//让mix停下来不乱跳 <br />
+mix.gotoAndPlay(1); <br />
+//前面解释过了... <br />
+played = 0; <br />
+key = false; <br />
+s = new Sound(); <br />
+} <br />
+}; <br />
+<br />
+播放/暂停按钮,也是要写最多东西的.哭~`和上面相同或类似的我就不废话了..早点写完早点睡觉 <br />
+btn3 <br />
+btn3.onPress = function() { <br />
+if (key) { <br />
+if (paused) { <br />
+//从获取已播放多少的地方开始播放,由于played的单位是毫秒,所以在这里要除以1000,后面就是循环了... <br />
+s.start(played / 1000, 1); <br />
+//略... <br />
+trackname = (id + 1) + &quot;. - &quot; + mp3name[id]; <br />
+mix.gotoAndStop(1); <br />
+paused = false; <br />
+} else { <br />
+//给played赋值,也就是已播放了多少毫秒 <br />
+played = s.position; <br />
+//略... <br />
+s.stop(); <br />
+mix.gotoAndPlay(1); <br />
+trackname = &quot;PAUSED&quot;; <br />
+paused = true; <br />
+} <br />
+} else { <br />
+loadsound(mp3[id]); <br />
+} <br />
+}; <br />
+<br />
+下一首按钮 <br />
+btn4 <br />
+btn4.onPress = function() { <br />
+id = id == mp3total.length - 1 ? 0 : id + 1; <br />
+loadsound(mp3[id]); <br />
+}; <br />
+<br />
+四个按钮都放上去了,如果要为播放器加个时间显示的话,那我们需要加上下面的代码... <br />
+<br />
+//执行loadsound函数 <br />
+loadsound(mp3[id]); <br />
+//定义几个变量 <br />
+var time1 = time2 = time3 = time4 = 0; <br />
+onEnterFrame = function () { <br />
+//又是头疼的条件表达式...给大家解释一下几个命令好了...(偷懒)...position前面我应该说过了吧,除以60000也就是除以1000再除以60,为什么要这么做呢?因为时间是60进制的,把毫秒换成秒的单位后还要换成时间单位,int()是取整的意思,也就把里面的东西化成整数,当前面的条件小于10的时候,我们不能让时间这么显示吧? <br />
+//如: 12:1,所以要加个0在前面. <br />
+//duration就是歌曲的总长度了. <br />
+//百分比符号在这里的作用可不是百分比哦,是取余数的意思,如 9%5=4 <br />
+//%60也就是除以60后取它的余数了,肯定不会超过60,用来做秒正合适 <br />
+time1 = int(s.position / 60000) &lt; 10 ? &quot;0&quot; + int(s.position / 60000) : int(s.position / 60000); <br />
+time2 = int(s.position / 1000 % 60) &lt; 10 ? &quot;0&quot; + int(s.position / 1000 % 60) : int(s.position / 1000 % 60); <br />
+time3 = int(s.duration / 60000) &lt; 10 ? &quot;0&quot; + int(s.duration / 60000) : int(s.duration / 60000); <br />
+time4 = int(s.duration / 1000 % 60) &lt; 10 ? &quot;0&quot; + int(s.duration / 1000 % 60) : <br />
+int(s.duration / 1000 % 60); <br />
+//四个变量都好了以后,放到名为timeline的文本框里,这个文本框大家找找,就在歌曲名上面 <br />
+timeline = time1 + &quot;:&quot; + time2 + &quot; - &quot; + time3 + &quot;:&quot; + time4; <br />
+}; <br />
+stop(); <br />
+<br />
+呼...主要的东西都写完了,下面我们来处理音量条,进度条和右边乱跳的东西... <br />
+<br />
+To be continued... <br />
+<br />
+我们先从VOLUME开始,也就是音量控制..新建个MC,随便怎么命名都好,然后在里面写AS <br />
+<br />
+VOLUME <br />
+//定义两个变量,l就是left的简写,t就是top了 <br />
+var l = this._x; <br />
+var t = this._y; <br />
+<br />
+btn.onPress = function() { <br />
+//点击的时候开始拖...这个MC,鼠标中心点定义成false,左边为l-146,因为这里的空间只有146这么宽,因为不让它上下移动,所以最高范围是t,右边也就是现在的位置定义为l,不让它超出现在的范围,最低范围也是t <br />
+startDrag(this._parent, false, l - 146, t, l, t); <br />
+}; <br />
+<br />
+btn.onRelease = btn.onReleaseOutside = function () { <br />
+stopDrag(); <br />
+}; <br />
+<br />
+onEnterFrame = function () { <br />
+//给vol变量赋值,这个公式大家研究一下看看,呵呵,挺简单的 <br />
+vol = (this._x - l) / 146 * 100 + 100; <br />
+//设置上一级里的声音大小 <br />
+_parent.s.setVolume(vol); <br />
+}; <br />
+<br />
+完成后把它拖到主场景里就用不着管它了,不过要注意放的位置哦 <br />
+<br />
+进度条:preload <br />
+其实只是个灰色的MC,和上面的格子状的东西做了个MASK,主场景里的AS控制了这里的长度 <br />
+<br />
+频率和音高:mix <br />
+这只是个假的东西,因为现在FLASH还取不到音高的各种数值,随便画几个运动的MC,和上面的点阵状的东西做个MASK也就能骗骗人了,不过我们要在这里做个停止和播放时不同的动作. <br />
+<br />
+在mix里的Frame1放上能动的MC,MC的动作在MC里完成,也就是做无规律的上下运动,看起来有点以假乱真的感觉就好,注意有动作的MC只保留在Frame1. <br />
+<br />
+后面就用个大点的白的MC来完成吧,移动到点阵状那东西的最上方然后下降,在下降过程中渐变成红色就OK. <br />
+<br />
+最后把这个东西拖到主场景合适的位置里,命名为mix就完成工作了. <br />
+<br />
+现在大家可以试试这个播放器的效果,也可以结合其他的素材等做出更漂亮的播放器来.需要更强大功能的话大家要研究一下哦,比如在FLASH里自由添加删除歌曲的功能,就是用合适的事件来增减各个数组里的东西和进行排序就OK了,拖动进度就是用position和duration取得时间来定义长度和实现.其他更多的,还有待于大家的想象,要相信自己的能力,多动手的话会提高得很快的 </span></span></span></span>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('FLASH音乐播放器_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/377.html">Flash AS2 事件处理机制 </a>&nbsp;&nbsp;下一条： <a href="/html/News/375.html">入门：关于Flash中注册点与中心点的区别…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码">FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/605.html" title="Flash,Actionscript,AS延时执行语句,延时播放影片">Flash,Actionscript,AS延时执行语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0">入门Flash CS3 ActionScript 3.0</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法">播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/384.html" title="JavaScript控制Flash播放器的方法汇总&nbsp;">JavaScript控制Flash播放器的方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/379.html" title="FLASH变量和作用域[这是一篇比较好的文章]">FLASH变量和作用域[这是一篇比较好…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/283.html" title="用FLASH8.0轻松制作简易计算器">用FLASH8.0轻松制作简易计算器</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1035.html" title="FLASH动画禁止右键菜单">FLASH动画禁止右键菜单</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/523.html" title="FLASH&nbsp;AS教程：响应键盘事件的四种方法">FLASH AS教程：响应键盘事件的四种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/541.html" title="最常用的Flash语句(汇总)">最常用的Flash语句(汇总)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/278.html" title="Flash制作坦克游戏视频教程">Flash制作坦克游戏视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/998.html" title="创建FLEX自定义组件(1)">创建FLEX自定义组件(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/370.html" title="FLASH与ASP通信原理入门&nbsp;">FLASH与ASP通信原理入门 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/524.html" title="Flash教程：加载外部文本文件的3种方法">Flash教程：加载外部文本文件的3种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/996.html" title="创建FLEX自定义组件(3)">创建FLEX自定义组件(3)</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设计与…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1482.html" title="常用UML建模工具" >常用UML建模工具</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码" >FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1250.html" title="视频教程卡住的解决办法" >视频教程卡住的解决办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法" >播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1174.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0" >入门Flash CS3 ActionScript 3.0</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "376" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

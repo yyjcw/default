@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Webpack教程01_web前端技术_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="Webpack&nbsp;是目前流行的打包工具，如何安装它呢？" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; web前端技术
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        Webpack教程01
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2017/4/27 22:58:57
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        Webpack&nbsp;是目前流行的打包工具，如何安装它呢？
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>Webpack 是目前流行的打包工具，如何安装它呢？</p><p>1. 安装 Node Js</p><p>首先，Webpack 是基于 NodeJs 的工具，你必须首先安装 NodeJs. NodeJs 仅仅只需要在你的系统中安装一次就可以了。</p><p>2. 全局安装 Webpack</p><p>我们希望能够在系统的任何文件夹中使用 Webpack，使用的方式是通过 Webpack 命令来完成的，这需要我们全局安装 Webpack。这也只需要安装一次，以后每个项目就不需要重新全局安装了。</p><p>$ npm install webpack -g</p><p>&nbsp;成功安装之后，你应该能够在任何目录中执行 webpack 命令，如果你还没有项目的配置文件的话，应该会看到当前的 Webpack 版本和一个命令的帮助列表。</p><p>&gt; webpackwebpack 1.12.12Usage: https://webpack.github.io/docs/cli.htmlOptions: &nbsp;--help, -h, -?</p><p>&nbsp; --config &nbsp;--context &nbsp;--entry &nbsp;--module-bind &nbsp;--module-bind-post &nbsp;--module-bind-pre &nbsp;--output-path &nbsp;--output-file</p><p>&nbsp; --output-chunk-file</p><p>&nbsp; --output-named-chunk-file</p><p>&nbsp; --output-source-map-file</p><p>&nbsp; --output-public-path &nbsp;--output-jsonp-function</p><p>&nbsp; --output-pathinfo &nbsp;--output-library &nbsp;--output-library-target &nbsp;--records-input-path &nbsp;--records-output-path &nbsp;--records-path &nbsp;--define &nbsp;--target &nbsp;--cache &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [default: true] &nbsp;--watch, -w</p><p>&nbsp; --watch which closes when stdin ends &nbsp;--watch-aggregate-timeout &nbsp;--watch-poll &nbsp;--hot &nbsp;--debug &nbsp;--devtool &nbsp;--progress &nbsp;--resolve-alias &nbsp;--resolve-loader-alias &nbsp;--optimize-max-chunks &nbsp;--optimize-min-chunk-size &nbsp;--optimize-minimize &nbsp;--optimize-occurence-order &nbsp;--optimize-dedupe &nbsp;--prefetch &nbsp;--provide &nbsp;--labeled-modules &nbsp;--plugin &nbsp;--bail &nbsp;--profile &nbsp;-d &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shortcut for --debug --devtool sourcemap --output-pathinfo &nbsp;-p &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;shortcut for --optimize-minimize &nbsp;--json, -j &nbsp;--colors, -c &nbsp;--sort-modules-by &nbsp;--sort-chunks-by &nbsp;--sort-assets-by &nbsp;--hide-modules &nbsp;--display-exclude &nbsp;--display-modules &nbsp;--display-chunks &nbsp;--display-error-details &nbsp;--display-origins &nbsp;--display-cached &nbsp;--display-cached-assets &nbsp;--display-reasons, --verbose, -v</p><p><br/></p><p>Output filename not configured.</p><p>PS C:\study\webpack\w1&gt;</p><p>&nbsp;</p><p>注意，最后还提示你，当前没有找到 webpack 配置文件。</p><p>3. 在项目中安装 Webpack</p><p>最好在你的项目中也包含一份独立的 Webpack，这样你更方便管理你的项目。为什么又是全局安装，又是局部安装呢？可以参考这里的说明。</p><p>3.1 确认创建 NPM 项目文件</p><p>首先，你需要已经创建了 NPM 的项目文件，如果没有的话，使用 init 命令创建它。</p><p>&nbsp;npm init</p><p>你需要回答一系列问题。最终你会得到一个名为 package.json 的 NPM 项目文件，如果你愿意的话，手工创建它也不错。甚至你可以直接复制一个过来。</p><p>一个新创建的 package.json 内容应该如下所示。</p><p>{ &nbsp;&quot;name&quot;: &quot;w1&quot;, &nbsp;&quot;version&quot;: &quot;1.0.0&quot;, &nbsp;&quot;description&quot;: &quot;&quot;, &nbsp;&quot;main&quot;: &quot;index.js&quot;, &nbsp;&quot;dependencies&quot;: {}, &nbsp;&quot;devDependencies&quot;: {}, &nbsp;&quot;scripts&quot;: { &nbsp; &nbsp;&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</p><p>&nbsp; }, &nbsp;&quot;keywords&quot;: [], &nbsp;&quot;author&quot;: &quot;&quot;, &nbsp;&quot;license&quot;: &quot;ISC&quot;}</p><p>&nbsp;</p><p>&nbsp;</p><p>3.2 在项目中安装 Webpack</p><p>现在，可以在项目中安装 Webpack 了，直接使用 NPM 的 install 命令。</p><p>npm install webpack --save-dev</p><p>&nbsp;--save-dev 的意思是说 webpack 是一个开发工具，我们需要将这一点保存到 package.Json 文件中。</p><p>install 命令可以简化为单个字符 i，注意是小写的 i。</p><p>--save-dev 还可以简化为大写的 S，写成 -S，你可以在这里查看 instal 的更详细使用说明。</p><p>npm i webpack --S</p><p>你应该看到一个长长的输出，这是由于 Webpack 是一个很复杂的工具。它依赖很多的其它工具。</p><p>&gt; npm install webpack --save-dev</p><p>w1@1.0.0 w1</p><p>`-- webpack@1.13.2</p><p>&nbsp; +-- acorn@3.3.0</p><p>&nbsp; +-- async@1.5.2</p><p>&nbsp; +-- clone@1.0.2</p><p>&nbsp; +-- enhanced-resolve@0.9.1</p><p>&nbsp; | +-- graceful-fs@4.1.9</p><p>&nbsp; | `-- memory-fs@0.2.0</p><p>&nbsp; +-- interpret@0.6.6</p><p>&nbsp; +-- loader-utils@0.2.16</p><p>&nbsp; | +-- big.js@3.1.3</p><p>&nbsp; | +-- emojis-list@2.1.0</p><p>&nbsp; | +-- json5@0.5.0</p><p>&nbsp; | `-- object-assign@4.1.0</p><p>&nbsp; +-- memory-fs@0.3.0</p><p>&nbsp; | +-- errno@0.1.4</p><p>&nbsp; | | `-- prr@0.0.0</p><p>&nbsp; | `-- readable-stream@2.1.5</p><p>&nbsp; | &nbsp; +-- buffer-shims@1.0.0</p><p>&nbsp; | &nbsp; +-- core-util-is@1.0.2</p><p>&nbsp; | &nbsp; +-- inherits@2.0.3</p><p>&nbsp; | &nbsp; +-- isarray@1.0.0</p><p>&nbsp; | &nbsp; +-- process-nextick-args@1.0.7</p><p>&nbsp; | &nbsp; `-- util-deprecate@1.0.2</p><p>&nbsp; +-- mkdirp@0.5.1</p><p>&nbsp; | `-- minimist@0.0.8</p><p>&nbsp; +-- node-libs-browser@0.6.0</p><p>&nbsp; | +-- assert@1.4.1</p><p>&nbsp; | +-- browserify-zlib@0.1.4</p><p>&nbsp; | | `-- pako@0.2.9</p><p>&nbsp; | +-- buffer@4.9.1</p><p>&nbsp; | | +-- base64-js@1.2.0</p><p>&nbsp; | | `-- ieee754@1.1.8</p><p>&nbsp; | +-- console-browserify@1.1.0</p><p>&nbsp; | | `-- date-now@0.1.4</p><p>&nbsp; | +-- constants-browserify@0.0.1</p><p>&nbsp; | +-- crypto-browserify@3.2.8</p><p>&nbsp; | | +-- pbkdf2-compat@2.0.1</p><p>&nbsp; | | +-- ripemd160@0.2.0</p><p>&nbsp; | | `-- sha.js@2.2.6</p><p>&nbsp; | +-- domain-browser@1.1.7</p><p>&nbsp; | +-- events@1.1.1</p><p>&nbsp; | +-- http-browserify@1.7.0</p><p>&nbsp; | | `-- Base64@0.2.1</p><p>&nbsp; | +-- https-browserify@0.0.0</p><p>&nbsp; | +-- os-browserify@0.1.2</p><p>&nbsp; | +-- path-browserify@0.0.0</p><p>&nbsp; | +-- process@0.11.9</p><p>&nbsp; | +-- punycode@1.4.1</p><p>&nbsp; | +-- querystring-es3@0.2.1</p><p>&nbsp; | +-- readable-stream@1.1.14</p><p>&nbsp; | | `-- isarray@0.0.1</p><p>&nbsp; | +-- stream-browserify@1.0.0</p><p>&nbsp; | | `-- readable-stream@1.1.14</p><p>&nbsp; | | &nbsp; `-- isarray@0.0.1</p><p>&nbsp; | +-- string_decoder@0.10.31</p><p>&nbsp; | +-- timers-browserify@1.4.2</p><p>&nbsp; | +-- tty-browserify@0.0.0</p><p>&nbsp; | +-- url@0.10.3</p><p>&nbsp; | | +-- punycode@1.3.2</p><p>&nbsp; | | `-- querystring@0.2.0</p><p>&nbsp; | +-- util@0.10.3</p><p>&nbsp; | | `-- inherits@2.0.1</p><p>&nbsp; | `-- vm-browserify@0.0.4</p><p>&nbsp; | &nbsp; `-- indexof@0.0.1</p><p>&nbsp; +-- optimist@0.6.1</p><p>&nbsp; | `-- wordwrap@0.0.3</p><p>&nbsp; +-- supports-color@3.1.2</p><p>&nbsp; | `-- has-flag@1.0.0</p><p>&nbsp; +-- tapable@0.1.10</p><p>&nbsp; +-- uglify-js@2.6.4</p><p>&nbsp; | +-- async@0.2.10</p><p>&nbsp; | +-- source-map@0.5.6</p><p>&nbsp; | +-- uglify-to-browserify@1.0.2</p><p>&nbsp; | `-- yargs@3.10.0</p><p>&nbsp; | &nbsp; +-- camelcase@1.2.1</p><p>&nbsp; | &nbsp; +-- cliui@2.1.0</p><p>&nbsp; | &nbsp; | +-- center-align@0.1.3</p><p>&nbsp; | &nbsp; | | +-- align-text@0.1.4</p><p>&nbsp; | &nbsp; | | | +-- longest@1.0.1</p><p>&nbsp; | &nbsp; | | | `-- repeat-string@1.5.4</p><p>&nbsp; | &nbsp; | | `-- lazy-cache@1.0.4</p><p>&nbsp; | &nbsp; | +-- right-align@0.1.3</p><p>&nbsp; | &nbsp; | `-- wordwrap@0.0.2</p><p>&nbsp; | &nbsp; +-- decamelize@1.2.0</p><p>&nbsp; | &nbsp; `-- window-size@0.1.0</p><p>&nbsp; +-- watchpack@0.2.9</p><p>&nbsp; | +-- async@0.9.2</p><p>&nbsp; | `-- chokidar@1.6.1</p><p>&nbsp; | &nbsp; +-- anymatch@1.3.0</p><p>&nbsp; | &nbsp; | +-- arrify@1.0.1</p><p>&nbsp; | &nbsp; | `-- micromatch@2.3.11</p><p>&nbsp; | &nbsp; | &nbsp; +-- arr-diff@2.0.0</p><p>&nbsp; | &nbsp; | &nbsp; | `-- arr-flatten@1.0.1</p><p>&nbsp; | &nbsp; | &nbsp; +-- array-unique@0.2.1</p><p>&nbsp; | &nbsp; | &nbsp; +-- braces@1.8.5</p><p>&nbsp; | &nbsp; | &nbsp; | +-- expand-range@1.8.2</p><p>&nbsp; | &nbsp; | &nbsp; | | `-- fill-range@2.2.3</p><p>&nbsp; | &nbsp; | &nbsp; | | &nbsp; +-- is-number@2.1.0</p><p>&nbsp; | &nbsp; | &nbsp; | | &nbsp; +-- isobject@2.1.0</p><p>&nbsp; | &nbsp; | &nbsp; | | &nbsp; `-- randomatic@1.1.5</p><p>&nbsp; | &nbsp; | &nbsp; | +-- preserve@0.2.0</p><p>&nbsp; | &nbsp; | &nbsp; | `-- repeat-element@1.1.2</p><p>&nbsp; | &nbsp; | &nbsp; +-- expand-brackets@0.1.5</p><p>&nbsp; | &nbsp; | &nbsp; | `-- is-posix-bracket@0.1.1</p><p>&nbsp; | &nbsp; | &nbsp; +-- extglob@0.3.2</p><p>&nbsp; | &nbsp; | &nbsp; +-- filename-regex@2.0.0</p><p>&nbsp; | &nbsp; | &nbsp; +-- kind-of@3.0.4</p><p>&nbsp; | &nbsp; | &nbsp; | `-- is-buffer@1.1.4</p><p>&nbsp; | &nbsp; | &nbsp; +-- normalize-path@2.0.1</p><p>&nbsp; | &nbsp; | &nbsp; +-- object.omit@2.0.0</p><p>&nbsp; | &nbsp; | &nbsp; | +-- for-own@0.1.4</p><p>&nbsp; | &nbsp; | &nbsp; | | `-- for-in@0.1.6</p><p>&nbsp; | &nbsp; | &nbsp; | `-- is-extendable@0.1.1</p><p>&nbsp; | &nbsp; | &nbsp; +-- parse-glob@3.0.4</p><p>&nbsp; | &nbsp; | &nbsp; | +-- glob-base@0.3.0</p><p>&nbsp; | &nbsp; | &nbsp; | `-- is-dotfile@1.0.2</p><p>&nbsp; | &nbsp; | &nbsp; `-- regex-cache@0.4.3</p><p>&nbsp; | &nbsp; | &nbsp; &nbsp; +-- is-equal-shallow@0.1.3</p><p>&nbsp; | &nbsp; | &nbsp; &nbsp; `-- is-primitive@2.0.0</p><p>&nbsp; | &nbsp; +-- async-each@1.0.1</p><p>&nbsp; | &nbsp; +-- glob-parent@2.0.0</p><p>&nbsp; | &nbsp; +-- is-binary-path@1.0.1</p><p>&nbsp; | &nbsp; | `-- binary-extensions@1.7.0</p><p>&nbsp; | &nbsp; +-- is-glob@2.0.1</p><p>&nbsp; | &nbsp; | `-- is-extglob@1.0.0</p><p>&nbsp; | &nbsp; +-- path-is-absolute@1.0.1</p><p>&nbsp; | &nbsp; `-- readdirp@2.1.0</p><p>&nbsp; | &nbsp; &nbsp; +-- minimatch@3.0.3</p><p>&nbsp; | &nbsp; &nbsp; | `-- brace-expansion@1.1.6</p><p>&nbsp; | &nbsp; &nbsp; | &nbsp; +-- balanced-match@0.4.2</p><p>&nbsp; | &nbsp; &nbsp; | &nbsp; `-- concat-map@0.0.1</p><p>&nbsp; | &nbsp; &nbsp; `-- set-immediate-shim@1.0.1</p><p>&nbsp; `-- webpack-core@0.6.8</p><p>&nbsp; &nbsp; +-- source-list-map@0.1.6</p><p>&nbsp; &nbsp; `-- source-map@0.4.4</p><p>&nbsp; &nbsp; &nbsp; `-- amdefine@1.0.0npm WARN optional Skipping failed optional dependency /chokidar/fsevents:</p><p>npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.0.14npm WARN w1@1.0.0 No description</p><p>npm WARN w1@1.0.0 No repository field.&gt;</p><p>&nbsp;</p><p>这时候，你再检查一下 package.json 文件，它应该多了三行。</p><p>{ &nbsp;&quot;name&quot;: &quot;w1&quot;, &nbsp;&quot;version&quot;: &quot;1.0.0&quot;, &nbsp;&quot;description&quot;: &quot;&quot;, &nbsp;&quot;main&quot;: &quot;index.js&quot;, &nbsp;&quot;dependencies&quot;: {}, &nbsp;&quot;devDependencies&quot;: { &nbsp; &nbsp;&quot;webpack&quot;: &quot;^1.13.2&quot;</p><p>&nbsp; }, &nbsp;&quot;scripts&quot;: { &nbsp; &nbsp;&quot;test&quot;: &quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</p><p>&nbsp; }, &nbsp;&quot;keywords&quot;: [], &nbsp;&quot;author&quot;: &quot;&quot;, &nbsp;&quot;license&quot;: &quot;ISC&quot;}</p><p>&nbsp;</p><p>&nbsp;</p><p>4. &nbsp;Hello, Webpack</p><p>&nbsp;</p><p>4.1 打包普通脚本文件</p><p>写一段普通的脚本，例如，一个 Hellowrold 脚本。当然了，这里应该是 Hello，Webpack.</p><p>function hello(){</p><p>&nbsp; &nbsp; alert(&quot;Hello, Webpack!&quot;);</p><p>}</p><p>&nbsp;</p><p>保存到你的项目根目录中，文件名就叫 hello.js</p><p>4.2 创建 Webpack 配置文件</p><p>Webpack 根据配置文件的配置来完成打包，默认的配置文件名称是 webpack.config.js。</p><p>Webpack 的工作很简单，就是打包，你需要告诉它打包的内容，还有输出到哪里。entry 就是入口，显然 output 就是输出。</p><p>我们让 Webpack 将 hello.js 文件打包后输出到 bundle.js 文件中。</p><p>module.exports = { &nbsp;// 入口</p><p>&nbsp; entry: &quot;./hello.js&quot;, &nbsp;// 输出的文件名 &nbsp;output: {</p><p>&nbsp; &nbsp; filename: &#39;bundle.js&#39;</p><p>&nbsp; }</p><p>};</p><p>&nbsp;在命令窗口，输入 webpack 回车执行。应该会看到如下的输出。</p><p>&gt; webpack</p><p>Hash: 05c39d9076887c35f015</p><p>Version: webpack 1.13.2Time: 59ms</p><p>&nbsp; &nbsp; Asset &nbsp; &nbsp; Size &nbsp;Chunks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chunk Names</p><p>bundle.js &nbsp;1.44 kB &nbsp; &nbsp; &nbsp; 0 &nbsp;[emitted] &nbsp;main</p><p>&nbsp; &nbsp;[0] ./hello.js 51 bytes {0} [built]</p><p>&gt;</p><p>&nbsp;默认的入口文件名为 index.js，如果你将 hello.js 改名为 index.js，还可以直接使用目录名，不用提供文件名。</p><p>module.exports = { &nbsp;// 入口，默认入口文件名为 index.js</p><p>&nbsp; entry: &quot;.&quot;, &nbsp;// 输出的文件名 &nbsp;output: {</p><p>&nbsp; &nbsp; filename: &#39;bundle.js&#39;</p><p>&nbsp; }</p><p>};</p><p>生成的 bundle.js 文件内容为</p><p>/******/ (function(modules) { // webpackBootstrap/******/ &nbsp; &nbsp; // The module cache/******/ &nbsp; &nbsp; var installedModules = {};/******/ &nbsp; &nbsp; // The require function/******/ &nbsp; &nbsp; function __webpack_require__(moduleId) {/******/ &nbsp; &nbsp; &nbsp; &nbsp; // Check if module is in cache/******/ &nbsp; &nbsp; &nbsp; &nbsp; if(installedModules[moduleId])/******/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; return installedModules[moduleId].exports;/******/ &nbsp; &nbsp; &nbsp; &nbsp; // Create a new module (and put it into the cache)/******/ &nbsp; &nbsp; &nbsp; &nbsp; var module = installedModules[moduleId] = {/******/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; exports: {},/******/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id: moduleId,/******/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; loaded: false/******/ &nbsp; &nbsp; &nbsp; &nbsp; };/******/ &nbsp; &nbsp; &nbsp; &nbsp; // Execute the module function/******/ &nbsp; &nbsp; &nbsp; &nbsp; modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);/******/ &nbsp; &nbsp; &nbsp; &nbsp; // Flag the module as loaded/******/ &nbsp; &nbsp; &nbsp; &nbsp; module.loaded = true;/******/ &nbsp; &nbsp; &nbsp; &nbsp; // Return the exports of the module/******/ &nbsp; &nbsp; &nbsp; &nbsp; return module.exports;/******/ &nbsp; &nbsp; }/******/ &nbsp; &nbsp; // expose the modules object (__webpack_modules__)/******/ &nbsp; &nbsp; __webpack_require__.m = modules;/******/ &nbsp; &nbsp; // expose the module cache/******/ &nbsp; &nbsp; __webpack_require__.c = installedModules;/******/ &nbsp; &nbsp; // __webpack_public_path__/******/ &nbsp; &nbsp; __webpack_require__.p = &quot;&quot;;/******/ &nbsp; &nbsp; // Load entry module and return exports/******/ &nbsp; &nbsp; return __webpack_require__(0);/******/ })/************************************************************************//******/ ([/* 0 *//***/ function(module, exports) { &nbsp; &nbsp;function hello(){</p><p>&nbsp; &nbsp; &nbsp; &nbsp; alert(&quot;Hello, Webpack!&quot;);</p><p>&nbsp; &nbsp; }/***/ }/******/ ]);</p><p>&nbsp;大多都是注释，最后就是我们的脚本。</p><p>&nbsp;</p><p>4.2 将脚本嵌入到网页中</p><p>刚刚只是一段脚本，还需要放到网页中才能执行。我们可以安装一个自动帮我们生成宿主网页的 webpack 插件 html-webpack-plugin 来帮助我们。</p><p>npm install html-webpack-plugin --save-dev</p><p>应该会看到如下的输出。</p><p>&gt; npm install html-webpack-plugin --save-dev</p><p>w1@1.0.0 w1</p><p>`-- html-webpack-plugin@2.24.0</p><p>&nbsp; +-- bluebird@3.4.6</p><p>&nbsp; +-- html-minifier@3.1.0</p><p>&nbsp; | +-- change-case@3.0.0</p><p>&nbsp; | | +-- camel-case@3.0.0</p><p>&nbsp; | | +-- constant-case@2.0.0</p><p>&nbsp; | | +-- dot-case@2.1.0</p><p>&nbsp; | | +-- header-case@1.0.0</p><p>&nbsp; | | +-- is-lower-case@1.1.3</p><p>&nbsp; | | +-- is-upper-case@1.1.2</p><p>&nbsp; | | +-- lower-case@1.1.3</p><p>&nbsp; | | +-- lower-case-first@1.0.2</p><p>&nbsp; | | +-- no-case@2.3.0</p><p>&nbsp; | | +-- param-case@2.1.0</p><p>&nbsp; | | +-- pascal-case@2.0.0</p><p>&nbsp; | | +-- path-case@2.1.0</p><p>&nbsp; | | +-- sentence-case@2.1.0</p><p>&nbsp; | | +-- snake-case@2.1.0</p><p>&nbsp; | | +-- swap-case@1.1.2</p><p>&nbsp; | | +-- title-case@2.1.0</p><p>&nbsp; | | +-- upper-case@1.1.3</p><p>&nbsp; | | `-- upper-case-first@1.1.2</p><p>&nbsp; | +-- clean-css@3.4.20</p><p>&nbsp; | | +-- commander@2.8.1</p><p>&nbsp; | | `-- source-map@0.4.4</p><p>&nbsp; | +-- commander@2.9.0</p><p>&nbsp; | | `-- graceful-readlink@1.0.1</p><p>&nbsp; | +-- he@1.1.0</p><p>&nbsp; | +-- ncname@1.0.0</p><p>&nbsp; | | `-- xml-char-classes@1.0.0</p><p>&nbsp; | +-- relateurl@0.2.7</p><p>&nbsp; | `-- uglify-js@2.7.3</p><p>&nbsp; | &nbsp; `-- async@0.2.10</p><p>&nbsp; +-- lodash@4.16.4</p><p>&nbsp; +-- pretty-error@2.0.2</p><p>&nbsp; | +-- renderkid@2.0.0</p><p>&nbsp; | | +-- css-select@1.2.0</p><p>&nbsp; | | | +-- boolbase@1.0.0</p><p>&nbsp; | | | +-- css-what@2.1.0</p><p>&nbsp; | | | +-- domutils@1.5.1</p><p>&nbsp; | | | | `-- dom-serializer@0.1.0</p><p>&nbsp; | | | | &nbsp; +-- domelementtype@1.1.3</p><p>&nbsp; | | | | &nbsp; `-- entities@1.1.1</p><p>&nbsp; | | | `-- nth-check@1.0.1</p><p>&nbsp; | | +-- dom-converter@0.1.4</p><p>&nbsp; | | | `-- utila@0.3.3</p><p>&nbsp; | | +-- htmlparser2@3.3.0</p><p>&nbsp; | | | +-- domelementtype@1.3.0</p><p>&nbsp; | | | +-- domhandler@2.1.0</p><p>&nbsp; | | | +-- domutils@1.1.6</p><p>&nbsp; | | | `-- readable-stream@1.0.34</p><p>&nbsp; | | | &nbsp; `-- isarray@0.0.1</p><p>&nbsp; | | +-- strip-ansi@3.0.1</p><p>&nbsp; | | | `-- ansi-regex@2.0.0</p><p>&nbsp; | | `-- utila@0.3.3</p><p>&nbsp; | `-- utila@0.4.0</p><p>&nbsp; `-- toposort@1.0.0npm WARN optional Skipping failed optional dependency /chokidar/fsevents:</p><p>npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.0.14npm WARN w1@1.0.0 No description</p><p>npm WARN w1@1.0.0 No repository field.&gt;</p><p>这说明这个插件安装好了。</p><p>配置 Webpack 使用这个插件，帮助我们生成一个网页，然后将打包的脚本自动插入到这个网页中。</p><p>var HtmlwebpackPlugin = require(&#39;html-webpack-plugin&#39;);</p><p><br/></p><p>module.exports = { &nbsp;// 入口</p><p>&nbsp; entry: &quot;.&quot;, &nbsp;// 输出的文件名 &nbsp;output: {</p><p>&nbsp; &nbsp; filename: &#39;bundle.js&#39;</p><p>&nbsp; }, &nbsp;// 添加我们的插件 会自动生成一个html文件 &nbsp;plugins: [ &nbsp; &nbsp;new HtmlwebpackPlugin({</p><p>&nbsp; &nbsp; &nbsp; title: &#39;Hello Webpack&#39;</p><p>&nbsp; &nbsp; })</p><p>&nbsp; ]</p><p>};</p><p>其实，这个配置文件就是一段程序，注意第一行，一定要加上。</p><p>重新执行 webpack 命令。你会看到多生成了一个名为 index.html 的网页。</p><p>&gt; webpack</p><p>Hash: 05c39d9076887c35f015</p><p>Version: webpack 1.13.2Time: 560ms</p><p>&nbsp; &nbsp; &nbsp;Asset &nbsp; &nbsp; &nbsp; Size &nbsp;Chunks &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Chunk Names</p><p>&nbsp;bundle.js &nbsp; &nbsp;1.44 kB &nbsp; &nbsp; &nbsp; 0 &nbsp;[emitted] &nbsp;mainindex.html &nbsp;184 bytes &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[emitted]</p><p>&nbsp; &nbsp;[0] ./index.js 51 bytes {0} [built]</p><p>Child html-webpack-plugin for &quot;index.html&quot;: &nbsp; &nbsp; &nbsp; &nbsp;+ 3 hidden modules&gt;</p><p>&nbsp;</p><p>打开这个网页，检查插入的脚本引用。</p><p>&lt;!DOCTYPE html&gt;&lt;html&gt;</p><p>&nbsp; &lt;head&gt;</p><p>&nbsp; &nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</p><p>&nbsp; &nbsp; &lt;title&gt;Hello Webpack&lt;/title&gt;</p><p>&nbsp; &lt;/head&gt;</p><p>&nbsp; &lt;body&gt;</p><p>&nbsp; &lt;script type=&quot;text/javascript&quot; src=&quot;bundle.js&quot;&gt;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</p><p>&nbsp;</p><p>&nbsp;</p><p>5. 总结</p><p>Webpack 是一个基于 NodeJs 的打包工具，我们可以使用它帮助我们将脚本打包，它还可以帮助我们生成宿主网页，并自动将打包之后的脚本嵌入到这个网页中。</p><p>&nbsp;</p><p>附录：</p><p>html-webpack-plugin 插件的使用说明</p><p><br/></p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('Webpack教程01_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1874.html">webpack学习指南</a>&nbsp;&nbsp;下一条： <a href="/html/News/1853.html">微信小程序第一批吃螃蟹的人</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1878.html" title="git常用命令汇总" >git常用命令汇总</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1877.html" title="Git 常用命令介绍" >Git 常用命令介绍</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1875.html" title="Grunt.js学习教程" >Grunt.js学习教程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1874.html" title="webpack学习指南" >webpack学习指南</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1873.html" title="Webpack教程01" >Webpack教程01</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1853.html" title="微信小程序第一批吃螃蟹的人" >微信小程序第一批吃螃蟹的人</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1803.html" title="前端面试题-事件监听、继承、闭包、跨域、性能" >前端面试题-事件监听、继承、…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1781.html" title="HTML5 Canvas学习笔记-处理鼠标事件" >HTML5 Canvas学习笔记-处理鼠…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1780.html" title="canvas学习笔记" >canvas学习笔记</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/557.html" title="XML&nbsp;Schema学习笔记(1)">XML Schema学习笔记(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/558.html" title="XML&nbsp;Schema学习笔记(2)">XML Schema学习笔记(2)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/540.html" title="C#对XML文档的操作">C#对XML文档的操作</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/612.html" title="ASP操作XMLDOM">ASP操作XMLDOM</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/239.html" title="XML入门教程：分析XML">XML入门教程：分析XML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/241.html" title="百度新闻开放协议XML文档制作方法简述">百度新闻开放协议XML文档制作方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/528.html" title="XSL&nbsp;语言">XSL 语言</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/848.html" title="用RSS做五分钟一自动更新的网站">用RSS做五分钟一自动更新的网站</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/240.html" title="XML入门教程：文档类型声明">XML入门教程：文档类型声明</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/242.html" title="XML教程:通过一个例子来学习XML的语法">XML教程:通过一个例子来学习XML的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/236.html" title="XML节点相关知识">XML节点相关知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/758.html" title="把XML文件绑定到列表控件">把XML文件绑定到列表控件</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/892.html" title="XML+XSLT+CSS+JQuery+WebService组建Asp.Net网站">XML+XSLT+CSS+JQuery+WebService组…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/847.html" title="XHTML头部Doctype声明必不可少！">XHTML头部Doctype声明必不可少！</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/244.html" title="历数Firefox2.0对XML处理的改进">历数Firefox2.0对XML处理的改进</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1878.html" title="git常用命令汇总" >git常用命令汇总</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1877.html" title="Git&nbsp;常用命令介绍" >Git 常用命令介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1875.html" title="Grunt.js学习教程" >Grunt.js学习教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1874.html" title="webpack学习指南" >webpack学习指南</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1873.html" title="Webpack教程01" >Webpack教程01</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1853.html" title="微信小程序第一批吃螃蟹的人" >微信小程序第一批吃螃蟹的人</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1803.html" title="前端面试题-事件监听、继承、闭包、跨域、性能" >前端面试题-事件监听、继承、闭包…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1781.html" title="HTML5&nbsp;Canvas学习笔记-处理鼠标事件" >HTML5 Canvas学习笔记-处理鼠标事…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1780.html" title="canvas学习笔记" >canvas学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1776.html" title="自行制作网页的图标ICON" >自行制作网页的图标ICON</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1773.html" title="MVC,&nbsp;MVP,&nbsp;MVVM区别" >MVC, MVP, MVVM区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1770.html" title="HBuilder为什么无法设置Courier&nbsp;New字体？" >HBuilder为什么无法设置Courier N…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1769.html" title="DIV&nbsp;自动滚动及滚动条颜色设置" >DIV 自动滚动及滚动条颜色设置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1768.html" title="移动互联网大环境下如何学习前端开发" >移动互联网大环境下如何学习前端开…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1765.html" title="Javascript模块化开发详解" >Javascript模块化开发详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1873" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

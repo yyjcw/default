@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>C#对XML文档的操作_web前端技术_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="C#对XML文档的操作" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; web前端技术
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        C#对XML文档的操作
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/10 21:22:54
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        C#对XML文档的操作
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <div>已知有一个XML文件（bookstore.xml）如下：<br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;gb2312&quot;?&gt;<br />
+&lt;bookstore&gt;<br />
+<wbr></wbr>&lt;book genre=&quot;fantasy&quot; ISBN=&quot;2-3631-4&quot;&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;Oberon's Legacy&lt;/title&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;author&gt;Corets, Eva&lt;/author&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;price&gt;5.95&lt;/price&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+&lt;/bookstore&gt;</div>
+<div><strong><font color="#c00000">1、往&lt;bookstore&gt;节点中插入一个&lt;book&gt;节点：<br />
+</font></strong><wbr></wbr><wbr></wbr>XmlDocument xmlDoc=new XmlDocument();<br />
+<wbr></wbr><wbr></wbr>xmlDoc.Load(&quot;bookstore.xml&quot;);<br />
+<wbr></wbr><wbr></wbr>XmlNode root=xmlDoc.SelectSingleNode(&quot;bookstore&quot;);//查找&lt;bookstore&gt;<br />
+<wbr></wbr><wbr></wbr>XmlElement xe1=xmlDoc.CreateElement(&quot;book&quot;);//创建一个&lt;book&gt;节点<br />
+<wbr></wbr><wbr></wbr>xe1.SetAttribute(&quot;genre&quot;,&quot;李赞红&quot;);//设置该节点genre属性<br />
+<wbr></wbr><wbr></wbr>xe1.SetAttribute(&quot;ISBN&quot;,&quot;2-3631-4&quot;);//设置该节点ISBN属性<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr>XmlElement xesub1=xmlDoc.CreateElement(&quot;title&quot;);<br />
+<wbr></wbr><wbr></wbr>xesub1.InnerText=&quot;CS从入门到精通&quot;;//设置文本节点<br />
+<wbr></wbr><wbr></wbr>xe1.AppendChild(xesub1);//添加到&lt;book&gt;节点中<br />
+<wbr></wbr><wbr></wbr>XmlElement xesub2=xmlDoc.CreateElement(&quot;author&quot;);<br />
+<wbr></wbr><wbr></wbr>xesub2.InnerText=&quot;候捷&quot;;<br />
+<wbr></wbr><wbr></wbr>xe1.AppendChild(xesub2);<br />
+<wbr></wbr><wbr></wbr>XmlElement xesub3=xmlDoc.CreateElement(&quot;price&quot;);<br />
+<wbr></wbr><wbr></wbr>xesub3.InnerText=&quot;58.3&quot;;<br />
+<wbr></wbr><wbr></wbr>xe1.AppendChild(xesub3);<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr>root.AppendChild(xe1);//添加到&lt;bookstore&gt;节点中<br />
+<wbr></wbr><wbr></wbr>xmlDoc.Save(&quot;bookstore.xml&quot;);<br />
+//===============================================<br />
+结果为：<br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;gb2312&quot;?&gt;<br />
+&lt;bookstore&gt;<br />
+<wbr></wbr>&lt;book genre=&quot;fantasy&quot; ISBN=&quot;2-3631-4&quot;&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;Oberon's Legacy&lt;/title&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;author&gt;Corets, Eva&lt;/author&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;price&gt;5.95&lt;/price&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+<wbr></wbr>&lt;book genre=&quot;李赞红&quot; ISBN=&quot;2-3631-4&quot;&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;CS从入门到精通&lt;/title&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;author&gt;候捷&lt;/author&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;price&gt;58.3&lt;/price&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+&lt;/bookstore&gt;</div>
+<div><strong><font color="#c00000">2、修改节点：将genre属性值为&ldquo;李赞红&ldquo;的节点的genre值改为&ldquo;update李赞红&rdquo;，将该节点的子节点&lt;author&gt;的文本修改为&ldquo;亚胜&rdquo;。</font></strong><br />
+<wbr></wbr><wbr></wbr><wbr></wbr>XmlNodeList nodeList=xmlDoc.SelectSingleNode(&quot;bookstore&quot;).ChildNodes;//获取bookstore节点的所有子节点<br />
+<wbr></wbr><wbr></wbr>foreach(XmlNode xn in nodeList)//遍历所有子节点<br />
+<wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>XmlElement xe=(XmlElement)xn;//将子节点类型转换为 <a herf="http://xgai.cn">搞笑的qq表情</a> XmlElement类型<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>if(xe.GetAttribute(&quot;genre&quot;)==&quot;李赞红&quot;)//如果genre属性值为&ldquo;李赞红&rdquo;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>xe.SetAttribute(&quot;genre&quot;,&quot;update李赞红&quot;);//则修改该属性为&ldquo;update李赞红&rdquo;<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>XmlNodeList nls=xe.ChildNodes;//继续获取xe子节点的所有子节点<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>foreach(XmlNode xn1 in nls)//遍历<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>XmlElement xe2=(XmlElement)xn1;//转换类型<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>if(xe2.Name==&quot;author&quot;)//如果找到<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>xe2.InnerText=&quot;亚胜&quot;;//则修改<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>break;//找到退出来就可以了<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>break;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr>xmlDoc.Save(&quot;bookstore.xml&quot;);//保存。<br />
+//==================================================<br />
+最后结果为：<br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;gb2312&quot;?&gt;<br />
+&lt;bookstore&gt;<br />
+<wbr></wbr>&lt;book genre=&quot;fantasy&quot; ISBN=&quot;2-3631-4&quot;&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;Oberon's Legacy&lt;/title&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;author&gt;Corets, Eva&lt;/author&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;price&gt;5.95&lt;/price&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+<wbr></wbr>&lt;book genre=&quot;update李赞红&quot; ISBN=&quot;2-3631-4&quot;&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;CS从入门到精通&lt;/title&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;author&gt;亚胜&lt;/author&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;price&gt;58.3&lt;/price&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+&lt;/bookstore&gt;</div>
+<div><strong><font color="#c00000">3、删除 &lt;book genre=&quot;fantasy&quot; ISBN=&quot;2-3631-4&quot;&gt;节点的genre属性，删除 &lt;book genre=&quot;update李赞红&quot; ISBN=&quot;2-3631-4&quot;&gt;节点。</font></strong><br />
+XmlNodeList xnl=xmlDoc.SelectSingleNode(&quot;bookstore&quot;).ChildNodes;<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr>foreach(XmlNode xn in xnl)<br />
+<wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>XmlElement xe=(XmlElement)xn;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>if(xe.GetAttribute(&quot;genre&quot;)==&quot;fantasy&quot;)<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>xe.RemoveAttribute(&quot;genre&quot;);//删除genre属性<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>else if(xe.GetAttribute(&quot;genre&quot;)==&quot;update李赞红&quot;)<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>xe.RemoveAll();//删除该节点的全部内容<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr>xmlDoc.Save(&quot;bookstore.xml&quot;);<br />
+//===========================================<br />
+最后结果为：<br />
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;gb2312&quot;?&gt;<br />
+&lt;bookstore&gt;<br />
+<wbr></wbr>&lt;book ISBN=&quot;2-3631-4&quot;&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;Oberon's Legacy&lt;/title&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;author&gt;Corets, Eva&lt;/author&gt;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>&lt;price&gt;5.95&lt;/price&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+<wbr></wbr>&lt;book&gt;<br />
+<wbr></wbr>&lt;/book&gt;<br />
+&lt;/bookstore&gt;<br />
+<strong><font color="#c00000">4、显示所有数据。</font></strong><br />
+<wbr></wbr><wbr></wbr>XmlNode xn=xmlDoc.SelectSingleNode(&quot;bookstore&quot;);<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr>XmlNodeList xnl=xn.ChildNodes;<br />
+<wbr></wbr><wbr></wbr><br />
+<wbr></wbr><wbr></wbr>foreach(XmlNode xnf in xnl)<br />
+<wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>XmlElement xe=(XmlElement)xnf;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>Console.WriteLine(xe.GetAttribute(&quot;genre&quot;));//显示属性值<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>Console.WriteLine(xe.GetAttribute(&quot;ISBN&quot;));<br />
+<wbr></wbr><br />
+<wbr></wbr><wbr></wbr><wbr></wbr>XmlNodeList xnf1=xe.ChildNodes;<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>foreach(XmlNode xn2 in xnf1)<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>{<br />
+<wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>Console.WriteLine(xn2.InnerText);//显示子节点点文本<br />
+<wbr></wbr><wbr></wbr><wbr></wbr>}<br />
+<wbr></wbr><wbr></wbr>}</div>
+<div><strong><font color="#c00000">5.向目标XML文件添加新节点 <wbr></wbr></font></strong><wbr></wbr><wbr></wbr><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> <wbr></wbr>namespace='system.xml'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;% <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>dim <wbr></wbr><wbr></wbr>userdom1=new <wbr></wbr><wbr></wbr>xmldocument,userdom2,userdom3 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.load <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'装载需要操作的XML文件 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom2=userdom1.selectsinglenode(&quot;alluser&quot;) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'操作游标指向alluser节点,句柄给userdom2变量 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom3=userdom1.createElement(&quot;fyw&quot;) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'新创建一名为fyw的节点,并将句柄给userdom3变量 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom3.setAttribute(&quot;name&quot;,&quot;风云舞&quot;) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'为userdom3添加节点属性,新属性名为name,值为风云舞 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom3.setAttribute(&quot;pass&quot;,&quot;123&quot;) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom3.innerText=&quot;测试&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'设置userdom3节点所包含的数据 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom2.AppendChild(userdom3) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'userdom2即alluser节点下添加userdom3所描述的fyw节点 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.save <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'将变动后的新XML数据保存到user.xml <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>%&gt;</div>
+<div><strong><font color="#c00000">6:修改XML节点 <wbr></wbr><wbr></wbr></font></strong><wbr></wbr><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> <wbr></wbr><wbr></wbr>namespace='system.xml'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;% <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>dim <wbr></wbr><wbr></wbr>userdom1=new <wbr></wbr><wbr></wbr>xmldocument,userdom2 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.load <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom2=userdom1.selectsinglenode(&quot;alluser&quot;).getElementsBytagname(&quot;fyw&quot;) '操作游标指向alluser节点下的fyw节点 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom2(0).setAttribute(&quot;name&quot;,&quot;风云舞&quot;) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'设定fyw节点数组的第一个,将其name属性值修改为风云舞 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom2(0).innerText=&quot;测试&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'设定fyw节点数组的第一个,将其所包含的数据改为测试 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.save <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>'将变动后的新XML数据保存到user.xml <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>%&gt; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><br />
+<strong><font color="#c00000">7:查找判断XML节点是否存在 <wbr></wbr><wbr></wbr><wbr></wbr></font></strong><wbr></wbr><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> <wbr></wbr><wbr></wbr>namespace='system.xml'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;% <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>dim <wbr></wbr><wbr></wbr>userdom1=new <wbr></wbr><wbr></wbr>xmldocument <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.load <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr>'装载需要操作的XML文件 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>'以下正是本人为什么要用&ldquo;用户帐号&rdquo;标识用户唯一身份的目的，查找方便呀：） <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>if <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.selectsinglenode(&quot;alluser&quot;).getElementsBytagname(&quot;fyw&quot;).count&lt;&gt;0 <wbr></wbr><br />
+<wbr></wbr>then <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>t2(&quot;fyw节点以存在&quot;) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>%&gt; <wbr></wbr><wbr></wbr></div>
+<div><strong><font color="#c00000">8:批量添加XML节点（在编写回复帖子时，用第4例提到的方法一个一个填加节点很麻烦，这时可以考虑用此方法批量填加）</font></strong> <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> <wbr></wbr><wbr></wbr>namespace='system.xml'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;% <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>dim <wbr></wbr><wbr></wbr>filedom=new <wbr></wbr><wbr></wbr>xmldocument,filedom2 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>filedom.load(server.mappath(&quot;data\&quot;&amp;request.querystring(&quot;dex&quot;))) <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><br />
+<wbr></wbr>'request.querystring(&quot;dex&quot;)=6.xml <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>filedom2=filedom.createElement(&quot;reply&quot;) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>'以下这种方法很方便，而且对XML文件的结构排版也很好，合理的空格和回车可以表现良好的XML文档结构 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>filedom2.innerXml=vbcrlf&amp;&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;anthor&gt;&quot;&amp;session(&quot;who&quot;)&amp;&quot;&lt;/anthor&gt;&quot;&amp;vbcrlf&amp;&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;date&gt;&quot;<br />
+<wbr></wbr>&amp;now&amp;&quot;&lt;/date&gt;&quot;&amp;vbcrlf&amp;&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;gengxindate&gt;&quot;&amp;now&amp;&quot;&lt;/gengxindate&gt;&quot;&amp;vbcrlf&amp;&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;body&gt;&quot;&amp;<br />
+<wbr></wbr>neirong.value &amp; &quot;&lt;/body&gt;&quot; &amp; vbcrlf &amp; &quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&quot;<br />
+<wbr></wbr>filedom.selectsinglenode(&quot;document/record&quot;).appendChild(filedom2) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>filedom.save(server.mappath(&quot;data\&quot; &amp; request.querystring(&quot;dex&quot;)))<br />
+<wbr></wbr>'request.querystring(&quot;dex&quot;)=6.xml <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>%&gt; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><br />
+<strong><font color="#c00000">9:删除XML节点 <wbr></wbr><wbr></wbr><wbr></wbr></font></strong><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> <wbr></wbr><wbr></wbr>namespace='system.xml'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;% <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>dim <wbr></wbr><wbr></wbr>userdom1=new <wbr></wbr><wbr></wbr>xmldocument,userdom2 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.load <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.DocumentElement.RemoveChild(userdom1.selectsinglenode(&quot;alluser/fyw&quot;))<br />
+<wbr></wbr>'删除alluser节点下的所有fyw节点 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>userdom1.save <wbr></wbr><wbr></wbr>(server.mappath(&quot;user.xml&quot;)) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>%&gt; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><br />
+<strong><font color="#c00000">10:创建新的XML文件（可以创建任何类型后缀的文件，不局于XML文件）</font></strong> <wbr></wbr><wbr></wbr><wbr></wbr><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> <wbr></wbr><wbr></wbr>namespace='system.io'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;% <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>dim newfile=new StreamWriter(server.mappath(&quot;data\&quot; &amp; new DirectoryInfo(server.mappath(&quot;data&quot;)).getfiles().length+1 &amp; &quot;.xml&quot;),false,System.Text.Encoding.Default) <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>'以上我们指定默认编码方式为System.Text.encoding.default,或者可改为System.Text.encoding.GetEncoding(&quot;gb2312&quot;),不然将以UTF8编码那样XML含有中文就无法正常工作了 <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>newfile.write (&quot;&lt;?xml version=&quot; &amp; chr(34) &amp; &quot;1.0&quot; &amp; chr(34) &amp; &quot; encoding=&quot; &amp; chr(34) &amp; &quot;gb2312&quot; &amp; chr(34) &amp; &quot;?&gt;&quot; <wbr></wbr><wbr></wbr>&amp; _<br />
+vbcrlf &amp; <wbr></wbr>&quot;&lt;?xml-stylesheet type='text/xsl' href='../file.aspx?dex=&quot; &amp; filelength+1 &amp; &quot;.xml'?&gt;&quot; &amp; vbcrlf &amp; _ <wbr></wbr><wbr></wbr><br />
+&quot;&lt;document&gt;&quot; &amp; vbcrlf &amp; &quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;record&gt;&quot; &amp; vbcrlf &amp; &quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;anthor&gt;&quot; &amp; session(&quot;who&quot;) &amp; &quot;&lt;/anthor&gt;&quot; &amp; vbcrlf &amp; _ <wbr></wbr><wbr></wbr><br />
+&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;title&gt;&quot; &amp; server.HTMLEncode(biaoti.value) &amp; &quot;&lt;/title&gt;&quot; &amp; vbcrlf &amp; &quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;date&gt;&quot; &amp; now &amp; &quot;&lt;/date&gt;&quot; &amp; vbcrlf &amp; &quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;gengxindate&gt;&quot; &amp; now &amp; &quot;&lt;/gengxindate&gt;&quot; &amp; vbcrlf &amp; &quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;body&gt;&quot; &amp; server.HTMLEncode(neirong.text) &amp; &quot;&lt;/body&gt;&quot; &amp; vbcrlf &amp;&quot; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr>&lt;/record&gt;&quot; &amp; vbcrlf &amp; &quot;&lt;/document&gt;&quot;)<br />
+newfile.close:newfile=nothing <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>%&gt; <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr><br />
+<strong><font color="#c00000">11:删除指定文件 <wbr></wbr><wbr></wbr><wbr></wbr><wbr></wbr></font></strong><br />
+&lt;<a href="mailto:%@ "><font color="#b99f8a">%@import</font></a> namespace='system.io'%&gt; <wbr></wbr><wbr></wbr><br />
+<wbr></wbr>&lt;%file.delete(server.mappath(&quot;data\2.xml&quot;))%&gt;</div>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('C#对XML文档的操作_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/557.html">XML Schema学习笔记(1)</a>&nbsp;&nbsp;下一条： <a href="/html/News/528.html">XSL 语言</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1878.html" title="git常用命令汇总" >git常用命令汇总</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1877.html" title="Git 常用命令介绍" >Git 常用命令介绍</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1875.html" title="Grunt.js学习教程" >Grunt.js学习教程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1874.html" title="webpack学习指南" >webpack学习指南</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1873.html" title="Webpack教程01" >Webpack教程01</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1853.html" title="微信小程序第一批吃螃蟹的人" >微信小程序第一批吃螃蟹的人</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1803.html" title="前端面试题-事件监听、继承、闭包、跨域、性能" >前端面试题-事件监听、继承、…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1781.html" title="HTML5 Canvas学习笔记-处理鼠标事件" >HTML5 Canvas学习笔记-处理鼠…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1780.html" title="canvas学习笔记" >canvas学习笔记</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/557.html" title="XML&nbsp;Schema学习笔记(1)">XML Schema学习笔记(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/558.html" title="XML&nbsp;Schema学习笔记(2)">XML Schema学习笔记(2)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/540.html" title="C#对XML文档的操作">C#对XML文档的操作</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/612.html" title="ASP操作XMLDOM">ASP操作XMLDOM</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/239.html" title="XML入门教程：分析XML">XML入门教程：分析XML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/241.html" title="百度新闻开放协议XML文档制作方法简述">百度新闻开放协议XML文档制作方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/528.html" title="XSL&nbsp;语言">XSL 语言</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/848.html" title="用RSS做五分钟一自动更新的网站">用RSS做五分钟一自动更新的网站</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/240.html" title="XML入门教程：文档类型声明">XML入门教程：文档类型声明</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/242.html" title="XML教程:通过一个例子来学习XML的语法">XML教程:通过一个例子来学习XML的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/236.html" title="XML节点相关知识">XML节点相关知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/758.html" title="把XML文件绑定到列表控件">把XML文件绑定到列表控件</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/892.html" title="XML+XSLT+CSS+JQuery+WebService组建Asp.Net网站">XML+XSLT+CSS+JQuery+WebService组…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/847.html" title="XHTML头部Doctype声明必不可少！">XHTML头部Doctype声明必不可少！</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/244.html" title="历数Firefox2.0对XML处理的改进">历数Firefox2.0对XML处理的改进</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1878.html" title="git常用命令汇总" >git常用命令汇总</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1877.html" title="Git&nbsp;常用命令介绍" >Git 常用命令介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1875.html" title="Grunt.js学习教程" >Grunt.js学习教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1874.html" title="webpack学习指南" >webpack学习指南</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1873.html" title="Webpack教程01" >Webpack教程01</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1853.html" title="微信小程序第一批吃螃蟹的人" >微信小程序第一批吃螃蟹的人</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1803.html" title="前端面试题-事件监听、继承、闭包、跨域、性能" >前端面试题-事件监听、继承、闭包…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1781.html" title="HTML5&nbsp;Canvas学习笔记-处理鼠标事件" >HTML5 Canvas学习笔记-处理鼠标事…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1780.html" title="canvas学习笔记" >canvas学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1776.html" title="自行制作网页的图标ICON" >自行制作网页的图标ICON</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1773.html" title="MVC,&nbsp;MVP,&nbsp;MVVM区别" >MVC, MVP, MVVM区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1770.html" title="HBuilder为什么无法设置Courier&nbsp;New字体？" >HBuilder为什么无法设置Courier N…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1769.html" title="DIV&nbsp;自动滚动及滚动条颜色设置" >DIV 自动滚动及滚动条颜色设置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1768.html" title="移动互联网大环境下如何学习前端开发" >移动互联网大环境下如何学习前端开…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1765.html" title="Javascript模块化开发详解" >Javascript模块化开发详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "540" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

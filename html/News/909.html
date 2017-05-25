@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>PHP中如何通过Web执行C/C++应用程序？_MVC_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="&nbsp;如果你对Unix/Linux有所了解的话，你应该知道他们大都自带了C和C++的编译器，分别是GCC和G++。Unix在程序安装及Make等许多地方使用到了这些编译器。利用一些控制台命令，C++和PHP,&nbsp;我将向你介绍怎样生成一个完整的C++程序例子，他可以在用PHP程序来执行，并能获得相应的输出结果。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; MVC
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        PHP中如何通过Web执行C/C++应用程序？
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/25 22:00:16
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        &nbsp;如果你对Unix/Linux有所了解的话，你应该知道他们大都自带了C和C++的编译器，分别是GCC和G++。Unix在程序安装及Make等许多地方使用到了这些编译器。利用一些控制台命令，C++和PHP,&nbsp;我将向你介绍怎样生成一个完整的C++程序例子，他可以在用PHP程序来执行，并能获得相应的输出结果。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><font face="Arial">一、简介</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; 如果你对Unix/Linux有所了解的话，你应该知道他们大都自带了C和C++的编译器，分别是GCC和G++。Unix在程序安装及Make等许多地方使用到了这些编译器。利用一些控制台命令，C++和PHP, 我将向你介绍怎样生成一个完整的C++程序例子，他可以在用PHP程序来执行，并能获得相应的输出结果。我将先生成C++程序代码，并编译它，谈后讨论我们将如果通过使用PHP的函数passthru来执行这个程序。从某种意义上来说，这边文章给我们提供一种通过Web页面来访问一般程序的方法。</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; 为了能更好的理解这篇文章，你应该有一台运行着apache和最新版本php的unix/Linux服务器。同时也应该掌握C++, unix控制台命令，当然一些PHP的编程经验也是必需的。</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; 二、编写一个C++程序</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; 例如，我们可以写一个能够通过命令行还接收参数的C++ 简单程序，并命名为Sampleapp.然后我们能够按照下面的方式给他传递三个不同的参数 ：</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; Sampleapp ?参数一 ?参数二 ?参数三</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; 这个程序的功能是能输出传递给他的参数的个数和每个参数的值，然后我们可以用PHP脚本程序来执行编译好的C++程序。</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; 利用你习惯的文本编辑器，新建一个名为Sampleapp.cpp 的文件，再此文件中输入如下的代码:</font></p>
+<p><font face="Arial">以下为引用的内容：</font></p>
+<p><font face="Arial">#include</font></p>
+<p><font face="Arial">int main(int argc, char* argv[]){</font></p>
+<p><font face="Arial">cout &lt;&lt; endl &lt;&lt; &quot;You passed &quot; &lt;&lt; argc-1 &lt;&lt; &quot; arguement&quot;</font></p>
+<p><font face="Arial">&lt;&lt; (argc-1 == 1 ? &quot;&quot; : &quot;s&quot;) &lt;&lt; &quot;.&quot; &lt;&lt; endl;</font></p>
+<p><font face="Arial">cout &lt;&lt; (argc-1 == 1 ? &quot;This&quot; : &quot;These&quot;)</font></p>
+<p><font face="Arial">&lt;&lt; &quot; arguement&quot; &lt;&lt; (argc-1 == 1 ? &quot;&quot; : &quot;s&quot;) &lt;&lt; &quot; &quot;</font></p>
+<p><font face="Arial">&lt;&lt; (argc-1 == 1 ? &quot;is&quot; : &quot;are&quot;) &lt;&lt; &quot;: &quot; &lt;&lt; endl &lt;&lt; endl;</font></p>
+<p><font face="Arial">for(int i = 1; i &lt; argc; i++)</font></p>
+<p><font face="Arial">cout &lt;&lt; &quot;[&quot; &lt;&lt; i &lt;&lt; &quot;] &quot; &lt;&lt; argv&lt;&lt; endl;</font></p>
+<p><font face="Arial">return 0;</font></p>
+<p><font face="Arial">}<br />
+&nbsp;</font></p>
+<font face="Arial">
+<p><br />
+&nbsp;&nbsp;&nbsp; 这个C++程序包含的程序的入口点：main()，main()函数带了两个参数：argc(命令行传入参数的个数)和argv(一个包含了所传参数实际值的字符型指针数组)。这个两个参数能被C++编译器自动捕获。</p>
+<p>以下为引用的内容：</p>
+<p>cout &lt;&lt; endl &lt;&lt; &quot;You passed &quot; &lt;&lt; argc-1 &lt;&lt; &quot; arguement&quot;</p>
+<p>&lt;&lt; (argc-1 == 1 ? &quot;&quot; : &quot;s&quot;) &lt;&lt; &quot;.&quot; &lt;&lt; endl;;<br />
+&nbsp;</p>
+<p><br />
+&nbsp;&nbsp;&nbsp; 这句话的意思是获得从执行命令行传入的参数的个数。Argv这个字符型指针数组是从0开始检索的，它至少包含一个实际的值(即本程序的路径和名称)，这个值由C++编译器自动地附加上去。条件操作符&rdquo;?&rdquo;是用来判断命令行传入地参数是否多于一个。例如，如果命令行过传入两个参数，我们地程序将输出如下信息:</p>
+<p>以下为引用的内容：</p>
+<p>You passed 2 arguments.</p>
+<p>cout &lt;&lt; (argc-1 == 1 ? &quot;This&quot; : &quot;These&quot;)</p>
+<p>&lt;&lt; &quot; arguement&quot; &lt;&lt; (argc-1 == 1 ? &quot;&quot; : &quot;s&quot;) &lt;&lt; &quot; &quot;</p>
+<p>&lt;&lt; (argc-1 == 1 ? &quot;is&quot; : &quot;are&quot;) &lt;&lt; &quot;: &quot; &lt;&lt; endl &lt;&lt; endl;<br />
+&nbsp;</p>
+<p><br />
+&nbsp;&nbsp;&nbsp; 接下来，我们同样用条件操作符来输出另一句话。不过要记住，即使我们不从程序执行命令行传入任何参数，main函数地argv[]参数也包含一个值。同样地，如果我们从命令行传入两个参数给程序，程序将输出如下地信息：</p>
+<p>以下为引用的内容：</p>
+<p>These arguments are:</p>
+<p>for(int i = 1; i &lt; argc; i++)</p>
+<p>cout &lt;&lt; &quot;[&quot; &lt;&lt; i &lt;&lt; &quot;] &quot; &lt;&lt; argv&lt;&lt; endl;<br />
+&nbsp;</p>
+<p><br />
+&nbsp;&nbsp;&nbsp; 最后，main函数逐一的输出命令行传入的每个参数，它用到了一个简单的for(;;)循环语句，这个函数能根据参数的个数将参数值一个一个的输出。假如我们传给程序两个参数&rdquo;first&rdquo;和second&rdquo;, for循环输出的结果如下:</p>
+<p>&nbsp;&nbsp;&nbsp; [1] ?first</p>
+<p>&nbsp;&nbsp;&nbsp; [2] ?second</p>
+<p>&nbsp;&nbsp;&nbsp; 以上是关于这个C++程序的简单说明，它的功能十分简单，就是将命令行传入的参数用cout函数显示在输出屏幕上。</p>
+<p>&nbsp;&nbsp;&nbsp; 接下来，我们将编译这个.cpp文件，如果你在windows平台下，需要telnet到所使用的server上。在这里，我们使用大多Unix机器上都提供的G++编译器来编译这个源文件。不过为了确信你的机器安装了G++,你可以输入如下命令:which g++。如果G++已经安装了，Unix shell将显示出G++所在的全路径。如果没有安装，它将提示你说&rdquo;command couldn&rsquo;t be found&rdquo;. 你可以在这里下载到G++.</p>
+<p>&nbsp;&nbsp;&nbsp; 在源文件所在的目录输入如下G++命令:</p>
+<p>&nbsp;&nbsp;&nbsp; g++ -c sampleapp.cpp.</p>
+<p>&nbsp;&nbsp;&nbsp; 通过这个命令，我们就将.cpp文件编译成了包含机器代码的目标文件。通过 ls ?a命令，你可以发现在本目录下出现了一个新文件sampleapp.o,这就是.cpp源文件被编译成机器码的结果。不过我们最终想要的是一个可执行文件，因为我们还要输入如下的G++命令:</p>
+<p>&nbsp;&nbsp;&nbsp; g++ sampleapp.cpp ?o sampleapp</p>
+<p>&nbsp;&nbsp;&nbsp; 这样我们就获得了一个名为sampleapp的可执行文件。不过注意的是，Unix下的可执行文件跟Windows不一样，它没有任何后缀。</p>
+<p>&nbsp;&nbsp;&nbsp; 下面我们可以来检验一下程序执行的结果，如果如下命令：</p>
+<p>&nbsp;&nbsp;&nbsp; sampleapp one -two /three</p>
+<p>&nbsp;&nbsp;&nbsp; 我们可以看到如下的执行结果：</p>
+<p>以下为引用的内容：</p>
+<p>You passed 3 arguments.</p>
+<p>These arguments are:</p>
+<p>[1] one</p>
+<p>[2] ?two</p>
+<p>[3] /three<br />
+&nbsp;</p>
+<p><br />
+&nbsp;&nbsp;&nbsp; 现在，可执行的C++程序成生完毕，下面我们将生成一个能够通过 web浏览器来访问这个程序的PHP教本程序。</p>
+<p>&nbsp;&nbsp;&nbsp; 三、生成PHP脚本程序</p>
+<p>&nbsp;&nbsp;&nbsp; 为了能通过Internet来调用我们的C++程序，我们需要生成一个PHP脚本程序。这个PHP脚本程序将有一个Form表单，以便用户能输入可以传给程序Sampleapp的参数。PHP脚本的代码太长就不在这里全部列出了，需要的话可以通过下面的地址来下载它。(Php code)</p>
+<p>以下为引用的内容：</p>
+<p>if(@$submit){</p>
+<p>}</p>
+<p>else{</p>
+<p>}<br />
+&nbsp;</p>
+<p><br />
+&nbsp;&nbsp;&nbsp; 首先,脚本程序检查看变量$submit是否有值，这个变量$submit的值是程序后面的Form表单提交后传递过来的，它缺省为空值。符号@的作用是当变量$submit的值不存在的时忽略相关的错误信息。</p>
+<p>&nbsp;&nbsp;&nbsp; 由于变量$submit缺省为空，所以一开始执行else{}中的代码，它在浏览器上简单的显示一个Form表单。Form的action属性设为变量$PHP_SELF，即表单提交后返回本页。同时Form表单包含了一个文本输入条，这是用来让用户输入要传递给C++程序的命令行参数。Form如下图所示:</p>
+<p>&nbsp;&nbsp;&nbsp; 一旦我们输入执行命令并提交表单，变量$submit(即按钮Go的名字)就获得一个值，这样PHP教本将执行if{}之间的代码。</p>
+<p>以下为引用的内容：</p>
+<p>if($args == &quot;&quot;)</p>
+<p>echo &quot;</p>
+<p>You didn't enter any arguments.</p>
+<p>&quot;;</p>
+<p>else{</p>
+<p>echo &quot;</p>
+<p>SampleApp Result</p>
+<p>&quot;;</p>
+<p>$command = &quot;/htdocs/sampleapp &quot; . escapeshellcmd($args);</p>
+<p>passthru($command);</p>
+<p>}<br />
+&nbsp;</p>
+<p><br />
+&nbsp;&nbsp;&nbsp; 变量$args是自动产生的，它的值是Form表单中文本输入条传过来的值。如果没有输入任何信息，程序将简单的告诉用户没有输入任何值。</p>
+<p>&nbsp;&nbsp;&nbsp; 如果用户输入任何非空的信息，程序将把text域的值，即变量$args传给C++程序。下面这段代码就是执行C++的程序的执行命令:</p>
+<p>&nbsp;&nbsp;&nbsp; $command = &quot;/htdocs/sampleapp &quot; . escapeshellcmd($args);</p>
+<p>&nbsp;&nbsp; 函数eacapeshellcmd是用来当做安全检查工具，以过滤调一些如&rdquo;,&rdquo;，&rdquo;&rdquo;和&rdquo;\&rdquo;等的特殊字符。这可以防止一些用户企图输入某些字符来调用系统内部命令。</p>
+<p>&nbsp;&nbsp;&nbsp; 例如，如果你在Form表单的text域中输入&rdquo;1 ?two /three&rdquo;,那么变量$command的值就为: /htdocs/sampleapp 1 ?two /three</p>
+<p>&nbsp;&nbsp;&nbsp; 你能发现我们定义了程序sampleapp的全路径，在这个例子中，程序文件位于/htdocs目录下。你可以根据的自己程序所在的目录做相应的修改。</p>
+<p>&nbsp;&nbsp;&nbsp; passthru($command);</p>
+<p>&nbsp;&nbsp;&nbsp; 最后，我们使用PHP的函数passthru来执行变量$command所包含的命令并且将原始的执行结果输出到浏览器上。在我的服务器上，返回结果的HTML页面如下:</p>
+<p>&nbsp;&nbsp;&nbsp; w在本文即将结束之前，几个可能碰到的问题我想说一下。首先，当你执行sampleapp.php教本程序的时候，如果你没有看到程序的任何输出信息，或许是开了安全模式。如果这样，系统将不会允许PHP脚本来执行系统内部程序。关于如何关闭安全模式，请访问网页http://www.php.net/manual/en/features.safe-mode.php，上面有详细的介绍。其次，在一些Unix系统上，PHP函数passthru不能将内部程序的输出传递给浏览页面，如果发生这种情况，可以用system函数来代替passthru函数。</p>
+<p>&nbsp;&nbsp;&nbsp; 四、结论</p>
+<p>&nbsp;&nbsp;&nbsp; 从本的例子可以看出,Unix操作系统非常强大,并且PHP允许开发者通过脚本以独立的线程来执行系统内部程序。本文的所给的例子非常的简单，但是只要再多花一点功夫，你可以写一个能更新Mysql数据库的c++程序，运行其他系统命令的程序或者是操作系统文件/目录结构的程序。但是，不管怎样，你都应该确保你的系统安全，绝对不能让任何其他的脚本程序随意访问系统内部程序。</p>
+<p><br />
+</p>
+</font>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('PHP中如何通过Web执行C/C++应用程序？_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/911.html">php自动更新新闻diy _php实例</a>&nbsp;&nbsp;下一条： <a href="/html/News/908.html">关于PHP中for循环语句的几种变型</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1621.html" title="MVC中怎么实现对于网站的权限管理" >MVC中怎么实现对于网站的权限…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1620.html" title="自定义AuthorizeAttribute" >自定义AuthorizeAttribute</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1485.html" title="“缺少 mysqli 扩展“的解决办法 " >“缺少 mysqli 扩展“的解决办…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1464.html" title="如何用php连接mysql实例详解" >如何用php连接mysql实例详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1205.html" title="PHPWind7.5 SP2版本新功能抢先看" >PHPWind7.5 SP2版本新功能抢先…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1148.html" title="PHP中如何保持SESSION以及由此引发的一些思考" >PHP中如何保持SESSION以及由此…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1104.html" title="php 使用GD库为页面增加水印" >php 使用GD库为页面增加水印</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1101.html" title="用php 发送html格式文本 " >用php 发送html格式文本 </a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1079.html" title="优化php的性能效率" >优化php的性能效率</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1025.html" title="PHP---构造函数">PHP---构造函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/786.html" title="php查询mysql中文乱码的解决办法">php查询mysql中文乱码的解决办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1027.html" title="PHP打印函数集合">PHP打印函数集合</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1148.html" title="PHP中如何保持SESSION以及由此引发的一些思考">PHP中如何保持SESSION以及由此引发…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/843.html" title="PHP判断远程文件是否存在">PHP判断远程文件是否存在</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1205.html" title="PHPWind7.5&nbsp;SP2版本新功能抢先看">PHPWind7.5 SP2版本新功能抢先看</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/713.html" title="PHP通过SQL语句将数据写入MySQL数据库指定的表">PHP通过SQL语句将数据写入MySQL数…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/864.html" title="php中计算时间差的方法">php中计算时间差的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1014.html" title="在PHP中截取HTML代码串问题">在PHP中截取HTML代码串问题</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1012.html" title="PHP教程：strtotime函数实现时间戳">PHP教程：strtotime函数实现时间戳…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1079.html" title="优化php的性能效率">优化php的性能效率</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1101.html" title="用php&nbsp;发送html格式文本&nbsp;">用php 发送html格式文本 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/667.html" title="PHP正则表达式提取超链接和标题">PHP正则表达式提取超链接和标题</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1026.html" title="iconv函数使用方法---php">iconv函数使用方法---php</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1077.html" title="配置PHP站点">配置PHP站点</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1621.html" title="MVC中怎么实现对于网站的权限管理" >MVC中怎么实现对于网站的权限管理…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1620.html" title="自定义AuthorizeAttribute" >自定义AuthorizeAttribute</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1485.html" title="“缺少&nbsp;mysqli&nbsp;扩展“的解决办法&nbsp;" >“缺少 mysqli 扩展“的解决办法 …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1464.html" title="如何用php连接mysql实例详解" >如何用php连接mysql实例详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1205.html" title="PHPWind7.5&nbsp;SP2版本新功能抢先看" >PHPWind7.5 SP2版本新功能抢先看</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1148.html" title="PHP中如何保持SESSION以及由此引发的一些思考" >PHP中如何保持SESSION以及由此引发…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1104.html" title="php&nbsp;使用GD库为页面增加水印" >php 使用GD库为页面增加水印</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1101.html" title="用php&nbsp;发送html格式文本&nbsp;" >用php 发送html格式文本 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1079.html" title="优化php的性能效率" >优化php的性能效率</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1078.html" title="解决PHP乱码问题的三种办法" >解决PHP乱码问题的三种办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1077.html" title="配置PHP站点" >配置PHP站点</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1027.html" title="PHP打印函数集合" >PHP打印函数集合</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1026.html" title="iconv函数使用方法---php" >iconv函数使用方法---php</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1025.html" title="PHP---构造函数" >PHP---构造函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1016.html" title="PHP之TEA算法实现" >PHP之TEA算法实现</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "909" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

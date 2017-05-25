@@ -1,0 +1,372 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>技巧篇：J2EE层次设计架构实例_成都网站建设_成都网页设计_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="层到了软件领域也一样好用。为什么呢？我们看看使用层技术有什么好处" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 成都网站建设_成都网页设计
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        技巧篇：J2EE层次设计架构实例
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/17 23:26:45
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        层到了软件领域也一样好用。为什么呢？我们看看使用层技术有什么好处
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><strong>Part 1 层 </strong></p>
+<p>层（layer）这个概念在计算机领域是非常了不得的一个概念。计算机本身就体现了一种层的概念：系统调用层、设备驱动层、操作系统层、CPU指令集。每个层都负责自己的职责。网络同样也是层的概念，最著名的OSI的七层协议。 </p>
+<p>层到了软件领域也一样好用。为什么呢？我们看看使用层技术有什么好处： </p>
+<ul>
+    <li>你使用层，但是不需要去了解层的实现细节。 </li>
+    <li>可以使用另一种技术来改变基础的层，而不会影响上面的层的应用。 </li>
+    <li>可以减少不同层之间的依赖。 </li>
+    <li>容易制定出层标准。 </li>
+    <li>底下的层可以用来建立顶上的层的多项服务。 当然，层也有弱点： </li>
+    <li>层不可能封装所有的功能，一旦有功能变动，势必要波及所有的层。 </li>
+    <li>效率降低。 </li>
+</ul>
+<p>当然，层最难的一个问题还是各个层都有些什么，以及要承担何种责任。 </p>
+<p><strong>典型的三层结构 </strong></p>
+<p>三层结构估计大家都很熟悉了。就是表示（presentation）层, 领域（domain）层, 以及基础架构（infrastructure）层。 </p>
+<p>表示层逻辑主要处理用户和软件的交互。现在最流行的莫过于视窗图形界面（wimp）和基于html的界面了。表示层的主要职责就是为用户提供信息，以及把用户的指令翻译。传送给业务层和基础架构层。 </p>
+<p>基础架构层逻辑包括处理和其他系统的通信，代表系统执行任务。例如数据库系统交互，和其他应用系统的交互等。大多数的信息系统，这个层的最大的逻辑就是存储持久数据。 </p>
+<p>还有一个就是领域层逻辑，有时也被叫做业务逻辑。它包括输入和存储数据的计算。验证表示层来的数据，根据表示层的指令指派一个基础架构层逻辑。 </p>
+<p>领域逻辑中，人们总是搞不清楚什么事领域逻辑，什么是其它逻辑。例如，一个销售系统中有这样一个逻辑：如果本月销售量比上个月增长10％，就要用红色标记。要实现这个功能，你可能会把逻辑放在表示层中，比较两个月的数字，如果超出10％，就标记为红色。 </p>
+<p>这样做，你就把领域逻辑放到了表示层中了。要分离这两个层，你应该现在领域层中提供一个方法，用来比较销售数字的增长。这个方法比较两个月的数字，并返回boolean类型。表示层则简单的调用该方法，如果返回true，则标记为红色。 </p>
+<p><strong>例子 </strong></p>
+<p>层技术不存在说永恒的技巧。如何使用都要看具体的情况才能够决定，下面我就列出了三个例子： </p>
+<p>例子1：一个电子商务系统。要求能够同时处理大量用户的请求，用户的范围遍及全球，而且数字还在不断增长。但是领域逻辑很简单，无非是订单的处理，以及和库存系统的连接部分。 </p>
+<p>这就要求我们1、表示层要友好，能够适应最广泛的用户，因此采用html技术；2、支持分布式的处理，以胜任同时几千的访问； 3、考虑未来的升级。 </p>
+<p>例子2：一个租借系统。系统的用户少的多，但是领域逻辑很复杂。这就要求我们制作一个领域逻辑非常复杂的系统，另外，还要给他们的用户提供一个方便的输入界面。这样，wimp是一个不错的选择。 </p>
+<p>例子3：简单的系统。非常简单，用户少、逻辑少。但是也不是没有问题，简单意味着要快速交付，并且还要充分考虑日后的升级。因为需求在不断的增加之中。</p>
+<p><strong>何时分层</strong> </p>
+<p>这样的三个例子，就要求我们不能够一概而论的解决问题，而是应该针对问题的具体情况制定具体的解决方法。这三个例子比较典型。 </p>
+<p>第二个例子中，可能需要严格的分成三个层次，而且可能还要加上另外的中介（mediating）层。例3则不需要，如果你要做的仅是查看数据，那仅需要几个server页面来放置所有的逻辑就可以了。 </p>
+<p>我一般会把表示层和领域层/基础架构层分开。除非领域层/基础架构层非常的简单，而我又可以使用工具来轻易的绑定这些层。这种两层架构的最好的例子就是在VB、PB的环境中，很容易就可以构建出一个基于SQL数据库的windows界面的系统。 </p>
+<p>这样的表示层和基础架构层非常的一致，但是一旦验证和计算变得复杂起来，这种方式就存在先天缺陷了。 </p>
+<p>很多时候，领域层和基础架构层看起来非常类似，这时候，其实是可以把它们放在一起的。可是，当领域层的业务逻辑和基础架构层的组织方式开始不同的时候，你就需要分开二者。 </p>
+<p><strong>更多的层模式 </strong></p>
+<p>三层的架构是最为通用的，尤其是对IS系统。其它的架构也有，但是并不适用于任何情况。 </p>
+<p>第一种是Brown model [Brown et al]。它有五个层：表示层（Presentation），控制/中介层（Controller/Mediator），领域层（Domain）, 数据映射层（Data Mapping）, 和数据源层（Data Source）。它其实就是在三层架构种增加了两个中间层。控制/中介层位于表示层和领域层之间，数据映射层位于领域层和基础架构层之间。 </p>
+<p>表示层和领域层的中介层，我们通常称之为表示-领域中介层，是一个常用的分层方法，通常针对一些非可视的控件。例如为特定的表示层组织信息格式，在不 同的窗口间导航，处理交易边界，提供Server的facade接口（具体实现原理见设计模式）。最大的危险就是，一些领域逻辑被放到这个层里，影响到其 它的表示层。 </p>
+<p>我常常发现把行为分配给表示层是有好处的。这可以简化问题。但表示层模型会比较复杂，所以，把这些行为放到非可视化的对象中，并提取出一个表示-领域中介层还是值得的。 </p>
+<p>Brown ISA </p>
+<p>表示层 表示层 </p>
+<p>控制/中介层 表示-领域中介层 </p>
+<p>领域层 领域层 </p>
+<p>数据映射层 数据库交互模式中的Database Mapper </p>
+<p>数据源层 基础架构层 </p>
+<p>领域层和基础架构层之间的中介层属于本书中提到的Database Mapper模式，是三种领域层到数据连接的办法之一。和表示-领域中介层一眼，有时候有用，但不是所有时候都有用。 </p>
+<p>还有一个好的分层架构是J2EE的架构，这方面的讨论可以见『J2EE核心模式』一书。他的分层是客户层（Client），表示层（Presentation），业务层（Business ），整合层（Integration），资源层（Resource）。差别如下： </p>
+<p>J2EE核心 ISA </p>
+<p>客户层 运行在客户机上的表示层 </p>
+<p>表示层 运行在服务器上的表示层 </p>
+<p>业务层 领域层 </p>
+<p>整合层 基础架构层 </p>
+<p>资源层 基础架构层通信的外部数据 </p>
+<p>微软的DNA架构定义了三个层：表示层（presentation），业务层（business），和数据存储层（data access），这和我的架构相似，但是在数据的传递方式上还有很大的不同。 </p>
+<p>在微软的DNA中，各层的操作都基于数据存储层传出的SQL查询结果集。这样的话，实际上是增加了表示层和业务层同数据存储层之间的耦合度。DNA的记录集在层之间的动作类似于Data Transfer Object。 </p>
+<p><strong>Part 2 组织领域逻辑 </strong></p>
+<p>要组织基于层的系统，首要的是如何组织领域逻辑。领域逻辑的组织有好几种模式。但其中最重要的莫过于两种方法：Transation Script和Domain Model。 </p>
+<p>选定了其中的一种，其它的都容易决定。不过，这两者之间并没有一条明显的分界线。所以如何选取也是门大学问。一般来说，我们认为领域逻辑比较复杂的系统可以采用Domain Model。 </p>
+<p>Transation Script就是对表示层用户输入的处理程序。包括验证和计算，存储，调用其它系统的操作，把数据回传给表示层。用户的一个动作表示一个程序，这个程序可 以是script，也可以是transation，也可以是几个子程序。在例子1中，检验，在购物车中增加一本书，显示递送状态，都可以是一个 Transation Script。 </p>
+<p>Domain Model是要建立对应领域名词的模型，例如例1中的书、购物车等。检验、计算等处理都放到领域模型中。 </p>
+<p>Transation Script属于结构性思维，Domain Model属于OO思维。Domain Model比较难使用，一旦习惯，你能够组织更复杂的逻辑，你的思想会更OO。到时候，即使是小的系统，你也会自然的使用Domain Model了。 </p>
+<p>但如何抉择呢？如果逻辑复杂，那肯定用Domain Model：如果只需要存取数据库，那Transation Script会好一些。但是需求是在不断进化的，你很难保证以后的需求还会如此简单。 </p>
+<p>如果你的团队不善于使用Domain Model，那你需要权衡一下投入产出比。另外，即使是Transation Script，也可以做到把逻辑和基础架构分开，你可以使用Gateway。 </p>
+<p>对例2，毫无疑问要使用Domain Model。对例1就需要权衡了。而对于例3，你很难说它将来会不会像例2那样，你现在可以使用Transation Script，但未来你可能要使用Domain Model。所以说，架构的决策是至关紧要的。 </p>
+<p>除了这两种模式，还有其它中庸的模式。Use Case Controller就是处于两者之间。只有和单个的用例相关的业务逻辑才放到对象中。所以大致上他们还是在使用Transation Script，而Domain Model只是Database Gateway的一组集合而已。我不太用这种模式。 </p>
+<p>Table Module是另一个中庸模式。很多的GUI环境依托于SQL查询的返回结果。你可以建立内存中的对象，来把GUI和数据库分开来。为每个表写一个模块，因此每一行都需要关键字变量来识别每一个实例。 </p>
+<p>Table Module适用于很多的组件构建于一个通用关系型数据库之上，而且领域逻辑不太复杂的情况。Microsoft COM 环境，以及它的带ADO.NET的.NET环境都适合使用这种模式。而对于Java，就不太适用了。 </p>
+<p>领域逻辑的一个问题是领域对象非常的臃肿。因为对象的行为太多了，类也就太大了。它必须是一个超集。这就要考虑哪些行为是通用的，哪些不是，可以由其它的类来处理，可能是Use Case Controller，也可能是表示层。 </p>
+<p>还有一个问题，复制。他会导致复杂和不一致。这比臃肿的危害更大。所以，宁可臃肿，也不要复制。等到臃肿为害时再处理它吧。 </p>
+<p><strong>选择一个地方运行领域逻辑 </strong></p>
+<p>我们的精力集中在逻辑层上。领域逻辑要么运行在Client上，要么运行在Server上。 </p>
+<p>比较简单的做法是全部集中在Server上。这样你需要使用html的前端以及web server。这样做的好处是升级和维护都非常的简单，你也不用考虑桌面平台和Server的同步问题，也不用考虑桌面平台的其它软件的兼容问题。 </p>
+<p>运行在Client适合于要求快速反应和没有联网的情况。在Server端的逻辑，用户的一个再小的请求，也需要信息从Client到Server绕一圈。反应的速度必然慢。再说，网络的覆盖程度也不是说达到了100％。 </p>
+<p>对于各个层来说，又是怎么样的呢？ </p>
+<p>基础架构层：一般都是在Server啦，不过有时候也会把数据复制到合适的高性能桌面机，但这是就要考虑同步的问题了。 </p>
+<p>表示层在何处运行取决于用户界面的设计。一个Windows界面只能在Client运行。而一个Web界面就是在Server运行。也有特别的例子，在桌面机上运行web server的，例如X Server。但这种情况少的多。 </p>
+<p>在例1中，没有更多的选择了，只能选在Server端。因此你的每一个bit都会绕一个大圈子。为了提高效率，尽量使用一些纯html脚本。 </p>
+<p>人们选用Windows界面的原因主要就是需要执行一些非常复杂的任务，需要一个合适的应用程序，而web GUI则无法胜任。这就是例2的做法。不过，人们应该会渐渐适应web GUI，而web GUI的功能也会越来越强大。 </p>
+<p>剩下的是领域逻辑。你可以全部放在Server，也可以全部放在Client，或是两边都放。 </p>
+<p>如果是在Client端，你可以考虑全部逻辑都放在Client端，这样至少保证所有的逻辑都在一个地方。而把web server移至Client，是可以解决没有联网的问题，但对反应时间不会有多大的帮助。你还是可以把逻辑和表示层分离开来。当然，你需要额外的升级和维护的工作。 </p>
+<p>在Client和Server端都具有逻辑并不是一个好的处理办法。但是对于那些仅有一些领域逻辑的情况是适用的。有一个小窍门，把那些和系统的其它部分没有联系的逻辑封装起来。 领域逻辑的接口 </p>
+<p>你的Server上有一些领域逻辑，要和Client通信，你应该有什么样的接口呢？要么是一个http接口，要么是一个OO接口。 </p>
+<p>http接口适用于web browser，就是说你要选择一个html的表示层。最近的新技术就是web service，通过基于http、特别是XML进行通信。XML有几个好处：通信量大，结构好，仅需一次的回路。这样远程调用的的开销就小了。同时，XML还是一个标准，支持平台异构。XML又是基于文本的，能够通过防火墙。 </p>
+<p>虽然XML有那么多的好处，不过一个OO的接口还是有它的价值的。hhtp的接口不明显，不容易看清楚数据是如何处理的。而OO的接口的方法带有变量和名字，容易看出处理的过程。当然，它无法通过防火墙，但可以提供安全和事务之类的控制。 </p>
+<p>最好的还是取二者所长。OO接口在下，http接口在上。但这样做就会使得实现机制非常的复杂。 </p>
+<p><strong>Part 3 组织web Server </strong></p>
+<p>很多使用html方式的人，并不能真正理解这种方式的优点。我们有各种各样好用的工具，但是却搞到让程序难以维护。在web server上组织程序的方式大致可以分为两种：脚本和server page。 </p>
+<p>脚本方式就是一个程序，用函数和方法来处理http调用。例如CGI脚本和java servlet。它和普通的程序并没有什么两样。它从web页面上获得html string形态的数据，有时候还要做一些表达式匹配，这正是perl能够成为CGI脚本的常用语言的原因。 </p>
+<p>而Java servelet则是把这种分析留给程序员，但它允许程序员通过关键字接口来访问信息，这样就会少一些表达式的判断。这种格式的web server输出是另一种html string，称为response，可以通过流数据来操作。 </p>
+<p>糟糕的是流数据是非常麻烦的，因此就导致了server page的产生，例如PHP，ASP，JSP。 </p>
+<p>server page的方式适合回应（response）的处理比较简单的情况。例如&ldquo;显示歌曲的明细&rdquo;，但是你的决策取决于输入的时候，就会比较杂乱。例如&ldquo;通俗和摇滚的显示格式不同&rdquo;。 </p>
+<p>脚步擅长于处理用户交互，server page擅长于处理格式化回应信息。所以很自然的就会采用脚本处理请求的交互，使用server page处理回应的格式化。这其实就是著名的MVC（Model View Controller）模式中的view/controller的处理。 </p>
+<p>应用Model View Controller模式首要的一点就是模型要和web服务完全分离开来。使用Transaction Script或Domain Model模式来封装处理流程。 </p>
+<p>接下来，我们就把剩余的模式归入两类模式中：属于Controller的模式，以及属于View的模式。 </p>
+<p>View模式 </p>
+<p>View这边有三种模式：Transform View，Template View和Two Step View。Transform View和Template View的处理只有一步，将领域数据转换为html。Two Step View要经过两步的处理，第一步把领域数据转换为逻辑表示形式，第二步把逻辑表示转换为html。 </p>
+<p>两步处理的好处是可以将逻辑集中于一处，如果只有一步，变化发生时，你就需要修改每一个屏幕。但这需要你有一个很好的逻辑屏幕结构。如果一个web应用有很多的前端用户时，两步处理就特别的好用。例如航空订票系统。使用不同的第二步处理，就可以获得不同的逻辑屏幕。 </p>
+<p>使用单步方法有两个可选的模式：Template View，Transform View。Template View其时就是把代码嵌入到html页面中，就像现在的server page技术，如ASP，PHP，JSP。这种模式灵活，强大，但显得杂乱无章。如果你能够把逻辑程序逻辑在页面结构之外进行很好的组织，这种模式还是有它的优点的。 </p>
+<p>Transform View使用翻译方式。例如XSLT。如果你的领域数据是用XML处理的，那这种模式就特别的好用。 </p>
+<p>Controller模式 </p>
+<p>Controller有两种模式。一般我们会根据动作来决定一项控制。动作可能是一个按钮或链接。所这种模式就是Action Controller模式。 </p>
+<p>Front Controller更进一步，它把http请求的处理和处理逻辑分离开来。一般是只有一个web handle来处理所有的请求。你的所有的http请求的处理都由一个对象来负责。你改变动作结构的影响就会降到最小。<br />
+</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('技巧篇：J2EE层次设计架构实例_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1223.html">深入分析架构差异对Web性能高低的…</a>&nbsp;&nbsp;下一条： <a href="/html/News/1221.html">如何做好需求分析：需求管理是项目管理…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1644.html" title="如何使用百度地图API一些简单的功能" >如何使用百度地图API一些简单…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1613.html" title="C#正则表达式提取网址、标题、图片" >C#正则表达式提取网址、标题、…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1546.html" title="网站高并发解决思路(转)" >网站高并发解决思路(转)</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1457.html" title="安装好Discuz!NT论坛后首页是一片空白" >安装好Discuz!NT论坛后首页是…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1437.html" title="有哪些细节设计给你带来好的用户体验？" >有哪些细节设计给你带来好的用…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1373.html" title="抄袭来的东西进行拼装之后，属于我的抄袭作品就出来了" >抄袭来的东西进行拼装之后，属…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1351.html" title="成都最便宜网站建设 QQ：1416759661" >成都最便宜网站建设 QQ：1416…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1268.html" title="成都网站建设：私人网站建设的好处" >成都网站建设：私人网站建设的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1267.html" title="夜鹰教程网网站建设常见问题集锦" >夜鹰教程网网站建设常见问题集…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/805.html" title="Dreamweaver&nbsp;CS4&nbsp;SN以及注册机、激活码和激活方法">Dreamweaver CS4 SN以及注册机、激…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1268.html" title="成都网站建设：私人网站建设的好处">成都网站建设：私人网站建设的好处…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/294.html" title="火狐浏览器FireFox常用插件介绍">火狐浏览器FireFox常用插件介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/628.html" title="向上下左右不间断无缝滚动图片的效果（兼容火狐和IE）">向上下左右不间断无缝滚动图片的效…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1265.html" title="网站建设需要准备哪些资料？">网站建设需要准备哪些资料？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1252.html" title="ASP无限级分类实例教程">ASP无限级分类实例教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/295.html" title="使用IE8常见问题问答">使用IE8常见问题问答</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/462.html" title="网页制作有关知识">网页制作有关知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/463.html" title="如何加入网页代码的基本知识">如何加入网页代码的基本知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/456.html" title="QQ空间开心农场升级最快的方法">QQ空间开心农场升级最快的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/292.html" title="不让你的QQ好友删除你">不让你的QQ好友删除你</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/606.html" title="HTML框架(Frames)">HTML框架(Frames)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1263.html" title="什么域名？如何注册域名？如何解析域名？">什么域名？如何注册域名？如何解析…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1221.html" title="如何做好需求分析：需求管理是项目管理的重点之一">如何做好需求分析：需求管理是项目…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/291.html" title="QQ远程协助后黑屏或花屏故障解决办法">QQ远程协助后黑屏或花屏故障解决办…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1644.html" title="如何使用百度地图API一些简单的功能" >如何使用百度地图API一些简单的功…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1613.html" title="C#正则表达式提取网址、标题、图片" >C#正则表达式提取网址、标题、图片…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1546.html" title="网站高并发解决思路(转)" >网站高并发解决思路(转)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1457.html" title="安装好Discuz!NT论坛后首页是一片空白" >安装好Discuz!NT论坛后首页是一片…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1437.html" title="有哪些细节设计给你带来好的用户体验？" >有哪些细节设计给你带来好的用户体…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1373.html" title="抄袭来的东西进行拼装之后，属于我的抄袭作品就出来了" >抄袭来的东西进行拼装之后，属于我…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1351.html" title="成都最便宜网站建设&nbsp;QQ：1416759661" >成都最便宜网站建设 QQ：14167596…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1268.html" title="成都网站建设：私人网站建设的好处" >成都网站建设：私人网站建设的好处…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1267.html" title="夜鹰教程网网站建设常见问题集锦" >夜鹰教程网网站建设常见问题集锦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1266.html" title="浅谈网站建设的十二大误区" >浅谈网站建设的十二大误区</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1265.html" title="网站建设需要准备哪些资料？" >网站建设需要准备哪些资料？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1264.html" title="怎样才能写好一篇软文呢：越低俗越有前途！" >怎样才能写好一篇软文呢：越低俗越…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1263.html" title="什么域名？如何注册域名？如何解析域名？" >什么域名？如何注册域名？如何解析…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1262.html" title="站长如何将网站的访客变为顾客？" >站长如何将网站的访客变为顾客？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1261.html" title="夜鹰教程网打造成都私人网站建设的摇篮" >夜鹰教程网打造成都私人网站建设的…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1222" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

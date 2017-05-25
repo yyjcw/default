@@ -1,0 +1,474 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>26个性能优化方法ASP.NET&nbsp;版_Asp.net专题(WCF/WPF/WF)_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="26个性能优化方法ASP.NET&nbsp;版" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Asp.net专题(WCF/WPF/WF)
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        26个性能优化方法ASP.NET 版
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2014/11/24 13:03:57
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        26个性能优化方法ASP.NET&nbsp;版
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <div><strong>1. <span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=61">数据库</span>访问性能优化</strong> 　　</div>
+<div>数据库的连接和关闭 　　</div>
+<div>访问数据库资源需要创建连接、打开连接和关闭连接几个操作。这些过程需要多次与数据库交换信息以通过身份验证，比较耗费<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=783">服务器</span>资源。ASP<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=506">.NET</span>中提供了连接池(Connection Pool)改善打开和关闭数据库对性能的影响。<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=960">系统</span>将用户的数据库连接放在连接池中，需要时取出，关闭时收回连接，等待下一次的连接请求。 　　</div>
+<div>连接池的大小是有限的，如果在连接池达到最大限度后仍要求创建连接，必然大大影响性能。因此，在建立数据库连接后只有在真正需要操作时才打开连接，使用完毕后马上关闭，从而尽量减少数据库连接打开的时间，避免出现超出连接限制的情况。 　　</div>
+<div>使用<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=99">存储过程</span> 　　存储过程是存储在服务器上的一组预编译的SQL语句，类似于DOS系统中的批处理文件。存储过程具有对数据库立即访问的功能，信息处理极为迅速。使用存储过程可以避免对命令的多次编译，在执行一次后其执行规划就驻留在高速缓存中，以后需要时只需直接调用缓存中的二进制代码即可。 　　</div>
+<div>另外，存储过程在服务器端运行，独立于ASP.<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=1154">NET</span>程序，便于修改，最重要的是它可以减少数据库操作语句在网络中的传输。 　　</div>
+<div>优化查询语句 　　</div>
+<div>ASP.NET中ADO连接消耗的资源相当大，SQL语句运行的时间越长，占用系统资源的时间也越长。因此，尽量使用优化过的SQL语句以减少执行时间。比如，不在查询语句中包含子查询语句，充分利用索引等。 　　<br />
+<strong>2. 字符串操作性能优化</strong> 　　使用值类型的ToString方法 　　</div>
+<div>在连接字符串时，经常使用&quot;+&quot;号直接将数字添加到字符串中。这种方法虽然简单，也可以得到正确结果，但是由于涉及到不同的数据类型，数字需要通过装箱操作转化为引用类型才可以添加到字符串中。但是装箱操作对性能影响较大，因为在进行这类处理时，将在托管堆中分配一个新的对象，原有的值复制到新创建的对象中。 　　</div>
+<div>使用值类型的ToString方法可以避免装箱操作，从而提高应用程序性能。 　　</div>
+<div>运用StringBuilder类 　　</div>
+<div>String类对象是不可改变的，对于String对象的重新赋值在本质上是重新创建了一个String对象并将新值赋予该对象，其方法ToString对性能的提高并非很显著。 　　</div>
+<div>在处理字符串时，最好使用StringBuilder类，其.NET 命名空间是System.Text。该类并非创建新的对象，而是通过Append，Remove，Insert等方法直接对字符串进行操作，通过ToString方法返回操作结果。 　　</div>
+<div>其定义及操作语句如下所示： </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>　　int num; 　　System.Text.StringBuilder str = new System.Text.StringBuilder(); //创建字符串 　　str.Append(num.ToString()); //添加数值num 　　Response.Write(str.ToString); //显示操作结果 </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div><strong>3. 优化 Web 服务器<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=1389">计算机</span>和特定应用程序的配置文件以符合您的特定需要</strong> 　　</div>
+<div>默认情况下，ASP.NET 配置被设置成启用最广泛的功能并尽量适应最常见的方案。因此，应用程序<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=1347">开发</span>人员可以根据应用程序所使用的功能，优化和更改其中的某些配置，以提高应用程序的性能。下面的列表是您应该考虑的一些选项。 　　<br />
+仅对需要的应用程序启用身份验证。默认情况下，身份验证模式为 Windows，或集成 NTLM。大多数情况下，对于需要身份验证的应用程序，最好在 Machine.config 文件中禁用身份验证，并在 Web.config 文件中启用身份验证。 　　</div>
+<div>根据适当的请求和响应编码设置来配置应用程序。ASP.NET 默认编码格式为 UTF-8。如果您的应用程序为严格的 ASCII，请配置应用程序使用 ASCII 以获得稍许的性能提高。 　　<br />
+考虑对应用程序禁用 AutoEventWireup。在 Machine.config 文件中将 AutoEventWireup 属性设置为 false，意味着页面不将方法名与事件进行匹配和将两者挂钩(例如 Page_Load)。如果页面开发人员要使用这些事件，需要在基类中重写这些方法(例如，需要为页面加载事件重写 Page.OnLoad，而不是使用 Page_Load 方法)。如果禁用 AutoEventWireup，页面将通过将事件连接留给页面作者而不是自动执行它，获得稍许的性能提升。 　　<br />
+从请求处理管线中移除不用的模块。默认情况下，服务器计算机的 Machine.config 文件中 节点的所有功能均保留为激活。根据应用程序所使用的功能，您可以从请求管线中移除不用的模块以获得稍许的性能提升。检查每个模块及其功能，并按您的需要自定义它。 　　<br />
+例如，如果您在应用程序中不使用会话状态和输出缓存，则可以从 列表中移除它们，以便请求在不执行其他有意义的处理时，不必执行每个模块的进入和离开代码。 　　<br />
+<strong>4. 一定要禁用调试模式</strong> 　　</div>
+<div>在部署生产应用程序或进行任何性能测量之前，始终记住禁用调试模式。如果启用了调试模式，应用程序的性能可能受到非常大的影响。 　　<br />
+<strong>5. 对于广泛依赖外部资源的应用程序，请考虑在多处理器计算机上启用网络园艺</strong> 　　</div>
+<div>ASP.NET 进程模型帮助启用多处理器计算机上的可缩放性，将工作分发给多个进程(每个 <u><font color="#000000">CPU</font></u> 一个)，并且每个进程都将处理器关系设置为其 CPU。此技术称为网络园艺。如果应用程序使用较慢的数据库服务器或调用具有外部依赖项的 COM 对象(这里只是提及两种可能性)，则为您的应用程序启用网络园艺是有益的。但是，在决定启用网络园艺之前，您应该测试应用程序在网络园中的执行情况。 　　<br />
+<strong>6. 只要可能，就缓存数据和页输出</strong> 　　</div>
+<div>ASP.NET 提供了一些简单的机制，它们会在不需要为每个页请求动态计算页输出或数据时缓存这些页输出或数据。另外，通过<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=869">设计</span>要进行缓存的页和数据请求(特别是在站点中预期将有较大通讯量的区域)，可以优化这些页的性能。与 .NET Framework 的任何 Web 窗体功能相比，适当地使用缓存可以更好的提高站点的性能，有时这种提高是超数量级的。 　　</div>
+<div>使用 ASP.NET 缓存机制有两点需要注意。首先，不要缓存太多项。缓存每个项均有开销，特别是在内存使用方面。不要缓存容易重新计算和很少使用的项。其次，给缓存的项分配的有效期不要太短。很快到期的项会导致缓存中不必要的周转，并且经常导致更多的代码清除和垃圾回收工作。若关心此问题，请监视与 ASP.NET Applications 性能对象关联的 Cache Total Turnover Rate 性能计数器。高周转率可能说明存在问题，特别是当项在到期前被移除时。这也称作内存压力。</div>
+<div><strong>7. 选择适合页面或应用程序的数据查看机制</strong> 　　</div>
+<div>根据您选择在 Web 窗体页显示数据的方式，在便利和性能之间常常存在着重要的权衡。例如，DataGrid Web 服务器控件可能是一种显示数据的方便快捷的方法，但就性能而言它的开销常常是最大的。在某些简单的情况下，您通过生成适当的 HTML 自己呈现数据可能很有效，但是自定义和浏览器定向会很快抵销所获得的额外功效。Repeater Web 服务器控件是便利和性能的折衷。它高效、可自定义且可编程。 　　</div>
+<div><strong>8. 将 <span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=29">Sql</span>DataReader 类用于快速只进数据游标</strong> 　　</div>
+<div>SqlDataReader 类提供了一种读取从 SQL Server 数据库检索的只进数据流的方法。如果当创建 ASP.NET 应用程序时出现允许您使用它的情况，则 SqlDataReader 类提供比 DataSet 类更高的性能。情况之所以这样，是因为 SqlDataReader 使用 SQL Server 的本机网络数据传输格式从数据库连接直接读取数据。另外，SqlDataReader 类实现 IEnumerable 接口，该接口也允许您将数据绑定到服务器控件。有关更多信息，请参见 SqlDataReader 类。有关 ASP.NET 如何访问数据的信息，请参见通过 ASP.NET 访问数据。 　　</div>
+<div><strong>9. 将 SQL Server 存储过程用于数据访问</strong> 　　</div>
+<div>在 .NET Framework 提供的所有数据访问方法中，基于 SQL Server 的数据访问是生成高性能、可缩放 Web 应用程序的推荐选择。使用托管 SQL Server 提供程序时，可通过使用编译的存储过程而不是特殊查询获得额外的性能提高。 　　</div>
+<div><strong>10. 避免单线程单元 (STA) COM 组件</strong> 　　</div>
+<div>默认情况下，ASP.NET 不允许任何 STA COM 组件在页面内运行。若要运行它们，必须在 .<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=789">asp</span>x 文件内将 ASPCompat=true 属性包含在 @ Page 指令中。这样就将执行用的线程池切换到 STA 线程池，而且使 HttpContext 和其他内置对象可用于 COM 对象。前者也是一种性能优化，因为它避免了将多线程单元 (MTA) 封送到 STA 线程的任何调用。 　　使用 STA COM 组件可能大大损害性能，应尽量避免。若必须使用 STA COM 组件，如在任何 interop 方案中，则应在执行期间进行大量调用并在每次调用期间发送尽可能多的信息。另外，小心不要在构造页面期间创建任何 STA COM 组件。例如下面的代码中，在页面构造时将实例化由某个线程创建的 MySTAComponent，而该线程并不是将运行页面的 STA 线程。这可能对性能有不利影响，因为要构造页面就必须完成 MTA 和 STA 线程之间的封送处理。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;%@ Page Language=&quot;VB&quot; ASPCompat=&quot;true&quot; %&gt; &lt;script runat=server&gt; Dim myComp as new MySTAComponent() Public Sub Page_Load() myComp.Name = &quot;Bob&quot; End Sub &lt;/script&gt; &lt;html&gt; &lt;% Response.Write(myComp.SayHello) %&gt; &lt;/html&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>　　 　　首选机制是推迟对象的创建，直到以后在 STA 线程下执行上述代码，如下面的例子所示。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;%@ Page Language=&quot;VB&quot; ASPCompat=&quot;true&quot; %&gt; &lt;script runat=server&gt; Dim myComp Public Sub Page_Load() myComp = new MySTAComponent() myComp.Name = &quot;Bob&quot; End Sub &lt;/script&gt; &lt;html&gt; &lt;% Response.Write(myComp.SayHello) %&gt; &lt;/html&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>　　推荐的做法是在需要时或者在 Page_Load 方法中构造任何 COM 组件和外部资源。　　</div>
+<div>永远不要将任何 STA COM 组件存储在可以由构造它的线程以外的其他线程访问的共享资源里。这类资源包括像缓存和会话状态这样的资源。即使 STA 线程调用 STA COM 组件，也只有构造此 STA COM 组件的线程能够实际为该调用服务，而这要求封送处理对创建者线程的调用。此封送处理可能产生重大的性能损失和可伸缩性问题。在这种情况下，请研究一下使 COM 组件成为 MTA COM 组件的可能性，或者更好的办法是迁移代码以使对象成为托管对象。 　　</div>
+<div><strong>11. 将调用密集型的 COM 组件迁移到托管代码</strong> 　　</div>
+<div>.NET Framework 提供了一个简单的方法与传统的 COM 组件进行交互。其优点是可以在保留现有投资的同时利用新的平台。但是在某些情况下，保留旧组件的性能开销使得将组件迁移到托管代码是值得的。每一情况都是不一样的，决定是否需要迁移组件的最好方法是对 Web 站点运行性能测量。建议您研究一下如何将需要大量调用以进行交互的任何 COM 组件迁移到托管代码。 　　许多情况下不可能将旧式组件迁移到托管代码，特别是在最初迁移 Web 应用程序时。在这种情况下，最大的性能障碍之一是将数据从非托管环境封送到托管环境。因此，在交互操作中，请在任何一端执行尽可能多的任务，然后进行一个大调用而不是一系列小调用。例如，公共语言运行库中的所有字符串都是 Unicode 的，所以应在调用托管代码之前将组件中的所有字符串转换成 Unicode 格式。 　　另外，一处理完任何 COM 对象或本机资源就释放它们。这样，其他请求就能够使用它们，并且最大限度地减少了因稍后请求垃圾回收器释放它们所引起的性能问题。 　　</div>
+<div><strong>12. 在 Visual Basic .NET 或 JScript 代码中使用早期绑定</strong> 　　</div>
+<div>以往，开发人员喜欢使用 Visual Basic、VBScript 和 JScript 的原因之一就是它们所谓&ldquo;无类型&rdquo;的性质。变量不需要显式类型声明，并能够简单地通过使用来创建它们。当从一个类型到另一个类型进行分配时，转换将自动执行。不过，这种便利会大大损害应用程序的性能。 　　</div>
+<div>Visual Basic 现在通过使用 Option Strict 编译器指令来支持类型安全编程。为了向后兼容，默认情况下，ASP.NET 不启用该选项。但是，为了得到最佳性能，强烈建议在页中启用该选项。若要启用 Option Strict，请将 Strict 属性包括在 @ Page 指令中，或者，对于用户控件，请将该属性包括在 @ Control 指令中。下面的示例演示了如何设置该属性，并进行了四个变量调用以显示使用该属性是如何导致编译器错误的。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;%@ Page Language=&quot;VB&quot; Strict=&quot;true&quot; %&gt;&nbsp;&nbsp; &lt;%&nbsp;&nbsp; Dim B&nbsp;&nbsp; Dim C As String&nbsp;&nbsp; ' This will cause a compiler error.&nbsp;&nbsp; A = &quot;Hello&quot;&nbsp;&nbsp; ' This will cause a compiler error.&nbsp;&nbsp; B = &quot;World&quot;&nbsp;&nbsp; ' This will not cause a compiler error.&nbsp;&nbsp; C = &quot;!!!!!!&quot;&nbsp;&nbsp; ' But this will cause a compiler error.&nbsp;&nbsp; C = 0&nbsp;&nbsp; %&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>JScript .NET 也支持无类型编程，但它不提供强制早期绑定的编译器指令。若发生下面任何一种情况，则变量是晚期绑定的：　　</div>
+<div>被显式声明为 Object。 　　</div>
+<div>是无类型声明的类的字段。 　　</div>
+<div>是无显式类型声明的专用函数或方法成员，并且无法从其使用推断出类型。 　　</div>
+<div>最后一个差别比较复杂，因为如果 JScript .NET 编译器可以根据变量的使用情况推断出类型，它就会进行优化。在下面的示例中，变量 A 是早期绑定的，但变量 B 是晚期绑定的。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>　　var A; 　　var B; 　　A = &quot;Hello&quot;; 　　B = &quot;World&quot;; 　　B = 0; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>　　为了获得最佳的性能，当声明 JScript .NET 变量时，请为其分配一个类型。例如，var A : String。 </div>
+<div><strong>13. 使请求管线内的所有模块尽可能高效</strong> 　　</div>
+<div>请求管线内的所有模块在每次请求中都有机会被运行。因此，当请求进入和离开模块时快速地触发代码至关重要，特别是在不使用模块功能的代码路径里。分别在使用及不使用模块和配置文件时执行吞吐量测试，对确定这些方法的执行速度非常有用。 　　</div>
+<div><strong>14. 使用 HttpServerUtility.Transfer 方法在同一应用程序的页面间重定向</strong> 　　</div>
+<div>采用 Server.Transfer 语法，在页面中使用该方法可避免不必要的客户端重定向。 　　</div>
+<div><strong>15. 必要时调整应用程序每个辅助进程的线程数</strong> 　　</div>
+<div>ASP.NET 的请求结构试图在执行请求的线程数和可用资源之间达到一种平衡。已知一个使用足够 CPU 功率的应用程序，该结构将根据可用于请求的 CPU 功率，来决定允许同时执行的请求数。这项技术称作线程门控。但是在某些条件下，线程门控算法不是很有效。通过使用与 ASP.NET Applications 性能对象关联的 Pipeline Instance Count 性能计数器，可以在 PerfMon 中监视线程门控。 　　</div>
+<div>当页面调用外部资源，如数据库访问或 XML Web services 请求时，页面请求通常停止并释放 CPU。如果某个请求正在等待被处理，并且线程池中有一个线程是自由的，那么这个正在等待的请求将开始被处理。遗憾的是，有时这可能导致 Web 服务器上存在大量同时处理的请求和许多正在等待的线程，而它们对服务器性能有不利影响。通常，如果门控因子是外部资源的响应时间，则让过多请求等待资源，对 Web 服务器的吞吐量并无帮助。 　　</div>
+<div>为缓和这种情况，可以通过更改 Machine.config 配置文件节点的 maxWorkerThreads 和 maxIOThreads 属性，手动设置进程中的线程数限制。 　　</div>
+<div>注意 辅助线程是用来处理 ASP.NET 请求的，而 IO 线程则是用于为来自文件、数据库或 XML Web services 的数据提供服务的。 　　</div>
+<div>分配给这些属性的值是进程中每个 CPU 每类线程的最大数目。对于双处理器计算机，最大数是设置值的两倍。对于四处理器计算机，最大值是设置值的四倍。无论如何，对于有四个或八个 CPU 的计算机，最好更改默认值。对于有一个或两个处理器的计算机，默认值就可以，但对于有更多处理器的计算机的性能，进程中有一百或两百个线程则弊大于利。 　　</div>
+<div>注意 进程中有太多线程往往会降低服务器的速度，因为额外的上下文交换导致操作系统将 CPU 周期花在维护线程而不是处理请求上。 　　</div>
+<div><strong>16. 适当地使用公共语言运行库的垃圾回收器和自动内存管理</strong> 　　</div>
+<div>小心不要给每个请求分配过多内存，因为这样垃圾回收器将必须更频繁地进行更多的工作。另外，不要让不必要的指针指向对象，因为它们将使对象保持活动状态，并且应尽量避免含 Finalize 方法的对象，因为它们在后面会导致更多的工作。特别是在 Finalize 调用中永远不要释放资源，因为资源在被垃圾回收器回收之前可能一直消耗着内存。最后这个问题经常会对 Web 服务器环境的性能造成毁灭性的打击，因为在等待 Finalize 运行时，很容易耗尽某个特定的资源。 　　</div>
+<div><strong>17. 如果有大型 Web 应用程序，可考虑执行预批编译</strong> 　　每当发生对目录的第一次请求时都会执行批编译。如果目录中的页面没有被分析并编译，此功能会成批分析并编译目录中的所有页面，以便更好地利用磁盘和内存。如果这需要很长时间，则将快速分析并编译单个页面，以便请求能被处理。此功能带给 ASP.NET 性能上的好处，因为它将许多页面编译为单个程序集。从已加载的程序集访问一页比每页加载新的程序集要快。 　　</div>
+<div>批编译的缺点在于：如果服务器接收到许多对尚未编译的页面的请求，那么当 Web 服务器分析并编译它们时，性能可能较差。为解决这个问题，可以执行预批编译。为此，只需在应用程序激活之前向它请求一个页面，无论哪页均可。然后，当用户首次访问您的站点时，页面及其程序集将已被编译。 　　</div>
+<div>没有简单的机制可以知道批编译何时发生。需一直等到 CPU 空闲或者没有更多的编译器进程(例如 csc.exe(<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=290">C#</span> 编译器)或 vbc.exe(Visual Basic 编译器))启动。 　　</div>
+<div>还应尽量避免更改应用程序的 \bin 目录中的程序集。更改页面会导致重新分析和编译该页，而替换 \bin 目录中的程序集则会导致完全重新批编译该目录。 　　</div>
+<div>在包含许多页面的大规模站点上，更好的办法可能是根据计划替换页面或程序集的频繁程度来设计不同的目录结构。不常更改的页面可以存储在同一目录中并在特定的时间进行预批编译。经常更改的页面应在它们自己的目录中(每个目录最多几百页)以便快速编译。 　　</div>
+<div>Web 应用程序可以包含许多子目录。批编译发生在目录级，而不是应用程序级。 　　</div>
+<div><strong>18. 不要依赖代码中的异常</strong> 　　因为异常大大地降低性能，所以您不应该将它们用作控制正常程序流程的方式。如果有可能检测到代码中可能导致异常的状态，请执行这种操作。不要在处理该状态之前捕获异常本身。常见的方案包括：检查 null，分配给将分析为数字值的 String 一个值，或在应用数学运算前检查特定值。下面的示例演示可能导致异常的代码以及测试是否存在某种状态的代码。两者产生相同的结果。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>　　try 　　{ 　　result = 100 / num; 　　} 　　catch (Exception e) 　　{ 　　result = 0; 　　} 　　// ...to this. 　　if (num != 0) 　　result = 100 / num; 　　else 　　result = 0; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div><strong>19. 使用 HttpResponse.Write 方法进行字符串串联</strong> 　　该方法提供非常有效的缓冲和连接服务。但是，如果您正在执行广泛的连接，请使用多个 Response.Write 调用。下面示例中显示的技术比用对 Response.Write 方法的单个调用连接字符串更快。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>　　Response.Write(&quot;a&quot;); 　　Response.Write(myString); 　　Response.Write(&quot;b&quot;); 　　Response.Write(myObj.ToString()); 　　Response.Write(&quot;c&quot;); 　　Response.Write(myString2); 　　Response.Write(&quot;d&quot;); </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div><strong>20. 除非有特殊的原因要关闭缓冲，否则使其保持打开</strong> 　　禁用 Web 窗体页的缓冲会导致大量的性能开销。 　　</div>
+<div><strong>21. 只在必要时保存服务器控件视图状态</strong> 　　自动视图状态管理是服务器控件的功能，该功能使服务器控件可以在往返过程上重新填充它们的属性值(您不需要编写任何代码)。但是，因为服务器控件的视图状态在隐藏的窗体字段中往返于服务器，所以该功能确实会对性能产生影响。您应该知道在哪些情况下视图状态会有所帮助，在哪些情况下它影响页的性能。例如，如果您将服务器控件绑定到每个往返过程上的数据，则将用从数据绑定操作获得的新值替换保存的视图状态。在这种情况下，禁用视图状态可以节省处理时间。 　　默认情况下，为所有服务器控件启用视图状态。若要禁用视图状态，请将控件的EnableViewState 属性设置为 false，如下面的 DataGrid 服务器控件示例所示。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;asp: atagrid EnableViewState=&quot;false&quot; datasource=&quot;...&quot; runat=&quot;server&quot;/&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>&nbsp;&nbsp;　　您还可以使用 @ Page 指令禁用整个页的视图状态。当您不从页回发到服务器时，这将十分有用： </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;%@ Page EnableViewState=&quot;false&quot; %&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>　　注意 @ Control 指令中也支持 EnableViewState 属性，该指令允许您控制是否为用户控件启用视图状态。 　　</div>
+<div>若要分析页上服务器控件使用的视图状态的数量，请(通过将 trace=&quot;true&quot; 属性包括在 @ Page 指令中)启用该页的跟踪并查看 Control Hierarchy 表的 Viewstate 列。有关跟踪和如何启用它的信息，请参见 ASP.NET 跟踪。</div>
+<div><strong>22. 避免到服务器的不必要的往返过程</strong> 　　虽然您很可能希望尽量多地使用 Web 窗体页框架的那些节省时间和代码的功能，但在某些情况下却不宜使用 ASP.NET 服务器控件和回发事件处理。 　　</div>
+<div>通常，只有在检索或存储数据时，您才需要启动到服务器的往返过程。多数数据操作可在这些往返过程间的客户端上进行。例如，从 HTML 窗体验证用户输入经常可在数据提交到服务器之前在客户端进行。通常，如果不需要将信息传递到服务器以将其存储在数据库中，那么您不应该编写导致往返过程的代码。 　　</div>
+<div>如果您开发自定义服务器控件，请考虑让它们为支持 ECMAScript 的浏览器呈现客户端代码。通过以这种方式使用服务器控件，您可以显著地减少信息被不必要的发送到 Web 服务器的次数。 　　</div>
+<div>使用 Page.IsPostBack 避免对往返过程执行不必要的处理 　　</div>
+<div>如果您编写处理服务器控件回发处理的代码，有时可能需要在首次请求页时执行其他代码，而不是当用户发送包含在该页中的 HTML 窗体时执行的代码。根据该页是否是响应服务器控件事件生成的，使用 Page.IsPostBack 属性有条件地执行代码。例如，下面的代码演示如何创建数据库连接和命令，该命令在首次请求该页时将数据绑定到 DataGrid 服务器控件。 </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>　　void Page_Load(Object sender, EventArgs e) 　　{ 　　// Set up a connection and command here. 　　if (!Page.IsPostBack) 　　{ 　　String query = &quot;select * from Authors where FirstName like '%JUSTIN%'&quot;; 　　myCommand.Fill(ds, &quot;Authors&quot;); 　　myDataGrid.DataBind(); 　　} 　　} </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>　　由于每次请求时都执行 Page_Load 事件，上述代码检查 IsPostBack 属性是否设置为 false。如果是，则执行代码。如果该属性设置为 true，则不执行代码。　　注意 如果不运行这种检查，回发页的行为将不更改。Page_Load 事件的代码在执行服务器控件事件之前执行，但只有服务器控件事件的结果才可能在输出页上呈现。如果不运行该检查，仍将为 Page_Load 事件和该页上的任何服务器控件事件执行处理。 　　<br />
+<strong>23. 当不使用会话状态时禁用它</strong> 　　并不是所有的应用程序或页都需要针对于具体用户的会话状态，您应该对任何不需要会话状态的应用程序或页禁用会话状态。 　　若要禁用页的会话状态，请将 @ Page 指令中的 EnableSessionState 属性设置为 false。例如: </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;%@ Page EnableSessi %&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div>　　注意 如果页需要访问会话变量，但不打算创建或修改它们，则将 @ Page 指令中的 EnableSessionState 属性设置为 ReadOnly。 　　</div>
+<div>还可以禁用 XML Web services 方法的会话状态。有关更多信息，请参见使用 ASP.NET 和 XML Web services 客户端创建的 XML Web services。 　　</div>
+<div>若要禁用应用程序的会话状态，请在应用程序 Web.config 文件的 sessionstate 配置节中将 mode 属性设置为 off。例如: </div>
+<div>
+<table style="BACKGROUND: #f3f3f3" cellspacing="1" cellpadding="4" class="t_table">
+    <tbody>
+        <tr>
+            <td>&lt;sessionstate mode=&quot;off&quot; /&gt; </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div><strong>24. 仔细选择会话状态提供程序</strong> 　　</div>
+<div>ASP.NET 为存储应用程序的会话数据提供了三种不同的方法：进程内会话状态、作为 Windows 服务的进程外会话状态和 SQL Server 数据库中的进程外会话状态。每种方法都有自己的优点，但进程内会话状态是迄今为止速度最快的解决方案。如果只在会话状态中存储少量易失数据，则建议您使用进程内提供程序。进程外解决方案主要用于跨多个处理器或多个计算机缩放应用程序，或者用于服务器或进程重新启动时不能丢失数据的情况。有关更多信息，请参见 ASP.NET 状态管理。 　　</div>
+<div><strong>25. 不使用不必要的Server Control</strong> 　　ASP.net中，大量的服务器端控件方便了<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=1725">程序开发</span>，但也可能带来性能的损失，因为用户每操作一次服务器端控件，就产生一次与服务器端的往返过程。因此，非必要，应当少使用Server Control。 　　</div>
+<div><strong>26. ASP.NET应用程序性能测试</strong> 　　在对ASP.NET应用程序进行性能测试之前，应确保应用程序没有错误，而且功能正确。具体的性能测试可以采用以下工具进行： 　　</div>
+<div>Web Application Strees Tool (WAS)是Microsoft发布的一个免费测试工具，可以从http://webtool.rte.microsoft.com/上<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=507">下载</span>。它可以模拟成百上千个用户同时对web应用程序进行访问请求，在服务器上形成流量负载，从而达到测试的目的，可以生成平均TTFB、平均TTLB等性能汇总报告。 　　</div>
+<div>Application Center Test (ACT) 是一个测试工具，附带于Visual Studio.NET的企业版中，是Microsoft正式支持的web应用程序测试工具。它能够直观地生成图表结果，功能比WAS多，但不具备多个客户机同时测试的能力。 　　</div>
+<div>服务器操作系统&quot;管理工具&quot;中的&quot;性能&quot;计数器，可以对服务器进行监测以了解应用程序性能。 　　</div>
+<div>结论：对于<span class="t_tag" href="tools/ajax.aspx?t=topicswithsametag&amp;tagid=434">网站</span>开发人员来说，在编写ASP.NET应用程序时注意性能问题，养成良好的习惯，提高应用程序性能，至少可以推迟必需的硬件升级，降低网站的成本。 </div>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('26个性能优化方法ASP.NET 版_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1527.html">ASP.NET中的URL映射技巧</a>&nbsp;&nbsp;下一条： <a href="/html/News/1524.html">ASP.NET如何优化性能</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例 C# 异步HttpListener " >完全并发处理HTTP请求示例 C#…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误: (500) 内部服务器错误" >远程服务器返回错误: (500) 内…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgility…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1048.html" title="表单提交中get和post方式的区别有5点&nbsp;">表单提交中get和post方式的区别有…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1005.html" title="解决ASP中UTF-8与GB2312编码转换乱码">解决ASP中UTF-8与GB2312编码转换乱…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/865.html" title="asp数组中REDIM的用法（动态数组）">asp数组中REDIM的用法（动态数组）…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1147.html" title="生成html的新方法ASP">生成html的新方法ASP</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/899.html" title="ASP字符串函数大全">ASP字符串函数大全</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1049.html" title="ASP生成Word文件的代码">ASP生成Word文件的代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1146.html" title="ASP中Randomize随机函数的使用">ASP中Randomize随机函数的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/697.html" title="十天学会ASP教程之第一天：安装调试ASP的环境">十天学会ASP教程之第一天：安装调…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/939.html" title="自定义的asp日期格式化函数">自定义的asp日期格式化函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1071.html" title="防范ASP网站漏洞的八大法则之一">防范ASP网站漏洞的八大法则之一</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/695.html" title="十天学会ASP教程之第二天：表单传送变量">十天学会ASP教程之第二天：表单传…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/838.html" title="asp中关于从utf8页面到gb2312页面出现乱码得解决">asp中关于从utf8页面到gb2312页面…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1007.html" title="ASP教程：实现长文章分页功能">ASP教程：实现长文章分页功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/672.html" title="IIS6架设网站的问题总结">IIS6架设网站的问题总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/945.html" title="五分钟打开&nbsp;allow_url_fopen&nbsp;的最简单方法">五分钟打开 allow_url_fopen 的最…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例&nbsp;C#&nbsp;异步HttpListener&nbsp;" >完全并发处理HTTP请求示例 C# 异步…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误:&nbsp;(500)&nbsp;内部服务器错误" >远程服务器返回错误: (500) 内部服…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgilityPack…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1622.html" title=".net高效代码的价值远远超出你想象" >.net高效代码的价值远远超出你想象…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1615.html" title="哪些地方需要用到委托c#版" >哪些地方需要用到委托c#版</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1614.html" title="&nbsp;直接调用、委托与反射调用的性能区别" > 直接调用、委托与反射调用的性能…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1612.html" title="C#遍历html字符串各个节点(mshtml)&nbsp;" >C#遍历html字符串各个节点(mshtml…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1611.html" title="浅析c#权限管理" >浅析c#权限管理</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1610.html" title="基于将角色与controller、action相关联来判断用户是否有权" >基于将角色与controller、action相…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1526" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

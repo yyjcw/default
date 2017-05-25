@@ -1,0 +1,527 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Windows下应用程序的执行是通过消息驱动的_vs2015_vs2006_vs2010_vs2012_vs2013_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="消息是整个应用程序的工作引擎，我们需要理解掌握我们使用的编程语言是如何封装消息的原理。&nbsp;<br />
+" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; vs2015_vs2006_vs2010_vs2012_vs2013
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        Windows下应用程序的执行是通过消息驱动的
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2014/11/1 15:11:29
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        消息是整个应用程序的工作引擎，我们需要理解掌握我们使用的编程语言是如何封装消息的原理。&nbsp;<br />
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>一、消息概述 </p>
+<p>&nbsp;&nbsp;&nbsp; Windows下应用程序的执行是通过消息驱动的。消息是整个应用程序的工作引擎，我们需要理解掌握我们使用的编程语言是如何封装消息的原理。 </p>
+<p>1 什么是消息(Message) </p>
+<p>&nbsp;&nbsp;&nbsp; 消息就是通知和命令。在.NET框架类库中的System.Windows.Forms命名空间中微软采用面对对象的方式重新定义了Message。新的消息(Message)结构的公共部分属性基本与早期的一样，不过它是面对对象的。 <br />
+&nbsp;&nbsp;&nbsp; 公共属性： </p>
+<p>&nbsp;&nbsp;&nbsp; HWnd&nbsp;&nbsp;&nbsp; 获取或设定消息的处理函数 <br />
+&nbsp;&nbsp;&nbsp; Msg&nbsp;&nbsp;&nbsp;&nbsp; 获取或设定消息的ID号 <br />
+&nbsp;&nbsp;&nbsp; Lparam&nbsp; 指定消息的LParam字段 <br />
+&nbsp;&nbsp;&nbsp; Wparam&nbsp; 指定消息的WParam字段 <br />
+&nbsp;&nbsp;&nbsp; Result&nbsp; 指定为响应消息处理函数而向OS系统返回的值 </p>
+<p>2 消息驱动的过程 </p>
+<p>&nbsp;&nbsp;&nbsp; 所有的外部事件，如键盘输入、鼠标移动、按动鼠标都由OS系统转换成相应的消息发送到应用程序的消息队列。每个应用程序都有一段相应的程序代码来检索、分发这些消息到对应的窗体，然后由窗体的处理函数来处理。 </p>
+<p>二、C#中的消息的封装 </p>
+<p>&nbsp;&nbsp;&nbsp; C#对消息重新进行了面对对象的封装，在C#中消息被封装成了事件。 <br />
+&nbsp;&nbsp;&nbsp; System.Windows.Forms.Application类具有用于启动和停止应用程序和线程以及处理Windows消息的方法。 <br />
+&nbsp;&nbsp;&nbsp; 调用Run以启动当前线程上的应用程序消息循环，并可以选择使其窗体可见。 <br />
+&nbsp;&nbsp;&nbsp; 调用Exit或ExitThread来停止消息循环。 <br />
+&nbsp;&nbsp;&nbsp; C#中用Application类来处理消息的接收和发送的。消息的循环是由它负责的。 <br />
+&nbsp;&nbsp;&nbsp; 从本质上来讲，每个窗体一般都对应一个窗体过程处理函数。那么，C#的一个Form实例(相当于一个窗体)收到消息后是如何处理消息的？其实，这个问题的分析也就是展示了C#的消息封装原理。 </p>
+<p>&nbsp;&nbsp;&nbsp; 实现鼠标左键按下的消息的响应(WM_LBUTTONDOWN) </p>
+<p>&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown1); <br />
+&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown2); </p>
+<p>&nbsp;&nbsp;&nbsp; private void Form1_MouseDown1(object sender, System.Windows.Forms.MouseEventArgs e) <br />
+&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(e.Button==System.Windows.Forms.MouseButtons.Left) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被Form1_MouseDown1函数响应&quot;); <br />
+&nbsp;&nbsp;&nbsp; } </p>
+<p>&nbsp;&nbsp;&nbsp; private void Form1_MouseDown2(object sender, System.Windows.Forms.MouseEventArgs e) <br />
+&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp; if(e.Button==System.Windows.Forms.MouseButtons.Left) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被Form1_MouseDown2函数响应&quot;); <br />
+&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; 上面this.MouseDown是C#中的一个事件。它的定义如下： </p>
+<p>&nbsp;&nbsp;&nbsp; public event MouseEventHandler MouseDown; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; 而MouseEventHandler的定义为： </p>
+<p>&nbsp;&nbsp;&nbsp; public delegate void MouseEventHandler( object sender,MouseEventArgs e); </p>
+<p>&nbsp;&nbsp;&nbsp; 实际上，上面定义了一个委托类型MouseEventHandler。委托了启用了其它编程语言中的函数指针的解决方案。与C++的函数指针不同，委托是完全面向对象的，同时封装了对象实例和方法。本质上，委托把一个实例和该实例上的方法函数封装成一个可调用的实体，它是面对对象的、安全的。 </p>
+<p>&nbsp;&nbsp;&nbsp; 我们可以把 <br />
+&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown1); <br />
+&nbsp;&nbsp;&nbsp; 这条语句看成向this.MouseDown添加一个函数指针。 </p>
+<p>&nbsp;&nbsp;&nbsp; 事件是对象发送的消息，以发送信号通知操作的发生。引发(触发)事件的对象叫做事件发送方。捕获事件并对事件作出响应的对象叫做事件接收方。在事件通讯中，事件发送方类并不知道哪个对象或方法将接收到(处理)它引发的事件。所需要的是在发送方和接收方之间存在一个媒介(类似指针的机制)。.NET框架定义了一个特殊的类型(Delegate委托)，该类型提供函数指针的功能。这样，委托就等效于一个类型安全的函数指针或一个回调函数。 </p>
+<p>&nbsp;&nbsp;&nbsp; 前面我们向this.MouseDown事件添加了两个委托。 <br />
+&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown1); <br />
+&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown2); <br />
+&nbsp;&nbsp;&nbsp; 结果，我们的两个函数Form1_MouseDown1、Form1_MouseDown2在我们单击鼠标左键的时候都会被调用，而且调用的顺序和我们添加委托的顺序一致。 </p>
+<p>&nbsp;&nbsp;&nbsp; WM_LBUTTONDOWN消息首先被Application类从应用程序消息队列中取出，然后分发到相应的窗体。窗体使用MouseDown事件中的函数指针调用已经添加的响应函数。所以C#中的事件字段实质上是一个函数指针列表，用来维护一些消息到达时的响应函数的地址。&nbsp;&nbsp;&nbsp;&nbsp; </p>
+<p>三、结论 </p>
+<p>&nbsp;&nbsp;&nbsp; C#中消息的工作流程： </p>
+<p>&nbsp;&nbsp;&nbsp; C#中的消息被Application类从应用程序消息队列中取出，然后分发到消息对应的窗体，窗体对象的第一个响应函数是对象中的protected override void WndProc(ref System.Windows.Forms.Message e)方法。 <br />
+&nbsp;&nbsp;&nbsp; 它再根据消息的类型调用默认的消息响应函数(如OnMouseDown)，默认的响应函数然后根据对象的事件字段(如this.MouseDown )中的函数指针列表，调用用户所加入的响应函数(如Form1_MouseDown1和Form1_MouseDown2)，而且调用顺序和用户添加顺序一致。 </p>
+<p>四、再回首Application类 </p>
+<p>&nbsp;&nbsp;&nbsp; Application类有一个AddMessageFilter的静态方法，通过它我们可以添加消息筛选器，以便在向目标传递Windows消息时，检视这些消息。 <br />
+&nbsp;&nbsp;&nbsp; 使用消息筛选器来防止引发特定事件，或在将某事件传递给事件处理程序之前使用消息筛选器对其执行特殊操作。我们必须提供IMessageFilter接口的一个实现，然后才可以使用消息筛选器。以下的示范代码将演示在消息发往窗体前我们如何拦截它。我们拦截的同样是WM_LBUTTONDOWN消息。 </p>
+<p><br />
+using System; <br />
+using System.Drawing; <br />
+using System.Collections; <br />
+using System.ComponentModel; <br />
+using System.Windows.Forms; <br />
+using System.Data; </p>
+<p>namespace MessageMech3 <br />
+{ <br />
+&nbsp;&nbsp;&nbsp; //实现消息过滤器接口 <br />
+&nbsp;&nbsp; public class CLButtonDownFilter : IMessageFilter <br />
+&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public bool PreFilterMessage(ref Message m) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (m.Msg==0x0201)// WM_LBUTTONDOWN <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;App中鼠标左键按下&quot;); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //返回值为true， 表示消息已被处理，不要再往后传递，因此消息被截获 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //返回值为false，表示消息未被处理，需要再往后传递，因此消息未被截获 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp; } </p>
+<p><br />
+&nbsp;&nbsp; /// &lt;summary&gt; <br />
+&nbsp;&nbsp; /// Summary description for WinForm. <br />
+&nbsp;&nbsp; /// &lt;/summary&gt; <br />
+&nbsp;&nbsp; public class WinForm : System.Windows.Forms.Form <br />
+&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// Required designer variable. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;/summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private System.Windows.Forms.Label label1; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private System.ComponentModel.Container components = null; </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public WinForm() <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Required for Windows Form Designer support <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; InitializeComponent(); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // TODO: Add any constructor code after InitializeComponent call <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //安装自己的过滤器 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CLButtonDownFilter MyFilter=new CLButtonDownFilter(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.Application.AddMessageFilter(MyFilter); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// Clean up any resources being used. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;/summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected override void Dispose (bool disposing) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (disposing) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (components != null) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; components.Dispose(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base.Dispose(disposing); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #region Windows Form Designer generated code <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// Required method for Designer support - do not modify <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// the contents of this method with the code editor. <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;/summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void InitializeComponent() <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1 = new System.Windows.Forms.Label(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.SuspendLayout(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // label1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.BackColor = System.Drawing.Color.Transparent; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.Dock = System.Windows.Forms.DockStyle.Top; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.ForeColor = System.Drawing.Color.DarkViolet; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.Name = &quot;label1&quot;; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.Size = new System.Drawing.Size(440, 32); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.TabIndex = 0; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.Text = &quot;演示如何在App对象中处理消息,请点鼠标左键&quot;; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Form1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.AutoScaleBaseSize = new System.Drawing.Size(7, 22); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.BackColor = System.Drawing.Color.WhiteSmoke; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.ClientSize = new System.Drawing.Size(440, 273); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.Controls.AddRange(new System.Windows.Forms.Control[] {this.label1}); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.Font = new System.Drawing.Font(&quot;华文行楷&quot;, 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(134))); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.Name = &quot;WinForm&quot;; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.Text = &quot;WinForm&quot;; </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //消息响应函数的调用顺序和添加委托的顺序一致 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //即：以下命令将先调用Form1_MouseDown1再调用Form1_MouseDown2 </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //通过委托添加自己的鼠标按键消息响应函数1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown1); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //通过委托添加自己的鼠标按键消息响应函数2 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown2); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.ResumeLayout(false); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #endregion </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// 应用程序的主入口点。 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;/summary&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [STAThread] <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; static void Main()&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Application.Run(new WinForm()); //启动当前Form线程上的应用程序消息循环 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //要点1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 通过C#提供的事件接口添加自己的鼠标按键事件的响应函数 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void Form1_MouseDown1(object sender, System.Windows.Forms.MouseEventArgs e) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(e.Button==System.Windows.Forms.MouseButtons.Left) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被Form1_MouseDown1函数响应&quot;); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void Form1_MouseDown2(object sender, System.Windows.Forms.MouseEventArgs e) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(e.Button==System.Windows.Forms.MouseButtons.Left) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被Form1_MouseDown2函数响应&quot;); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //要点2 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //通过覆盖基类的事件引发函数拦截消息 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected override&nbsp; void OnMouseDown( MouseEventArgs e) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(e.Button==System.Windows.Forms.MouseButtons.Left) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被OnMouseDown函数响应&quot;); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //如果需要截获消息，可将base.OnMouseDown(e);语句注释掉 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base.OnMouseDown(e); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //要点3 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //通过覆盖基类的窗体函数拦截消息 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected override void WndProc(ref System.Windows.Forms.Message e) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //如果需要截获消息， <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //if(e.Msg==0x0201)// WM_LBUTTONDOWN <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被WndProc函数响应&quot;); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //else <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //&nbsp;&nbsp; base.WndProc(ref e); </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //不需要截获消息则为 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(e.Msg==0x0201)// WM_LBUTTONDOWN <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;消息被WndProc函数响应&quot;); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base.WndProc(ref e); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } </p>
+<p>&nbsp;&nbsp; } <br />
+} </p>
+<p>&nbsp;&nbsp;&nbsp; 以上代码我们首先用类CLButtonDownFilter实现了IMessageFilter接口，在WinForm初始化的时候我们安装了消息筛选器。程序实际执行的时候，在点击鼠标左键的时候，程序仅仅会弹出一个&quot;App中鼠标左键按下&quot;的消息框。因为我们在消息发往窗体前拦截了它，所以窗体将接收不到WM_LBUTTONDOWN消息。 <br />
+&nbsp;&nbsp;&nbsp; 如果我们把 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (m.Msg==0x0201)// WM_LBUTTONDOWN <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;App中鼠标左键按下&quot;); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return true; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp; 改成 </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (m.Msg==0x0201)// WM_LBUTTONDOWN <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.MessageBox.Show(&quot;App中鼠标左键按下&quot;); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return false; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp; 那么，我们在Application类处理消息后，消息将继续发往窗体。窗体的函数将可以处理此消息。程序执行效果是顺序弹出5个消息框。 <br />
+&nbsp;&nbsp;&nbsp; 1：&lt;&lt;App中鼠标左键按下&gt;&gt; <br />
+&nbsp;&nbsp;&nbsp; 2：&lt;&lt;消息被WndProc函数响应&gt;&gt; <br />
+&nbsp;&nbsp;&nbsp; 3：&lt;&lt;消息被OnMouseDown函数响应&gt;&gt; <br />
+&nbsp;&nbsp;&nbsp; 4：&lt;&lt;消息被Form1_MouseDown1函数响应&gt;&gt; <br />
+&nbsp;&nbsp;&nbsp; 5：&lt;&lt;消息被Form1_MouseDown2函数响应&gt;&gt; <br />
+主要有两种方法过滤实现过滤 <br />
+第一种: <br />
+protected override void WndProc(ref Message m) <br />
+{ <br />
+if (m.Msg == 0x0201) <br />
+return; <br />
+else <br />
+base.WndProc(ref m); <br />
+} <br />
+第二种 <br />
+不重写WndProc </p>
+<p>//实现消息过滤器接口 <br />
+public class CLButtonDownFilter : IMessageFilter <br />
+{ <br />
+public bool PreFilterMessage(ref Message m) <br />
+{ <br />
+if (m.Msg == 0x0201)// WM_LBUTTONDOWN <br />
+{ <br />
+//返回值为true， 表示消息已被处理，不要再往后传递，因此消息被截获 <br />
+//返回值为false，表示消息未被处理，需要再往后传递，因此消息未被截获 <br />
+return true; <br />
+} <br />
+return false; <br />
+} <br />
+} </p>
+<p>CLButtonDownFilter MyFilter = new CLButtonDownFilter(); <br />
+System.Windows.Forms.Application.AddMessageFilter(MyFilter); </p>
+<p>&nbsp;</p>
+<p>本文来自于《电脑编程技巧与维护》2002年7期。 </p>
+<p>出处：http://blog.csdn.net/acupofnescafe/archive/2009/01/13/3768944.aspx</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('Windows下应用程序的执行是通过消息驱动的_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1503.html">Microsoft Visual Studio 2012 Ul…</a>&nbsp;&nbsp;下一条： <a href="/html/News/1496.html">SQL_Server_2005数据库实践教程—5.第五…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET 4.0尚未在 Web 服务器上注册 解决方法" >ASP.NET 4.0尚未在 Web 服务器…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,ses…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual Studio 2015新增安卓模拟器" >微软为Visual Studio 2015新增…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/743.html" title="一个关于天气预报的WebService【C#版】">一个关于天气预报的WebService【C…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/777.html" title="VS2010最大的新特点是并行编程的进展">VS2010最大的新特点是并行编程的进…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1244.html" title="TextBox控件：asp.net中如何为密码输入框赋值">TextBox控件：asp.net中如何为密码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1184.html" title="Web服务调用实例：实现天气预报的查询&nbsp;">Web服务调用实例：实现天气预报的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/659.html" title="ASP.NET程序员面试试题(130道题)">ASP.NET程序员面试试题(130道题)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/208.html" title="ASP.NET教程:调用WebService的源码">ASP.NET教程:调用WebService的源码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/299.html" title="网站开发全程设计">网站开发全程设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/625.html" title="据说这套.net面试题很多网络公司都用">据说这套.net面试题很多网络公司都…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1240.html" title="考考你：C#常见题型及部分答案">考考你：C#常见题型及部分答案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/497.html" title="原创：.net读取数据库sql2000">原创：.net读取数据库sql2000</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1245.html" title="伪静态URL重写配置">伪静态URL重写配置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1093.html" title="配置web.config代码asp.net3.5个性化用户">配置web.config代码asp.net3.5个性…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1291.html" title="使用线程池提高性能&nbsp;Socket网络编程学习笔记（6）">使用线程池提高性能 Socket网络编…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/614.html" title="ASP.NET（C#）GridView表头的增加">ASP.NET（C#）GridView表头的增加…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1129.html" title="如何找到正确的学习方向【.NET版】">如何找到正确的学习方向【.NET版】…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET&nbsp;4.0尚未在&nbsp;Web&nbsp;服务器上注册&nbsp;解决方法" >ASP.NET 4.0尚未在 Web 服务器上注…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,session…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的解决…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web&nbsp;Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web Dep…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开文件…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual&nbsp;Studio&nbsp;2015新增安卓模拟器" >微软为Visual Studio 2015新增安卓…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1605.html" title="&nbsp;用C#抓取需要登录的页面数据" > 用C#抓取需要登录的页面数据</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1588.html" title="VS2015新功能" >VS2015新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1584.html" title="VS2015安装图解教程" >VS2015安装图解教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1565.html" title="vs2015新功能介绍" >vs2015新功能介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1564.html" title="vs2015安装图解" >vs2015安装图解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1562.html" title="c#生成二维码和打印" >c#生成二维码和打印</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1498" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

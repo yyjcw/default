@@ -1,0 +1,480 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>C++中指针入门的最好的文章&nbsp;_计算机等级考试_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="&nbsp;其实指针就像是其它变量一样，所不同的是一般的变量包含的是实际的真实的数据，而指针是一个指示器，它告诉程序在内存的哪块区域可以找到数据。这是一个非常重要的概念，有很多程序和算法都是围绕指针而设计的，如链表。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 计算机等级考试
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        C++中指针入门的最好的文章 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/16 13:55:53
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        &nbsp;其实指针就像是其它变量一样，所不同的是一般的变量包含的是实际的真实的数据，而指针是一个指示器，它告诉程序在内存的哪块区域可以找到数据。这是一个非常重要的概念，有很多程序和算法都是围绕指针而设计的，如链表。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        什么是指针？
+<p>&nbsp;&nbsp;&nbsp; 其实指针就像是其它变量一样，所不同的是一般的变量包含的是实际的真实的数据，而指针是一个指示器，它告诉程序在内存的哪块区域可以找到数据。这是一个非常重要的概念，有很多程序和算法都是围绕指针而设计的，如链表。</p>
+<p>&nbsp;&nbsp;&nbsp; <strong>开始学习</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 如何定义一个指针呢？就像你定义一个其它变量一样，只不过你要在指针名字前加上一个星号。我们来看一个例子：下面这个程序定义了两个指针，它们都是指向整型数据。</p>
+<p>&nbsp;&nbsp;&nbsp; int* pNumberOne；</p>
+<p>&nbsp;&nbsp;&nbsp; int* pNumberTwo；</p>
+<p>&nbsp;&nbsp;&nbsp; 你注意到在两个变量名前的&ldquo;p&rdquo;前缀了吗？这是程序员通常在定义指针时的</p>
+<p>&nbsp;&nbsp;&nbsp; 一个习惯，以提高便程序的阅读性，表示这是个指针。现在让我们来初始化这两个指针：</p>
+<p>&nbsp;&nbsp;&nbsp; pNumberOne = &amp;some_number；pNumberTwo = &amp;some_other_number；</p>
+<p>&nbsp;&nbsp;&nbsp; &amp;号读作&ldquo;什么的地址&rdquo;，它表示返回的是变量在内存中的地址而不是变量本身的值。在这个例子中，pNumberOne 等于some_number的地址，所以现在pNumberOne指向some_number. 如果现在我们在程序中要用到some_number，我们就可以使用pNumberOne.</p>
+<p>&nbsp;&nbsp;&nbsp; 我们来学习一个例子：</p>
+<p>&nbsp;&nbsp;&nbsp; 在这个例子中你将学到很多，如果你对指针的概念一点都不了解，我建议你多看几遍这个例子，指针是个很复杂的东西，但你会很快掌握它的。</p>
+<p>&nbsp;&nbsp;&nbsp; 这个例子用以增强你对上面所介绍内容的了解。它是用C编写的（注：原英文版是用C写的代码，译者重新用<a class="channel_keylink" target="_blank" href="http://c.chinaitlab.com">C++</a>改写写了所有代码，并在DEV <a class="channel_keylink" target="_blank" href="http://c.chinaitlab.com">C++</a> 和VC++中编译通过！） </p>
+<table border="2" cellspacing="0" bordercolor="#cccccc" cellpadding="3" width="100%" bgcolor="#ffffff">
+    <tbody>
+        <tr>
+            <td>&nbsp;#include &lt;iostream.h&gt;<br />
+            　　<br />
+            　　void main()<br />
+            　　{<br />
+            　　// 声明变量：<br />
+            　　<br />
+            　　int nNumber;<br />
+            　　int *pPointer;<br />
+            　　<br />
+            　　// 现在给它们赋值：<br />
+            　　<br />
+            　　nNumber = 15;<br />
+            　　pPointer = &amp;nNumber;<br />
+            　　<br />
+            　　//打印出变量nNumber的值：<br />
+            　　<br />
+            　　cout&lt;&lt;&quot;nNumber is equal to :&quot;&lt;&lt; nNumber&lt;&lt;endl;<br />
+            　　<br />
+            　　// 现在通过指针改变nNumber的值：<br />
+            　　<br />
+            　　*pPointer = 25;<br />
+            　　<br />
+            　　//证明nNumber已经被上面的程序改变<br />
+            　　<br />
+            　　//重新打印出nNumber的值:<br />
+            　　<br />
+            　　cout&lt;&lt;&quot;nNumber is equal to :&quot;&lt;&lt;nNumber&lt;&lt;endl;<br />
+            　　}<br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; 通读一下这个程序，编译并运行它，务必明白它是怎样工作的。如果你完成了，准备好，开始下一小节。</p>
+<p>&nbsp;&nbsp;&nbsp; 陷井！</p>
+<p>&nbsp;&nbsp;&nbsp; 试一下，你能找出下面这段程序的错误吗？ </p>
+<table border="2" cellspacing="0" bordercolor="#cccccc" cellpadding="3" width="100%" bgcolor="#ffffff">
+    <tbody>
+        <tr>
+            <td>&nbsp;#include &lt;iostream.h&gt;<br />
+            　　<br />
+            　　int *pPointer;<br />
+            　　<br />
+            　　void SomeFunction();<br />
+            　　<br />
+            　　{<br />
+            　　int nNumber;<br />
+            　　nNumber = 25;<br />
+            　　<br />
+            　　//让指针指向nNumber:<br />
+            　　<br />
+            　　pPointer = &amp;nNumber;<br />
+            　　}<br />
+            　　<br />
+            　　void main()<br />
+            　　{<br />
+            　　SomeFunction(); //为pPointer赋值<br />
+            　　<br />
+            　　//为什么这里失败了?为什么没有得到25<br />
+            　　<br />
+            　　cout&lt;&lt;&quot;Value of *pPointer: &quot;&lt;&lt;*pPointer&lt;&lt;endl;<br />
+            　　}<br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; 这段程序先调用了SomeFunction函数，创建了个叫nNumber的变量，接着让指针pPointer指向了它。可是问题出在哪儿呢？当函数结束后，nNumber被删掉了，</p>
+<p>&nbsp;&nbsp;&nbsp; 因为这一个局部变量。局部变量在定义它的函数执行完后都会被系统自动删掉。也就是说当SomeFunction 函数返回主函数main（）时，这个变量已经被删掉，但pPointer还指着变量曾经用过的但现在已不属于这个程序的区域。如果你还不明白，你可以再读读这个程序，注意它的局部变量和全局变量，这些概念都非常重要。</p>
+<p>&nbsp;&nbsp;&nbsp; 但这个问题怎么解决呢？答案是动态分配技术。注意这在C和C++中是不同的。由于大多数程序员都是用C++，所以我用到的是C++中常用的称谓。</p>
+<p>&nbsp;&nbsp;&nbsp; <strong>动态分配</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 动态分配是指针的关键技术。它是用来在不必定义变量的情况下分配内存和让指针去指向它们。尽管这么说可能会让你迷惑，其实它真的很简单。下面的代码就是一个为一个整型数据分配内存的例子：</p>
+<p>&nbsp;&nbsp;&nbsp; int *pNumber；</p>
+<p>&nbsp;&nbsp;&nbsp; pNumber = new int；</p>
+<p>&nbsp;&nbsp;&nbsp; 第一行声明一个指针pNumber.第二行为一个整型数据分配一个内存空间，并让pNumber指向这个新内存空间。下面是一个新例，这一次是用double双精型：</p>
+<p>&nbsp;&nbsp;&nbsp; double *pDouble；pDouble = new double；</p>
+<p>&nbsp;&nbsp;&nbsp; 这种格式是一个规则，这样写你是不会错的。</p>
+<p>&nbsp;&nbsp;&nbsp; 但动态分配又和前面的例子有什么不同呢？就是在函数返回或执行完毕时，你分配的这块内存区域是不会被删除的所以我们现在可以用动态分配重写上面的程序：</p>
+<p>&nbsp;</p>
+<table border="2" cellspacing="0" bordercolor="#cccccc" cellpadding="3" width="100%" bgcolor="#ffffff">
+    <tbody>
+        <tr>
+            <td>&nbsp;#include &lt;iostream.h&gt;<br />
+            　　<br />
+            　　int *pPointer;<br />
+            　　<br />
+            　　void SomeFunction()<br />
+            　　{<br />
+            　　<br />
+            　　// 让指针指向一个新的整型<br />
+            　　<br />
+            　　pPointer = new int;<br />
+            　　*pPointer = 25;<br />
+            　　}<br />
+            　　<br />
+            　　void main()<br />
+            　　{<br />
+            　　SomeFunction(); // 为pPointer赋值<br />
+            　　<br />
+            　　cout&lt;&lt;&quot;Value of *pPointer: &quot;&lt;&lt;*pPointer&lt;&lt;endl;<br />
+            　　}<br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; 通读这个程序，编译并运行它，务必理解它是怎样工作的。当SomeFunction调用时，它分配了一个内存，并让pPointer指向它。这一次，当函数返回时，新的内存区域被保留下来，所以pPointer始终指着有用的信息，这是因为了动态分配。但是你再仔细读读上面这个程序，虽然它得到了正确结果，可仍有一个严重的错误。</p>
+<p>&nbsp;&nbsp;&nbsp;<strong> 分配了内存，别忘了回收</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 太复杂了，怎么会还有严重的错误！其实要改正并不难。问题是：你动态地分配了一个内存空间，可它绝不会被自动删除。也就是说，这块内存空间会一直存在，直到你告诉电脑你已经使用完了。可结果是，你并没有告诉电脑你已不再需要这块内存空间了，所以它会继续占据着内存空间造成浪费，甚至你的程序运行完毕，其它程序运行时它还存在。当这样的问题积累到一定程度，最终将导致系统崩溃。所以这是很重要的，在你用完它以后，请释放它的空间，如：</p>
+<p>&nbsp;&nbsp;&nbsp; delete pPointer；</p>
+<p>&nbsp;&nbsp;&nbsp; 这样就差不多了，你不得不小心。在这你终止了一个有效的指针（一个确实指向某个内存的指针）。下面的程序，它不会浪费任何的内存：</p>
+<p>&nbsp;&nbsp;&nbsp; #include &lt;iostream.h&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; 调用时，它分配了一个内存，并让pPointer指向它。这一次，当函数返回时，新的内存区域被保留下来，所以pPointer始终指着有用的信息，这是因为了动态分配。但是你再仔细读读上面这个程序，虽然它得到了正确结果，可仍有一个严重的错误。</p>
+<p>&nbsp;&nbsp;<strong>&nbsp; 分配了内存，别忘了回收</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 太复杂了，怎么会还有严重的错误！其实要改正并不难。问题是：你动态地分配了一个内存空间，可它绝不会被自动删除。也就是说，这块内存空间会一直存在，直到你告诉电脑你已经使用完了。可结果是，你并没有告诉电脑你已不再需要这块内存空间了，所以它会继续占据着内存空间造成浪费，甚至你的程序运行完毕，其它程序运行时它还存在。当这样的问题积累到一定程度，最终将导致系统崩溃。所以这是很重要的，在你用完它以后，请释放它的空间，如：delete pPointer；</p>
+<p>&nbsp;&nbsp;&nbsp; 这样就差不多了，你不得不小心。在这你终止了一个有效的指针（一个确实指向某个内存的指针）。</p>
+<p>&nbsp;&nbsp;&nbsp; 下面的程序，它不会浪费任何的内存： </p>
+<table border="2" cellspacing="0" bordercolor="#cccccc" cellpadding="3" width="100%" bgcolor="#ffffff">
+    <tbody>
+        <tr>
+            <td>&nbsp;#include &lt;iostream.h&gt;<br />
+            　　<br />
+            　　int *pPointer;<br />
+            　　<br />
+            　　void SomeFunction()<br />
+            　　{<br />
+            　　<br />
+            　　// 让指针指向一个新的整型<br />
+            　　<br />
+            　　pPointer = new int;<br />
+            　　*pPointer = 25;<br />
+            　　}<br />
+            　　<br />
+            　　void main()<br />
+            　　{<br />
+            　　SomeFunction(); //为pPointer赋值<br />
+            　　<br />
+            　　cout&lt;&lt;&quot;Value of *pPointer: &quot;&lt;&lt;*pPointer&lt;&lt;endl;<br />
+            　　<br />
+            　　delete pPointer;<br />
+            　　}<br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp; 只有一行与前一个程序不同，但就是这最后一行十分地重要。如果你不删除它，你就会制造一起&ldquo;内存漏洞&rdquo;，而让内存逐渐地泄漏。（译者：假如在程序中调用了两次SomeFunction，你又该如何修改这个程序呢？请读者自己思考）</p>
+<p>&nbsp;&nbsp;&nbsp;<strong> 传递指针到函数</strong></p>
+<p>&nbsp;&nbsp;&nbsp; 传递指针到函数是非常有用的，也很容易掌握。如果我们写一个程序，让一个数加上5，看一看这个程序完整吗： </p>
+<table border="2" cellspacing="0" bordercolor="#cccccc" cellpadding="3" width="100%" bgcolor="#ffffff">
+    <tbody>
+        <tr>
+            <td>&nbsp;#include &lt;iostream.h&gt;<br />
+            　　<br />
+            　　void AddFive(int Number)<br />
+            　　{<br />
+            　　Number = Number + 5;<br />
+            　　}<br />
+            　　<br />
+            　　void main()<br />
+            　　{<br />
+            　　int nMyNumber = 18;<br />
+            　　<br />
+            　　cout&lt;&lt;&quot;My original number is &quot;&lt;&lt;nMyNumber&lt;&lt;endl;<br />
+            　　AddFive(nMyNumber);<br />
+            　　cout&lt;&lt;&quot;My new number is &quot;&lt;&lt;nMyNumber&lt;&lt;endl;<br />
+            　　<br />
+            　　//得到了结果23吗？问题出在哪儿？<br />
+            　　<br />
+            　　}<br />
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+&nbsp;&nbsp;&nbsp; 问题出在函数AddFive里用到的Number是变量nMyNumber的一个副本而传递给函数，而不是变量本身。因此， &quot; Number = Number + 5&quot; 这一行是把变量的副本加了5，而原始的变量在主函数main（）里依然没变。试着运行这个程序，自己去体会一下。要解决这个问题，我们就要传递一个指针到函数，所以我们要修改一下函数让它能接受指针：把'void AddFive（int Number）' 改成 'void AddFive（int*Number）'　。下面就是改过的程序，注意函数调用时要用＆号，以表示传递的是指针：
+<table border="2" cellspacing="0" bordercolor="#cccccc" cellpadding="3" width="100%" bgcolor="#ffffff">
+    <tbody>
+        <tr>
+            <td>&nbsp;　#include &lt;iostream.h&gt;<br />
+            　　void AddFive(int* Number)<br />
+            　　{<br />
+            　　*Number = *Number + 5;<br />
+            　　}<br />
+            　　<br />
+            　　void main()<br />
+            　　{<br />
+            　　int nMyNumber = 18;<br />
+            　　<br />
+            　　cout</td>
+        </tr>
+    </tbody>
+</table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('C++中指针入门的最好的文章 _夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/685.html">C++程序调用数据库的方法</a>&nbsp;&nbsp;下一条： <a href="/html/News/683.html">C++ 数组array与vector的比较 </a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1600.html" title="Windows消息机制详解" >Windows消息机制详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1139.html" title="SQLite在VC下的使用" >SQLite在VC下的使用</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1138.html" title="五种区别C++内存分配的方法" >五种区别C++内存分配的方法</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1112.html" title="VC的dll进行profile " >VC的dll进行profile </a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1111.html" title="C打开文件的追加参数" >C打开文件的追加参数</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/961.html" title="C/C++编程中无所不在的指针概念" >C/C++编程中无所不在的指针概…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/849.html" title="C++从零开始学编程" >C++从零开始学编程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/775.html" title="VC、VC++、C++、C它们有什么区别" >VC、VC++、C++、C它们有什么区…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/719.html" title="为C++脚本加入新元素" >为C++脚本加入新元素</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/849.html" title="C++从零开始学编程">C++从零开始学编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/683.html" title="C++&nbsp;数组array与vector的比较&nbsp;">C++ 数组array与vector的比较 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/775.html" title="VC、VC++、C++、C它们有什么区别">VC、VC++、C++、C它们有什么区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1139.html" title="SQLite在VC下的使用">SQLite在VC下的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1138.html" title="五种区别C++内存分配的方法">五种区别C++内存分配的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/718.html" title="用Cint解析C++脚本">用Cint解析C++脚本</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1111.html" title="C打开文件的追加参数">C打开文件的追加参数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/717.html" title="C++&nbsp;Builder&nbsp;访问&nbsp;USB&nbsp;口的方法">C++ Builder 访问 USB 口的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/706.html" title="C++中强制转换函数总结&nbsp;">C++中强制转换函数总结 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/719.html" title="为C++脚本加入新元素">为C++脚本加入新元素</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/961.html" title="C/C++编程中无所不在的指针概念">C/C++编程中无所不在的指针概念</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/685.html" title="C++程序调用数据库的方法">C++程序调用数据库的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/696.html" title="内存泄漏是编程中常常见到的一个问题">内存泄漏是编程中常常见到的一个问…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/684.html" title="C++中指针入门的最好的文章&nbsp;">C++中指针入门的最好的文章 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/682.html" title="C++编译错误解决方法">C++编译错误解决方法</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1600.html" title="Windows消息机制详解" >Windows消息机制详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1139.html" title="SQLite在VC下的使用" >SQLite在VC下的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1138.html" title="五种区别C++内存分配的方法" >五种区别C++内存分配的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1112.html" title="VC的dll进行profile&nbsp;" >VC的dll进行profile </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1111.html" title="C打开文件的追加参数" >C打开文件的追加参数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/961.html" title="C/C++编程中无所不在的指针概念" >C/C++编程中无所不在的指针概念</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/849.html" title="C++从零开始学编程" >C++从零开始学编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/775.html" title="VC、VC++、C++、C它们有什么区别" >VC、VC++、C++、C它们有什么区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/719.html" title="为C++脚本加入新元素" >为C++脚本加入新元素</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/718.html" title="用Cint解析C++脚本" >用Cint解析C++脚本</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/717.html" title="C++&nbsp;Builder&nbsp;访问&nbsp;USB&nbsp;口的方法" >C++ Builder 访问 USB 口的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/706.html" title="C++中强制转换函数总结&nbsp;" >C++中强制转换函数总结 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/701.html" title="C++构造函数的幕后工作&nbsp;" >C++构造函数的幕后工作 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/696.html" title="内存泄漏是编程中常常见到的一个问题" >内存泄漏是编程中常常见到的一个问…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/685.html" title="C++程序调用数据库的方法" >C++程序调用数据库的方法</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "684" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

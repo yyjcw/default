@@ -1,0 +1,700 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ASP汉字转拼音函数_Asp.net专题(WCF/WPF/WF)_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="ASP汉字转拼音函数" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Asp.net专题(WCF/WPF/WF)
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        ASP汉字转拼音函数
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/27 11:45:05
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        ASP汉字转拼音函数
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>注意,只能应用于GB2312编码的.比如UTF-8中要用,可以做参数传递方式!</p>
+<p>以下是源代码:</p>
+<p>&lt;% <br />
+Set d = CreateObject(&quot;Scripting.Dictionary&quot;) <br />
+d.add &quot;a&quot;,-20319 <br />
+d.add &quot;ai&quot;,-20317 <br />
+d.add &quot;an&quot;,-20304 <br />
+d.add &quot;ang&quot;,-20295 <br />
+d.add &quot;ao&quot;,-20292 <br />
+d.add &quot;ba&quot;,-20283 <br />
+d.add &quot;bai&quot;,-20265 <br />
+d.add &quot;ban&quot;,-20257 <br />
+d.add &quot;bang&quot;,-20242 <br />
+d.add &quot;bao&quot;,-20230 <br />
+d.add &quot;bei&quot;,-20051 <br />
+d.add &quot;ben&quot;,-20036 <br />
+d.add &quot;beng&quot;,-20032 <br />
+d.add &quot;bi&quot;,-20026 <br />
+d.add &quot;bian&quot;,-20002 <br />
+d.add &quot;biao&quot;,-19990 <br />
+d.add &quot;bie&quot;,-19986 <br />
+d.add &quot;bin&quot;,-19982 <br />
+d.add &quot;bing&quot;,-19976 <br />
+d.add &quot;bo&quot;,-19805 <br />
+d.add &quot;bu&quot;,-19784 <br />
+d.add &quot;ca&quot;,-19775 <br />
+d.add &quot;cai&quot;,-19774 <br />
+d.add &quot;can&quot;,-19763 <br />
+d.add &quot;cang&quot;,-19756 <br />
+d.add &quot;cao&quot;,-19751 <br />
+d.add &quot;ce&quot;,-19746 <br />
+d.add &quot;ceng&quot;,-19741 <br />
+d.add &quot;cha&quot;,-19739 <br />
+d.add &quot;chai&quot;,-19728 <br />
+d.add &quot;chan&quot;,-19725 <br />
+d.add &quot;chang&quot;,-19715 <br />
+d.add &quot;chao&quot;,-19540 <br />
+d.add &quot;che&quot;,-19531 <br />
+d.add &quot;chen&quot;,-19525 <br />
+d.add &quot;cheng&quot;,-19515 <br />
+d.add &quot;chi&quot;,-19500 <br />
+d.add &quot;chong&quot;,-19484 <br />
+d.add &quot;chou&quot;,-19479 <br />
+d.add &quot;chu&quot;,-19467 <br />
+d.add &quot;chuai&quot;,-19289 <br />
+d.add &quot;chuan&quot;,-19288 <br />
+d.add &quot;chuang&quot;,-19281 <br />
+d.add &quot;chui&quot;,-19275 <br />
+d.add &quot;chun&quot;,-19270 <br />
+d.add &quot;chuo&quot;,-19263 <br />
+d.add &quot;ci&quot;,-19261 <br />
+d.add &quot;cong&quot;,-19249 <br />
+d.add &quot;cou&quot;,-19243 <br />
+d.add &quot;cu&quot;,-19242 <br />
+d.add &quot;cuan&quot;,-19238 <br />
+d.add &quot;cui&quot;,-19235 <br />
+d.add &quot;cun&quot;,-19227 <br />
+d.add &quot;cuo&quot;,-19224 <br />
+d.add &quot;da&quot;,-19218 <br />
+d.add &quot;dai&quot;,-19212 <br />
+d.add &quot;dan&quot;,-19038 <br />
+d.add &quot;dang&quot;,-19023 <br />
+d.add &quot;dao&quot;,-19018 <br />
+d.add &quot;de&quot;,-19006 <br />
+d.add &quot;deng&quot;,-19003 <br />
+d.add &quot;di&quot;,-18996 <br />
+d.add &quot;dian&quot;,-18977 <br />
+d.add &quot;diao&quot;,-18961 <br />
+d.add &quot;die&quot;,-18952 <br />
+d.add &quot;ding&quot;,-18783 <br />
+d.add &quot;diu&quot;,-18774 <br />
+d.add &quot;dong&quot;,-18773 <br />
+d.add &quot;dou&quot;,-18763 <br />
+d.add &quot;du&quot;,-18756 <br />
+d.add &quot;duan&quot;,-18741 <br />
+d.add &quot;dui&quot;,-18735 <br />
+d.add &quot;dun&quot;,-18731 <br />
+d.add &quot;duo&quot;,-18722 <br />
+d.add &quot;e&quot;,-18710 <br />
+d.add &quot;en&quot;,-18697 <br />
+d.add &quot;er&quot;,-18696 <br />
+d.add &quot;fa&quot;,-18526 <br />
+d.add &quot;fan&quot;,-18518 <br />
+d.add &quot;fang&quot;,-18501 <br />
+d.add &quot;fei&quot;,-18490 <br />
+d.add &quot;fen&quot;,-18478 <br />
+d.add &quot;feng&quot;,-18463 <br />
+d.add &quot;fo&quot;,-18448 <br />
+d.add &quot;fou&quot;,-18447 <br />
+d.add &quot;fu&quot;,-18446 <br />
+d.add &quot;ga&quot;,-18239 <br />
+d.add &quot;gai&quot;,-18237 <br />
+d.add &quot;gan&quot;,-18231 <br />
+d.add &quot;gang&quot;,-18220 <br />
+d.add &quot;gao&quot;,-18211 <br />
+d.add &quot;ge&quot;,-18201 <br />
+d.add &quot;gei&quot;,-18184 <br />
+d.add &quot;gen&quot;,-18183 <br />
+d.add &quot;geng&quot;,-18181 <br />
+d.add &quot;gong&quot;,-18012 <br />
+d.add &quot;gou&quot;,-17997 <br />
+d.add &quot;gu&quot;,-17988 <br />
+d.add &quot;gua&quot;,-17970 <br />
+d.add &quot;guai&quot;,-17964 <br />
+d.add &quot;guan&quot;,-17961 <br />
+d.add &quot;guang&quot;,-17950 <br />
+d.add &quot;gui&quot;,-17947 <br />
+d.add &quot;gun&quot;,-17931 <br />
+d.add &quot;guo&quot;,-17928 <br />
+d.add &quot;ha&quot;,-17922 <br />
+d.add &quot;hai&quot;,-17759 <br />
+d.add &quot;han&quot;,-17752 <br />
+d.add &quot;hang&quot;,-17733 <br />
+d.add &quot;hao&quot;,-17730 <br />
+d.add &quot;he&quot;,-17721 <br />
+d.add &quot;hei&quot;,-17703 <br />
+d.add &quot;hen&quot;,-17701 <br />
+d.add &quot;heng&quot;,-17697 <br />
+d.add &quot;hong&quot;,-17692 <br />
+d.add &quot;hou&quot;,-17683 <br />
+d.add &quot;hu&quot;,-17676 <br />
+d.add &quot;hua&quot;,-17496 <br />
+d.add &quot;huai&quot;,-17487 <br />
+d.add &quot;huan&quot;,-17482 <br />
+d.add &quot;huang&quot;,-17468 <br />
+d.add &quot;hui&quot;,-17454 <br />
+d.add &quot;hun&quot;,-17433 <br />
+d.add &quot;huo&quot;,-17427 <br />
+d.add &quot;ji&quot;,-17417 <br />
+d.add &quot;jia&quot;,-17202 <br />
+d.add &quot;jian&quot;,-17185 <br />
+d.add &quot;jiang&quot;,-16983 <br />
+d.add &quot;jiao&quot;,-16970 <br />
+d.add &quot;jie&quot;,-16942 <br />
+d.add &quot;jin&quot;,-16915 <br />
+d.add &quot;jing&quot;,-16733 <br />
+d.add &quot;jiong&quot;,-16708 <br />
+d.add &quot;jiu&quot;,-16706 <br />
+d.add &quot;ju&quot;,-16689 <br />
+d.add &quot;juan&quot;,-16664 <br />
+d.add &quot;jue&quot;,-16657 <br />
+d.add &quot;jun&quot;,-16647 <br />
+d.add &quot;ka&quot;,-16474 <br />
+d.add &quot;kai&quot;,-16470 <br />
+d.add &quot;kan&quot;,-16465 <br />
+d.add &quot;kang&quot;,-16459 <br />
+d.add &quot;kao&quot;,-16452 <br />
+d.add &quot;ke&quot;,-16448 <br />
+d.add &quot;ken&quot;,-16433 <br />
+d.add &quot;keng&quot;,-16429 <br />
+d.add &quot;kong&quot;,-16427 <br />
+d.add &quot;kou&quot;,-16423 <br />
+d.add &quot;ku&quot;,-16419 <br />
+d.add &quot;kua&quot;,-16412 <br />
+d.add &quot;kuai&quot;,-16407 <br />
+d.add &quot;kuan&quot;,-16403 <br />
+d.add &quot;kuang&quot;,-16401 <br />
+d.add &quot;kui&quot;,-16393 <br />
+d.add &quot;kun&quot;,-16220 <br />
+d.add &quot;kuo&quot;,-16216 <br />
+d.add &quot;la&quot;,-16212 <br />
+d.add &quot;lai&quot;,-16205 <br />
+d.add &quot;lan&quot;,-16202 <br />
+d.add &quot;lang&quot;,-16187 <br />
+d.add &quot;lao&quot;,-16180 <br />
+d.add &quot;le&quot;,-16171 <br />
+d.add &quot;lei&quot;,-16169 <br />
+d.add &quot;leng&quot;,-16158 <br />
+d.add &quot;li&quot;,-16155 <br />
+d.add &quot;lia&quot;,-15959 <br />
+d.add &quot;lian&quot;,-15958 <br />
+d.add &quot;liang&quot;,-15944 <br />
+d.add &quot;liao&quot;,-15933 <br />
+d.add &quot;lie&quot;,-15920 <br />
+d.add &quot;lin&quot;,-15915 <br />
+d.add &quot;ling&quot;,-15903 <br />
+d.add &quot;liu&quot;,-15889 <br />
+d.add &quot;long&quot;,-15878 <br />
+d.add &quot;lou&quot;,-15707 <br />
+d.add &quot;lu&quot;,-15701 <br />
+d.add &quot;lv&quot;,-15681 <br />
+d.add &quot;luan&quot;,-15667 <br />
+d.add &quot;lue&quot;,-15661 <br />
+d.add &quot;lun&quot;,-15659 <br />
+d.add &quot;luo&quot;,-15652 <br />
+d.add &quot;ma&quot;,-15640 <br />
+d.add &quot;mai&quot;,-15631 <br />
+d.add &quot;man&quot;,-15625 <br />
+d.add &quot;mang&quot;,-15454 <br />
+d.add &quot;mao&quot;,-15448 <br />
+d.add &quot;me&quot;,-15436 <br />
+d.add &quot;mei&quot;,-15435 <br />
+d.add &quot;men&quot;,-15419 <br />
+d.add &quot;meng&quot;,-15416 <br />
+d.add &quot;mi&quot;,-15408 <br />
+d.add &quot;mian&quot;,-15394 <br />
+d.add &quot;miao&quot;,-15385 <br />
+d.add &quot;mie&quot;,-15377 <br />
+d.add &quot;min&quot;,-15375 <br />
+d.add &quot;ming&quot;,-15369 <br />
+d.add &quot;miu&quot;,-15363 <br />
+d.add &quot;mo&quot;,-15362 <br />
+d.add &quot;mou&quot;,-15183 <br />
+d.add &quot;mu&quot;,-15180 <br />
+d.add &quot;na&quot;,-15165 <br />
+d.add &quot;nai&quot;,-15158 <br />
+d.add &quot;nan&quot;,-15153 <br />
+d.add &quot;nang&quot;,-15150 <br />
+d.add &quot;nao&quot;,-15149 <br />
+d.add &quot;ne&quot;,-15144 <br />
+d.add &quot;nei&quot;,-15143 <br />
+d.add &quot;nen&quot;,-15141 <br />
+d.add &quot;neng&quot;,-15140 <br />
+d.add &quot;ni&quot;,-15139 <br />
+d.add &quot;nian&quot;,-15128 <br />
+d.add &quot;niang&quot;,-15121 <br />
+d.add &quot;niao&quot;,-15119 <br />
+d.add &quot;nie&quot;,-15117 <br />
+d.add &quot;nin&quot;,-15110 <br />
+d.add &quot;ning&quot;,-15109 <br />
+d.add &quot;niu&quot;,-14941 <br />
+d.add &quot;nong&quot;,-14937 <br />
+d.add &quot;nu&quot;,-14933 <br />
+d.add &quot;nv&quot;,-14930 <br />
+d.add &quot;nuan&quot;,-14929 <br />
+d.add &quot;nue&quot;,-14928 <br />
+d.add &quot;nuo&quot;,-14926 <br />
+d.add &quot;o&quot;,-14922 <br />
+d.add &quot;ou&quot;,-14921 <br />
+d.add &quot;pa&quot;,-14914 <br />
+d.add &quot;pai&quot;,-14908 <br />
+d.add &quot;pan&quot;,-14902 <br />
+d.add &quot;pang&quot;,-14894 <br />
+d.add &quot;pao&quot;,-14889 <br />
+d.add &quot;pei&quot;,-14882 <br />
+d.add &quot;pen&quot;,-14873 <br />
+d.add &quot;peng&quot;,-14871 <br />
+d.add &quot;pi&quot;,-14857 <br />
+d.add &quot;pian&quot;,-14678 <br />
+d.add &quot;piao&quot;,-14674 <br />
+d.add &quot;pie&quot;,-14670 <br />
+d.add &quot;pin&quot;,-14668 <br />
+d.add &quot;ping&quot;,-14663 <br />
+d.add &quot;po&quot;,-14654 <br />
+d.add &quot;pu&quot;,-14645 <br />
+d.add &quot;qi&quot;,-14630 <br />
+d.add &quot;qia&quot;,-14594 <br />
+d.add &quot;qian&quot;,-14429 <br />
+d.add &quot;qiang&quot;,-14407 <br />
+d.add &quot;qiao&quot;,-14399 <br />
+d.add &quot;qie&quot;,-14384 <br />
+d.add &quot;qin&quot;,-14379 <br />
+d.add &quot;qing&quot;,-14368 <br />
+d.add &quot;qiong&quot;,-14355 <br />
+d.add &quot;qiu&quot;,-14353 <br />
+d.add &quot;qu&quot;,-14345 <br />
+d.add &quot;quan&quot;,-14170 <br />
+d.add &quot;que&quot;,-14159 <br />
+d.add &quot;qun&quot;,-14151 <br />
+d.add &quot;ran&quot;,-14149 <br />
+d.add &quot;rang&quot;,-14145 <br />
+d.add &quot;rao&quot;,-14140 <br />
+d.add &quot;re&quot;,-14137 <br />
+d.add &quot;ren&quot;,-14135 <br />
+d.add &quot;reng&quot;,-14125 <br />
+d.add &quot;ri&quot;,-14123 <br />
+d.add &quot;rong&quot;,-14122 <br />
+d.add &quot;rou&quot;,-14112 <br />
+d.add &quot;ru&quot;,-14109 <br />
+d.add &quot;ruan&quot;,-14099 <br />
+d.add &quot;rui&quot;,-14097 <br />
+d.add &quot;run&quot;,-14094 <br />
+d.add &quot;ruo&quot;,-14092 <br />
+d.add &quot;sa&quot;,-14090 <br />
+d.add &quot;sai&quot;,-14087 <br />
+d.add &quot;san&quot;,-14083 <br />
+d.add &quot;sang&quot;,-13917 <br />
+d.add &quot;sao&quot;,-13914 <br />
+d.add &quot;se&quot;,-13910 <br />
+d.add &quot;sen&quot;,-13907 <br />
+d.add &quot;seng&quot;,-13906 <br />
+d.add &quot;sha&quot;,-13905 <br />
+d.add &quot;shai&quot;,-13896 <br />
+d.add &quot;shan&quot;,-13894 <br />
+d.add &quot;shang&quot;,-13878 <br />
+d.add &quot;shao&quot;,-13870 <br />
+d.add &quot;she&quot;,-13859 <br />
+d.add &quot;shen&quot;,-13847 <br />
+d.add &quot;sheng&quot;,-13831 <br />
+d.add &quot;shi&quot;,-13658 <br />
+d.add &quot;shou&quot;,-13611 <br />
+d.add &quot;shu&quot;,-13601 <br />
+d.add &quot;shua&quot;,-13406 <br />
+d.add &quot;shuai&quot;,-13404 <br />
+d.add &quot;shuan&quot;,-13400 <br />
+d.add &quot;shuang&quot;,-13398 <br />
+d.add &quot;shui&quot;,-13395 <br />
+d.add &quot;shun&quot;,-13391 <br />
+d.add &quot;shuo&quot;,-13387 <br />
+d.add &quot;si&quot;,-13383 <br />
+d.add &quot;song&quot;,-13367 <br />
+d.add &quot;sou&quot;,-13359 <br />
+d.add &quot;su&quot;,-13356 <br />
+d.add &quot;suan&quot;,-13343 <br />
+d.add &quot;sui&quot;,-13340 <br />
+d.add &quot;sun&quot;,-13329 <br />
+d.add &quot;suo&quot;,-13326 <br />
+d.add &quot;ta&quot;,-13318 <br />
+d.add &quot;tai&quot;,-13147 <br />
+d.add &quot;tan&quot;,-13138 <br />
+d.add &quot;tang&quot;,-13120 <br />
+d.add &quot;tao&quot;,-13107 <br />
+d.add &quot;te&quot;,-13096 <br />
+d.add &quot;teng&quot;,-13095 <br />
+d.add &quot;ti&quot;,-13091 <br />
+d.add &quot;tian&quot;,-13076 <br />
+d.add &quot;tiao&quot;,-13068 <br />
+d.add &quot;tie&quot;,-13063 <br />
+d.add &quot;ting&quot;,-13060 <br />
+d.add &quot;tong&quot;,-12888 <br />
+d.add &quot;tou&quot;,-12875 <br />
+d.add &quot;tu&quot;,-12871 <br />
+d.add &quot;tuan&quot;,-12860 <br />
+d.add &quot;tui&quot;,-12858 <br />
+d.add &quot;tun&quot;,-12852 <br />
+d.add &quot;tuo&quot;,-12849 <br />
+d.add &quot;wa&quot;,-12838 <br />
+d.add &quot;wai&quot;,-12831 <br />
+d.add &quot;wan&quot;,-12829 <br />
+d.add &quot;wang&quot;,-12812 <br />
+d.add &quot;wei&quot;,-12802 <br />
+d.add &quot;wen&quot;,-12607 <br />
+d.add &quot;weng&quot;,-12597 <br />
+d.add &quot;wo&quot;,-12594 <br />
+d.add &quot;wu&quot;,-12585 <br />
+d.add &quot;xi&quot;,-12556 <br />
+d.add &quot;xia&quot;,-12359 <br />
+d.add &quot;xian&quot;,-12346 <br />
+d.add &quot;xiang&quot;,-12320 <br />
+d.add &quot;xiao&quot;,-12300 <br />
+d.add &quot;xie&quot;,-12120 <br />
+d.add &quot;xin&quot;,-12099 <br />
+d.add &quot;xing&quot;,-12089 <br />
+d.add &quot;xiong&quot;,-12074 <br />
+d.add &quot;xiu&quot;,-12067 <br />
+d.add &quot;xu&quot;,-12058 <br />
+d.add &quot;xuan&quot;,-12039 <br />
+d.add &quot;xue&quot;,-11867 <br />
+d.add &quot;xun&quot;,-11861 <br />
+d.add &quot;ya&quot;,-11847 <br />
+d.add &quot;yan&quot;,-11831 <br />
+d.add &quot;yang&quot;,-11798 <br />
+d.add &quot;yao&quot;,-11781 <br />
+d.add &quot;ye&quot;,-11604 <br />
+d.add &quot;yi&quot;,-11589 <br />
+d.add &quot;yin&quot;,-11536 <br />
+d.add &quot;ying&quot;,-11358 <br />
+d.add &quot;yo&quot;,-11340 <br />
+d.add &quot;yong&quot;,-11339 <br />
+d.add &quot;you&quot;,-11324 <br />
+d.add &quot;yu&quot;,-11303 <br />
+d.add &quot;yuan&quot;,-11097 <br />
+d.add &quot;yue&quot;,-11077 <br />
+d.add &quot;yun&quot;,-11067 <br />
+d.add &quot;za&quot;,-11055 <br />
+d.add &quot;zai&quot;,-11052 <br />
+d.add &quot;zan&quot;,-11045 <br />
+d.add &quot;zang&quot;,-11041 <br />
+d.add &quot;zao&quot;,-11038 <br />
+d.add &quot;ze&quot;,-11024 <br />
+d.add &quot;zei&quot;,-11020 <br />
+d.add &quot;zen&quot;,-11019 <br />
+d.add &quot;zeng&quot;,-11018 <br />
+d.add &quot;zha&quot;,-11014 <br />
+d.add &quot;zhai&quot;,-10838 <br />
+d.add &quot;zhan&quot;,-10832 <br />
+d.add &quot;zhang&quot;,-10815 <br />
+d.add &quot;zhao&quot;,-10800 <br />
+d.add &quot;zhe&quot;,-10790 <br />
+d.add &quot;zhen&quot;,-10780 <br />
+d.add &quot;zheng&quot;,-10764 <br />
+d.add &quot;zhi&quot;,-10587 <br />
+d.add &quot;zhong&quot;,-10544 <br />
+d.add &quot;zhou&quot;,-10533 <br />
+d.add &quot;zhu&quot;,-10519 <br />
+d.add &quot;zhua&quot;,-10331 <br />
+d.add &quot;zhuai&quot;,-10329 <br />
+d.add &quot;zhuan&quot;,-10328 <br />
+d.add &quot;zhuang&quot;,-10322 <br />
+d.add &quot;zhui&quot;,-10315 <br />
+d.add &quot;zhun&quot;,-10309 <br />
+d.add &quot;zhuo&quot;,-10307 <br />
+d.add &quot;zi&quot;,-10296 <br />
+d.add &quot;zong&quot;,-10281 <br />
+d.add &quot;zou&quot;,-10274 <br />
+d.add &quot;zu&quot;,-10270 <br />
+d.add &quot;zuan&quot;,-10262 <br />
+d.add &quot;zui&quot;,-10260 <br />
+d.add &quot;zun&quot;,-10256 <br />
+d.add &quot;zuo&quot;,-10254 <br />
+&nbsp;<br />
+Function g(num) <br />
+&nbsp;&nbsp;&nbsp; If num&gt;0 And num&lt;160 Then <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g=chr(num) <br />
+&nbsp;&nbsp;&nbsp; Else&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If num&lt;-20319 or num&gt;-10247 Then <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g=&quot;&quot; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Else <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a=d.Items <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b=d.keys <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For i=d.count-1 to 0 step -1 <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If a(i)&lt;=num Then Exit For <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Next <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g=b(i) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If <br />
+&nbsp;&nbsp;&nbsp; End If <br />
+End Function </p>
+<p>Function c(str) <br />
+&nbsp;&nbsp;&nbsp; c=&quot;&quot; <br />
+&nbsp;&nbsp;&nbsp; For i=1 to len(str) <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c=c&amp;g(asc(mid(str,i,1))) <br />
+&nbsp;&nbsp;&nbsp; Next <br />
+End Function&nbsp; </p>
+<p>response.write c(request(&quot;hz&quot;)) <br />
+%&gt; </p>
+<p>&lt;form method=&quot;post&quot; action=&quot;&quot;&gt; <br />
+请在此处输入中文：&lt;input name=&quot;hz&quot;&gt; <br />
+&lt;input type=&quot;submit&quot; name=&quot;Submit&quot; value=&quot;查询&quot;&gt;<br />
+&lt;/form&gt; </p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('ASP汉字转拼音函数_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/939.html">自定义的asp日期格式化函数</a>&nbsp;&nbsp;下一条： <a href="/html/News/900.html">Asp获取当日文章并支持前一天后一天的方…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例 C# 异步HttpListener " >完全并发处理HTTP请求示例 C#…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误: (500) 内部服务器错误" >远程服务器返回错误: (500) 内…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgility…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1048.html" title="表单提交中get和post方式的区别有5点&nbsp;">表单提交中get和post方式的区别有…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1005.html" title="解决ASP中UTF-8与GB2312编码转换乱码">解决ASP中UTF-8与GB2312编码转换乱…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/865.html" title="asp数组中REDIM的用法（动态数组）">asp数组中REDIM的用法（动态数组）…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1147.html" title="生成html的新方法ASP">生成html的新方法ASP</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/899.html" title="ASP字符串函数大全">ASP字符串函数大全</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1049.html" title="ASP生成Word文件的代码">ASP生成Word文件的代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1146.html" title="ASP中Randomize随机函数的使用">ASP中Randomize随机函数的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/697.html" title="十天学会ASP教程之第一天：安装调试ASP的环境">十天学会ASP教程之第一天：安装调…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/939.html" title="自定义的asp日期格式化函数">自定义的asp日期格式化函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1071.html" title="防范ASP网站漏洞的八大法则之一">防范ASP网站漏洞的八大法则之一</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/695.html" title="十天学会ASP教程之第二天：表单传送变量">十天学会ASP教程之第二天：表单传…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/838.html" title="asp中关于从utf8页面到gb2312页面出现乱码得解决">asp中关于从utf8页面到gb2312页面…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1007.html" title="ASP教程：实现长文章分页功能">ASP教程：实现长文章分页功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/672.html" title="IIS6架设网站的问题总结">IIS6架设网站的问题总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/945.html" title="五分钟打开&nbsp;allow_url_fopen&nbsp;的最简单方法">五分钟打开 allow_url_fopen 的最…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例&nbsp;C#&nbsp;异步HttpListener&nbsp;" >完全并发处理HTTP请求示例 C# 异步…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误:&nbsp;(500)&nbsp;内部服务器错误" >远程服务器返回错误: (500) 内部服…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgilityPack…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1622.html" title=".net高效代码的价值远远超出你想象" >.net高效代码的价值远远超出你想象…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1615.html" title="哪些地方需要用到委托c#版" >哪些地方需要用到委托c#版</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1614.html" title="&nbsp;直接调用、委托与反射调用的性能区别" > 直接调用、委托与反射调用的性能…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1612.html" title="C#遍历html字符串各个节点(mshtml)&nbsp;" >C#遍历html字符串各个节点(mshtml…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1611.html" title="浅析c#权限管理" >浅析c#权限管理</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1610.html" title="基于将角色与controller、action相关联来判断用户是否有权" >基于将角色与controller、action相…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "938" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

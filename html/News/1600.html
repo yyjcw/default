@@ -1,0 +1,526 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Windows消息机制详解_计算机等级考试_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="Windows消息机制要点&nbsp;" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 计算机等级考试
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        Windows消息机制详解
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2015/10/22 13:19:45
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        Windows消息机制要点&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>
+			</p><p><strong>1. 窗口过程</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>每个窗口会有一个称为窗口过程的回调函数(WndProc)，它带有四个参数，分别为：窗口句柄(Window
+Handle),消息ID(Message ID),和两个消息参数(wParam, lParam),
+当窗口收到消息时系统就会调用此窗口过程来处理消息。（所以叫回调函数）</p><p><strong>2 消息类型</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>1) 系统定义消息(System-Defined Messages)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;在SDK中事先定义好的消息，非用户定义的，其范围在[0x0000, 0x03ff]之间， 可以分为以下三类：<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>1&gt;
+窗口消息(Windows Message)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;与窗口的内部运作有关，如创建窗口，绘制窗口，销毁窗口等。可以是一般的窗口，也可以是Dialog,控件等。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;如：WM_CREATE, WM_PAINT, WM_MOUSEMOVE, WM_CTLCOLOR, WM_HSCROLL...<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>2&gt;
+命令消息(Command Message)<br/>
+ &nbsp; &nbsp; &nbsp;<br/></strong>与处理用户请求有关， 如单击菜单项或工具栏或控件时， 就会产生命令消息。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;WM_COMMAND, LOWORD(wParam)表示菜单项，工具栏按钮或控件的ID。如果是控件, HIWORD(wParam)表示控件消息类型<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>3&gt;
+ 控件通知(Notify Message)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;控件通知消息， 这是最灵活的消息格式， 其Message, wParam, lParam分别为：WM_NOTIFY, 控件ID，指向NMHDR的指针。NMHDR包含控件通知的内容， 可以任意扩展。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>2) 程序定义消息(Application-Defined Messages)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;用户自定义的消息， 对于其范围有如下规定：<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;WM_USER: 0x0400-0x7FFF&nbsp;
+&nbsp;
+&nbsp;
+ (ex. WM_USER+10)<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;WM_APP(winver&gt;
+4.0): 0x8000-0xBFFF (ex.WM_APP+4)<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;RegisterWindowMessage: 0xC000-0xFFFF</p><p><strong>3 消息队列(Message Queues)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;Windows中有两种类型的消息队列<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>1) 系统消息队列(System Message Queue)<br/>
+ &nbsp; &nbsp; &nbsp;<br/></strong>这是一个系统唯一的Queue，设备驱动(mouse, keyboard)会把操作输入转化成消息存在系统队列中，然后系统会把此消息放到目标窗口所在的线程的消息队列(thread-specific message queue)中等待处理<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>2) 线程消息队列(Thread-specific Message Queue)<br/>
+ &nbsp; &nbsp; &nbsp;<br/></strong>每一个GUI线程都会维护这样一个线程消息队列。(这个队列只有在线程调用GDI函数时才会创建，默认不创建)。然后线程消息队列中的消息会被送到相应的窗口过程(WndProc)处理.<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;注意： 线程消息队列中WM_PAINT，WM_TIMER只有在Queue中没有其他消息的时候才会被处理，WM_PAINT消息还会被合并以提高效率。其他所有消息以先进先出（FIFO）的方式被处理。</p><p><strong>4 队列消息(Queued Messages)和非队列消息(Non-Queued Messages)<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;1)队列消息(Queued Messages)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;消息会先保存在消息队列中，消息循环会从此队列中取消息并分发到各窗口处理<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;如鼠标，键盘消息。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;<strong>2) 非队列消息(NonQueued Messages)<br/>
+ &nbsp; &nbsp; &nbsp;<br/></strong>消息会绕过系统消息队列和线程消息队列直接发送到窗口过程被处理<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;如： WM_ACTIVATE, WM_SETFOCUS, WM_SETCURSOR， WM_WINDOWPOSCHANGED<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;注意: postMessage发送的消息是队列消息，它会把消息Post到消息队列中； SendMessage发送的消息是非队列消息， 被直接送到窗口过程处理</p><p><strong>5 PostMessage(PostThreadMessage), SendMessage</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;PostMessage:把消息放到指定窗口所在的线程消息队列中后立即返回。 PostThreadMessage：把消息放到指定线程的消息队列中后立即返回。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;SendMessage：直接把消息送到窗口过程处理， 处理完了才返回。</p><p><strong>6 GetMessage, PeekMessage</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;PeekMessage会立即返回&nbsp;
+&nbsp;
+可以保留消息<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;GetMessage在有消息时返回&nbsp;
+会删除消息</p><p><strong>7 TranslateMessage, TranslateAccelerator</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;TranslateMessage: 把一个virtual-key消息转化成字符消息(character message)，并放到当前线程的消息队列中，消息循环下一次取出处理。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>TranslateAccelerator: 将快捷键对应到相应的菜单命令。它会把WM_KEYDOWN 或
+WM_SYSKEYDOWN转化成快捷键表中相应的WM_COMMAND 或WM_SYSCOMMAND消息， 然后把转化后的
+WM_COMMAND或WM_SYSCOMMAND直接发送到窗口过程处理， 处理完后才会返回。</p><p><strong>8(消息死锁( Message Deadlocks)</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;假设有线程A和B， 现在有以下下步骤<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;1) 线程A SendMessage给线程B, A等待消息在线程B中处理后返回<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;2) 线程B收到了线程A发来的消息，并进行处理， 在处理过程中，B也向线程A SendMessgae，然后等待从A返回。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;因为此时， 线程A正等待从线程B返回， 无法处理B发来的消息， 从而导致了线程A,B相互等待， 形成死锁。多个线程也可以形成环形死锁。<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;可以使用 SendNotifyMessage或SendMessageTimeout来避免出现死锁。</p><p><strong>9 BroadcastSystemMessage</strong><br/>
+ &nbsp; &nbsp; &nbsp;<br/>我们一般所接触到的消息都是发送给窗口的， 其实， 消息的接收者可以是多种多样的，它可以是应用程序(applications),
+可安装驱动(installable drivers), 网络设备(network drivers), 系统级设备驱动(system-level
+device drivers)等，<br/>
+ &nbsp; &nbsp; &nbsp;<br/>
+ &nbsp; &nbsp; &nbsp;BroadcastSystemMessage这个API可以对以上系统组件发送消息。</p><p>&nbsp;</p><p>一、引言<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　随着<a href="http://windows.chinaitlab.com/" target="_blank">Windows</a>操作系统的不断推广，众多软件开发包都提供有开发基于<a href="http://windows.chinaitlab.com/" target="_blank">Windows</a>平台应用软件的功能。虽然这些开发包不尽相同，流行的有Visual <a href="http://c.chinaitlab.com/" target="_blank">C++</a>、Visual Basic、Delphi、<a href="http://c.chinaitlab.com/" target="_blank">C++</a>Builder 等多种，但由这些不同语言开发的软件有一点却是相同的--都是运行于Windows 操作平台，都必须接受Windows
+的运行机制。作为Windows
+操作系统灵魂的消息机制也就必然为众多用不同语言开发的Windows操作系统下运行的应用程序所接受。因此，要编写深入的Windows程序，就必须对
+Windows的运行机制有很好的认识和理解。本文下面将对Windows操作系统下的消息运行机制做较为深入的剖析。<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　二、Windows事件驱动机制<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　我们当中不少使用VC、Delphi等作为开发语言的程序员是一步步从DOS下的Basic、C++中走过来的，而且大多在刚开始学习编程时也是先从
+DOS下的编程环境入手的，因此在习惯了DOS下的过程驱动形式的顺序程序设计方法后，往往在向Windows下的开发环境转型的过程中会对
+Windows所采取的事件驱动方式感到无法适应。因为DOS和Windows这两种操作系统的运行机制是截然不同的，DOS下的任何程序都是使用顺序
+的、过程驱动的程序设计方法。这种程序都有一个明显的开始、明显的过程以及一个明显的结束，因此通过程序就能直接控制程序事件或过程的全部顺序。即使是在
+处理异常时，处理过程也仍然是顺序的、过程驱动的结构。而Windows的驱动方式则是事件驱动的，即程序的流程不是由事件的顺序来控制，而是由事件的发
+生来控制，所有的事件是无序的，所为一个程序员，在编写程序时，并不知道用户会先按下哪个按纽，也就不知道程序先触发哪个消息。因此我们的主要任务就是对
+正在开发的应用程序要发出的或要接收的消息进行排序和管理。事件驱动程序设计是密切围绕消息的产生与处理而展开的，一条消息是关于发生的事件的消息。<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　三、Windows的消息循环<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　Windows操作系统为每一个正在运行的应用程序保持有一个消息队列。当有事件发生后，Windows并不是将这个激发事件直接送给应用程序，而是
+先将其翻译成一个Windows消息，然后再把这个消息加入到这个应用程序的消息队列中去。应用程序需要通过消息循环来接收这些消息。在MFC中使用了对
+WinAPI进行了很好封装的类库，虽然可以为编程提供一个面向对象的界面，使Windows程序员能够以面象对象的方式进行编程，把那些进行SDK编程
+时最繁琐的部分提供给程序员，使之专注于功能的实现，但是由于引入了很好的封装特性，使我们不能直接操纵部分核心代码。对于消息的循环和接收也只是通过类
+似于下面的消息映射予以很简单的表示：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　BEGIN_MESSAGE_MAP(CTEMMSView, CFormView)<br/>
+ &nbsp; &nbsp; &nbsp;　　//{
+{
+AFX_MSG_MAP(CTEMMSView)<br/>
+ &nbsp; &nbsp; &nbsp;　　ON_WM_LBUTTONDOWN()<br/>
+ &nbsp; &nbsp; &nbsp;　　ON_COMMAND(ID_OPENDATA, OnOpenData)<br/>
+ &nbsp; &nbsp; &nbsp;　　ON_WM_TIMER()<br/>
+ &nbsp; &nbsp; &nbsp;　　ON_WM_PAINT()<br/>
+ &nbsp; &nbsp; &nbsp;　　//}
+}
+AFX_MSG_MAP<br/>
+ &nbsp; &nbsp; &nbsp;　　END_MESSAGE_MAP()<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　虽然上述消息映射在编程过程中处理消息非常简练方便，但显然是难于理解消息是如何参与循环和分发的。因此有必要通过SDK（Software
+Developers
+Kit，软件开发工具箱）代码深入到被MFC封装的Windows编程的核心中来研究其具体是如何工作的。在SDK编程中，一般是在Windows应用程
+序的入口点WinMain函数中添加处理消息循环的代码以检索Windows送来的消息，然后WinMain再把这些消息分配给相应的窗口函数并处理它
+们：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　……<br/>
+ &nbsp; &nbsp; &nbsp;　　MSG msg;
+ //定义消息名<br/>
+ &nbsp; &nbsp; &nbsp;　　while (GetMessage (&amp;
+msg, NULL, 0, 0))<br/>
+ &nbsp; &nbsp; &nbsp;　　{<br/>
+ &nbsp; &nbsp; &nbsp;　　TranslateMessage (&amp;
+msg) ;
+ //翻译消息<br/>
+ &nbsp; &nbsp; &nbsp;　　DispatchMessage (&amp;
+msg) ;
+ //撤去消息<br/>
+ &nbsp; &nbsp; &nbsp;　　}<br/>
+ &nbsp; &nbsp; &nbsp;　　return msg.wParam ;<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　上述几句虽然简单但却是所有Windows程序的关键代码，担负着获取、解释和分发消息的任务，下面就重点对其功能和作用进行分析：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　MSG结构在头文件中定义如下：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　typedef struct tagMSG<br/>
+ &nbsp; &nbsp; &nbsp;　　{<br/>
+ &nbsp; &nbsp; &nbsp;　　HWND hwnd;<br/>
+ &nbsp; &nbsp; &nbsp;　　UINT message;<br/>
+ &nbsp; &nbsp; &nbsp;　　WPARAM wParam;<br/>
+ &nbsp; &nbsp; &nbsp;　　LPARAM lParam;<br/>
+ &nbsp; &nbsp; &nbsp;　　DWORD time;<br/>
+ &nbsp; &nbsp; &nbsp;　　POINT pt;<br/>
+ &nbsp; &nbsp; &nbsp;　　}
+ MSG, *PMSG;<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　其数据成员的具体意义如下：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　hwnd：消息将要发送到的那个窗口的句柄，用这个参数可以决定让哪个窗口接收消息。<br/>
+ &nbsp; &nbsp; &nbsp;　　message：消息号，它唯一标识了一种消息类型。每种消息类型都在Windows文件进行了预定义。<br/>
+ &nbsp; &nbsp; &nbsp;　　wParam：一个32位的消息参数，这个值的确切意义取决于消息本身。<br/>
+ &nbsp; &nbsp; &nbsp;　　lParam：同上。<br/>
+ &nbsp; &nbsp; &nbsp;　　time：消息放入消息队列中的时间，在这个域中写入的并非当时日期，而是从Windows启动后所测量的时间值。Windows用<br/>
+ &nbsp; &nbsp; &nbsp;　　这个域来使用消息保持正确的顺序。<br/>
+ &nbsp; &nbsp; &nbsp;　　pt：消息放入消息队列时的鼠标坐标。<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　消息循环以GetMessage调用开始，它从消息队列中取出一个消息。该函数的四个参数可以有控制地获取消息，第一个参数指定要接收消息的MSG结
+构的地址，第二个参数表示窗口句柄，一般将其设置为空，表示要获取该应用程序创建的所有窗口的消息；第三、四参数用于指定消息范围。后面三个参数被设置为
+默认值，用于接收发送到属于这个应用程序的任何一个窗口的所有消息。在接收到除WM_QUIT之外的任何一个消息后，GetMessage()返回
+TRUE；如果GetMessage收到一个WM_QUIT消息，则返回FALSE以退出消息循环，终止程序运行。因此，在接收到WM_QUIT之前，带
+有GetMessage()的消息循环可以一直循环下去。当除WM_QUIT的消息用GetMessage读入后，首先要经过函数
+TranslateMessage()对其进行解释，但对大多数消息来说并不起什么作用。这里起关键作用的是DispatchMessage()函数，把
+由GetMessage获取的Windows消息传送给在MSG结构中为窗口所指定的窗口过程。在消息处理函数处理完消息之后，代码又循环到开始去接收另
+一个消息，这样就完成了一个完整的消息循环。<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　由于Windows操作系统是一种非剥夺式多任务操作系统。只有在应用程序主动交出CPU控制权后，Windows才能把控制权交给其他应用程序。在
+消息循环中，一定要有能交出控制的系统函数才能实现协同式多任务操作。能完成该功能的只有GetMessage、PeekMessage和
+WaitMessage这三个函数，如果在应用程序中长期不去调用这三个函数之一其他任务则无法执行。GetMessage函数在找不到等待应用程序处理
+的消息时，会自动交出控制权，由Windows把CPU的控制权交给其他等待获取控制权的应用程序。由于任何Windows应用程序都含有一个消息循环，
+这种隐式交出控制权的方式可以保证合并各个应用程序共享控制权。一旦发往该应用程序的消息到达应用程序队列，即开始执行GetMessage语句的下一条
+语句。使用GetMessage函数的消息循环在消息队列中没有消息时将等待，如果需要，可以利用这段时间进行I/O端口操作等耗时操作，不过需要在消息
+循环中使用PeekMessage函数来代替GetMessage。使用PeekMessage的方法同GetMessage类似，下面是一段使用
+PeekMessage函数的消息循环的典型例子：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　MSG msg;<br/>
+ &nbsp; &nbsp; &nbsp;　　BOOL bDone=FALSE;<br/>
+ &nbsp; &nbsp; &nbsp;　　do{<br/>
+ &nbsp; &nbsp; &nbsp;　　if(PeekMessage(&amp;
+msg,NULL,0,0,PM_REMOVE)){<br/>
+ &nbsp; &nbsp; &nbsp;　　if(msg.message==WM_QUIT)<br/>
+ &nbsp; &nbsp; &nbsp;　　bDone=TRUE;<br/>
+ &nbsp; &nbsp; &nbsp;　　else{<br/>
+ &nbsp; &nbsp; &nbsp;　　TranslateMessage(&amp;
+msg);<br/>
+ &nbsp; &nbsp; &nbsp;　　DispatchMessage(&amp;
+msg);<br/>
+ &nbsp; &nbsp; &nbsp;　　}<br/>
+ &nbsp; &nbsp; &nbsp;　　}<br/>
+ &nbsp; &nbsp; &nbsp;　　//无消息处理，进行长时间操作<br/>
+ &nbsp; &nbsp; &nbsp;　　else{<br/>
+ &nbsp; &nbsp; &nbsp;　　……//长时间操作<br/>
+ &nbsp; &nbsp; &nbsp;　　}<br/>
+ &nbsp; &nbsp; &nbsp;　　}
+while(!bDone)<br/>
+ &nbsp; &nbsp; &nbsp;　　……<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　无论应用程序消息队列中是否有消息，PeekMessage函数都立即返回，如果希望等待新消息入队，可以利用无返回值的函数WaitMessage配合PeekMessage进行消息循环。<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　四、对Windowds消息的处理<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　窗口过程处理消息通常以switch语句开始，对于它要处理的每一条消息ID都跟有一条case语句，这在功能上同MFC的消息映射有些类似：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　switch(uMsgId)<br/>
+ &nbsp; &nbsp; &nbsp;　　{<br/>
+ &nbsp; &nbsp; &nbsp;　　case WM_TIMER：<br/>
+ &nbsp; &nbsp; &nbsp;　　//对WM_TIMER定时器消息的处理过程<br/>
+ &nbsp; &nbsp; &nbsp;　　return 0;<br/>
+ &nbsp; &nbsp; &nbsp;　　case WM_LBUTTONDOWN：<br/>
+ &nbsp; &nbsp; &nbsp;　　//对WM_ LBUTTONDOWN鼠标左键单击消息的处理过程<br/>
+ &nbsp; &nbsp; &nbsp;　　ruturn 0;<br/>
+ &nbsp; &nbsp; &nbsp;　　……<br/>
+ &nbsp; &nbsp; &nbsp;　　default:<br/>
+ &nbsp; &nbsp; &nbsp;　　//其他消息由这个默认处理函数来处理<br/>
+ &nbsp; &nbsp; &nbsp;　　return DefWindowProc(hwnd,uMsgId,wParam,lParam);<br/>
+ &nbsp; &nbsp; &nbsp;　　}<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　在处理完消息后必须返回0，这很重要，否则Windows将要不停地重试下去。对于那些在程序中不准备处理的消息，窗口过程会把它们都扔给
+DefWindowProc进行缺省处理，而且还要返回那个函数的返回值。在消息传递层次中，可以认为DefWindowProc函数是最顶层的函数。该
+函数发出WM_SYSCOMMAND消息，由系统执行Windows环境中多数窗口所公用的各种通用操作，如更新窗口的正文标题等等。
+在MFC下可以用下述部分代码实现与上述SDK代码相同的功能：<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>
+ &nbsp; &nbsp; &nbsp;　　BEGIN_MESSAGE_MAP(CTEMMSView, CFormView)<br/>
+ &nbsp; &nbsp; &nbsp;　　//{
+{
+AFX_MSG_MAP(CTEMMSView)<br/>
+ &nbsp; &nbsp; &nbsp;　　ON_WM_LBUTTONDOWN()<br/>
+ &nbsp; &nbsp; &nbsp;　　ON_WM_TIMER()<br/>
+ &nbsp; &nbsp; &nbsp;　　//}
+}
+AFX_MSG_MAP<br/>
+ &nbsp; &nbsp; &nbsp;　　END_MESSAGE_MAP()<br/>
+ &nbsp; &nbsp; &nbsp;　　<br/>　　小结：Windows环境提供有非常丰富的系统资源，在这个基础上可以编制出能满足各种各样目标功能的应用系统。要深入Windows编程就必须首先
+对Windows系统的运行机理有很好的认识，本文仅针对Windows的一种重要运行机制--消息机制作了较深入的剖析和阐述。对培养在Windows
+下的编程思想有一定的帮助。对某些相关问题的详细论述可以参考MSDN在线帮助的&quot;
+SDK Reference&quot;
+部分。</p><p>
+		
+		
+		</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('Windows消息机制详解_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条：已经是第一条了&nbsp;&nbsp;下一条： <a href="/html/News/1139.html">SQLite在VC下的使用</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1600.html" title="Windows消息机制详解" >Windows消息机制详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1139.html" title="SQLite在VC下的使用" >SQLite在VC下的使用</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1138.html" title="五种区别C++内存分配的方法" >五种区别C++内存分配的方法</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1112.html" title="VC的dll进行profile " >VC的dll进行profile </a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1111.html" title="C打开文件的追加参数" >C打开文件的追加参数</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/961.html" title="C/C++编程中无所不在的指针概念" >C/C++编程中无所不在的指针概…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/849.html" title="C++从零开始学编程" >C++从零开始学编程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/775.html" title="VC、VC++、C++、C它们有什么区别" >VC、VC++、C++、C它们有什么区…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/719.html" title="为C++脚本加入新元素" >为C++脚本加入新元素</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/849.html" title="C++从零开始学编程">C++从零开始学编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/683.html" title="C++&nbsp;数组array与vector的比较&nbsp;">C++ 数组array与vector的比较 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/775.html" title="VC、VC++、C++、C它们有什么区别">VC、VC++、C++、C它们有什么区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1139.html" title="SQLite在VC下的使用">SQLite在VC下的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1138.html" title="五种区别C++内存分配的方法">五种区别C++内存分配的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/718.html" title="用Cint解析C++脚本">用Cint解析C++脚本</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1111.html" title="C打开文件的追加参数">C打开文件的追加参数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/717.html" title="C++&nbsp;Builder&nbsp;访问&nbsp;USB&nbsp;口的方法">C++ Builder 访问 USB 口的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/706.html" title="C++中强制转换函数总结&nbsp;">C++中强制转换函数总结 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/719.html" title="为C++脚本加入新元素">为C++脚本加入新元素</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/961.html" title="C/C++编程中无所不在的指针概念">C/C++编程中无所不在的指针概念</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/685.html" title="C++程序调用数据库的方法">C++程序调用数据库的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/696.html" title="内存泄漏是编程中常常见到的一个问题">内存泄漏是编程中常常见到的一个问…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/684.html" title="C++中指针入门的最好的文章&nbsp;">C++中指针入门的最好的文章 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/682.html" title="C++编译错误解决方法">C++编译错误解决方法</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1600.html" title="Windows消息机制详解" >Windows消息机制详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1139.html" title="SQLite在VC下的使用" >SQLite在VC下的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1138.html" title="五种区别C++内存分配的方法" >五种区别C++内存分配的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1112.html" title="VC的dll进行profile&nbsp;" >VC的dll进行profile </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1111.html" title="C打开文件的追加参数" >C打开文件的追加参数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/961.html" title="C/C++编程中无所不在的指针概念" >C/C++编程中无所不在的指针概念</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/849.html" title="C++从零开始学编程" >C++从零开始学编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/775.html" title="VC、VC++、C++、C它们有什么区别" >VC、VC++、C++、C它们有什么区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/719.html" title="为C++脚本加入新元素" >为C++脚本加入新元素</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/718.html" title="用Cint解析C++脚本" >用Cint解析C++脚本</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/717.html" title="C++&nbsp;Builder&nbsp;访问&nbsp;USB&nbsp;口的方法" >C++ Builder 访问 USB 口的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/706.html" title="C++中强制转换函数总结&nbsp;" >C++中强制转换函数总结 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/701.html" title="C++构造函数的幕后工作&nbsp;" >C++构造函数的幕后工作 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/696.html" title="内存泄漏是编程中常常见到的一个问题" >内存泄漏是编程中常常见到的一个问…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/685.html" title="C++程序调用数据库的方法" >C++程序调用数据库的方法</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1600" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

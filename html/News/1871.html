@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>socket.io详解_NodeJs_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="socket.io详解" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; NodeJs
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        socket.io详解
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2017/4/26 22:48:34
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        socket.io详解
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>socket.io为什么会诞生呢？请看下面文字说明。</p><p>为什么需要socket.io？</p><p>&nbsp; &nbsp; node.js提供了高效的服务端运行环境，但是由于浏览器端对HTML5的支持不一，为了兼容所有浏览器，提供卓越的实时的用户体验，并且为程序员提供客户端与服务端一致的编程体验，于是socket.io诞生。</p><p>&nbsp; &nbsp; socket.io设计的目标是支持任何的浏览器，任何Mobile设备。目前支持主流的PC浏览器(IE,Safari,Chrome,Firefox,Opera等)，Mobile浏览器(iphone Safari/ipad Safari/android WebKit/WebOS WebKit等)。</p><p>&nbsp; &nbsp; socket.io基于node.js并简化了WebSocket API，统一了各种通信API。它支持：WebSocket, Flash Socket, AJAX long-polling, AJAX multipart streaming, Forever IFrame, JSONP polling。</p><p>&nbsp; &nbsp; socket.io解决了实时的通信问题，并统一了服务端与客户端的编程方式。启动了socket以后，就像建立了一条客户端与服务端的管道，两边可以互通有无。</p><p>安装</p><p>&nbsp; &nbsp; 在命令行中执行：npm install socket.io 即可安装。</p><p>服务端编程模型</p><p>&nbsp; &nbsp; 服务端编程还是与普通服务器一样，启动服务器，提供服务，处理事件。</p><p>比如下面的server.js：</p><p><br/></p><p>var http = require(&#39;http&#39;)</p><p>&nbsp; , url = require(&#39;url&#39;)</p><p>&nbsp; , fs = require(&#39;fs&#39;)</p><p>&nbsp; , server;</p><p>server = http.createServer(function(req, res){</p><p>&nbsp; // your normal server code</p><p>&nbsp; var path = url.parse(req.url).pathname;</p><p>&nbsp; switch (path){</p><p>&nbsp; case &#39;/&#39;:</p><p>&nbsp; &nbsp;res.writeHead(200, {&#39;Content-Type&#39;: &#39;text/html&#39;});</p><p>&nbsp; &nbsp;res.write(&#39;&lt;h1&gt;Hello! Try the &lt;a href=&quot;/index.html&quot;&gt;Socket.io Test&lt;/a&gt;&lt;/h1&gt;&#39;);</p><p>&nbsp; &nbsp;res.end();</p><p>&nbsp; &nbsp;break;</p><p>&nbsp; case &#39;/index.html&#39;:</p><p>&nbsp; &nbsp;fs.readFile(__dirname + path, function(err, data){</p><p>&nbsp; &nbsp; if (err) return send404(res);</p><p>&nbsp; &nbsp; res.writeHead(200, {&#39;Content-Type&#39;: path == &#39;json.js&#39; ? &#39;text/javascript&#39; : &#39;text/html&#39;})</p><p>&nbsp; &nbsp; res.write(data, &#39;utf8&#39;);</p><p>&nbsp; &nbsp; res.end();</p><p>&nbsp; &nbsp;});</p><p>&nbsp; &nbsp;break;</p><p>&nbsp; default: send404(res);</p><p>&nbsp; }</p><p>}),</p><p>send404 = function(res){</p><p>&nbsp; res.writeHead(404);</p><p>&nbsp; res.write(&#39;404&#39;);</p><p>&nbsp; res.end();</p><p>};</p><p>server.listen(8080);</p><p>var io = require(&#39;socket.io&#39;).listen(server);</p><p>io.sockets.on(&#39;connection&#39;, function(socket){</p><p>&nbsp;console.log(&quot;Connection &quot; + socket.id + &quot; accepted.&quot;);</p><p>&nbsp;socket.on(&#39;message&#39;, function(message){</p><p>&nbsp; &nbsp; console.log(&quot;Received message: &quot; + message + &quot; - from client &quot; + socket.id);</p><p>&nbsp;});</p><p>&nbsp;socket.on(&#39;disconnect&#39;, function(){</p><p>&nbsp; console.log(&quot;Connection &quot; + socket.id + &quot; terminated.&quot;);</p><p>&nbsp;});</p><p>});</p><p>客户端编程模型&nbsp;</p><p>&nbsp; &nbsp; 客户端编程也是相似的处理方式，连接服务器，交互信息。</p><p>比如下面的index.html页面：</p><p><br/></p><p>&lt;!doctype html&gt;</p><p>&lt;html&gt;</p><p>&nbsp;&lt;head&gt;</p><p>&nbsp; &lt;title&gt;Socket.io Test&lt;/title&gt;</p><p>&nbsp; &lt;script src=&quot;/json.js&quot;&gt;&lt;/script&gt; &lt;!-- for ie --&gt;</p><p>&nbsp; &lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;</p><p>&nbsp;&lt;/head&gt;</p><p>&nbsp;&lt;body&gt; &nbsp;</p><p>&nbsp; &lt;script&gt; &nbsp; &nbsp;</p><p>&nbsp; var socket;</p><p>&nbsp; var firstconnect = true;</p><p>&nbsp; function connect() {</p><p>&nbsp; &nbsp;if(firstconnect) {</p><p>&nbsp; &nbsp; socket = io.connect(null);</p><p>&nbsp; &nbsp; socket.on(&#39;message&#39;, function(data){ message(data); });</p><p>&nbsp; &nbsp; socket.on(&#39;connect&#39;, function(){ status_update(&quot;Connected to Server&quot;); });</p><p>&nbsp; &nbsp; socket.on(&#39;disconnect&#39;, function(){ status_update(&quot;Disconnected from Server&quot;); });</p><p>&nbsp; &nbsp; socket.on(&#39;reconnect&#39;, function(){ status_update(&quot;Reconnected to Server&quot;); });</p><p>&nbsp; &nbsp; socket.on(&#39;reconnecting&#39;, function( nextRetry ){ status_update(&quot;Reconnecting in &quot;</p><p>&nbsp; &nbsp; &nbsp;+ nextRetry + &quot; seconds&quot;); });</p><p>&nbsp; &nbsp; socket.on(&#39;reconnect_failed&#39;, function(){ message(&quot;Reconnect Failed&quot;); });</p><p>&nbsp; &nbsp; firstconnect = false;</p><p>&nbsp; &nbsp;}</p><p>&nbsp; &nbsp;else {</p><p>&nbsp; &nbsp; socket.socket.reconnect();</p><p>&nbsp; &nbsp;}</p><p>&nbsp; }</p><p>&nbsp; function disconnect() {</p><p>&nbsp; &nbsp;socket.disconnect();</p><p>&nbsp; }</p><p>&nbsp; function message(data) {</p><p>&nbsp; &nbsp;document.getElementById(&#39;message&#39;).innerHTML = &quot;Server says: &quot; + data;</p><p>&nbsp; }</p><p>&nbsp; function status_update(txt){</p><p>&nbsp; &nbsp;document.getElementById(&#39;status&#39;).innerHTML = txt;</p><p>&nbsp; }</p><p>&nbsp; function esc(msg){</p><p>&nbsp; &nbsp;return msg.replace(/&lt;/g, &#39;&lt;&#39;).replace(/&gt;/g, &#39;&gt;&#39;);</p><p>&nbsp; }</p><p>&nbsp; function send() {</p><p>&nbsp; &nbsp;socket.send(&quot;Hello Server!&quot;); &nbsp;</p><p>&nbsp; }; &nbsp; &nbsp;</p><p>&nbsp; &lt;/script&gt;</p><p>&nbsp; &lt;h1&gt;Socket.io Test&lt;/h1&gt;</p><p>&nbsp; &lt;div&gt;&lt;p id=&quot;status&quot;&gt;Waiting for input&lt;/p&gt;&lt;/div&gt;</p><p>&nbsp; &lt;div&gt;&lt;p id=&quot;message&quot;&gt;&lt;/p&gt;&lt;/div&gt;&nbsp;</p><p>&nbsp; &lt;button id=&quot;connect&quot; onClick=&#39;connect()&#39;/&gt;Connect&lt;/button&gt;</p><p>&nbsp; &lt;button id=&quot;disconnect&quot; onClick=&#39;disconnect()&#39;&gt;Disconnect&lt;/button&gt;</p><p>&nbsp; &lt;button id=&quot;send&quot; onClick=&#39;send()&#39;/&gt;Send Message&lt;/button&gt;</p><p>&nbsp;&lt;/body&gt;</p><p>&lt;/html&gt;</p><p>注意事项</p><p>1. 启动服务器还是交给node，打开命令行窗口，定位到server.js所在文件夹，输入node server.js启动服务器。</p><p>&nbsp; &nbsp; 在上面的index.html中，注意这行：&lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;。如果不想使用本地的socket.io脚本，可</p><p>以直接使用下面这个公开的脚本：</p><p><br/></p><p>&lt;script src=&quot;http://cdn.socket.io/stable/socket.io.js&quot;&gt;&lt;/script&gt;</p><p><br/></p><p>&nbsp; &nbsp; 此外需要注意这行：socket = io.connect(null)。</p><p>这里的null代表连接本地服务，可以换成&quot;localhost&quot;，效果也是一样的。&nbsp;</p><p>2. 可以使用socket.io直接启动http服务。</p><p>例如：</p><p><br/></p><p>var io = require(&#39;socket.io&#39;).listen(80);</p><p>io.sockets.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp;io.sockets.emit(&#39;this&#39;, { will: &#39;be received by everyone&#39;});</p><p>});</p><p><br/></p><p>3. socket.io可以直接通过send方法发送消息，使用message事件接收消息，例如：</p><p><br/></p><p>//server.js</p><p>var io = require(&#39;socket.io&#39;).listen(80);</p><p>io.sockets.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp;socket.on(&#39;message&#39;, function () { });</p><p>});</p><p>//index.html</p><p>&lt;script&gt;</p><p>&nbsp;var socket = io.connect(&#39;http://localhost/&#39;);</p><p>&nbsp;socket.on(&#39;connect&#39;, function () {</p><p>&nbsp; socket.send(&#39;hi&#39;);</p><p>&nbsp; socket.on(&#39;message&#39;, function (msg) {</p><p>&nbsp; &nbsp;// my msg</p><p>&nbsp; });</p><p>&nbsp;});</p><p>&lt;/script&gt;</p><p>4. 发送和处理数据</p><p>&nbsp; &nbsp; 两端可以互发事件，互发数据，相互通信。发送事件的代码为：socket.emit(action, data, function)，其中action为事件的名称，data为数据，function为回调函数;处理事件代码为：socket.on(action,function)，如果emit发送的时候有数据data，则function中参数包含了这个数据。socket.io除了发送和处理内置事件，如connect, disconnect, message。还允许发送和处理自定义事件，例如:</p><p>//服务端：</p><p><br/></p><p>io.sockets.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp;socket.emit(&#39;news&#39;, { hello: &#39;world&#39; });</p><p>&nbsp;socket.on(&#39;my other event&#39;, function (data) {</p><p>&nbsp; console.log(data);</p><p>&nbsp;});</p><p>});</p><p><br/></p><p>//客户端：</p><p><br/></p><p>&lt;script src=&quot;/socket.io/socket.io.js&quot;&gt;&lt;/script&gt;</p><p>&lt;script&gt;</p><p>&nbsp;var socket = io.connect(&#39;http://localhost&#39;);</p><p>&nbsp;socket.on(&#39;news&#39;, function (data) {</p><p>&nbsp; console.log(data);</p><p>&nbsp; socket.emit(&#39;my other event&#39;, { my: &#39;data&#39; });</p><p>&nbsp;});</p><p>&lt;/script&gt;</p><p>5. 从上面可以看出来，发送数据的时候，send和emit是都可以使用的。只不过emit更是强化了自定义事件的处理。</p><p>6. 可以在服务端使用socket的get/set方法存储客服端的相关数据，例如：</p><p>//服务端</p><p><br/></p><p>var io = require(&#39;socket.io&#39;).listen(80);</p><p>io.sockets.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp;socket.on(&#39;set nickname&#39;, function (name) {</p><p>&nbsp; socket.set(&#39;nickname&#39;, name, function () { socket.emit(&#39;ready&#39;); });</p><p>&nbsp;});</p><p>&nbsp;socket.on(&#39;msg&#39;, function () {</p><p>&nbsp; socket.get(&#39;nickname&#39;, function (err, name) {</p><p>&nbsp; &nbsp;console.log(&#39;Chat message by &#39;, name);</p><p>&nbsp; });</p><p>&nbsp;});</p><p>});</p><p><br/></p><p>//客户端</p><p><br/></p><p>&lt;script&gt;</p><p>&nbsp;var socket = io.connect(&#39;http://localhost&#39;);</p><p>&nbsp;socket.on(&#39;connect&#39;, function () {</p><p>&nbsp; socket.emit(&#39;set nickname&#39;, confirm(&#39;What is your nickname?&#39;));</p><p>&nbsp; socket.on(&#39;ready&#39;, function () {</p><p>&nbsp; &nbsp;console.log(&#39;Connected !&#39;);</p><p>&nbsp; &nbsp;socket.emit(&#39;msg&#39;, confirm(&#39;What is your message?&#39;));</p><p>&nbsp; });</p><p>&nbsp;});</p><p>&lt;/script&gt;</p><p>7. 可以广播消息，比如聊天室中给除了当前socket连接外的所有人发消息。</p><p><br/></p><p>var io = require(&#39;socket.io&#39;).listen(80);</p><p>io.sockets.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp;socket.broadcast.emit(&#39;user connected&#39;);</p><p>});</p><p>8. 可以在同一次链接中，建立多个互相独立的通道，而不是建立多次链接。这个官方叫法是“多个namespace”，比如官方的例子：</p><p><br/></p><p>var io = require(&#39;socket.io&#39;).listen(80);</p><p>//Server</p><p>var chat = io</p><p>&nbsp;.of(&#39;/chat&#39;)</p><p>&nbsp;.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp; socket.emit(&#39;a message&#39;, {</p><p>&nbsp; &nbsp; that: &#39;only&#39;</p><p>&nbsp; &nbsp;, &#39;/chat&#39;: &#39;will get&#39;</p><p>&nbsp; });</p><p>&nbsp; chat.emit(&#39;a message&#39;, {</p><p>&nbsp; &nbsp; everyone: &#39;in&#39;</p><p>&nbsp; &nbsp;, &#39;/chat&#39;: &#39;will get&#39;</p><p>&nbsp; });</p><p>&nbsp;});</p><p>var news = io</p><p>&nbsp;.of(&#39;/news&#39;)</p><p>&nbsp;.on(&#39;connection&#39;, function (socket) {</p><p>&nbsp; socket.emit(&#39;item&#39;, { news: &#39;item&#39; });</p><p>&nbsp;});</p><p>//Client</p><p>&lt;script&gt;</p><p>&nbsp;var chat = io.connect(&#39;http://localhost/chat&#39;)</p><p>&nbsp; , news = io.connect(&#39;http://localhost/news&#39;);</p><p>&nbsp;chat.on(&#39;connect&#39;, function () {</p><p>&nbsp; chat.emit(&#39;hi!&#39;);</p><p>&nbsp;});</p><p>&nbsp;news.on(&#39;news&#39;, function () {</p><p>&nbsp; news.emit(&#39;woot&#39;);</p><p>&nbsp;});</p><p>&lt;/script&gt;</p><p>&nbsp;socket.io的配置&nbsp;</p><p>&nbsp; &nbsp; socket.io的配置很简单，如果配置过express的话，你会发现它们几乎是使用差不多的方式。先看个小例子：</p><p><br/></p><p><br/></p><p>var io = require(&#39;socket.io&#39;).listen(80);</p><p>io.configure(&#39;production&#39;, function(){</p><p>&nbsp;io.enable(&#39;browser client etag&#39;);</p><p>&nbsp;io.set(&#39;log level&#39;, 1);</p><p>&nbsp;io.set(&#39;transports&#39;, [</p><p>&nbsp; &#39;websocket&#39;</p><p>&nbsp;, &#39;flashsocket&#39;</p><p>&nbsp;, &#39;htmlfile&#39;</p><p>&nbsp;, &#39;xhr-polling&#39;</p><p>&nbsp;, &#39;jsonp-polling&#39;</p><p>&nbsp;]);</p><p>});</p><p>io.configure(&#39;development&#39;, function(){</p><p>&nbsp;io.set(&#39;transports&#39;, [&#39;websocket&#39;]);</p><p>});</p><p>可以看到，socket.io使用configure, set, enable, disable进行配置。</p><p>1. 使用configure方法配置不同的运行环境下的行为；就是说在不同的环境下，启用不同的配置选项。configure的第一个参数是运行环境，第二个参数是进行配置的function。运行环境典型的如production或者是development，当然这里可以使任意的字符串。如果configure的第一个参数省略的话，说明后面的配置是公用的，不管是什么环境下，都有效。</p><p>2. 配置好各种运行环境了，那么如何设置当前运行在那个环境下呢？这个是通过在命令行中修改环境变量NODE_ENV的值实现的。</p><p>3. 在configure的配置函数中，我们可以使用set, enable, disable设置相关选项。</p><p>4. 具体可以配置的项参考：https://github.com/LearnBoost/Socket.IO/wiki/Configuring-Socket.IO</p><p>实用参考</p><p>socket.io介绍：http://davidchambersdesign.com/getting-started-with-socket.io/</p><p>socket.io安装和使用说明：http://socket.io/</p><p>socket.io Wiki：https://github.com/LearnBoost/Socket.IO/wiki</p><p><br/></p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('socket.io详解_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1872.html">Nodejs+socket.io搭建多人聊天室</a>&nbsp;&nbsp;下一条： <a href="/html/News/1870.html">TypeError: socket.set is not a funct…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1872.html" title="Nodejs+socket.io搭建多人聊天室" >Nodejs+socket.io搭建多人聊天…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1871.html" title="socket.io详解" >socket.io详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1870.html" title="TypeError: socket.set is not a function" >TypeError: socket.set is no…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1868.html" title="Node.js主要思路详解" >Node.js主要思路详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1867.html" title="Node.js会超越 Java 吗" >Node.js会超越 Java 吗</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1865.html" title="Node.js中的模块化详解" >Node.js中的模块化详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1800.html" title="为何要用构建工具？" >为何要用构建工具？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1755.html" title="npm如何切换到淘宝镜像" >npm如何切换到淘宝镜像</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1721.html" title="NPM vs Bower 的区别" >NPM vs Bower 的区别</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/275.html" title="在Windows系统下搭建SVN服务器">在Windows系统下搭建SVN服务器</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/856.html" title="宽带连接速度慢">宽带连接速度慢</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1042.html" title="在iis下设置伪静态的规则和方法">在iis下设置伪静态的规则和方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/272.html" title="Oralce&nbsp;9i安装OID目录服务器说明">Oralce 9i安装OID目录服务器说明</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1044.html" title="需要停止的windows&nbsp;2003&nbsp;server服务">需要停止的windows 2003 server服…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/270.html" title=".htaccess文件设置技巧16则">.htaccess文件设置技巧16则</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/268.html" title="Apache&nbsp;SSL证书安装指南">Apache SSL证书安装指南</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/448.html" title="linux下手工修改分区后的挂载">linux下手工修改分区后的挂载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/271.html" title="MSN服务器为什么不放置在中国境内呢？">MSN服务器为什么不放置在中国境内…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/428.html" title="自定义MIME类型&nbsp;网络空间支持FLV">自定义MIME类型 网络空间支持FLV</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/266.html" title="稳定的国外网站服务器对SEO排名没有影响">稳定的国外网站服务器对SEO排名没…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/522.html" title="Windows下定期自动备份网站软件——cwRsync">Windows下定期自动备份网站软件—…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/429.html" title="实战讲解:从零开始配置Linux服务器">实战讲解:从零开始配置Linux服务器…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/431.html" title="IIS错误代码及其含义">IIS错误代码及其含义</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1254.html" title="服务器领域众“菜鸟”们的几个常见问题">服务器领域众“菜鸟”们的几个常见…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1872.html" title="Nodejs+socket.io搭建多人聊天室" >Nodejs+socket.io搭建多人聊天室</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1871.html" title="socket.io详解" >socket.io详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1870.html" title="TypeError:&nbsp;socket.set&nbsp;is&nbsp;not&nbsp;a&nbsp;function" >TypeError: socket.set is not a …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1868.html" title="Node.js主要思路详解" >Node.js主要思路详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1867.html" title="Node.js会超越&nbsp;Java&nbsp;吗" >Node.js会超越 Java 吗</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1865.html" title="Node.js中的模块化详解" >Node.js中的模块化详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1800.html" title="为何要用构建工具？" >为何要用构建工具？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1755.html" title="npm如何切换到淘宝镜像" >npm如何切换到淘宝镜像</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1721.html" title="NPM&nbsp;vs&nbsp;Bower&nbsp;的区别" >NPM vs Bower 的区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1720.html" title="nodejs是什么" >nodejs是什么</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1683.html" title="win10下如何安装IIS" >win10下如何安装IIS</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1677.html" title="LoadRunner性能测试结果分析" >LoadRunner性能测试结果分析</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1665.html" title="XPath路径表达式学习总结-HtmlAgilityPack抓取网页" >XPath路径表达式学习总结-HtmlAgi…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1664.html" title="C#同步方法和异步方法的区别(比较经典)" >C#同步方法和异步方法的区别(比较…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1661.html" title="C#如何设置KeepAlive" >C#如何设置KeepAlive</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1871" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

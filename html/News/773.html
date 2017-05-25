@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ajax&nbsp;清除缓存的两种方法_Jquery_Ajax_Javascript_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="ajax&nbsp;清除缓存的两种方法" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Jquery_Ajax_Javascript
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        ajax 清除缓存的两种方法
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/19 15:52:51
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        ajax&nbsp;清除缓存的两种方法
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <font face="黑体">第一种：</font>
+<p><font face="黑体"></font><br />
+模板上加上<br />
+</p>
+<font size="2" face="MS Sans Serif">
+<div class="quote"><font size="2" face="Arial">&lt;META HTTP-EQUIV=&quot;pragma&quot; CONTENT=&quot;no-cache&quot;&gt;<br />
+&lt;META HTTP-EQUIV=&quot;Cache-Control&quot; CONTENT=&quot;no-cache, must-revalidate&quot;&gt;<br />
+&lt;META HTTP-EQUIV=&quot;expires&quot; CONTENT=&quot;Wed, 26 Feb 1997 08:21:57 GMT&quot;&gt;</font></div>
+<p>&nbsp;</p>
+<p><font size="3" face="Verdana"><font face="黑体">第二种：</font><br />
+url加上随机数变量<br />
+<font size="2" face="Arial"></font></font>
+<p><font size="3" face="Verdana"><br />
+<font face="Arial Black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [AJAX介绍]</font></font></p>
+<p><font size="3" face="Verdana">　　Ajax是使用客户端脚本与Web服务器交换数据的Web应用开发方法。Web页面不用打断交互流程进行重新加裁，就可以动态地更新。使用Ajax，用户可以创建接近本地桌面应用的直接、高可用、更丰富、更动态的Web用户界面。</font></p>
+<p><font size="3" face="Verdana">　　异步JavaScript和XML（AJAX）不是什么新技术，而是使用几种现有技术&mdash;&mdash;包括级联样式表（CSS）、JavaScript、XHTML、XML和可扩展样式语言转换（XSLT），开发外观及操作类似桌面软件的Web应用软件。</font></p>
+<p><font face="Verdana"><font size="3">　　</font></font><font size="3" face="Arial Black">[AJAX执行原理]</font></p>
+<p><font size="3" face="Verdana">　　一个Ajax交互从一个称为XMLHttpRequest的JavaScript对象开始。如同名字所暗示的，它允许一个客户端脚本来执行HTTP请求，并且将会解析一个XML格式的服务器响应。Ajax处理过程中的第一步是创建一个XMLHttpRequest实例。使用HTTP方法（GET或POST）来处理请求，并将目标URL设置到XMLHttpRequest对象上。</font></p>
+<p><font size="3" face="Verdana">　　当你发送HTTP请求，你不希望浏览器挂起并等待服务器的响应，取而代之的是，你希望通过页面继续响应用户的界面交互，并在服务器响应真正到达后处理它们。要完成它，你可以向XMLHttpRequest注册一个回调函数，并异步地派发XMLHttpRequest请求。控制权马上就被返回到浏览器，当服务器响应到达时，回调函数将会被调用。</font></p>
+<p><font size="3" face="Verdana">　　[AJAX实际应用]</font></p>
+<p><font size="3" face="Verdana">　　<font face="Arial Black">1. 初始化Ajax</font></font></p>
+<p><font size="3" face="Verdana">　　Ajax实际上就是调用了XMLHttpRequest对象，那么首先我们的就必须调用这个对象，我们构建一个初始化Ajax的函数：</font></p>
+<font size="2" face="Arial">
+<div class="quote">
+<p><font size="2" face="Arial">/**<br />
+* 初始化一个xmlhttp对象<br />
+*/<br />
+function InitAjax()<br />
+{<br />
+　var ajax=false;<br />
+　try {<br />
+　　ajax = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);<br />
+　} catch (e) {<br />
+　　try {<br />
+　　　ajax = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);<br />
+　　} catch (E) {<br />
+　　　ajax = false;<br />
+　　}<br />
+　}<br />
+　if (!ajax &amp;&amp; typeof XMLHttpRequest!='undefined') {<br />
+　　ajax = new XMLHttpRequest();<br />
+　}<br />
+　return ajax;<br />
+}</font></p>
+</div>
+<p>&nbsp;</p>
+<p><font size="3" face="Verdana">　　<font face="Arial Black">2. Ajax使用Get方式</font></font></p>
+<p><font size="3" face="Verdana">　　现在我们第一步来执行一个Get请求，加入我们需要获取 /show.php?id=1的数据，那么我们应该怎么做呢？</font></p>
+<p><font size="3" face="Verdana">　　假设有一个链接：＜a href=&quot;/show.php?id=1&quot;＞新闻1＜/a＞，我点该链接的时候，不想任何刷新就能够看到链接的内容，那么我们该怎么做呢？</font></p>
+<p><font size="3" face="Verdana">//将链接改为：<br />
+<font size="2" face="Arial"></font></font><font size="3" face="Verdana">//并且设置一个接收新闻的层，并且设置为不显示：<br />
+<font size="2" face="Arial"></font></font>
+<p><font size="3" face="Verdana">　　同时构造相应的JavaScript函数：</font></p>
+<font size="2" face="Arial">
+<div class="quote">
+<p><font size="2" face="Arial">function getNews(newsID)<br />
+{<br />
+　//如果没有把参数newsID传进来<br />
+　if (typeof(newsID) == 'undefined')<br />
+　{<br />
+　　return false;<br />
+　}<br />
+　//需要进行Ajax的URL地址<br />
+　var url = &quot;/show.php?id=&quot;+ newsID;</font></p>
+<p><font size="2" face="Arial">　//获取新闻显示层的位置<br />
+　var show = document.getElementById(&quot;show_news&quot;);</font></p>
+<p><font size="2" face="Arial">　//实例化Ajax对象<br />
+　var ajax = InitAjax();</font></p>
+<p><font size="2" face="Arial">　//使用Get方式进行请求<br />
+　ajax.open(&quot;GET&quot;, url, true);</font></p>
+<p><font size="2" face="Arial">　//获取执行状态<br />
+　ajax.onreadystatechange = function() {<br />
+　　//如果执行是状态正常，那么就把返回的内容赋值给上面指定的层<br />
+　　if (ajax.readyState == 4 &amp;&amp; ajax.status == 200) {<br />
+　　　show.innerHTML = ajax.responseText;<br />
+　　}<br />
+　}<br />
+　//发送空<br />
+　ajax.send(null);<br />
+}</font></p>
+</div>
+<p>&nbsp;</p>
+<p><font size="3" face="Verdana">　　这种方式适应于页面中任何元素，包括表单等等，其实在应用中，对表单的操作是比较多的，针对表单，更多使用的是POST方式，这个下面将讲述。</font></p>
+<p><font face="Arial Black">3. Ajax使用POST方式</font> </p>
+<p><font size="3" face="Verdana">　　其实POST方式跟Get方式是比较类似的，只是在执行Ajax的时候稍有不同，我们简单讲述一下。</font></p>
+<p><font size="3" face="Verdana">　　假设有一个用户输入资料的表单，我们在无刷新的情况下把用户资料保存到数据库中，同时给用户一个成功的提示。</font></p>
+<p><font size="3" face="Verdana">//构建一个表单，表单中不需要action、method之类的属性，全部由ajax来搞定了。<br />
+<font size="2" face="Arial"></font></font></p>
+<div class="quote">
+<p><font size="3" face="Verdana"><font size="2" face="Arial">＜form name=&quot;user_info&quot;＞<br />
+姓名：＜input type=&quot;text&quot; name=&quot;user_name&quot; /＞＜br /＞<br />
+年龄：＜input type=&quot;text&quot; name=&quot;user_age&quot; /＞＜br /＞<br />
+性别：＜input type=&quot;text&quot; name=&quot;user_sex&quot; /＞＜br /＞</font></font></p>
+<p><font size="2" face="Arial">＜input type=&quot;button&quot; value=&quot;提交表单&quot; onClick=&quot;saveUserInfo()&quot;＞<br />
+＜/form＞<br />
+//构建一个接受返回信息的层：<br />
+＜div id=&quot;msg&quot;＞＜/div＞</font></p>
+</div>
+<p>&nbsp;</p>
+<p><font size="3" face="Verdana">　　我们看到上面的form表单里没有需要提交目标等信息，并且提交按钮的类型也只是button，那么所有操作都是靠onClick事件中的saveUserInfo()函数来执行了。我们描述一下这个函数：</font></p>
+<font size="2" face="Arial">
+<div class="quote">
+<p><font size="2" face="Arial">function saveUserInfo()<br />
+{<br />
+　//获取接受返回信息层<br />
+　var msg = document.getElementById(&quot;msg&quot;);</font></p>
+<p><font size="2" face="Arial">　//获取表单对象和用户信息值<br />
+　var f = document.user_info;<br />
+　var userName = f.user_name.value;<br />
+　var userAge = f.user_age.value;<br />
+　var userSex = f.user_sex.value;</font></p>
+<p><font size="2" face="Arial">　//接收表单的URL地址<br />
+　var url = &quot;/save_info.php&quot;;</font></p>
+<p><font size="2" face="Arial">　//需要POST的值，把每个变量都通过&amp;来联接<br />
+　var postStr = &quot;user_name=&quot;+ userName +&quot;&amp;user_age=&quot;+ userAge +&quot;&amp;user_sex=&quot;+ userSex;</font></p>
+<p><font size="2" face="Arial">　//实例化Ajax<br />
+　var ajax = InitAjax();<br />
+　<br />
+　//通过Post方式打开连接<br />
+　ajax.open(&quot;POST&quot;, url, true);</font></p>
+<p><font size="2" face="Arial">　//定义传输的文件HTTP头信息<br />
+　ajax.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-www-form-urlencoded&quot;);</font></p>
+<p><font size="2" face="Arial">　//发送POST数据<br />
+　ajax.send(postStr);</font></p>
+<p><font size="2" face="Arial">　//获取执行状态<br />
+　ajax.onreadystatechange = function() {<br />
+　　//如果执行状态成功，那么就把返回信息写到指定的层里<br />
+　　if (ajax.readyState == 4 &amp;&amp; ajax.status == 200) {<br />
+　　　msg.innerHTML = ajax.responseText;<br />
+　　}<br />
+　}<br />
+}</font></p>
+</div>
+<p>&nbsp;</p>
+<p><font size="3" face="Verdana">　　<font face="Arial Black">4. 异步回调（伪Ajax方式）</font></font></p>
+<p><font size="3" face="Verdana">　　一般情况下，使用Get、Post方式的Ajax我们都能够解决目前问题，只是应用复杂程度，当然，在开发中我们也许会碰到无法使用Ajax的时候，但是我们又需要模拟Ajax的效果，那么就可以使用伪Ajax的方式来实现我们的需求。</font></p>
+<p><font size="3" face="Verdana">　　伪Ajax大致原理就是说我们还是普通的表单提交，或者别的什么的，但是我们却是把提交的值目标是一个浮动框架，这样页面就不刷新了，但是呢，我们又需要看到我们的执行结果，当然可以使用JavaScript来模拟提示信息，但是，这不是真实的，所以我们就需要我们的执行结果来异步回调，告诉我们执行结果是怎么样的。</font></p>
+<p><font size="3" face="Verdana">　　假设我们的需求是需要上传一张图片，并且，需要知道图片上传后的状态，比如，是否上传成功、文件格式是否正确、文件大小是否正确等等。那么我们就需要我们的目标窗口把执行结果返回来给我们的窗口，这样就能够顺利的模拟一次Ajax调用的过程。</font></p>
+<p><font size="3" face="Verdana">　　以下代码稍微多一点， 并且涉及Smarty模板技术，如果不太了解，请阅读相关技术资料。</font></p>
+<p><font size="3" face="Verdana">　　<font face="Arial Black">上传文件：upload.html</font></font></p>
+<font size="2" face="Arial">
+<div class="quote">
+<p><font size="2" face="Arial">//上传表单，指定target属性为浮动框架iframe1<br />
+＜form action=&quot;/upload.php&quot; method=&quot;post&quot; enctype=&quot;multipart/form-data&quot; name=&quot;upload_img&quot; target=&quot;iframe1&quot;＞<br />
+选择要上传的图片：＜input type=&quot;file&quot; name=&quot;image&quot;＞＜br /＞<br />
+＜input type=&quot;submit&quot; value=&quot;上传图片&quot;＞<br />
+＜/form＞<br />
+//显示提示信息的层<br />
+＜div id=&quot;message&quot; style=&quot;display:none&quot;＞＜/div＞</font></p>
+<p><font size="2" face="Arial">//用来做目标窗口的浮动框架<br />
+＜iframe name=&quot;iframe1&quot; width=&quot;0&quot; height=&quot;0&quot; scrolling=&quot;no&quot;＞＜/iframe＞</font></p>
+</div>
+<p>&nbsp;</p>
+<font size="2" face="Arial">
+<div class="quote">
+<p><font size="2" face="Arial">＜?php</font></p>
+<p><font size="2" face="Arial">/* 定义常量 */</font></p>
+<p><font size="2" face="Arial">//定义允许上传的MIME格式<br />
+define(&quot;UPLOAD_IMAGE_MIME&quot;, &quot;image/pjpeg,image/jpg,image/jpeg,image/gif,image/x-png,image/png&quot;);<br />
+//图片允许大小，字节<br />
+define(&quot;UPLOAD_IMAGE_SIZE&quot;, 102400);<br />
+//图片大小用KB为单位来表示<br />
+define(&quot;UPLOAD_IMAGE_SIZE_KB&quot;, 100);<br />
+//图片上传的路径<br />
+define(&quot;UPLOAD_IMAGE_PATH&quot;, &quot;./upload/&quot;);</font></p>
+<p><font size="2" face="Arial">//获取允许的图像格式<br />
+$mime = explode(&quot;,&quot;, USER_FACE_MIME);<br />
+$is_vaild = 0;</font></p>
+<p><font size="2" face="Arial">//遍历所有允许格式<br />
+foreach ($mime as $type)<br />
+{<br />
+　if ($_FILES['image']['type'] == $type)<br />
+　{<br />
+　　$is_vaild = 1;<br />
+　}<br />
+}</font></p>
+<p><font size="2" face="Arial">//如果格式正确，并且没有超过大小就上传上去<br />
+if ($is_vaild &amp;&amp; $_FILES['image']['size']＜=USER_FACE_SIZE &amp;&amp; $_FILES['image']['size']＞0)<br />
+{<br />
+　if (move_uploaded_file($_FILES['image']['tmp_name'], USER_IMAGE_PATH . $_FILES['image']['name']))<br />
+　{<br />
+　　$upload_msg =&quot;上传图片成功！&quot;;<br />
+　}<br />
+　else<br />
+　{<br />
+　　$upload_msg = &quot;上传图片文件失败&quot;;<br />
+　}<br />
+}<br />
+else<br />
+{<br />
+　$upload_msg = &quot;上传图片失败，可能是文件超过&quot;. USER_FACE_SIZE_KB .&quot;KB、或者图片文件为空、或文件格式不正确&quot;;<br />
+}</font></p>
+<p><font size="2" face="Arial">//解析模板文件<br />
+$smarty-＞assign(&quot;upload_msg&quot;, $upload_msg);<br />
+$smarty-＞display(&quot;upload.tpl&quot;);</font></p>
+<p><font size="2" face="Arial">?＞</font></p>
+</div>
+<p>&nbsp;</p>
+<font size="2" face="Arial">
+<div class="quote">
+<p><font size="2" face="Arial">{if $upload_msg != &quot;&quot;}<br />
+callbackMessage(&quot;{$upload_msg}&quot;);<br />
+{/if}</font></p>
+<p><font size="2" face="Arial">//回调的JavaScript函数，用来在父窗口显示信息<br />
+function callbackMessage(msg)<br />
+{<br />
+　//把父窗口显示消息的层打开<br />
+　parent.document.getElementById(&quot;message&quot;).style.display = &quot;block&quot;;<br />
+　//把本窗口获取的消息写上去<br />
+　parent.document.getElementById(&quot;message&quot;).innerHTML = msg;<br />
+　//并且设置为3秒后自动关闭父窗口的消息显示<br />
+　setTimeout(&quot;parent.document.getElementById('message').style.display = 'none'&quot;, 3000);<br />
+}</font></p>
+</div>
+<p>&nbsp;</p>
+<p><font size="3" face="Verdana">　　<font face="黑体">[结束语]</font></font></p>
+<p><font size="3" face="Verdana">　　这是一种非常良好的Web开发技术，虽然出现时间比较长，但是到现在才慢慢火起来，也希望带给Web开发界一次变革，让我们朝RIA（富客户端）的开发迈进，当然，任何东西有利也有弊端，如果过多的使用JavaScript，那么客户端将非常臃肿，不利于用户的浏览体验，如何在做到快速的亲前提下，还能够做到好的用户体验，这就需要Web开发者共同努力了。</font></p>
+</font><font size="3" face="Verdana">　　使用异步回调的方式过程有点复杂，但是基本实现了Ajax、以及信息提示的功能，如果接受模板的信息提示比较多，那么还可以通过设置层的方式来处理，这个随机应变吧。</font></font><font size="3" face="Arial Black">模板文件：upload.tpl</font></font><font size="3" face="Verdana">　　<font face="Arial Black">处理上传的PHP文件：upload.php</font></font></font><font size="3" face="Verdana">　　大致使用POST方式的过程就是这样，当然，实际开发情况可能会更复杂，这就需要开发者去慢慢琢磨。</font></font><font size="3" face="Verdana">　　那么当，当用户点击&ldquo;新闻1&rdquo;这个链接的时候，在下面对应的层将显示获取的内容，而且页面没有任何刷新。当然，我们上面省略了show.php这个文件，我们只是假设show.php文件存在，并且能够正常工作的从数据库中把id为1的新闻提取出来。</font></p>
+<div class="quote"><font size="3" face="Verdana"><font size="2" face="Arial">＜a href=&quot;#&quot; onClick=&quot;getNews(1)&quot;＞新闻1＜/a＞</font></font></div>
+<p>&nbsp;</p>
+<div class="quote"><font size="2" face="Arial">＜div id=&quot;show_news&quot;＞＜/div＞</font></div>
+</font><font size="3" face="Verdana">　　你也许会说，这个代码因为要调用XMLHTTP组件，是不是只有IE浏览器能使，不是的经我试验，Firefox也是能使用的。<br />
+那么我们在执行任何Ajax操作之前，都必须先调用我们的InitAjax()函数来实例化一个Ajax对象。</font></p>
+<div class="quote"><font size="2" face="Arial">url = &quot;xxx.asp?&quot; + Math.round(Math.random()*100)</font></div>
+</font><br />
+强制刷新
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('ajax 清除缓存的两种方法_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/794.html">谈谈JavaScript中的集合以及效率</a>&nbsp;&nbsp;下一条： <a href="/html/News/772.html">AJAX JavaScript 对象设计</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return false preventDefault 和 stopPropagation详解" >return false preventDefault…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuer…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/773.html" title="ajax&nbsp;清除缓存的两种方法">ajax 清除缓存的两种方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/644.html" title="js日历控件点击日期显示在文本框中">js日历控件点击日期显示在文本框中…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1316.html" title="HTML、JS与FLASH&nbsp;之间的静态传值方法">HTML、JS与FLASH 之间的静态传值方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/489.html" title="主题：ajax请求JSP，为什么GET就是乱码，POST就没问题">主题：ajax请求JSP，为什么GET就是…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/800.html" title="javascript&nbsp;改变iframe(框架)的方法">javascript 改变iframe(框架)的方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/616.html" title="javascript取鼠标当前坐标">javascript取鼠标当前坐标</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1241.html" title="推荐一款网页软键盘&nbsp;很漂亮的哦">推荐一款网页软键盘 很漂亮的哦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/409.html" title="ajax&nbsp;session过期问题的几个解决方案">ajax session过期问题的几个解决方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1106.html" title="js文字间隔停顿向上滚动效果">js文字间隔停顿向上滚动效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/413.html" title="ajax&nbsp;服务器文本框自动填值">ajax 服务器文本框自动填值</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/546.html" title="js技术技巧收藏（200例）---1">js技术技巧收藏（200例）---1</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/412.html" title="ajax&nbsp;数据库中随机读取5条数据动态在页面中刷新">ajax 数据库中随机读取5条数据动态…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/488.html" title="主题：这是否是个捷径？Ajax利用Struts转发到的jsp作为数据传回">主题：这是否是个捷径？Ajax利用S…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/406.html" title="揭开AJAX神秘的面纱(AJAX个人学习笔记)">揭开AJAX神秘的面纱(AJAX个人学习…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/888.html" title="常用的JS后台导航菜单">常用的JS后台导航菜单</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各样的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return&nbsp;false&nbsp;preventDefault&nbsp;和&nbsp;stopPropagation详解" >return false preventDefault 和 …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuery的r…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1784.html" title="ES6中使用箭头定义函数" >ES6中使用箭头定义函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1783.html" title="正则表达式学习笔记" >正则表达式学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1782.html" title="javascript数组详解" >javascript数组详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1772.html" title="JavaScript是世界上最流行的脚本语言" >JavaScript是世界上最流行的脚本语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1709.html" title="onSelectStart事件详解" >onSelectStart事件详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1706.html" title="js中的classList详解" >js中的classList详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "773" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

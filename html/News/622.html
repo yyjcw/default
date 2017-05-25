@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>浅析C#3.0&nbsp;新特性_vs2015_vs2006_vs2010_vs2012_vs2013_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="C#3.0已经推出好一段时间了，由于种种原因，一直没有去学习，这两天在园子中看到老赵的拯救C#&nbsp;2.0，但是我们真做的到吗？。里面提到了些C#3.0的新特性和优势。勾起了我对3.0的兴趣，初探学习一下，分享给新手。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; vs2015_vs2006_vs2010_vs2012_vs2013
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        浅析C#3.0 新特性
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/14 22:52:57
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        C#3.0已经推出好一段时间了，由于种种原因，一直没有去学习，这两天在园子中看到老赵的拯救C#&nbsp;2.0，但是我们真做的到吗？。里面提到了些C#3.0的新特性和优势。勾起了我对3.0的兴趣，初探学习一下，分享给新手。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <h2>初探C#3.0 ,C#3.0新特性</h2>
+<div id="message102" class="t_msgfont">
+<div id="firstpost">C#3.0已经推出好一段时间了，由于种种原因，一直没有去学习，这两天在园子中看到老赵的<font color="#333333"><font color="#3366ff">拯救C# 2.0，但是我们真做的到吗？</font></font>。里面提到了些C#3.0的新特性和优势。勾起了我对3.0的兴趣，初探学习一下，分享给新手。<br />
+在C#2.0中，微软给我们带来了一些新的特性，例如泛型，匿名委托等。然而，这些新的特性多多少少会给人一种从别的语言中&ldquo;抄&rdquo;来的感觉（例如泛型类似C++的模板，一些特性类似Java中的一些东西）。但是在C#3.0中，微软给我带来的一些新特性可能是以前所有开发语言都没有的特性。这无疑大大的体现了C#3.0在开发语言中强大的优势。<br />
+<strong>Lambda表达式</strong><br />
+Lambda 表达式是一个匿名函数，它可以包含表达式和语句，并且可用于创建委托或表达式目录树类型。所有 Lambda 表达式都使用 Lambda 运算符 =&gt;。关于Lambda更详细的讲解大家可以参看<a target="_blank" href="http://msdn.microsoft.com/zh-cn/library/bb397687.aspx"><font color="#0000ff"> MSDN</font></a>。里面说的很清楚。<br />
+这里简单举个例子来说明Lambda的好处。Lambda在对匿名委托的处理上提供了更清楚的实施方式。例如在2.0中。我们可以写这样的代码：<br />
+<img id="img_0.1934333565431111" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ContractedBlock.gif" /><img id="img_0.0994664683668558" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ExpandedBlockStart.gif" />Code<br />
+<font color="#0000ff">public</font><br />
+<font color="#0000ff">class</font><font color="#000000"> Example<br />
+{<br />
+&nbsp; </font><font color="#0000ff">public</font><br />
+<font color="#0000ff">static</font><br />
+<font color="#0000ff">void</font><font color="#000000"> Demo(System.Windows.Controls.TextBlock outputBlock)<br />
+&nbsp; {<br />
+&nbsp; &nbsp; &nbsp; Func</font><font color="#000000">&lt;</font><font color="#0000ff">string</font><font color="#000000">, </font><font color="#0000ff">string</font><font color="#000000">&gt;</font><font color="#000000"> convert </font><font color="#000000">=</font><br />
+<font color="#0000ff">delegate</font><font color="#000000">(</font><font color="#0000ff">string</font><font color="#000000"> s)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; { </font><font color="#0000ff">return</font><font color="#000000"> s.ToUpper(); };<br />
+<br />
+&nbsp; &nbsp; &nbsp; </font><font color="#0000ff">string</font><font color="#000000"> name </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">Dakota</font><font color="#800000">&quot;</font><font color="#000000">;<br />
+&nbsp; &nbsp; &nbsp; outputBlock.Text </font><font color="#000000">+=</font><font color="#000000"> convert(name) </font><font color="#000000">+</font><br />
+<font color="#800000">&quot;</font><font color="#800000">\n</font><font color="#800000">&quot;</font><font color="#000000">;<br />
+&nbsp; }<br />
+}<br />
+</font><br />
+在 C# 中将 Func&lt;(Of &lt;(T, TResult&gt;)&gt;) 委托与匿名方法一起使用。<br />
+在3.0中，我们可以使用Lambda来更清楚的进行参数的传递：<br />
+<img id="img_0.09190739291707839" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ContractedBlock.gif" /><img id="img_0.32818837113347726" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ExpandedBlockStart.gif" />Code<br />
+<font color="#0000ff">public</font><br />
+<font color="#0000ff">class</font><font color="#000000"> Example<br />
+{<br />
+&nbsp; </font><font color="#0000ff">public</font><br />
+<font color="#0000ff">static</font><br />
+<font color="#0000ff">void</font><font color="#000000"> Demo(System.Windows.Controls.TextBlock outputBlock)<br />
+&nbsp; {<br />
+&nbsp; &nbsp; &nbsp; Func</font><font color="#000000">&lt;</font><font color="#0000ff">string</font><font color="#000000">, </font><font color="#0000ff">string</font><font color="#000000">&gt;</font><font color="#000000"> convert </font><font color="#000000">=</font><font color="#000000"> s </font><font color="#000000">=&gt;</font><font color="#000000"> s.ToUpper();<br />
+<br />
+&nbsp; &nbsp; &nbsp; </font><font color="#0000ff">string</font><font color="#000000"> name </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">Dakota</font><font color="#800000">&quot;</font><font color="#000000">;<br />
+&nbsp; &nbsp; &nbsp; outputBlock.Text </font><font color="#000000">+=</font><font color="#000000"> convert(name) </font><font color="#000000">+</font><br />
+<font color="#800000">&quot;</font><font color="#800000">\n</font><font color="#800000">&quot;</font><font color="#000000">;<br />
+&nbsp; }<br />
+}<br />
+<br />
+</font><br />
+Lambda 表达式的基础类型是泛型 Func 委托之一。这样能以参数形式传递 lambda 表达式，而不用显式将其分配给委托。尤其是，因为 System.Linq 命名空间中许多类型方法具有 Func&lt;(Of &lt;(T, TResult&gt;)&gt;) 参数，因此可以给这些方法传递 lambda 表达式，而不用显式实例化 Func&lt;(Of &lt;(T, TResult&gt;)&gt;) 委托。这样可以使我们的代码更加简洁，逻辑上更易于理解。 <br />
+<strong>对象的初始化</strong><br />
+在C#中，对象的初始化也做了一些改进。一个新的功能就是提供了更方便的语法规则来声明变量的值。<br />
+假如我们声明一个Student对象：<br />
+<img id="img_0.7512166468177868" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ContractedBlock.gif" /><img id="img_0.8292945982528782" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ExpandedBlockStart.gif" />Code<br />
+<font color="#0000ff">public</font><br />
+<font color="#0000ff">class</font><font color="#000000"> Student<br />
+{<br />
+&nbsp; &nbsp; </font><font color="#0000ff">private</font><br />
+<font color="#0000ff">string</font><font color="#000000"> _stuName;<br />
+&nbsp; &nbsp; </font><font color="#0000ff">private</font><br />
+<font color="#0000ff">string</font><font color="#000000"> _stuAge;<br />
+&nbsp; &nbsp; </font><font color="#0000ff">private</font><br />
+<font color="#0000ff">int</font><font color="#000000"> _stuClass;<br />
+<br />
+&nbsp; &nbsp; </font><font color="#0000ff">public</font><font color="#000000"> Student() { }<br />
+<br />
+&nbsp; &nbsp; </font><font color="#0000ff">public</font><br />
+<font color="#0000ff">string</font><font color="#000000"> StuName<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">get</font><font color="#000000"> { </font><font color="#0000ff">return</font><font color="#000000"> _stuName; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">set</font><font color="#000000"> { _stuName </font><font color="#000000">=</font><font color="#000000"> value; }<br />
+&nbsp; &nbsp; }<br />
+<br />
+&nbsp; &nbsp; </font><font color="#0000ff">public</font><br />
+<font color="#0000ff">string</font><font color="#000000"> StuAge<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">get</font><font color="#000000"> { </font><font color="#0000ff">return</font><font color="#000000"> _stuAge; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">set</font><font color="#000000"> { _stuAge </font><font color="#000000">=</font><font color="#000000"> value; }<br />
+&nbsp; &nbsp; }<br />
+<br />
+&nbsp; &nbsp; </font><font color="#0000ff">public</font><br />
+<font color="#0000ff">int</font><font color="#000000"> StuClass<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">get</font><font color="#000000"> { </font><font color="#0000ff">return</font><font color="#000000"> _stuClass; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">set</font><font color="#000000"> { _stuClass </font><font color="#000000">=</font><font color="#000000"> value; }<br />
+&nbsp; &nbsp; }<br />
+<br />
+}</font><br />
+在C#2.0中，我们是这样声明变量并赋值的：<br />
+<font color="#000000">Student stu </font><font color="#000000">=</font><br />
+<font color="#0000ff">new</font><font color="#000000"> Student();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; stu.StuName </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">Brian</font><font color="#800000">&quot;</font><font color="#000000">;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; stu.StuAge </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">21</font><font color="#800000">&quot;</font><font color="#000000">;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; stu.StuClass </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">1班</font><font color="#800000">&quot;</font><font color="#000000">;</font><br />
+而在C#3.0中，我们可以这样初始化对象：<br />
+<font color="#000000">Student stu2 </font><font color="#000000">=</font><br />
+<font color="#0000ff">new</font><font color="#000000"> Student <br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StuName </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">Brian</font><font color="#800000">&quot;</font><font color="#000000">,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StuAge </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">21</font><font color="#800000">&quot;</font><font color="#000000">,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StuClass </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">1班</font><font color="#800000">&quot;</font><font color="#000000"><br />
+&nbsp; &nbsp; &nbsp; &nbsp; };</font><br />
+从代码中不难看出，C#3.0给我们提供了很方便得方式来进行对象的初始化工作。<br />
+<strong>查询</strong><br />
+这个想必大家都应该有所耳闻，那就是鼎鼎大名的Linq。这是C#3.0中最独特好用的新特性之一。Linq改变了我们写数据应用程序的方式，先前，开发人员需要考虑并编写不用的代码来处理不同数据源中的数据（SQL Server ，XML ，Memory....）。LINQ很好的帮我们解决了这个烦人的问题。同时借助Lambda，我们可以更方便准确的查询我们想要的数据。<br />
+使用Linq简单的数据查询例子：<br />
+<img id="img_0.28582079095319723" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ContractedBlock.gif" /><img id="img_0.9304700643966218" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ExpandedBlockStart.gif" />Code<br />
+<font color="#0000ff">private</font><br />
+<font color="#0000ff">void</font><font color="#000000"> BindGridView(</font><font color="#0000ff">string</font><font color="#000000"> criteria)<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">string</font><font color="#000000"> strConn </font><font color="#000000">=</font><font color="#000000"> ConfigurationManager.ConnectionStrings[</font><font color="#800000">&quot;</font><font color="#800000">connstr</font><font color="#800000">&quot;</font><font color="#000000">].ConnectionString;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; NorthwindDb db </font><font color="#000000">=</font><br />
+<font color="#0000ff">new</font><font color="#000000"> NorthwindDb(strConn);<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; IEnumerable</font><font color="#000000">&lt;</font><font color="#000000">Employee</font><font color="#000000">&gt;</font><font color="#000000"> results;<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">if</font><font color="#000000"> (criteria </font><font color="#000000">==</font><br />
+<font color="#0000ff">string</font><font color="#000000">.Empty)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; results</font><font color="#000000">=</font><font color="#000000">db.Employee.ToArray();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">else</font><font color="#000000"><br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; results </font><font color="#000000">=</font><font color="#000000"> (from c </font><font color="#0000ff">in</font><font color="#000000"> db.Employee<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">where</font><font color="#000000"> c.FirstName.Contains(criteria)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; select c).ToArray();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; GridView1.DataSource </font><font color="#000000">=</font><font color="#000000"> results;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; GridView1.DataBind();<br />
+&nbsp; &nbsp; }<br />
+</font><br />
+<br />
+<strong>变量声明</strong><br />
+这里要说的是var。var是C#3.0中提供的用于声明变量的关键字，开发人员可以不考虑变量的类型就可以对变量进行声明（这一点用法非常类似Javascript）。但是两者还是有些差异。<br />
+相同点：用var来声明任何类型的局部变量。<br />
+不同点：它仅仅负责告诉编译器，该变量需要根据初始化表达式来推断变量的类型，而且只能是局部变量。<br />
+我们可以这样声明变量：<br />
+<font color="#000000">var i</font><font color="#000000">=</font><br />
+<font color="#800080">10</font><font color="#000000">; <br />
+var name </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">edisundong</font><font color="#800000">&quot;</font><font color="#000000">; <br />
+var numbers </font><font color="#000000">=</font><br />
+<font color="#0000ff">new</font><br />
+<font color="#0000ff">int</font><font color="#000000">[] { </font><font color="#800080">1</font><font color="#000000">, </font><font color="#800080">2</font><font color="#000000">, </font><font color="#800080">3</font><font color="#000000"> }; <br />
+</font><br />
+var仅仅是个关键字，它并不是C#3.0中的一种新的类型，而是负责告诉编译器，该变量需要根据初始化表达式来推断变量的类型，上面的语句相当于<br />
+<font color="#0000ff">int</font><font color="#000000"> i</font><font color="#000000">=</font><br />
+<font color="#800080">10</font><font color="#000000">; <br />
+</font><font color="#0000ff">string</font><font color="#000000"> name </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000"> edisundong </font><font color="#800000">&quot;</font><font color="#000000">; <br />
+</font><font color="#0000ff">int</font><font color="#000000">[] numbers </font><font color="#000000">=</font><br />
+<font color="#0000ff">new</font><br />
+<font color="#0000ff">int</font><font color="#000000">[] { </font><font color="#800080">1</font><font color="#000000">, </font><font color="#800080">2</font><font color="#000000">, </font><font color="#800080">3</font><font color="#000000"> }; </font><br />
+这里还需要注意几点：<br />
+1.在声明时必须同时赋值。<br />
+2.在使用var声明一个局部变量后，他仍然具备强类型。<br />
+var integer = 10; <br />
+integer = &quot; edisundong &quot;; <br />
+编译时会报Cannot implicitly convert type string to int错误。<br />
+3. 初始化器表达式的编译期类型不能够是空(null)类型。<br />
+4. var的声明仅限于局部变量<br />
+<strong>扩展方法</strong><br />
+以前如果我们想扩展一个类的功能必须直接源自于它并且从学其中的方法，在C#3.0中，介绍了一种很快捷的扩展功能的方法。<br />
+<img id="img_0.90414773339457" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ContractedBlock.gif" /><img id="img_0.4597764607507433" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ExpandedBlockStart.gif" />Code<br />
+<font color="#0000ff">public</font><br />
+<font color="#0000ff">static</font><br />
+<font color="#0000ff">class</font><font color="#000000"> StudentExtensionMethods<br />
+&nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">public</font><font color="#000000"> StudentExtensionMethods()<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#008000">//</font><font color="#008000"><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#008000">//</font><font color="#008000">TODO: 在此处添加构造函数逻辑<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#008000">//<br />
+</font><font color="#000000">&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">public</font><br />
+<font color="#0000ff">static</font><br />
+<font color="#0000ff">string</font><font color="#000000"> GetStudentInformation(</font><font color="#0000ff">this</font><font color="#000000"> Student stu)<br />
+&nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </font><font color="#0000ff">return</font><br />
+<font color="#0000ff">string</font><font color="#000000">.Format(</font><font color="#800000">&quot;</font><font color="#800000">Name: {0} {1} Age: {2}</font><font color="#800000">&quot;</font><font color="#000000">, stu.StuName,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; stu.StuAge, stu.StuClass);<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; }</font><br />
+定义一个类，其中定义一个方法，注意：这个类和方法都是static的，并且方法的参数是类Student。这样，Student类就可以扩展GetStudentInformation方法：<br />
+<img id="img_0.38883238473554277" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ContractedBlock.gif" /><img id="img_0.5645354530801234" border="0" width="11" height="16" alt="" src="http://www.cnblogs.com/Images/OutliningIndicators/ExpandedBlockStart.gif" />Code<br />
+<font color="#000000">Student stu2 </font><font color="#000000">=</font><br />
+<font color="#0000ff">new</font><font color="#000000"> Student<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StuName </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">Brian</font><font color="#800000">&quot;</font><font color="#000000">,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StuAge </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">12</font><font color="#800000">&quot;</font><font color="#000000">,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; StuClass </font><font color="#000000">=</font><br />
+<font color="#800000">&quot;</font><font color="#800000">1班</font><font color="#800000">&quot;</font><font color="#000000"><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; };<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console.WriteLine(stu2.GetPersonInformation());</font><br />
+<br />
+小结：初学了下C#3.0，感觉带来了不少惊喜，其中有很多新的特性是以前所未知的。C#3.0的新特性应该还不止这些，还需继续学习研究。 </div>
+</div>
+<SCRIPT type=text/javascript>function forumhottag_callback(data){ tags = data; }</SCRIPT><SCRIPT type=text/javascript src="cache/hottags_forum_cache_jsonp.txt"></SCRIPT>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('浅析C#3.0 新特性_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/625.html">据说这套.net面试题很多网络公司都…</a>&nbsp;&nbsp;下一条： <a href="/html/News/621.html">.net开发技巧篇三</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET 4.0尚未在 Web 服务器上注册 解决方法" >ASP.NET 4.0尚未在 Web 服务器…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,ses…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual Studio 2015新增安卓模拟器" >微软为Visual Studio 2015新增…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/743.html" title="一个关于天气预报的WebService【C#版】">一个关于天气预报的WebService【C…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/777.html" title="VS2010最大的新特点是并行编程的进展">VS2010最大的新特点是并行编程的进…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1244.html" title="TextBox控件：asp.net中如何为密码输入框赋值">TextBox控件：asp.net中如何为密码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1184.html" title="Web服务调用实例：实现天气预报的查询&nbsp;">Web服务调用实例：实现天气预报的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/659.html" title="ASP.NET程序员面试试题(130道题)">ASP.NET程序员面试试题(130道题)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/208.html" title="ASP.NET教程:调用WebService的源码">ASP.NET教程:调用WebService的源码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/299.html" title="网站开发全程设计">网站开发全程设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/625.html" title="据说这套.net面试题很多网络公司都用">据说这套.net面试题很多网络公司都…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1240.html" title="考考你：C#常见题型及部分答案">考考你：C#常见题型及部分答案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/497.html" title="原创：.net读取数据库sql2000">原创：.net读取数据库sql2000</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1245.html" title="伪静态URL重写配置">伪静态URL重写配置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1093.html" title="配置web.config代码asp.net3.5个性化用户">配置web.config代码asp.net3.5个性…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1291.html" title="使用线程池提高性能&nbsp;Socket网络编程学习笔记（6）">使用线程池提高性能 Socket网络编…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/614.html" title="ASP.NET（C#）GridView表头的增加">ASP.NET（C#）GridView表头的增加…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1129.html" title="如何找到正确的学习方向【.NET版】">如何找到正确的学习方向【.NET版】…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET&nbsp;4.0尚未在&nbsp;Web&nbsp;服务器上注册&nbsp;解决方法" >ASP.NET 4.0尚未在 Web 服务器上注…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,session…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的解决…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web&nbsp;Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web Dep…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开文件…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual&nbsp;Studio&nbsp;2015新增安卓模拟器" >微软为Visual Studio 2015新增安卓…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1605.html" title="&nbsp;用C#抓取需要登录的页面数据" > 用C#抓取需要登录的页面数据</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1588.html" title="VS2015新功能" >VS2015新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1584.html" title="VS2015安装图解教程" >VS2015安装图解教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1565.html" title="vs2015新功能介绍" >vs2015新功能介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1564.html" title="vs2015安装图解" >vs2015安装图解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1562.html" title="c#生成二维码和打印" >c#生成二维码和打印</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "622" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

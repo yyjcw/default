@@ -1,0 +1,822 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ASP.NET&nbsp;MVC开发实践教程【View/Model&nbsp;全解&nbsp;】_vs2015_vs2006_vs2010_vs2012_vs2013_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="本文讲解在Action中向View传递Model的几种方式.以及View获取Model以后如何编写显示逻辑.还详细的介绍了<br />
+<br />
+" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; vs2015_vs2006_vs2010_vs2012_vs2013
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        ASP.NET MVC开发实践教程【View/Model 全解 】
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2014/11/13 16:12:27
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        本文讲解在Action中向View传递Model的几种方式.以及View获取Model以后如何编写显示逻辑.还详细的介绍了<br />
+<br />
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <h2>一.摘要</h2>
+<p>本文讲解在Action中向View传递Model的几种方式.以及View获取Model以后如何编写显示逻辑.还详细的介绍了</p>
+<p>ASP.NET MVC框架提供的Html Helper类的使用及如何为Html Helper类添加自定义扩展方法.</p>
+<h1>二.承上启下</h1>
+<p>上一篇文章中我们学习了Controller处理一次请求的全过程.在Controller的Action中, 会传递数据给View,</p>
+<p>还会通知View对象开始显示.所以Model是在Action中获取的, 并由Action传递给View. View对象接到Action通<br />
+知后会使用自己的显示逻辑展示页面.</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_14.png"></a><img alt="" width="532" height="236" src="/UserFiles/image_thumb_6.png" />&nbsp;</p>
+<p>下面首先让我们学习如何将Model传递给View对象.</p>
+<h2>三.传递数据给View</h2>
+<p>在MVC中,Model对象是指包含了数据的模型. Controller将Model传递给View以后, View对象中不应该做任何<br />
+的业务逻辑处理, 仅仅根据Model对象做一些显示逻辑的处理.</p>
+<p>传递Model对象时, 我们有两种选择:</p>
+<p>1.传递一个弱类型的集合, 即成员为object类型的集合,&nbsp; 在View中需要将每个成员转换成我们需要的类型,比如<br />
+int, string,自定义类型等.</p>
+<p>2.传递强类型对象, 这些类型是我们自定义的. 在View中直接使用我们传递的强类型对象, 不需要再转换类型.</p>
+<p>如果让我们自己设计一个MVC框架, 我们也会想到上面两种实现方式,接下来看看在ASP.NET MVC中的实现.</p>
+<h3>1.传递弱类型的集合</h3>
+<h4>(1) 如何传递</h4>
+<p>ASP.NET MVC框架定义了ViewContext类, 直译后是&quot;View上下文&quot;, 其中保存和View有关的所有数据, 其中<br />
+Model对象也封装在了此类型中.</p>
+<p>ViewContext对象包含三个属性: </p>
+<ul>
+    <li>IView View </li>
+    <li>ViewDataDictionary ViewData </li>
+    <li>TempDataDictionary TempData </li>
+</ul>
+<p>其中ViewData集合和TempData集合都是用来保存Model对象的.在一个Controller的Action中, 我们可以用<br />
+如下方式为这两个集合赋值:<br />
+<font face="Arial">///&lt;summary&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+/// 传递弱类型Model的Action示例<br />
+/// &lt;/summary&gt;<br />
+/// &lt;returns&gt;ViewResult&lt;/returns&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public ActionResult WeakTypedDemo()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;model&quot;] = &quot;Weak Type Data in ViewData&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TempData[&quot;model&quot;] = &quot;Weak Type Data in TempData&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return View(&quot;WeakTypedDemo&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font>&nbsp;&nbsp;&nbsp;&nbsp; <br />
+在页面中, 是用如下方式使用这两个集合:<br />
+<br />
+<font face="Arial">&nbsp;&nbsp;&nbsp; &lt;div&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% = ViewData[&quot;model&quot;] %&gt;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% = TempData[&quot;model&quot;] %&gt;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+</font></p>
+<style type="text/css">
+
+
+<!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<h4>(2) 传递过程</h4>
+<p>请注意Action中的赋值语句实际上<strong>操作的是Controller类的ViewData和TempData属性, </strong>此时并没有任<br />
+何的数据传递.上一篇文章中我们已经学到, return View语句会返回一个ViewResult对象, 并且接下来要<br />
+执行ViewResult的Executeresult方法. <strong>Controller的View方法会将Controller类的ViewData和<br />
+TempData属性值传递给ViewResult,代码如下:</strong></p>
+<pre class="csharpcode"><p><font face="Arial">protected internal virtual ViewResult View(IView view, object model) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (model != null) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData.Model = model;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></p><p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return new ViewResult {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View = view,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData = ViewData,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TempData = TempData<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></p>        <br /><br /><br /><br />然后在ViewResult中根据ViewData和TempData构建ViewContext对象:</pre>
+<pre class="csharpcode"><font face="Arial">&nbsp;public override void ExecuteResult(ControllerContext context) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewContext viewContext = new ViewContext(context, View, ViewData, TempData);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; View.Render(viewContext, context.HttpContext.Response.Output);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //...<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /></font>       <br /><br />ViewContext对象最终会传递给ViewPage, 也就是说ViewData和TempData集合传递到了ViewPage. <br />我这里简化了最后的传递流程, 实际上ViewData对象并不是通过ViewContext传递到ViewPage中的, <br />ViewPage上的ViewData是一个单独的属性, 并没有像TempData一样其实访问的是<br />ViewContext.TempData. 这么做容易产生奇异, 本类ViewContext是一个很好理解职责十分清晰的类. <br />作为使用者的我们暂时可以忽略这点不足, 因为如此实现ViewData完全是为了下面使用强类型对象.</pre>
+<h4>(3)ViewData和TempData的区别</h4>
+<p>虽然ViewData和TempData都可以传递弱类型数据,但是两者的使用是有区别的:</p>
+<ul>
+    <li>ViewData的生命周期和View相同, 只对当前View有效. </li>
+    <li>TempData保存在Session中, Controller每次执行请求的时候会从Session中获取TempData并<br />
+    删除Session, 获取完TempData数据后虽然保存在内部的字典对象中,但是TempData集合的每<br />
+    个条目访问一次后就从字典表中删除. 也就是说<strong>TempData的数据至多只能经过一次Controller传递.</strong> </li>
+</ul>
+<h4>(4) TempData的实现</h4>
+<p>TempData的类型是TempDataDictionary, 和一般的字典表没有明显的不同, TempData的生命周期<br />
+是由Controll决定的.</p>
+<p>在所有Controll的基类ControllerBase中, 创建了类型为TempDataDictionary的TempData属性.</p>
+<p>在ControllerBase的派生类Controller中, 重写了ExecuteCore()方法:</p>
+<pre class="csharpcode"><style type="text/css">
+
+
+<!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style><p><font face="Arial">&nbsp; protected override void ExecuteCore() {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TempData.Load(ControllerContext, TempDataProvider);</font></p><p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; string actionName = RouteData.GetRequiredString(&quot;action&quot;);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (!ActionInvoker.InvokeAction(ControllerContext, actionName)) {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HandleUnknownAction(actionName);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; finally {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TempData.Save(ControllerContext, TempDataProvider);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></p><br />注意其中的TempData.Load和TempData.Save语句.</pre>
+<p>TempDataDictionary.Load用来从ControllerContext总读取TempData的数据.</p>
+<p>TempDataDictionary.Save方法<strong>将发生了变化的TempData数据保存到ControllerContext中.</strong></p>
+<p>这两个方法都需要传递ITempDataProvider实例负责具体的读取和保存操作. 在Controll中默认的<br />
+TempDataProvider是SessionStateTempDataProvider, 也就是说读取和保存都使用Session. 我<br />
+们也可以扩展自己的TempDataProvider, 可以将临时数据保存在任何地方.比如制作<br />
+AspNetCacheTempDataProvider使用机器本地缓存来保存TempData.</p>
+<p>为何TempData只能够在Controll中传递一次? 因为SessionStateTempDataProvider.LoadTempData<br />
+方法(在TempDataDictionary.Load中调用)在从ControllerContext的Session中读取了TempData<br />
+数据后, 会清空Session:</p>
+<pre><font face="Arial">&nbsp;<p><font face="Arial">&nbsp; <font face="Arial">public virtual IDictionary&lt;string, object&gt; LoadTempData(ControllerContext controllerContext) {&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HttpContextBase httpContext = controllerContext.HttpContext;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp; if (httpContext.Session == null) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial"> throw new InvalidOperationException(MvcResources.SessionStateTempDataProvider_SessionStateDisabled);</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></font></p><p><font face="Arial"><font face="Arial">Dictionary&lt;string, object&gt; tempDataDictionary = </font></font></p><p><font face="Arial"><font face="Arial">httpContext.Session[TempDataSessionStateKey] as Dictionary&lt;string, object&gt;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp; if (tempDataDictionary != null) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp; // If we got it from Session, remove it so that no other request gets it&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; httpContext.Session.Remove(TempDataSessionStateKey);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp; return tempDataDictionary;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp; else {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return new Dictionary&lt;string, object&gt;(StringComparer.OrdinalIgnoreCase);&nbsp;&nbsp;&nbsp;&nbsp;</font></font></p><p><font face="Arial"><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</font></font></p></font><br /></pre>
+<pre class="csharpcode"><br /><br />注意上面加粗的部分. 一旦读取成功, 就会删除TempData的Session.</pre>
+<p>再回忆一下Controll的ExecuteCore方法,&nbsp; 是在Controll的Execute方法中调用的, 是每一次<br />
+Controll一定会执行的方法, <strong>所以我们得出了&quot;只能在Controll之间传递一次&quot;的结论.</strong></p>
+<h3>2.传递强类型对象</h3>
+<p>我在系统中建立了一个模型类:StrongTypedDemoDTO</p>
+<p>从名字可以看出, 这个模型类是数据传输时使用的(Data Transfer Object).而且是我为一个View单独创建的.</p>
+<p>添加一个传递强类型Model的Action,使用如下代码:</p>
+<pre class="csharpcode"><style type="text/css">
+
+
+<!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style><font face="Arial">&nbsp;public ActionResult StrongTypedDemo()<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; StrongTypedDemoDTO model = new StrongTypedDemoDTO() { UserName=&quot;ziqiu.zhang&quot;, <br />UserPassword=&quot;123456&quot; };<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return View(model);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br /></font><br /><br />使用了Controller.View()方法的一个重载, 将model对象传递给View对象.下面省略此对象的传输过程, <br />先让我们来<br />看看如何在View中使用此对象.</pre>
+<p>在创建一个View时, 会弹出下面的弹出框:</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_2.png"></a><img alt="" width="352" height="384" src="/UserFiles/image_thumb(2).png" />&nbsp;</p>
+<p>勾选&quot;Create a strongly-typed view&quot;即表示要创建一个强类型的View, <br />
+在&quot;View data class&quot;中选择我们的数据模型类.</p>
+<p>在&quot;view content&quot;中如下选项:</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_4.png"></a><img alt="" width="297" height="99" src="/UserFiles/image_thumb_1(3).png" />&nbsp;</p>
+<p>这里是选择我们的View的&quot;模板&quot;, 不同的模板会生成不同的View页面代码. 虽然这些代码不一定满足我们需要, <br />
+但是有时候的确能节省一些时间,尤其是在写文章做Demo的时候. 比如我们的View是添加数据使用的,那就选<br />
+择&quot;Create&quot;.如果是显示一条数据用的, 就选择&quot;Detail&quot;.</p>
+<p>以选择Detail为例, 自动生成了下列代码:<br />
+<br />
+<br />
+<br />
+</p>
+<p><font face="Arial">&lt;%@ Page Language=&quot;C#&quot; Inherits=&quot;System.Web.Mvc.ViewPage<br />
+&lt;DemoRC.Models.DTO.TransferModelController.StrongTypedDemoDTO&gt;&quot; %&gt;<br />
+...<br />
+&lt;body&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;fieldset&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;legend&gt;Fields&lt;/legend&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UserName: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%= Html.Encode(Model.UserName) %&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UserPassword: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%= Html.Encode(Model.UserPassword) %&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/p&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/fieldset&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;p&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%=Html.ActionLink(&quot;Edit&quot;, &quot;Edit&quot;, new { /* id=Model.PrimaryKey */ }) %&gt; |<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%=Html.ActionLink(&quot;Back to List&quot;, &quot;Index&quot;) %&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/p&gt;<br />
+&lt;/body&gt;<br />
+...<br />
+页面的Model属性就是一个强类型对象, 在这里就是StrongTypedDemoDTO类实例.page页面指令可以看出, <br />
+这里的页面继承自ViewPage&lt;T&gt;类, 而不是ViewPage, 用T已经确定为StrongTypedDemoDTO类型, <br />
+所以Model的类型就是StrongTypedDemoDTO.</font></p>
+<h3>3.传递数据的思考</h3>
+<p>使用强类型数据要优于弱类型数据, 老赵也曾提出过. 强类型有太多的好处, 智能提示, 语意明确, <br />
+提高性能,编译时发现错误等等.</p>
+<p>所以在实际应用中, 我们应该传递强类型的数据.</p>
+<p>目前ASP.NET MVC还存在一些不足. 将页面类型化,&nbsp; 导致了只能传递一种数据类型实例到页面上. 而且内<br />
+部代码的实现上并不十分完美.尤其是虽然我们已经知道传递的是StrongTypedDemoDTO类型, 页面的Model<br />
+属性也是StrongTypedDemoDTO类型, 但是仍然需要进行强制类型转换, 原因是Controller的View(object model)<br />
+方法重载接收的是一个object类型.</p>
+<p>还有, 为每个View建立一个模型类, 也是一件繁琐的工作. 也许我们的业务模型中的两个类组合在一起就是View页<br />
+面需要的数据, 但是却不得不建立一个类将其封装起来.模型类的膨胀也是需要控制一个事情. 尤其是对于互谅网<br />
+应用而非企业内部的系统, 页面往往会有成百上千个.而且复用较少.</p>
+<p>当然目前来说既然要使用强类型的Model, 我提出一些组织Model类型的实践方法.下面是我项目中的Model<br />
+类型组织结构:</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_6.png"></a><img alt="" width="270" height="70" src="/UserFiles/image_thumb_2(3).png" />&nbsp;</p>
+<p>这里Model是一个文件夹, 稍大一些的系统可以建立一个Model项目. 另外我们需要建立一个DTO文件夹, <br />
+用来区分Model的类型. <br />
+MVC中的Model应该对应DTO文件夹中的类.在DTO中按照Controller再建立文件夹, <br />
+因为Action和View大部分都是按照Controller组织的, 所以Model也应该按照Controller组织.</p>
+<p>在Controller文件夹里放置具体的Model类. 其实两个Controller文件夹中可以同相同的类名称, 我们<br />
+<strong>通过命名空间区分同名的Model类</strong>:</p>
+<p><br />
+<br />
+<br />
+使用时也要通过带有Controller的命名空间使用比如DTO.TransferModelController.StrongTypedDemoDTO, <br />
+或者建立一些自己的约定.</p>
+<h1>四.使用Model输出页面</h1>
+<p>View对象获取了Model以后, 我们可以通过两种方式使用数据:</p>
+<h3>1.使用内嵌代码</h3>
+<p>熟悉ASP,PHP等页面语言的人都会很熟悉这种直接在页面上书写代码的方式.但是在View中应该只书写和显示<br />
+逻辑有关的代码,而不要增加任何的业务逻辑代码.</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_8.png"></a><br />
+</p>
+<p><font face="Arial">假设我们创建了下面这个Action,为ViewData添加了三条记录:</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;summary&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// Action示例:使用内嵌代码输出ViewData<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;/summary&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;returns&gt;&lt;/returns&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public ActionResult ShowModelWithInsideCodeDemo()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k1&quot;] = @&quot;&lt;script type=&quot;&quot;text/javascript&quot;&quot;&gt;&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k2&quot;] = @&quot;alert(&quot;&quot;Hello ASP.NET MVC !&quot;&quot;);&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k3&quot;] = @&quot;&lt;/script&gt;&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return View(&quot;ShowModelWithInsideCode&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+在ShowModelWithInsideCode中, 我们可以通过内嵌代码的方式, 遍历ViewData集合:</font></p>
+<p><font face="Arial">&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; &gt;<br />
+&lt;head runat=&quot;server&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;title&gt;使用内嵌代码输出ViewData&lt;/title&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;% foreach(KeyValuePair&lt;string, object&gt; item in ViewData )<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% = item.Value %&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;% } %&gt;&nbsp;&nbsp;&nbsp; <br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt;<br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;div&gt;此页面运行的脚本代码为:&lt;/div&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;fieldset&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% foreach(KeyValuePair&lt;string, object&gt; item in ViewData )<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {%&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% = Html.Encode(item.Value) %&gt; &lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%&nbsp; } %&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/fieldset&gt; <br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+页面上遍历了两遍ViewData,第一次是作为脚本输出的, 第二次由于进行了HTML编码,所以将作为文字显示在页面上.</font></p>
+<p><font face="Arial">使用这种方式, 我们可以美工做好的HTML页面的动态部分, 使用&lt;% %&gt;的形式转化为编码区域, 通过程序控制输出.<br />
+由于只剩下显示逻辑要处理,所以这种开发方式往往要比CodeBehind的编码方式更有效率, 维护起来一目了然.</font></p>
+<p><font face="Arial">最让我高兴是使用这种方式后,我们终于可以只使用HTML控件了.虽然ASP.NET WebFrom编程模型中自带了很多服<br />
+务器控件, 功能很好很强大, 但是那终究是别人开发的控件, 这些控件是可以随意变化的, 而且实现原理也对使用<br />
+者封闭. 使用原始的页面模型和HTML控件将使我们真正的做程序的主人.而且不会因为明天服务器控件换了个<br />
+用法就要更新知识, 要知道几乎<br />
+所有的HTML控件几乎是被所有浏览器支持且不会轻易改变的.</font></p>
+<p><font face="Arial">2.使用服务器控件<br />
+注意虽然我们同样可以在ASP.NET MVC中使用服务器端控件, 但是在MVC中这并不是一个好的使用方式.建议不要使用.</font></p>
+<p><font face="Arial">要使用服务器端控件, 我们就需要在后台代码中为控件绑定数据. ASP.NET MVC框架提供的添加一个View对象的方法已<br />
+经不能创建后台代码, 也就是说已经摒弃了这种方式.但是我们仍然可以自己添加.</font></p>
+<p><font face="Arial">首先创建一个带有后台代码的(.cs文件),一般的Web Form页面(aspx页面),然后修改页面的继承关系,<br />
+改为继承自ViewPage:</font></p>
+<p><font face="Arial">public partial class ShowModelWithControl : System.Web.Mvc.ViewPage<br />
+在页面上放置一个Repeater控件用来显示数据:</font></p>
+<p><font face="Arial">&lt;body&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;form id=&quot;form1&quot; runat=&quot;server&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;div&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;asp:Repeater ID=&quot;rptView&quot; runat=&quot;server&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;ItemTemplate&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;%# ((KeyValuePair&lt;string, object&gt;)Container.DataItem).Value&nbsp; %&gt;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/ItemTemplate&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/asp:Repeater&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/form&gt;<br />
+&lt;/body&gt;<br />
+在Page_Load方法中, 为Repeater绑定数据:</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; public partial class ShowModelWithControl : System.Web.Mvc.ViewPage<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protected void Page_Load(object sender, EventArgs e)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rptView.DataSource = ViewData;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rptView.DataBind();<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+在Controller中创建Action, 为ViewData赋值:</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;summary&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// Action示例:使用服务器控件输出ViewData<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;/summary&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /// &lt;returns&gt;&lt;/returns&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public ActionResult ShowModelWithControlDemo()<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k1&quot;] = @&quot;This&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k2&quot;] = @&quot;is&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k3&quot;] = @&quot;a&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ViewData[&quot;k4&quot;] = @&quot;page&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return View(&quot;ShowModelWithControl&quot;);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+运行结果:</font></p>
+<p><font face="Arial"></font>&nbsp;</p>
+<p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<img alt="" width="94" height="100" src="/UserFiles/image_thumb_3(1).png" />&nbsp;</p>
+<p><strong>再次强调,&nbsp; 在ASP.NET MVC中我们应该尽量避免使用这种方式.</strong></p>
+<h3>3.使用 HTML Helper 类生成HTML控件</h3>
+<p>HTML Helper类是ASP.NET MVC框架中提供的生成HTML控件代码的类. 本质上与第一种方式一样, 只是我们<br />
+可以不必手工书写HTML代码,而是借助HTML Helper类中的方法帮助我们生成HTML控件代码.</p>
+<p>同时,我们也可以使用扩展方法为HTML Helper类添加自定义的生成控件的方法.</p>
+<p>HTML Helper类的大部分方法都是返回一个HTML控件的完整字符串, 所以可以直接在需要调用的地方使用<br />
+&lt;% =Html.ActionLink() %&gt;的形式输出字符串.</p>
+<h4>(1)ASP.NET MVC中的HtmlHelper类</h4>
+<p>在ViewPage中提供了Html属性, 这就是一个HtmlHelper类的实例. ASP.NET MVC框架自带了下面这些方法:</p>
+<ul>
+    <li>Html.ActionLink() </li>
+    <li>Html.BeginForm() </li>
+    <li>Html.CheckBox() </li>
+    <li>Html.DropDownList() </li>
+    <li>Html.EndForm() </li>
+    <li>Html.Hidden() </li>
+    <li>Html.ListBox() </li>
+    <li>Html.Password() </li>
+    <li>Html.RadioButton() </li>
+    <li>Html.TextArea() </li>
+    <li>Html.TextBox() </li>
+</ul>
+<p>上面列举的常用的HtmlHelper类的方法,并不是完整列表.</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_10.png"></a><br />
+</p>
+<p><font face="Arial">下面的例子演示如何使用HtmlHelper类:</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; &lt;div&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% using (Html.BeginForm())<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { %&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label style=&quot;width:60px;display:inline-block;&quot;&gt;用户名:&lt;/label&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% =Html.TextBox(&quot;UserName&quot;, &quot;ziqiu.zhang&quot;, new { style=&quot;width:200px;&quot; })%&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;br /&gt;&lt;br /&gt; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;label style=&quot;width:60px;display:inline-block;&quot;&gt;密码:&lt;/label&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% =Html.Password(&quot;Psssword&quot;, &quot;123456&quot;, new { style = &quot;width:200px;&quot; })%&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;% }%&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+上面的代码使用Html.BeginForm输出一个表单对象, 并在表单对象中添加了两个Input, 一个使用<br />
+Html.TextBox输出, 另一个使用Html.Password输出,区别是Html.Password输出的input控件的type类型<br />
+为password.效果如图:</font></p>
+<p><font face="Arial"></font>&nbsp;</p>
+<p><br />
+<br />
+<br />
+<img alt="" src="/UserFiles/image_thumb_4(1).png" />&nbsp;</p>
+<h4>(2)扩展Html Helper类</h4>
+<p>我们可以自己扩展HtmlHelper类, 为HtmlHelper类添加新的扩展方法, 从而实现更多的功能.</p>
+<p>在项目中建立Extensions文件夹, 在其中创建SpanExtensions.cs文件.源代码如下:</p>
+<p><font face="Arial">using System;<br />
+using System.Collections.Generic;<br />
+using System.Linq;<br />
+using System.Web;<br />
+using System.Web.Mvc;</font></p>
+<p><font face="Arial"><br />
+namespace System.Web.Mvc<br />
+{<br />
+&nbsp;&nbsp;&nbsp; public static class SpanExtensions<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static string Span(this HtmlHelper helper,string id, string text)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return String.Format(@&quot;&lt;span id=&quot;&quot;{0}&quot;&quot;&gt;{1}&lt;/span&gt;&quot;, id, text);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+}<br />
+</font></p>
+<p><br />
+<br />
+上面的代码我们为HtmlHelper类添加了一个Span()方法, 能够返回一个Span的完整HTML字符串.</p>
+<p>因为命名空间是System.Web.Mvc,所以页面使用的时候不需要再做修改,Visual Studio会自动识别出来:</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_12.png"></a><img alt="" width="192" height="187" src="/UserFiles/image_thumb_5.png" />&nbsp;</p>
+<p>请大家一定要注意命名空间, 如果不使用System.Web.Mvc命名空间, 那么一定要在页面上引用你的扩展方法所在<br />
+的命名空间, 否则我们的扩展方法将不会被识别.</p>
+<p>接下来在页面上可以使用我们的扩展方法:</p>
+<pre class="csharpcode">    <span class="kwrd">&lt;</span><span class="html">div</span><span class="kwrd">&gt;</span>
+        <span class="rem">&lt;!-- 使用自定义的Span方法扩展HTML Helper --&gt;</span>
+        <span class="asp">&lt;%</span> =Html.Span(<span class="str">&quot;textSpan&quot;</span>, <span class="str">&quot;使用自定义的Span方法扩展HtmlHelper类生成的Span&quot;</span>) <span class="asp">%&gt;</span>
+    <span class="kwrd">&lt;/</span><span class="html">div</span><span class="kwrd">&gt;</span></pre>
+<style type="text/css">
+
+
+<!--
+.csharpcode, .csharpcode pre
+{
+	font-size: small;
+	color: black;
+	font-family: consolas, "Courier New", courier, monospace;
+	background-color: #ffffff;
+	/*white-space: pre;*/
+}
+.csharpcode pre { margin: 0em; }
+.csharpcode .rem { color: #008000; }
+.csharpcode .kwrd { color: #0000ff; }
+.csharpcode .str { color: #006080; }
+.csharpcode .op { color: #0000c0; }
+.csharpcode .preproc { color: #cc6633; }
+.csharpcode .asp { background-color: #ffff00; }
+.csharpcode .html { color: #800000; }
+.csharpcode .attr { color: #ff0000; }
+.csharpcode .alt 
+{
+	background-color: #f4f4f4;
+	width: 100%;
+	margin: 0em;
+}
+.csharpcode .lnum { color: #606060; }
+--></style>
+<h4>(3) 使用TagBuilder类创建扩展方法</h4>
+<p>上面自定义的Span()方法十分简单, 但是有时候我们要构造具有复杂结构的Html元素, 如果用字符串拼接的方法就有些笨拙.</p>
+<p>ASP.NET MVC框架提供了一个帮助我们构造Html元素的类:TagBuilder</p>
+<p>TagBuilder类有如下方法帮助我们构建Html控件字符串:</p>
+<table style="WIDTH: 620px; HEIGHT: 224px" border="1" cellspacing="1" cellpadding="2" width="620">
+    <tbody>
+        <tr>
+            <td valign="top" width="250"><strong>方法名称</strong></td>
+            <td valign="top" width="555"><strong>用途</strong></td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">AddCssClass()</td>
+            <td valign="top" width="555">添加class=&rdquo;&rdquo;属性</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">GenerateId()</td>
+            <td valign="top" width="555">添加Id,&nbsp; 会将Id名称中的&quot;.&quot;替换为IdAttributeDotReplacement 属性值的字符.默认替换成&quot;_&quot;</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">MergeAttribute()</td>
+            <td valign="top" width="555">添加一个属性,有多种重载方法.</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">SetInnerText() </td>
+            <td valign="top" width="555">设置标签内容, 如果标签中没有再嵌套标签,则与设置InnerHTML 属性获得的效果相同.</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">ToString() </td>
+            <td valign="top" width="555">输出Html标签的字符串, 带有一个参数的重载可以设置标签的输出形式为以下枚举值:
+            <ul>
+                <li>TagRenderMode.Normal -- 有开始和结束标签 </li>
+                <li>TagRenderMode.StartTag -- 只有开始标签 </li>
+                <li>TagRenderMode.EndTag -- 只有结尾标签 </li>
+                <li>TagRenderMode.SelfClosing -- 单标签形式,如&lt;br/&gt; </li>
+            </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>同时一个TagBuilder还有下列关键属性:</p>
+<table style="WIDTH: 621px; HEIGHT: 110px" border="1" cellspacing="1" cellpadding="2" width="621">
+    <tbody>
+        <tr>
+            <td valign="top" width="250"><strong>属性名称</strong></td>
+            <td valign="top" width="556"><strong>用途</strong></td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">Attributes </td>
+            <td valign="top" width="556">Tag的所有属性</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">IdAttributeDotReplacement </td>
+            <td valign="top" width="556">添加Id时替换&quot;.&quot;的目标字符</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">InnerHTML </td>
+            <td valign="top" width="556">Tag的内部HTML内容</td>
+        </tr>
+        <tr>
+            <td valign="top" width="250">TagName </td>
+            <td valign="top" width="556">Html标签名, TagBuilder只有带一个参数-TagName的构造函数.所以TagName是必填属性</td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p><font face="Arial">下面在添加一个自定义的HtmlHelper类扩展方法,同样是输出一个&lt;Span&gt;标签:</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public static string Span(this HtmlHelper helper, string id, string text, string css, object htmlAttributes)<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //创意某一个Tag的TagBuilder<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var builder = new TagBuilder(&quot;span&quot;);</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //创建Id,注意要先设置IdAttributeDotReplacement属性后再执行GenerateId方法.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; builder.IdAttributeDotReplacement = &quot;-&quot;;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; builder.GenerateId(id);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //添加属性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; builder.MergeAttributes(new RouteValueDictionary(htmlAttributes));</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //添加样式<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; builder.AddCssClass(css);<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //或者用下面这句的形式也可以: builder.MergeAttribute(&quot;class&quot;, css);</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //添加内容,以下两种方式均可<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //builder.InnerHtml = text;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; builder.SetInnerText(text);</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //输出控件<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return builder.ToString(TagRenderMode.Normal);</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />
+在页面上,调用这个方法:</font></p>
+<p><font face="Arial">&lt;% =Html.Span(&quot;span.test&quot;, &quot;使用TagBuilder帮助构建扩展方法&quot;, &quot;ColorRed&quot;, new { style=&quot;font-size:15px;&quot; })%&gt;</font></p>
+<p><font face="Arial">生成的Html代码为:</font></p>
+<p><font face="Arial">&lt;span id=&quot;span-test&quot; class=&quot;ColorRed&quot; style=&quot;font-size: 15px;&quot;&gt;使用TagBuilder帮助构建扩展方法&lt;/span&gt;</font></p>
+<p><font face="Arial">注意已经将id中的&quot;.&quot;替换为了&quot;-&quot;字符.</font></p>
+<p><font face="Arial"></font>&nbsp;</p>
+<p><br />
+<br />
+<br />
+五.总结</p>
+<p>本来打算在本文中直接将ViewEngine的使用也加进来, 但是感觉本文已经写了很长的内容, (虽然不多,但是很长......)<br />
+所以将ViewEngine作为下一章单独介绍. </p>
+<p>前些天 Scott Guthrie's的博客上放出了&quot;ASP.NET MVC免费教程&quot;, 里面介绍了创建一名为&quot;NerdDinner&quot;项目的全过程, <br />
+使用LINQ+ASP.NET MVC, 但是其中对于技术细节没有详细介绍(和本系列文章比较一下就能明显感觉出来), 下面提供本书的<br />
+pdf文件下载地址以及源代码下载地址:</p>
+<p><a href="http://images.cnblogs.com/cnblogs_com/zhangziqiu/WindowsLiveWriter/View_149B7/image_16.png"></a>&nbsp;</p>
+<li>免费下载<a href="http://aspnetmvcbook.s3.amazonaws.com/aspnetmvc-nerdinner_v1.pdf">PDF版本</a> </li>
+<li>下载<a href="http://nerddinner.codeplex.com/">应用源码 + 单元测试</a>
+<p>源代码是英文版本,&nbsp; 其实我最近有做一个中文的&quot;Nerd Dinner&quot;的想法, 但是因为要写文章而且还要工作已经让我焦头烂额, <br />
+写文章真的是一件体力活.如果有人同样有兴趣翻译代码, 我可以提供域名和服务器空间. </p>
+<p>差点提供忘记本篇文章的示例源代码下载:</p>
+<p><a href="http://files.cnblogs.com/zhangziqiu/AspNet-Mvc-4-Demo.rar">http://files.cnblogs.com/zhangziqiu/AspNet-Mvc-4-Demo.rar</a></p>
+<div id="MySignature">作者：张子秋<br />
+</div>
+</li>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('ASP.NET MVC开发实践教程【View/Model 全解 】_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1517.html">ASP.NET MVC开发实践教程【ViewEn…</a>&nbsp;&nbsp;下一条： <a href="/html/News/1515.html">ASP.NET MVC开发实践教程Controller/Ac…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET 4.0尚未在 Web 服务器上注册 解决方法" >ASP.NET 4.0尚未在 Web 服务器…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,ses…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual Studio 2015新增安卓模拟器" >微软为Visual Studio 2015新增…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/743.html" title="一个关于天气预报的WebService【C#版】">一个关于天气预报的WebService【C…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/777.html" title="VS2010最大的新特点是并行编程的进展">VS2010最大的新特点是并行编程的进…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1244.html" title="TextBox控件：asp.net中如何为密码输入框赋值">TextBox控件：asp.net中如何为密码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1184.html" title="Web服务调用实例：实现天气预报的查询&nbsp;">Web服务调用实例：实现天气预报的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/659.html" title="ASP.NET程序员面试试题(130道题)">ASP.NET程序员面试试题(130道题)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/208.html" title="ASP.NET教程:调用WebService的源码">ASP.NET教程:调用WebService的源码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/299.html" title="网站开发全程设计">网站开发全程设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/625.html" title="据说这套.net面试题很多网络公司都用">据说这套.net面试题很多网络公司都…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1240.html" title="考考你：C#常见题型及部分答案">考考你：C#常见题型及部分答案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/497.html" title="原创：.net读取数据库sql2000">原创：.net读取数据库sql2000</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1245.html" title="伪静态URL重写配置">伪静态URL重写配置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1093.html" title="配置web.config代码asp.net3.5个性化用户">配置web.config代码asp.net3.5个性…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1291.html" title="使用线程池提高性能&nbsp;Socket网络编程学习笔记（6）">使用线程池提高性能 Socket网络编…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/614.html" title="ASP.NET（C#）GridView表头的增加">ASP.NET（C#）GridView表头的增加…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1129.html" title="如何找到正确的学习方向【.NET版】">如何找到正确的学习方向【.NET版】…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET&nbsp;4.0尚未在&nbsp;Web&nbsp;服务器上注册&nbsp;解决方法" >ASP.NET 4.0尚未在 Web 服务器上注…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,session…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的解决…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web&nbsp;Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web Dep…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开文件…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual&nbsp;Studio&nbsp;2015新增安卓模拟器" >微软为Visual Studio 2015新增安卓…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1605.html" title="&nbsp;用C#抓取需要登录的页面数据" > 用C#抓取需要登录的页面数据</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1588.html" title="VS2015新功能" >VS2015新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1584.html" title="VS2015安装图解教程" >VS2015安装图解教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1565.html" title="vs2015新功能介绍" >vs2015新功能介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1564.html" title="vs2015安装图解" >vs2015安装图解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1562.html" title="c#生成二维码和打印" >c#生成二维码和打印</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1516" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

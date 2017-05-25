@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ASP.NET应用程序中上传文件_Asp.net专题(WCF/WPF/WF)_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="在Web程序中上传文件是很常见的需求。利用HTTP协议上传文件的方式非常有限，最常见的莫过于使用&lt;input&nbsp;type=&quot;file&quot;&nbsp;/&gt;元素进行上传。这种上传方式会将内容使用multipart/form-data方案进行编码，并将内容POST到服务器端。使用&nbsp;multipart/form-data编码方式与默认的application/x-url-encoded编码方式相比，在大数据量情况下效率要高很多。&nbsp;<br />
+" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Asp.net专题(WCF/WPF/WF)
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        ASP.NET应用程序中上传文件
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2014/10/14 12:54:49
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        在Web程序中上传文件是很常见的需求。利用HTTP协议上传文件的方式非常有限，最常见的莫过于使用&lt;input&nbsp;type=&quot;file&quot;&nbsp;/&gt;元素进行上传。这种上传方式会将内容使用multipart/form-data方案进行编码，并将内容POST到服务器端。使用&nbsp;multipart/form-data编码方式与默认的application/x-url-encoded编码方式相比，在大数据量情况下效率要高很多。&nbsp;<br />
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        在Web程序中上传文件是很常见的需求。利用HTTP协议上传文件的方式非常有限，最常见的莫过于使用&lt;input type=&quot;file&quot; /&gt;元素进行上传。这种上传方式会将内容使用multipart/form-data方案进行编码，并将内容POST到服务器端。使用 multipart/form-data编码方式与默认的application/x-url-encoded编码方式相比，在大数据量情况下效率要高很多。 <br />
+<br />
+&nbsp; 使用&lt;input type=&quot;file&quot; /&gt;上传文件最大的优势在于编程方便，几乎各种服务器端技术都对这种上传方式做了良好的封装，使得程序员能够直观地对客户端上传的文件进行处理。不过总体来说，这个协议并不适合做文件传输，解析数据流内容的代价相对较高，并且没有一些例如断点续传的机制来辅助，导致在上传大文件时经常会力不从心。 <br />
+<br />
+&nbsp; 有朋友认为使用&lt;input type=&quot;file&quot; /&gt;上传文件最大的问题在于内存占用太高，由于需要将整个文件载入内存进行处理，导致如果用户上传文件太大，或者同时上传的用户太多，会造成服务器端内存耗尽。这个观点其实是错误的。对于某些服务器端的技术，例如Spring Framework，或者早期ASP.NET 1.1时，为了供程序处理，都会将用户上传的内容完全载入内存，这的确会带来问题。但是其实协议本身并没有规定服务器端应该使用何种方式来处理上传的文件。例如在现在的ASP.NET 2.0中就已经会在用户上传数据超过一定数量之后将其存在硬盘中的临时文件中，而这点对于开发人员完全透明，也就是说，开发人员可以像以前一样进行数据流的处理。 <br />
+<br />
+&nbsp; ASP.NET 2.0启用硬盘临时文件的阈值（threshold）是可配置的：<br />
+<pre style="BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #ededed; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; PADDING-TOP: 4px"><!--
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+--><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">system</span><span style="COLOR: #ff0000">.web</span><span style="COLOR: #0000ff">&gt;</span><span style="COLOR: #000000">
+</span><span style="COLOR: #0000ff">&lt;</span><span style="COLOR: #800000">httpRuntime
+</span><span style="COLOR: #ff0000">maxRequestLength</span><span style="COLOR: #0000ff">=&quot;Int32&quot;</span><span style="COLOR: #ff0000">
+requestLengthDiskThreshold</span><span style="COLOR: #0000ff">=&quot;Int32&quot;</span><span style="COLOR: #ff0000"> </span><span style="COLOR: #0000ff">/&gt;</span><span style="COLOR: #000000">
+</span><span style="COLOR: #0000ff">&lt;/</span><span style="COLOR: #800000">system.web</span><span style="COLOR: #0000ff">&gt;</span>
+</pre>
+&nbsp; maxRequestLength自不必说，刚接触ASP.NET的朋友总会发现上传文件不能超过4M，这就是因为 maxRequestLength的大小默认为4096，这就限制着每个请求的大小不得超过4096KB。这么做的目的是为了保护应用程序不受恶意请求的危害。当请求超过maxRequestLength之后，ASP.NET处理程序将不会处理该请求。这里和ASP.NET抛出一个异常是不同的，这就是为什么如果用户上传文件太大，看到的并非是ASP.NET应用程序中指定的错误页面（或者默认的），因为ASP.NET还没有对这个请求进行处理。 requestLengthDiskThreshold就是刚才所提到的阈值，其默认值为256，即一个请求内容超过256KB时就会启用硬盘作为缓存。这个阈值理论上和客户端是否是在上传内容无关，只要客户端发来的请求大于这个值即可。因此，在ASP.NET 2.0中服务器的内存不会因为客户端的异常请求而耗尽。 <br />
+<br />
+&nbsp; 如果我们需要在ASP.NET（如果没有特别说明，以下ASP.NET均指ASP.NET 2.0）应用中上传文件，我们一般就会直接使用&lt;asp:FileUpload /&gt;控件进行文件上传。如果一个页面中存在&lt;asp:FileUpload /&gt;控件，那么页面中form元素的enctype就会被自动改为multipart/form-data，而且我们可以在页面PostBack之后通过&lt;asp:FileUpload /&gt;控件的引用来获得客户端通过该控件所上传得文件。不过，如果上传文件的功能需要较为特别的需求&mdash;&mdash;例如需要进度条提示，&lt;asp: FileUpload /&gt;控件就无能为力了。 <br />
+<br />
+&nbsp; 确切地说，应该是&lt;input type=&quot;file&quot; /&gt;所能提供的支持非常有限，因此一些特殊需求我们不能实现&mdash;&mdash;严格说来，应该是无法轻易地、直接地实现。这样，在实现这些功能时，我们就会绕一个大大的弯。为了避免每次实现相同功能时都要费神费时地走一遍弯路，因此出现了各种上传组件。上传组件提供了封装好的功能，使得我们在实现文件上传功能时变得轻松了很多。例如几乎所有的上传组件都直接或间接地提供了进度提示的功能，有的提供了当前的百分比数值，有的则直接提供了一套UI；有的组件只提供了简单的UI，有的却提供了一整套上传、删除的管理界面。此外，有的组件还提供了防止客户端恶意上传的能力。 <br />
+<br />
+&nbsp; 关于ASP.NET下的上传组件，最广为流传的方式莫过于在ASP.NET Pipeline的BeginRequest事件中截获当前的HttpWorkerRequest对象，然后直接调用其ReadEntityBody等方法获取客户端传递过来的数据流，并加以分析和处理。在ASP.NET 1.1时期，这么做的目的是为了直接将数据写入硬盘，以避免上传内容消耗太多服务器内存，但是现在自然已经不会因为这个原因而这么做了。从客户端发起请求到一定规模的数据传输完毕需要一段时间，那么从HttpWorkerRequest对象中读取数据流自然需要一段时间，而在这段时间内，客户端可以使用新的请求进行轮询来获得当前上传的状况。这就是获得上传进度的最传统的做法。这个做法的原理很容易理解，但是写出一个完整的组件其实很不容易，尤其是各种细节方面的问题会让人感到防不胜防。此类组件中最成功且最著名的莫过于NeatUpload了。 <br />
+<br />
+&nbsp; NeatUpload是一个开源组件，使用LGPL（Lesser General Public License）许可协议，也就是说它是&ldquo;business-friendly&rdquo;的。NeatUpload可以在ASP.NET和mono中使用，能够将上传的文件存在硬盘中或者Sql Server数据库中。NeatUpload提供了两个服务器控件：&lt;NeatUpload:InputFile&gt;和&lt; NeatUpload:ProgressBar&gt;。前者用于代替&lt;asp:FileUpload /&gt;，可以通过它访问到用户通过特定上传框上传的内容；后者则是一个进度条显示控件，负责使用弹出窗口或内联的形式显示上传的进度。弹出窗口自不必说，而所谓的&ldquo;内联&rdquo;方式其实只是在页面中嵌入一个Iframe元素，然后通过不断刷新iframe中的页面来进行进度展示而已&mdash;&mdash;可见它和弹出窗口显示方式的区别仅仅在页面所处的位置。当然，如果我们希望将其移植为AJAX形式也不难，只需开发一个页面，继承NeatUpload提供的 ProgressPage类，并通过ProgressPage所提供的一些属性（总字节数，已上传字节数，已花时间，etc.）来获得当前上传的进度，最后直接使用Response.Write输出JSON形式的数据即可。事实上原本在iframe（或新窗口）中的页面，也是继承了 ProgressPage类，并且使用HTML的方式进行呈现而已，本质上并没有太大区别。 <br />
+<br />
+&nbsp; 不过个人认为，其实NeatUpload的实用价值不高（这点稍后再述），它最大的意义还在于提供了一个完整的优秀的示例。 NeatUpload设计精巧，注释完整，是个不可多得学习案例。如果能够将NeatUpload的代码研究一遍，那么相信在编程能力和ASP.NET的理解上都会上一个新的台阶。此外，在NeatUpload站点上还能够发现NeatHtml。NeatHtml是一个开源的Web组件，用于显示不安全的内容（主要是用户输入内容，例如博客评论，论坛帖子等等），主要用于避免跨站脚本（XSS，Cross-Site Scripting）等安全问题。作为组件的作者，Dean还将NeatHtml所用到的技术总结为一篇Whitepaper，感兴趣的朋友可以看一下，这是一份不可多得的技术资料。 <br />
+<br />
+&nbsp; 顺便提一下，个人认为目前很多开发人员的编程能力还不够，似乎很多人都过早地把精力放在了&ldquo;设计&rdquo;，或者某个特定的技术上，而忽略了最基础的&ldquo;编程能力&rdquo;，也就是将一段思路转化为代码实现的能力。我发现，很多朋友在解决问题的时候，似乎都能很快得到解决方案并且叙述出来，但是真正要使用代码来表现出来时却显得困难重重。其实在工作中，思路或解决方案可以通过讨论而获得，但是真正转化为代码的时候只能靠自己了。而且编程能力其实和所谓的&ldquo;工作经验&rdquo;无关，我建议以&ldquo;应届毕业生&rdquo;&ldquo;自居&rdquo;的朋友，可以定心地锻炼一下自己的编程能力。 <br />
+<br />
+&nbsp; 与NeatUpload类似的开源组件还有Memba Velodoc XP Edition，它是Velodoc文件管理系统的核心。不过严格说来，这不仅仅是一个上传组件，而是一套文件管理的解决方案，它包含： <br />
+<br />
+&nbsp; 1. 一个兼容IIS 7集成管道模式的ASP.NET Http Module，支持大文件上传使用（有趣的是，NeatUpload申明，IIS 7的一个Bug使它无法在IIS 7集成管道模式中使用）。 <br />
+&nbsp; 2. 一个支持断点续传的ASP.NET Http Handler。 <br />
+&nbsp; 3. 一系列ASP.NET服务器端控件，提供了文件上传功能所需的UI，包括一个多文件上传控件，一个ListView控件和一个进度条控件。 <br />
+&nbsp; 4. 一个Web应用程序，可以替换FTP的交换文件方式，支持Email发送链接。它也是上面所提到的组件的使用示例。 <br />
+&nbsp; 5. 一个Windows Service，用于定期清理旧文件。 <br />
+&nbsp; 6. 一个测试项目、一个部署项目、以及一个安装项目。 <br />
+&nbsp; 7. 文档。 <br />
+<br />
+&nbsp; 回到NeatUpload组件。说实话，我始终不喜欢这种进度获取方式，因为我觉得通过一个额外的请求对服务器进行轮询无疑是一个累赘。事实上，如果需要上传大文件并且获得上传进度，目前最好的方式应该是使用RIA方式。最典型的RIA上传方式就是利用Flash了。ActionScript 2.0中已经存在FileReference和FileReferenceList组件以支持单文件和多文件的上传，有了这两个组件，上传的各种信息已经能够完全在客户端获得，而上传进度也自然能够计算出来。FileReference和FileReferenceList组件非常容易使用，就连像我这样对Flash一窍不通的人，也能在短时间内作出一个简单的上传功能。但是自从有了swfupload，世界就变得更美好了。 <br />
+<br />
+&nbsp; 严格说来，通过FileReference所得到的上传进度是&ldquo;客户端发送数据的进度&rdquo;，而像NeatUpload的做法得到的是&ldquo;服务器端接受数据的进度&rdquo;，两者不可混为一谈。 <br />
+<br />
+&nbsp; swfupload也是个开源组件，顾名思义是使用Flash进行上传。不过对于swfupload来说，Flash的作用主要是&ldquo;控制&rdquo;，而不是&ldquo;展示&rdquo;，这无疑给了开发人员更大的灵活性。swfupload的实现方式自然是利用了FileReference和 FileReferenceList组件所提供的功能，通过Flash与JavaScript的交互能力，使得开发文件上传功能变得非常优雅和容易。有了 swfupload，开发人员可以使用JavaScript来实现各种显示方式，开发像Flicker一样酷酷的上传界面也不再是非常困难的事情了。 <br />
+<br />
+&nbsp; swfupload是个客户端组件，它对于服务器端来说完全透明，也就是说，服务器端只需要使用对待普通form的方式来处理即可。例如在 ASP.NET中我们可以使用Generic Handler来处理客户端的文件上传。如下，fileCollection变量即为客户端Post至服务器端所有文件的集合，我们可以使用name或下标的方式来获得其中的HttpPostedFile对象。：
+<pre style="BORDER-BOTTOM: black 1px solid; BORDER-LEFT: black 1px solid; PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #ededed; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; PADDING-TOP: 4px"><!--
+Code highlighting produced by Actipro CodeHighlighter (freeware)
+http://www.CodeHighlighter.com/
+--><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">class</span><span style="COLOR: #000000"> UploadHandler : IHttpHandler
+{
+</span><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">void</span><span style="COLOR: #000000"> ProcessRequest(HttpContext context)
+{
+HttpFileCollection fileColllection </span><span style="COLOR: #000000">=</span><span style="COLOR: #000000"> context.Request.Files;
+...
+}
+</span><span style="COLOR: #0000ff">public</span><span style="COLOR: #000000"> </span><span style="COLOR: #0000ff">bool</span><span style="COLOR: #000000"> IsReusable { ... }
+}</span>
+</pre>
+&nbsp; 既然Flash提供了文件上传功能，Silverlight作为微软主推的RIA技术也不会缺了这项功能。这篇文章源自Silverlight 2.0的Quick Starts，展示了如何使用Silverlight 2.0开发文件上传的功能，感兴趣的朋友可以一读。 <br />
+<br />
+&nbsp; 围绕着ASP.NET中上传文件这个话题也讨论了不少了，还有什么没有涉及到的吗？个人认为其实至少还有一个非常重要问题是没有讨论过，那就是在处理上传文件时占用ASP.NET处理线程的问题。众所周知，ASP.NET处理请求时会用到线程池中的线程，当线程池中的线程被用完之后没有被处理的请求只能排队了。因此增大ASP.NET应用程序吞吐量的一个重要手段，就是为一些耗时的操作使用异步处理方式（事实上这一命题可以在大部分应用中成立）。例如一个数据库查询操作需要3秒钟，如果不使用异步操作，处理线程就会被阻塞，直至查询完成。如果使用异步方式来执行数据库查询，在这3秒钟内线程就可以用户处理其他请求，当异步操作结束之后，ASP.NET就会使用另一个线程来继续处理这个请求。 <br />
+<br />
+&nbsp; 上传大文件也是一个长时间占用处理线程的工作，而且遗憾的是，这无法使用异步操作来完成（通过异步操作来释放处理线程需要操作系统的支持，因此只有少量功能可以使用异步操作）。如果一个文件上传需要3分钟时间，那么在这3分钟内就会独占一个处理线程，如果上传文件的连接一多，就会大大影响应用程序的性能&mdash;&mdash;就像遭受了某种方式的DOS攻击一样。因此，即使使用了像NeatUpload和swfupload这样的组件，也无法解决上传连接过多造成可用线程减少的问题。要解决这个问题并不容易，以下是两种思路（欢迎大家就此问题进行讨论）： <br />
+<br />
+&nbsp; * 扩展IIS，使上传文件或处理文件的过程不经ASP.NET处理，以减少ASP.NET应用程序线程的消耗。现在有了IIS 7，如果使用集成管道模式，应该也可以使用托管代码进行扩展。 <br />
+&nbsp; * 使用额外的ASP.NET应用程序处理文件上传，以节省上传文件的线程对原ASP.NET应用程序线程的消耗。 <br />
+<br />
+&nbsp; 就先说到这里吧。
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('ASP.NET应用程序中上传文件_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1384.html">asp.net中导出Execl有两种方法</a>&nbsp;&nbsp;下一条： <a href="/html/News/1378.html">asp.net断点续传技术：断点续传的原理</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例 C# 异步HttpListener " >完全并发处理HTTP请求示例 C#…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误: (500) 内部服务器错误" >远程服务器返回错误: (500) 内…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgility…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1048.html" title="表单提交中get和post方式的区别有5点&nbsp;">表单提交中get和post方式的区别有…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1005.html" title="解决ASP中UTF-8与GB2312编码转换乱码">解决ASP中UTF-8与GB2312编码转换乱…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/865.html" title="asp数组中REDIM的用法（动态数组）">asp数组中REDIM的用法（动态数组）…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1147.html" title="生成html的新方法ASP">生成html的新方法ASP</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/899.html" title="ASP字符串函数大全">ASP字符串函数大全</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1049.html" title="ASP生成Word文件的代码">ASP生成Word文件的代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1146.html" title="ASP中Randomize随机函数的使用">ASP中Randomize随机函数的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/697.html" title="十天学会ASP教程之第一天：安装调试ASP的环境">十天学会ASP教程之第一天：安装调…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/939.html" title="自定义的asp日期格式化函数">自定义的asp日期格式化函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1071.html" title="防范ASP网站漏洞的八大法则之一">防范ASP网站漏洞的八大法则之一</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/695.html" title="十天学会ASP教程之第二天：表单传送变量">十天学会ASP教程之第二天：表单传…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/838.html" title="asp中关于从utf8页面到gb2312页面出现乱码得解决">asp中关于从utf8页面到gb2312页面…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1007.html" title="ASP教程：实现长文章分页功能">ASP教程：实现长文章分页功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/672.html" title="IIS6架设网站的问题总结">IIS6架设网站的问题总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/945.html" title="五分钟打开&nbsp;allow_url_fopen&nbsp;的最简单方法">五分钟打开 allow_url_fopen 的最…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例&nbsp;C#&nbsp;异步HttpListener&nbsp;" >完全并发处理HTTP请求示例 C# 异步…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误:&nbsp;(500)&nbsp;内部服务器错误" >远程服务器返回错误: (500) 内部服…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgilityPack…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1622.html" title=".net高效代码的价值远远超出你想象" >.net高效代码的价值远远超出你想象…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1615.html" title="哪些地方需要用到委托c#版" >哪些地方需要用到委托c#版</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1614.html" title="&nbsp;直接调用、委托与反射调用的性能区别" > 直接调用、委托与反射调用的性能…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1612.html" title="C#遍历html字符串各个节点(mshtml)&nbsp;" >C#遍历html字符串各个节点(mshtml…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1611.html" title="浅析c#权限管理" >浅析c#权限管理</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1610.html" title="基于将角色与controller、action相关联来判断用户是否有权" >基于将角色与controller、action相…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1380" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

@@ -1,0 +1,384 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>C#反射知识_vs2015_vs2006_vs2010_vs2012_vs2013_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="C#反射知识" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; vs2015_vs2006_vs2010_vs2012_vs2013
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        C#反射知识
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/27 16:59:15
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        C#反射知识
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        1、 什么是反射<br />
+2、 命名空间与装配件的关系<br />
+3、 运行期得到类型信息有什么用<br />
+4、 如何使用反射获取类型<br />
+5、 如何根据类型来动态创建对象<br />
+6、 如何获取方法以及动态调用方法<br />
+7、 动态创建委托<br />
+<br />
+&nbsp;1、什么是反射<br />
+&nbsp; Reflection，中文翻译为反射。<br />
+&nbsp; 这是.Net中获取运行时类型信息的方式，.Net的应用程序由几个部分：&lsquo;程序集(Assembly)&rsquo;、&lsquo;模块(Module)&rsquo;、&lsquo;类型(class)&rsquo;组成，而反射提供一种编程的方式，让程序员可以在程序运行期获得这几个组成部分的相关信息，例如：<br />
+<br />
+&nbsp; Assembly类可以获得正在运行的装配件信息，也可以动态的加载装配件，以及在装配件中查找类型信息，并创建该类型的实例。<br />
+Type类可以获得对象的类型信息，此信息包含对象的所有要素：方法、构造器、属性等等，通过Type类可以得到这些要素的信息，并且调用之。<br />
+MethodInfo包含方法的信息，通过这个类可以得到方法的名称、参数、返回值等，并且可以调用之。<br />
+诸如此类，还有FieldInfo、EventInfo等等，这些类都包含在System.Reflection命名空间下。<br />
+<br />
+2、命名空间与装配件的关系<br />
+&nbsp; 很多人对这个概念可能还是很不清晰，对于合格的.Net程序员，有必要对这点进行澄清。<br />
+&nbsp; 命名空间类似与Java的包，但又不完全等同，因为Java的包必须按照目录结构来放置，命名空间则不需要。<br />
+<br />
+&nbsp; 装配件是.Net应用程序执行的最小单位，编译出来的.dll、.exe都是装配件。<br />
+<br />
+&nbsp; 装配件和命名空间的关系不是一一对应，也不互相包含，一个装配件里面可以有多个命名空间，一个命名空间也可以在多个装配件中存在，这样说可能有点模糊，举个例子：<br />
+装配件A：
+<pre><ol class="dp-c"><li class="alt"><span><span class="keyword">namespace</span><span>&nbsp;N1 &nbsp;</span></span></li><li><span>{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;AC1&nbsp;{&hellip;} &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;AC2&nbsp;{&hellip;} &nbsp;</span></li><li class="alt"><span>} &nbsp;</span></li><li><span class="keyword">namespace</span><span>&nbsp;N2 &nbsp;</span></li><li class="alt"><span>{ &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;AC3&nbsp;{&hellip;} &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;AC4{&hellip;} &nbsp;</span></li><li><span>} &nbsp;</span></li><li class="alt"><span>装配件B： &nbsp;</span></li><li><span class="keyword">namespace</span><span>&nbsp;N1 &nbsp;</span></li><li class="alt"><span>{ &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;BC1&nbsp;{&hellip;} &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;BC2&nbsp;{&hellip;} &nbsp;</span></li><li><span>} &nbsp;</span></li><li class="alt"><span class="keyword">namespace</span><span>&nbsp;N2 &nbsp;</span></li><li><span>{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;BC3&nbsp;{&hellip;} &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;BC4{&hellip;} &nbsp;</span></li><li class="alt"><span>}&nbsp;</span></li></ol></pre>
+<p>&nbsp; 这两个装配件中都有N1和N2两个命名空间，而且各声明了两个类，这样是完全可以的，然后我们在一个应用程序中引用装配件A，那么在这个应用程序中，我们能看到N1下面的类为AC1和AC2，N2下面的类为AC3和AC4。<br />
+&nbsp; 接着我们去掉对A的引用，加上对B的引用，那么我们在这个应用程序下能看到的N1下面的类变成了BC1和BC2，N2下面也一样。<br />
+&nbsp; 如果我们同时引用这两个装配件，那么N1下面我们就能看到四个类：AC1、AC2、BC1和BC2。<br />
+<br />
+&nbsp; 到这里，我们可以清楚一个概念了，命名空间只是说明一个类型是那个族的，比如有人是汉族、有人是回族；而装配件表明一个类型住在哪里，比如有人住在北京、有人住在上海；那么北京有汉族人，也有回族人，上海有汉族人，也有回族人，这是不矛盾的。<br />
+<br />
+&nbsp; 上面我们说了，装配件是一个类型居住的地方，那么在一个程序中要使用一个类，就必须告诉编译器这个类住在哪儿，编译器才能找到它，也就是说必须引用该装配件。<br />
+&nbsp; 那么如果在编写程序的时候，也许不确定这个类在哪里，仅仅只是知道它的名称，就不能使用了吗？答案是可以，这就是反射了，就是在程序运行的时候提供该类型的地址，而去找到它。<br />
+有兴趣的话，接着往下看吧。<br />
+<br />
+3、运行期得到类型信息有什么用<br />
+&nbsp; 有人也许疑问，既然在开发时就能够写好代码，干嘛还放到运行期去做，不光繁琐，而且效率也受影响。<br />
+这就是个见仁见智的问题了，就跟早绑定和晚绑定一样，应用到不同的场合。有的人反对晚绑定，理由是损耗效率，但是很多人在享受虚函数带来的好处的时侯还没有意识到他已经用上了晚绑定。这个问题说开去，不是三言两语能讲清楚的，所以就点到为止了。<br />
+&nbsp; 我的看法是，晚绑定能够带来很多设计上的便利，合适的使用能够大大提高程序的复用性和灵活性，但是任何东西都有两面性，使用的时侯，需要再三衡量。<br />
+<br />
+接着说，运行期得到类型信息到底有什么用呢？<br />
+还是举个例子来说明，很多软件开发者喜欢在自己的软件中留下一些接口，其他人可以编写一些插件来扩充软件的功能，比如我有一个媒体播放器，我希望以后可以很方便的扩展识别的格式，那么我声明一个接口：</p>
+<pre><ol class="dp-xml"><li class="alt"><span><span>public&nbsp;interface&nbsp;IMediaFormat &nbsp;</span></span></li><li><span>{ &nbsp;</span></li><li class="alt"><span>string&nbsp;Extension&nbsp;{get;} &nbsp;</span></li><li><span>Decoder&nbsp;GetDecoder(); &nbsp;</span></li><li class="alt"><span>}&nbsp;</span></li></ol></pre>
+<p>这个接口中包含一个Extension属性，这个属性返回支持的扩展名，另一个方法返回一个解码器的对象（这里我假设了一个Decoder的类，这个类提供把文件流解码的功能，扩展插件可以派生之），通过解码器对象我就可以解释文件流。<br />
+那么我规定所有的解码插件都必须派生一个解码器，并且实现这个接口，在GetDecoder方法中返回解码器对象，并且将其类型的名称配置到我的配置文件里面。<br />
+这样的话，我就不需要在开发播放器的时侯知道将来扩展的格式的类型，只需要从配置文件中获取现在所有解码器的类型名称，而动态的创建媒体格式的对象，将其转换为IMediaFormat接口来使用。<br />
+<br />
+这就是一个反射的典型应用。<br />
+<br />
+4、如何使用反射获取类型<br />
+&nbsp; 首先我们来看如何获得类型信息。<br />
+&nbsp; 获得类型信息有两种方法，一种是得到实例对象<br />
+&nbsp; 这个时侯我仅仅是得到这个实例对象，得到的方式也许是一个object的引用，也许是一个接口的引用，但是我并不知道它的确切类型，我需要了解，那么就可以通过调用System.Object上声明的方法GetType来获取实例对象的类型对象，比如在某个方法内，我需要判断传递进来的参数是否实现了某个接口，如果实现了，则调用该接口的一个方法：</p>
+<pre><ol class="dp-c"><li class="alt"><span><span>&hellip; &nbsp;</span></span></li><li><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;Process(&nbsp;</span><span class="keyword">object</span><span>&nbsp;processObj&nbsp;) &nbsp;</span></li><li class="alt"><span>{ &nbsp;</span></li><li><span>Type&nbsp;t&nbsp;=&nbsp;processsObj.GetType(); &nbsp;</span></li><li class="alt"><span class="keyword">if</span><span>(&nbsp;t.GetInterface(&ldquo;ITest&rdquo;)&nbsp;!=</span><span class="keyword">null</span><span>&nbsp;) &nbsp;</span></li><li><span>&nbsp;&nbsp;&hellip; &nbsp;</span></li><li class="alt"><span>} &nbsp;</span></li><li><span>&hellip;&nbsp;</span></li></ol></pre>
+<p>&nbsp; 另外一种获取类型的方法是通过Type.GetType以及Assembly.GetType方法，如：<br />
+&nbsp; Type t = Type.GetType(&ldquo;System.String&rdquo;);<br />
+&nbsp; 需要注意的是，前面我们讲到了命名空间和装配件的关系，要查找一个类，必须指定它所在的装配件，或者在已经获得的Assembly实例上面调用GetType。<br />
+&nbsp; 本装配件中类型可以只写类型名称，另一个例外是mscorlib.dll，这个装配件中声明的类型也可以省略装配件名称（.Net装配件编译的时候，默认都引用了mscorlib.dll，除非在编译的时候明确指定不引用它），比如：<br />
+&nbsp; System.String是在mscorlib.dll中声明的，上面的Type t = Type.GetType(&ldquo;System.String&rdquo;)是正确的<br />
+&nbsp; System.Data.DataTable是在System.Data.dll中声明的，那么：<br />
+Type.GetType(&ldquo;System.Data.DataTable&rdquo;)就只能得到空引用。<br />
+&nbsp; 必须：<br />
+Type t = Type.GetType(&quot;System.Data.DataTable,System.Data,Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;);<br />
+&nbsp; 这样才可以，大家可以看下面这个帖子：<br />
+&nbsp; http://expert.csdn.net/Expert/topic/2210/2210762.xml?temp=.1919977<br />
+&nbsp; qqchen的回答很精彩<br />
+<br />
+5、如何根据类型来动态创建对象<br />
+&nbsp; System.Activator提供了方法来根据类型动态创建对象，比如创建一个DataTable：<br />
+<br />
+Type t = Type.GetType(&quot;System.Data.DataTable,System.Data,Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089&quot;);<br />
+<br />
+DataTable table = (DataTable)Activator.CreateInstance(t);<br />
+<br />
+&nbsp; 例二：根据有参数的构造器创建对象</p>
+<pre><ol class="dp-c"><li class="alt"><span><span class="keyword">namespace</span><span>&nbsp;TestSpace&nbsp;&nbsp; &nbsp;</span></span></li><li><span>&nbsp;{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;TestClass &nbsp;</span></li><li><span>&nbsp;&nbsp;{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">private</span><span>&nbsp;</span><span class="keyword">string</span><span>&nbsp;_value; &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;TestClass(</span><span class="keyword">string</span><span>&nbsp;value)&nbsp;&nbsp; &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;{ &nbsp;</span></li><li><span>&nbsp;&nbsp;_value=value; &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;} &nbsp;</span></li><li><span>&nbsp;&nbsp;} &nbsp;</span></li><li class="alt"><span>} &nbsp;</span></li><li><span>&hellip; &nbsp;</span></li><li class="alt"><span>Type&nbsp;t&nbsp;=&nbsp;Type.GetType(&ldquo;TestSpace.TestClass&rdquo;); &nbsp;</span></li><li><span>Object[]&nbsp;constructParms&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;</span><span class="keyword">object</span><span>[]&nbsp;{&ldquo;hello&rdquo;};&nbsp;</span><span class="comment">//构造器参数 </span><span>&nbsp;</span></li><li class="alt"><span>TestClass&nbsp;obj&nbsp;=&nbsp;(TestClass)Activator.CreateInstance(t,constructParms); &nbsp;</span></li><li><span>&hellip;&nbsp;</span></li></ol></pre>
+<p>把参数按照顺序放入一个Object数组中即可<br />
+<br />
+6、如何获取方法以及动态调用方法</p>
+<pre><ol class="dp-xml"><li class="alt"><span><span>namespace&nbsp;TestSpace &nbsp;</span></span></li><li><span>{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;public&nbsp;class&nbsp;TestClass&nbsp;{ &nbsp;</span></li><li><span>&nbsp;&nbsp;private&nbsp;string&nbsp;_value; &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;public&nbsp;TestClass()&nbsp;{ &nbsp;</span></li><li><span>&nbsp;&nbsp;} &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;public&nbsp;TestClass(string&nbsp;value)&nbsp;{ &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="attribute">_value</span><span>&nbsp;=&nbsp;value; &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;} &nbsp;</span></li><li><span>&nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;public&nbsp;string&nbsp;GetValue(&nbsp;string&nbsp;prefix&nbsp;)&nbsp;{ &nbsp;</span></li><li><span>&nbsp;&nbsp;if(&nbsp;</span><span class="attribute">_value</span><span>==null&nbsp;) &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;return&nbsp;&quot;NULL&quot;; &nbsp;</span></li><li><span>&nbsp;&nbsp;else &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;return&nbsp;prefix+&quot;&nbsp;:&nbsp;&quot;+_value; &nbsp;</span></li><li><span>&nbsp;&nbsp;} &nbsp;</span></li><li class="alt"><span>&nbsp;</span></li><li><span>&nbsp;&nbsp;public&nbsp;string&nbsp;Value&nbsp;{ &nbsp;</span></li><li class="alt"><span>set&nbsp;{ &nbsp;</span></li><li><span class="attribute">_value</span><span>=value; &nbsp;</span></li><li class="alt"><span>} &nbsp;</span></li><li><span>get&nbsp;{ &nbsp;</span></li><li class="alt"><span>if(&nbsp;</span><span class="attribute">_value</span><span>==null&nbsp;) &nbsp;</span></li><li><span>return&nbsp;&quot;NULL&quot;; &nbsp;</span></li><li class="alt"><span>else &nbsp;</span></li><li><span>return&nbsp;_value; &nbsp;</span></li><li class="alt"><span>} &nbsp;</span></li><li><span>&nbsp;&nbsp;} &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;} &nbsp;</span></li><li><span>}&nbsp;</span></li></ol></pre>
+<p>上面是一个简单的类，包含一个有参数的构造器，一个GetValue的方法，一个Value属性，我们可以通过方法的名称来得到方法并且调用之，如：<br />
+<br />
+//获取类型信息<br />
+Type t = Type.GetType(&quot;TestSpace.TestClass&quot;);<br />
+//构造器的参数<br />
+object[] constuctParms = new object[]{&quot;timmy&quot;};<br />
+//根据类型创建对象<br />
+object dObj = Activator.CreateInstance(t,constuctParms);<br />
+//获取方法的信息<br />
+MethodInfo method = t.GetMethod(&quot;GetValue&quot;);<br />
+//调用方法的一些标志位，这里的含义是Public并且是实例方法，这也是默认的值<br />
+BindingFlags flag = BindingFlags.Public | BindingFlags.Instance;<br />
+//GetValue方法的参数<br />
+object[] parameters = new object[]{&quot;Hello&quot;};<br />
+//调用方法，用一个object接收返回值<br />
+object returnValue = method.Invoke(dObj,flag,Type.DefaultBinder,parameters,null);<br />
+<br />
+&nbsp; 属性与方法的调用大同小异，大家也可以参考MSDN<br />
+<br />
+7、动态创建委托<br />
+&nbsp; 委托是C#中实现事件的基础，有时候不可避免的要动态的创建委托，实际上委托也是一种类型：System.Delegate，所有的委托都是从这个类派生的<br />
+&nbsp; System.Delegate提供了一些静态方法来动态创建一个委托，比如一个委托：</p>
+<pre><ol class="dp-c"><li class="alt"><span><span class="keyword">namespace</span><span>&nbsp;TestSpace&nbsp;{ &nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">delegate</span><span>&nbsp;</span><span class="keyword">string</span><span>&nbsp;TestDelegate(</span><span class="keyword">string</span><span>&nbsp;value); &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;TestClass&nbsp;{ &nbsp;</span></li><li><span class="keyword">public</span><span>&nbsp;TestClass()&nbsp;{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;} &nbsp;</span></li><li><span>&nbsp;&nbsp;</span><span class="keyword">public</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;GetValue(</span><span class="keyword">string</span><span>&nbsp;value)&nbsp;{ &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;</span><span class="keyword">return</span><span>&nbsp;value; &nbsp;</span></li><li><span>&nbsp;&nbsp;} &nbsp;</span></li><li class="alt"><span>&nbsp;&nbsp;} &nbsp;</span></li><li><span>}&nbsp;</span></li></ol></pre>
+<p>使用示例：<br />
+TestClass obj = new TestClass();<br />
+<br />
+//获取类型，实际上这里也可以直接用typeof来获取类型<br />
+Type t = Type.GetType(&ldquo;TestSpace.TestClass&rdquo;);<br />
+//创建代理，传入类型、创建代理的对象以及方法名称<br />
+TestDelegate method = (TestDelegate)Delegate.CreateDelegate(t,obj,&rdquo;GetValue&rdquo;);<br />
+String returnValue = method(&ldquo;hello&rdquo;);<br />
+</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('C#反射知识_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/341.html">VB和c#取得mp3长度</a>&nbsp;&nbsp;下一条： <a href="/html/News/299.html">网站开发全程设计</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET 4.0尚未在 Web 服务器上注册 解决方法" >ASP.NET 4.0尚未在 Web 服务器…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,ses…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual Studio 2015新增安卓模拟器" >微软为Visual Studio 2015新增…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/743.html" title="一个关于天气预报的WebService【C#版】">一个关于天气预报的WebService【C…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/777.html" title="VS2010最大的新特点是并行编程的进展">VS2010最大的新特点是并行编程的进…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1244.html" title="TextBox控件：asp.net中如何为密码输入框赋值">TextBox控件：asp.net中如何为密码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1184.html" title="Web服务调用实例：实现天气预报的查询&nbsp;">Web服务调用实例：实现天气预报的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/659.html" title="ASP.NET程序员面试试题(130道题)">ASP.NET程序员面试试题(130道题)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/208.html" title="ASP.NET教程:调用WebService的源码">ASP.NET教程:调用WebService的源码…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/299.html" title="网站开发全程设计">网站开发全程设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/625.html" title="据说这套.net面试题很多网络公司都用">据说这套.net面试题很多网络公司都…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1240.html" title="考考你：C#常见题型及部分答案">考考你：C#常见题型及部分答案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/497.html" title="原创：.net读取数据库sql2000">原创：.net读取数据库sql2000</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1245.html" title="伪静态URL重写配置">伪静态URL重写配置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1093.html" title="配置web.config代码asp.net3.5个性化用户">配置web.config代码asp.net3.5个性…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1291.html" title="使用线程池提高性能&nbsp;Socket网络编程学习笔记（6）">使用线程池提高性能 Socket网络编…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/614.html" title="ASP.NET（C#）GridView表头的增加">ASP.NET（C#）GridView表头的增加…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1129.html" title="如何找到正确的学习方向【.NET版】">如何找到正确的学习方向【.NET版】…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1862.html" title="一个获取内容中的图片地址的方法" >一个获取内容中的图片地址的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1856.html" title="ASP.NET&nbsp;4.0尚未在&nbsp;Web&nbsp;服务器上注册&nbsp;解决方法" >ASP.NET 4.0尚未在 Web 服务器上注…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1805.html" title="四大作用域：application,session,request,page" >四大作用域：application,session…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1796.html" title="ConfigurationManager不存在的解决办法" >ConfigurationManager不存在的解决…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1750.html" title="vs2012_vs2013_vs2015没有Web&nbsp;Deployment如何合并程序集" >vs2012_vs2013_vs2015没有Web Dep…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1707.html" title="vs2015禁用解决方案中单击打开文件的功能" >vs2015禁用解决方案中单击打开文件…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1654.html" title="微软为Visual&nbsp;Studio&nbsp;2015新增安卓模拟器" >微软为Visual Studio 2015新增安卓…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1627.html" title="C#如何实现搜索引擎网络爬虫程序" >C#如何实现搜索引擎网络爬虫程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1626.html" title="C#中正则表达式的用法" >C#中正则表达式的用法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1605.html" title="&nbsp;用C#抓取需要登录的页面数据" > 用C#抓取需要登录的页面数据</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1588.html" title="VS2015新功能" >VS2015新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1584.html" title="VS2015安装图解教程" >VS2015安装图解教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1565.html" title="vs2015新功能介绍" >vs2015新功能介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1564.html" title="vs2015安装图解" >vs2015安装图解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1562.html" title="c#生成二维码和打印" >c#生成二维码和打印</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "340" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

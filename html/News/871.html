@@ -1,0 +1,870 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>js&nbsp;房产税费计算器代码_Jquery_Ajax_Javascript_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="1/DTD/xhtml1-strict.dtd&lt;/a&gt;&quot;&gt;&lt;br&nbsp;/&gt;&lt;html&nbsp;xmlns=&quot;&lt;a&nbsp;href=&quot;http://www.w3.org/1999/xhtml&quot;&gt;http://www.w3.org/1999/xhtml&lt;/a&gt;&quot;&gt;&lt;br&nbsp;/&gt;&lt;head&gt;&lt;br&nbsp;/&gt;&lt;title&gt;js&nbsp;房产税费计算器代码&lt;/title&gt;&lt;br&nbsp;/&gt;&lt;meta&nbsp;http-equiv=&quot;Content-type&quot;&nbsp;content=&quot;te..." />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Jquery_Ajax_Javascript
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        js 房产税费计算器代码
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/24 20:34:02
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        1/DTD/xhtml1-strict.dtd&lt;/a&gt;&quot;&gt;&lt;br&nbsp;/&gt;&lt;html&nbsp;xmlns=&quot;&lt;a&nbsp;href=&quot;http://www.w3.org/1999/xhtml&quot;&gt;http://www.w3.org/1999/xhtml&lt;/a&gt;&quot;&gt;&lt;br&nbsp;/&gt;&lt;head&gt;&lt;br&nbsp;/&gt;&lt;title&gt;js&nbsp;房产税费计算器代码&lt;/title&gt;&lt;br&nbsp;/&gt;&lt;meta&nbsp;http-equiv=&quot;Content-type&quot;&nbsp;content=&quot;te...
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        第二<a class="infotextkey" target="_blank" href="http://www.002pc.com/">电脑</a>网提供收集的js 房产税费计算器<a class="infotextkey" target="_blank" href="http://www.002pc.com/master/College/Page/">代码</a><br />
+<br />
+&lt;p&gt;&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;&lt;a href=&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&lt;/a&gt;&quot;&gt;&lt;br /&gt;<br />
+&lt;html xmlns=&quot;&lt;a href=&quot;http://www.w3.org/1999/xhtml&quot;&gt;http://www.w3.org/1999/xhtml&lt;/a&gt;&quot;&gt;&lt;br /&gt;<br />
+&lt;head&gt;&lt;br /&gt;<br />
+&lt;title&gt;js 房产税费计算器代码&lt;/title&gt;&lt;br /&gt;<br />
+&lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html; charset=gb2312&quot;&gt;&lt;br /&gt;<br />
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/<a class="infotextkey" target="_blank" href="http://www.002pc.com/master/College/Page/">css</a>&quot; href=&quot;style.css&quot; /&gt;&lt;br /&gt;<br />
+&lt;SCRIPT language=<a class="infotextkey" target="_blank" href="http://www.002pc.com/master/College/Programming/JavaScript/">JavaScript</a> src=&quot;js/9.js&quot;&gt;&lt;/SCRIPT&gt;&lt;br /&gt;<br />
+&lt;script language=&quot;JavaScript&quot;&gt;&lt;br /&gt;<br />
+&lt;!--&lt;br /&gt;<br />
+//62.180.9&lt;/p&gt;<br />
+&lt;p&gt;//定义利率&lt;br /&gt;<br />
+lilv_array=new Array;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;br /&gt;<br />
+//2004年之前的旧利率&lt;br /&gt;<br />
+lilv_array[1]=new Array;&lt;br /&gt;<br />
+lilv_array[1][1]=new Array;&lt;br /&gt;<br />
+lilv_array[1][2]=new Array;&lt;br /&gt;<br />
+lilv_array[1][1][5]=0.0477;//商贷 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[1][1][10]=0.0504;//商贷 5-30年 5.04%&lt;br /&gt;<br />
+lilv_array[1][2][5]=0.0360;//公积金 1～5年 3.60%&lt;br /&gt;<br />
+lilv_array[1][2][10]=0.0405;//公积金 5-30年 4.05%&lt;/p&gt;<br />
+&lt;p&gt;//2005年 1月的新利率&lt;br /&gt;<br />
+lilv_array[2]=new Array;&lt;br /&gt;<br />
+lilv_array[2][1]=new Array;&lt;br /&gt;<br />
+lilv_array[2][2]=new Array;&lt;br /&gt;<br />
+lilv_array[2][1][5]=0.0495;//商贷 1～5年 4.95%&lt;br /&gt;<br />
+lilv_array[2][1][10]=0.0531;//商贷 5-30年 5.31%&lt;br /&gt;<br />
+lilv_array[2][2][5]=0.0378;//公积金 1～5年 3.78%&lt;br /&gt;<br />
+lilv_array[2][2][10]=0.0423;//公积金 5-30年 4.23%&lt;/p&gt;<br />
+&lt;p&gt;//2006年 1月的新利率下限&lt;br /&gt;<br />
+lilv_array[3]=new Array;&lt;br /&gt;<br />
+lilv_array[3][1]=new Array;&lt;br /&gt;<br />
+lilv_array[3][2]=new Array;&lt;br /&gt;<br />
+lilv_array[3][1][5]=0.0527;//商贷 1～5年 5.27%&lt;br /&gt;<br />
+lilv_array[3][1][10]=0.0551;//商贷 5-30年 5.51%&lt;br /&gt;<br />
+lilv_array[3][2][5]=0.0396;//公积金 1～5年 3.96%&lt;br /&gt;<br />
+lilv_array[3][2][10]=0.0441;//公积金 5-30年 4.41%&lt;br /&gt;<br />
+&nbsp;&nbsp; &lt;br /&gt;<br />
+//2006年 1月的新利率上限&lt;br /&gt;<br />
+lilv_array[4]=new Array;&lt;br /&gt;<br />
+lilv_array[4][1]=new Array;&lt;br /&gt;<br />
+lilv_array[4][2]=new Array;&lt;br /&gt;<br />
+lilv_array[4][1][5]=0.0527;//商贷 1～5年 5.27%&lt;br /&gt;<br />
+lilv_array[4][1][10]=0.0612;//商贷 5-30年 6.12%&lt;br /&gt;<br />
+lilv_array[4][2][5]= 0.0396;//公积金 1～5年 3.96%&lt;br /&gt;<br />
+lilv_array[4][2][10]=0.0441;//公积金 5-30年 4.41%&lt;/p&gt;<br />
+&lt;p&gt;//2006年 4月28日的新利率下限&lt;br /&gt;<br />
+lilv_array[5]=new Array;&lt;br /&gt;<br />
+lilv_array[5][1]=new Array;&lt;br /&gt;<br />
+lilv_array[5][2]=new Array;&lt;br /&gt;<br />
+lilv_array[5][1][5]=0.0551;//商贷 1～5年 5.51%&lt;br /&gt;<br />
+lilv_array[5][1][10]=0.0575;//商贷 5-30年 5.75%&lt;br /&gt;<br />
+lilv_array[5][2][5]= 0.0414;//公积金 1～5年 4.14%&lt;br /&gt;<br />
+lilv_array[5][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2006年 4月28日的新利率上限&lt;br /&gt;<br />
+lilv_array[6]=new Array;&lt;br /&gt;<br />
+lilv_array[6][1]=new Array;&lt;br /&gt;<br />
+lilv_array[6][2]=new Array;&lt;br /&gt;<br />
+lilv_array[6][1][5]=0.0612;//商贷 1～5年 6.12%&lt;br /&gt;<br />
+lilv_array[6][1][10]=0.0639;//商贷 5-30年 6.39%&lt;br /&gt;<br />
+lilv_array[6][2][5]= 0.0414;//公积金 1～5年 4.14%&lt;br /&gt;<br />
+lilv_array[6][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2006年 8月19日的新利率下限&lt;br /&gt;<br />
+lilv_array[7]=new Array;&lt;br /&gt;<br />
+lilv_array[7][1]=new Array;&lt;br /&gt;<br />
+lilv_array[7][2]=new Array;&lt;br /&gt;<br />
+lilv_array[7][1][5]=0.0551;//商贷 1～5年 5.51%&lt;br /&gt;<br />
+lilv_array[7][1][10]=0.0581;//商贷 5-30年 5.81%&lt;br /&gt;<br />
+lilv_array[7][2][5]= 0.0414;//公积金 1～5年 4.14%&lt;br /&gt;<br />
+lilv_array[7][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2006年 8月19日的新利率上限&lt;br /&gt;<br />
+lilv_array[8]=new Array;&lt;br /&gt;<br />
+lilv_array[8][1]=new Array;&lt;br /&gt;<br />
+lilv_array[8][2]=new Array;&lt;br /&gt;<br />
+lilv_array[8][1][5]=0.0648;//商贷 1～5年 6.48%&lt;br /&gt;<br />
+lilv_array[8][1][10]=0.0684;//商贷 5-30年 6.84%&lt;br /&gt;<br />
+lilv_array[8][2][5]= 0.0414;//公积金 1～5年 4.14%&lt;br /&gt;<br />
+lilv_array[8][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+//2007年 3月18日的新利率下限&lt;br /&gt;<br />
+lilv_array[9]=new Array;&lt;br /&gt;<br />
+lilv_array[9][1]=new Array;&lt;br /&gt;<br />
+lilv_array[9][2]=new Array;&lt;br /&gt;<br />
+lilv_array[9][1][5]=0.0574;//商贷 1～5年 5.74%&lt;br /&gt;<br />
+lilv_array[9][1][10]=0.0604;//商贷 5-30年 6.04%&lt;br /&gt;<br />
+lilv_array[9][2][5]=0.0432;//公积金 1～5年 4.32%&lt;br /&gt;<br />
+lilv_array[9][2][10]=0.0477;//公积金 5-30年 4.77%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 3月18日的新利率上限&lt;br /&gt;<br />
+lilv_array[10]=new Array;&lt;br /&gt;<br />
+lilv_array[10][1]=new Array;&lt;br /&gt;<br />
+lilv_array[10][2]=new Array;&lt;br /&gt;<br />
+lilv_array[10][1][5]=0.0675;//商贷 1～5年 6.75%&lt;br /&gt;<br />
+lilv_array[10][1][10]=0.0711;//商贷 5-30年 7.11%&lt;br /&gt;<br />
+lilv_array[10][2][5]=0.0432;//公积金 1～5年 4.32%&lt;br /&gt;<br />
+lilv_array[10][2][10]=0.0477;//公积金 5-30年 4.77%&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+//2007年 5月19日的新利率下限&lt;br /&gt;<br />
+lilv_array[11]=new Array;&lt;br /&gt;<br />
+lilv_array[11][1]=new Array;&lt;br /&gt;<br />
+lilv_array[11][2]=new Array;&lt;br /&gt;<br />
+lilv_array[11][1][5]=0.0589;//商贷 1～5年 5.89%&lt;br /&gt;<br />
+lilv_array[11][1][10]=0.0612;//商贷 5-30年 6.12%&lt;br /&gt;<br />
+lilv_array[11][2][5]=0.0441;//公积金 1～5年 4.41%%&lt;br /&gt;<br />
+lilv_array[11][2][10]=0.0486;//公积金 5-30年 4.86%%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 5月19日的新利率上限&lt;br /&gt;<br />
+lilv_array[12]=new Array;&lt;br /&gt;<br />
+lilv_array[12][1]=new Array;&lt;br /&gt;<br />
+lilv_array[12][2]=new Array;&lt;br /&gt;<br />
+lilv_array[12][1][5]=0.0693;//商贷 1～5年 6.93%&lt;br /&gt;<br />
+lilv_array[12][1][10]=0.0720;//商贷 5-30年 7.20%&lt;br /&gt;<br />
+lilv_array[12][2][5]=0.0441;//公积金 1～5年 4.41%%&lt;br /&gt;<br />
+lilv_array[12][2][10]=0.0486;//公积金 5-30年 4.86%%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 7月21日的新利率下限&lt;br /&gt;<br />
+lilv_array[13]=new Array;&lt;br /&gt;<br />
+lilv_array[13][1]=new Array;&lt;br /&gt;<br />
+lilv_array[13][2]=new Array;&lt;br /&gt;<br />
+lilv_array[13][1][5]=0.0612;//商贷 1～5年 6.12%&lt;br /&gt;<br />
+lilv_array[13][1][10]=0.06273;//商贷 5-30年 6.273%&lt;br /&gt;<br />
+lilv_array[13][2][5]=0.0450;//公积金 1～5年 4.50%%&lt;br /&gt;<br />
+lilv_array[13][2][10]=0.0495;//公积金 5-30年 4.95%%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 7月21日的新利率上限&lt;br /&gt;<br />
+lilv_array[14]=new Array;&lt;br /&gt;<br />
+lilv_array[14][1]=new Array;&lt;br /&gt;<br />
+lilv_array[14][2]=new Array;&lt;br /&gt;<br />
+lilv_array[14][1][5]=0.0720;//商贷 1～5年 7.20%&lt;br /&gt;<br />
+lilv_array[14][1][10]=0.0738;//商贷 5-30年 7.38%&lt;br /&gt;<br />
+lilv_array[14][2][5]=0.0450;//公积金 1～5年 4.50%%&lt;br /&gt;<br />
+lilv_array[14][2][10]=0.0495;//公积金 5-30年 4.95%%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 8月22日的新利率下限&lt;br /&gt;<br />
+lilv_array[15]=new Array;&lt;br /&gt;<br />
+lilv_array[15][1]=new Array;&lt;br /&gt;<br />
+lilv_array[15][2]=new Array;&lt;br /&gt;<br />
+lilv_array[15][1][5]=0.06273;//商贷 1～5年 6.273%&lt;br /&gt;<br />
+lilv_array[15][1][10]=0.06426;//商贷 5-30年 6.426%&lt;br /&gt;<br />
+lilv_array[15][2][5]=0.0459;//公积金 1～5年 4.59%&lt;br /&gt;<br />
+lilv_array[15][2][10]=0.0504;//公积金 5-30年 5.04%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 8月22日的新利率上限&lt;br /&gt;<br />
+lilv_array[16]=new Array;&lt;br /&gt;<br />
+lilv_array[16][1]=new Array;&lt;br /&gt;<br />
+lilv_array[16][2]=new Array;&lt;br /&gt;<br />
+lilv_array[16][1][5]=0.0738;//商贷 1～5年 7.38%&lt;br /&gt;<br />
+lilv_array[16][1][10]=0.0756;//商贷 5-30年 7.56%&lt;br /&gt;<br />
+lilv_array[16][2][5]=0.0459;//公积金 1～5年 4.59%&lt;br /&gt;<br />
+lilv_array[16][2][10]=0.0504;//公积金 5-30年 5.04%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 9月15日的新利率下限&lt;br /&gt;<br />
+lilv_array[17]=new Array;&lt;br /&gt;<br />
+lilv_array[17][1]=new Array;&lt;br /&gt;<br />
+lilv_array[17][2]=new Array;&lt;br /&gt;<br />
+lilv_array[17][1][5]=0.06503;//商贷 1～5年 6.503%&lt;br /&gt;<br />
+lilv_array[17][1][10]=0.06656;//商贷 5-30年 6.656%&lt;br /&gt;<br />
+lilv_array[17][2][5]=0.0477;//公积金 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[17][2][10]=0.0522;//公积金 5-30年 5.22%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 9月15日的新利率上限&lt;br /&gt;<br />
+lilv_array[18]=new Array;&lt;br /&gt;<br />
+lilv_array[18][1]=new Array;&lt;br /&gt;<br />
+lilv_array[18][2]=new Array;&lt;br /&gt;<br />
+lilv_array[18][1][5]=0.0765;//商贷 1～5年 7.65%&lt;br /&gt;<br />
+lilv_array[18][1][10]=0.0783;//商贷 5-30年 7.83%&lt;br /&gt;<br />
+lilv_array[18][2][5]=0.0477;//公积金 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[18][2][10]=0.0522;//公积金 5-30年 5.22%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 9月15日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[19]=new Array;&lt;br /&gt;<br />
+lilv_array[19][1]=new Array;&lt;br /&gt;<br />
+lilv_array[19][2]=new Array;&lt;br /&gt;<br />
+lilv_array[19][1][5]=0.08415;//商贷 1～5年 8.415%&lt;br /&gt;<br />
+lilv_array[19][1][10]=0.08613;//商贷 5-30年 8.613%&lt;br /&gt;<br />
+lilv_array[19][2][5]=0.0477;//公积金 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[19][2][10]=0.0522;//公积金 5-30年 5.22%&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+//2007年 12月21日的新利率下限&lt;br /&gt;<br />
+lilv_array[20]=new Array;&lt;br /&gt;<br />
+lilv_array[20][1]=new Array;&lt;br /&gt;<br />
+lilv_array[20][2]=new Array;&lt;br /&gt;<br />
+lilv_array[20][1][5]=0.06579;//商贷 1～5年 6.579%&lt;br /&gt;<br />
+lilv_array[20][1][10]=0.06656;//商贷 5-30年 6.656%&lt;br /&gt;<br />
+lilv_array[20][2][5]=0.0477;//公积金 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[20][2][10]=0.0522;//公积金 5-30年 5.22%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 12月21日的新利率上限&lt;br /&gt;<br />
+lilv_array[21]=new Array;&lt;br /&gt;<br />
+lilv_array[21][1]=new Array;&lt;br /&gt;<br />
+lilv_array[21][2]=new Array;&lt;br /&gt;<br />
+lilv_array[21][1][5]=0.0851;//商贷 1～5年 8.514%&lt;br /&gt;<br />
+lilv_array[21][1][10]=0.0861;//商贷 5-30年 8.613%&lt;br /&gt;<br />
+lilv_array[21][2][5]=0.0477;//公积金 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[21][2][10]=0.0522;//公积金 5-30年 5.22%&lt;/p&gt;<br />
+&lt;p&gt;//2007年 12月21日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[22]=new Array;&lt;br /&gt;<br />
+lilv_array[22][1]=new Array;&lt;br /&gt;<br />
+lilv_array[22][2]=new Array;&lt;br /&gt;<br />
+lilv_array[22][1][5]=0.0851;//商贷 1～5年 8.514%&lt;br /&gt;<br />
+lilv_array[22][1][10]=0.0861;//商贷 5-30年 8.613%&lt;br /&gt;<br />
+lilv_array[22][2][5]=0.0477;//公积金 1～5年 4.77%&lt;br /&gt;<br />
+lilv_array[22][2][10]=0.0522;//公积金 5-30年 5.22%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 09月16日新利率下限&lt;br /&gt;<br />
+lilv_array[23]=new Array;&lt;br /&gt;<br />
+lilv_array[23][1]=new Array;&lt;br /&gt;<br />
+lilv_array[23][2]=new Array;&lt;br /&gt;<br />
+lilv_array[23][1][5]=0.06426;//商贷 1～5年 6.426%&lt;br /&gt;<br />
+lilv_array[23][1][10]=0.06579;//商贷 5-30年 6.579%&lt;br /&gt;<br />
+lilv_array[23][2][5]=0.0459;//公积金 1～5年 4.59%&lt;br /&gt;<br />
+lilv_array[23][2][10]=0.0513;//公积金 5-30年 5.13%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 09月16日新利率上限&lt;br /&gt;<br />
+lilv_array[24]=new Array;&lt;br /&gt;<br />
+lilv_array[24][1]=new Array;&lt;br /&gt;<br />
+lilv_array[24][2]=new Array;&lt;br /&gt;<br />
+lilv_array[24][1][5]=0.0832;//商贷 1～5年 8.32%&lt;br /&gt;<br />
+lilv_array[24][1][10]=0.0851;//商贷 5-30年 8.51%&lt;br /&gt;<br />
+lilv_array[24][2][5]=0.0459;//公积金 1～5年 4.59%&lt;br /&gt;<br />
+lilv_array[24][2][10]=0.0513;//公积金 5-30年 5.13%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 09月16日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[25]=new Array;&lt;br /&gt;<br />
+lilv_array[25][1]=new Array;&lt;br /&gt;<br />
+lilv_array[25][2]=new Array;&lt;br /&gt;<br />
+lilv_array[25][1][5]=0.0832;//商贷 1～5年 8.32%&lt;br /&gt;<br />
+lilv_array[25][1][10]=0.0851;//商贷 5-30年 8.51%&lt;br /&gt;<br />
+lilv_array[25][2][5]=0.0459;//公积金 1～5年 4.59%&lt;br /&gt;<br />
+lilv_array[25][2][10]=0.0513;//公积金 5-30年 5.13%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月09日新利率下限&lt;br /&gt;<br />
+lilv_array[26]=new Array;&lt;br /&gt;<br />
+lilv_array[26][1]=new Array;&lt;br /&gt;<br />
+lilv_array[26][2]=new Array;&lt;br /&gt;<br />
+lilv_array[26][1][5]=0.062;//商贷 1～5年 6.20%&lt;br /&gt;<br />
+lilv_array[26][1][10]=0.0635;//商贷 5-30年 6.35%&lt;br /&gt;<br />
+lilv_array[26][2][5]=0.0432;//公积金 1～5年 4.32%&lt;br /&gt;<br />
+lilv_array[26][2][10]=0.0486;//公积金 5-30年 4.86%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月09日新利率上限&lt;br /&gt;<br />
+lilv_array[27]=new Array;&lt;br /&gt;<br />
+lilv_array[27][1]=new Array;&lt;br /&gt;<br />
+lilv_array[27][2]=new Array;&lt;br /&gt;<br />
+lilv_array[27][1][5]=0.0802;//商贷 1～5年 8.02%&lt;br /&gt;<br />
+lilv_array[27][1][10]=0.0822;//商贷 5-30年 8.22%&lt;br /&gt;<br />
+lilv_array[27][2][5]=0.0432;//公积金 1～5年 4.32%&lt;br /&gt;<br />
+lilv_array[27][2][10]=0.0486;//公积金 5-30年 4.86%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月09日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[28]=new Array;&lt;br /&gt;<br />
+lilv_array[28][1]=new Array;&lt;br /&gt;<br />
+lilv_array[28][2]=new Array;&lt;br /&gt;<br />
+lilv_array[28][1][5]=0.0802;//商贷 1～5年 8.02%&lt;br /&gt;<br />
+lilv_array[28][1][10]=0.0822;//商贷 5-30年 8.22%&lt;br /&gt;<br />
+lilv_array[28][2][5]=0.0432;//公积金 1～5年 4.32%&lt;br /&gt;<br />
+lilv_array[28][2][10]=0.0486;//公积金 5-30年 4.86%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月27日新利率下限&lt;br /&gt;<br />
+lilv_array[29]=new Array;&lt;br /&gt;<br />
+lilv_array[29][1]=new Array;&lt;br /&gt;<br />
+lilv_array[29][2]=new Array;&lt;br /&gt;<br />
+lilv_array[29][1][5]=0.051;//商贷 1～5年 5.10%&lt;br /&gt;<br />
+lilv_array[29][1][10]=0.0523;//商贷 5-30年 5.23%&lt;br /&gt;<br />
+lilv_array[29][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[29][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月27日新利率上限&lt;br /&gt;<br />
+lilv_array[30]=new Array;&lt;br /&gt;<br />
+lilv_array[30][1]=new Array;&lt;br /&gt;<br />
+lilv_array[30][2]=new Array;&lt;br /&gt;<br />
+lilv_array[30][1][5]=0.0802;//商贷 1～5年 8.02%&lt;br /&gt;<br />
+lilv_array[30][1][10]=0.0822;//商贷 5-30年 8.22%&lt;br /&gt;<br />
+lilv_array[30][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[30][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月27日新利率基准&lt;br /&gt;<br />
+lilv_array[31]=new Array;&lt;br /&gt;<br />
+lilv_array[31][1]=new Array;&lt;br /&gt;<br />
+lilv_array[31][2]=new Array;&lt;br /&gt;<br />
+lilv_array[31][1][5]=0.0729;//商贷 1～5年 7.29%&lt;br /&gt;<br />
+lilv_array[31][1][10]=0.0747;//商贷 5-30年 7.47%&lt;br /&gt;<br />
+lilv_array[31][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[31][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月27日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[32]=new Array;&lt;br /&gt;<br />
+lilv_array[32][1]=new Array;&lt;br /&gt;<br />
+lilv_array[32][2]=new Array;&lt;br /&gt;<br />
+lilv_array[32][1][5]=0.0802;//商贷 1～5年 8.02%&lt;br /&gt;<br />
+lilv_array[32][1][10]=0.0822;//商贷 5-30年 8.22%&lt;br /&gt;<br />
+lilv_array[32][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[32][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月30日新利率下限&lt;br /&gt;<br />
+lilv_array[33]=new Array;&lt;br /&gt;<br />
+lilv_array[33][1]=new Array;&lt;br /&gt;<br />
+lilv_array[33][2]=new Array;&lt;br /&gt;<br />
+lilv_array[33][1][5]=0.0491;//商贷 1～5年 4.91%&lt;br /&gt;<br />
+lilv_array[33][1][10]=0.0504;//商贷 5-30年 5.04%&lt;br /&gt;<br />
+lilv_array[33][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[33][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月30日新利率上限&lt;br /&gt;<br />
+lilv_array[34]=new Array;&lt;br /&gt;<br />
+lilv_array[34][1]=new Array;&lt;br /&gt;<br />
+lilv_array[34][2]=new Array;&lt;br /&gt;<br />
+lilv_array[34][1][5]=0.0772;//商贷 1～5年 7.72%&lt;br /&gt;<br />
+lilv_array[34][1][10]=0.0792;//商贷 5-30年 7.92%&lt;br /&gt;<br />
+lilv_array[34][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[34][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月30日新利率基准&lt;br /&gt;<br />
+lilv_array[35]=new Array;&lt;br /&gt;<br />
+lilv_array[35][1]=new Array;&lt;br /&gt;<br />
+lilv_array[35][2]=new Array;&lt;br /&gt;<br />
+lilv_array[35][1][5]=0.0702;//商贷 1～5年 7.02%&lt;br /&gt;<br />
+lilv_array[35][1][10]=0.0720;//商贷 5-30年 7.20%&lt;br /&gt;<br />
+lilv_array[35][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[35][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 10月30日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[36]=new Array;&lt;br /&gt;<br />
+lilv_array[36][1]=new Array;&lt;br /&gt;<br />
+lilv_array[36][2]=new Array;&lt;br /&gt;<br />
+lilv_array[36][1][5]=0.0772;//商贷 1～5年 7.72%&lt;br /&gt;<br />
+lilv_array[36][1][10]=0.0792;//商贷 5-30年 7.92%&lt;br /&gt;<br />
+lilv_array[36][2][5]=0.0405;//公积金 1～5年 4.05%&lt;br /&gt;<br />
+lilv_array[36][2][10]=0.0459;//公积金 5-30年 4.59%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 11月27日新利率下限&lt;br /&gt;<br />
+lilv_array[37]=new Array;&lt;br /&gt;<br />
+lilv_array[37][1]=new Array;&lt;br /&gt;<br />
+lilv_array[37][2]=new Array;&lt;br /&gt;<br />
+lilv_array[37][1][5]=0.0416;//商贷 1～5年 4.16%&lt;br /&gt;<br />
+lilv_array[37][1][10]=0.0428;//商贷 5-30年 4.28%&lt;br /&gt;<br />
+lilv_array[37][2][5]=0.0351;//公积金 1～5年 3.51%&lt;br /&gt;<br />
+lilv_array[37][2][10]=0.0405;//公积金 5-30年 4.05%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 11月27日新利率上限&lt;br /&gt;<br />
+lilv_array[38]=new Array;&lt;br /&gt;<br />
+lilv_array[38][1]=new Array;&lt;br /&gt;<br />
+lilv_array[38][2]=new Array;&lt;br /&gt;<br />
+lilv_array[38][1][5]=0.0653;//商贷 1～5年 6.53%&lt;br /&gt;<br />
+lilv_array[38][1][10]=0.0673;//商贷 5-30年 6.73%&lt;br /&gt;<br />
+lilv_array[38][2][5]=0.0351;//公积金 1～5年 3.51%&lt;br /&gt;<br />
+lilv_array[38][2][10]=0.0405;//公积金 5-30年 4.05%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 11月27日新利率基准&lt;br /&gt;<br />
+lilv_array[39]=new Array;&lt;br /&gt;<br />
+lilv_array[39][1]=new Array;&lt;br /&gt;<br />
+lilv_array[39][2]=new Array;&lt;br /&gt;<br />
+lilv_array[39][1][5]=0.0594;//商贷 1～5年 5.94%&lt;br /&gt;<br />
+lilv_array[39][1][10]=0.0612;//商贷 5-30年 6.12%&lt;br /&gt;<br />
+lilv_array[39][2][5]=0.0351;//公积金 1～5年 3.51%&lt;br /&gt;<br />
+lilv_array[39][2][10]=0.0405;//公积金 5-30年 4.05%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 11月27日新利率(第二套房)&lt;br /&gt;<br />
+lilv_array[40]=new Array;&lt;br /&gt;<br />
+lilv_array[40][1]=new Array;&lt;br /&gt;<br />
+lilv_array[40][2]=new Array;&lt;br /&gt;<br />
+lilv_array[40][1][5]=0.0653;//商贷 1～5年 6.53%&lt;br /&gt;<br />
+lilv_array[40][1][10]=0.0673;//商贷 5-30年 6.73%&lt;br /&gt;<br />
+lilv_array[40][2][5]=0.0351;//公积金 1～5年 3.51%&lt;br /&gt;<br />
+lilv_array[40][2][10]=0.0405;//公积金 5-30年 4.05%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 12月23日新利率下限(7折)&lt;br /&gt;<br />
+lilv_array[41]=new Array;&lt;br /&gt;<br />
+lilv_array[41][1]=new Array;&lt;br /&gt;<br />
+lilv_array[41][2]=new Array;&lt;br /&gt;<br />
+lilv_array[41][1][5]=0.0403;//商贷 1～5年 4.03%&lt;br /&gt;<br />
+lilv_array[41][1][10]=0.0416;//商贷 5-30年 4.16%&lt;br /&gt;<br />
+lilv_array[41][2][5]=0.0333;//公积金 1～5年 3.33%&lt;br /&gt;<br />
+lilv_array[41][2][10]=0.0387;//公积金 5-30年 3.87%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 12月23日新利率下限(85折)&lt;br /&gt;<br />
+lilv_array[42]=new Array;&lt;br /&gt;<br />
+lilv_array[42][1]=new Array;&lt;br /&gt;<br />
+lilv_array[42][2]=new Array;&lt;br /&gt;<br />
+lilv_array[42][1][5]=0.0490;//商贷 1～5年 4.90%&lt;br /&gt;<br />
+lilv_array[42][1][10]=0.0505;//商贷 5-30年 5.05%&lt;br /&gt;<br />
+lilv_array[42][2][5]=0.0333;//公积金 1～5年 3.33%&lt;br /&gt;<br />
+lilv_array[42][2][10]=0.0387;//公积金 5-30年 3.87%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 12月23日新利率上限(1.1倍)&lt;br /&gt;<br />
+lilv_array[43]=new Array;&lt;br /&gt;<br />
+lilv_array[43][1]=new Array;&lt;br /&gt;<br />
+lilv_array[43][2]=new Array;&lt;br /&gt;<br />
+lilv_array[43][1][5]=0.0634;//商贷 1～5年 6.34%&lt;br /&gt;<br />
+lilv_array[43][1][10]=0.0653;//商贷 5-30年 6.53%&lt;br /&gt;<br />
+lilv_array[43][2][5]=0.0333;//公积金 1～5年 3.33%&lt;br /&gt;<br />
+lilv_array[43][2][10]=0.0387;//公积金 5-30年 3.87%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 12月23日新利率基准&lt;br /&gt;<br />
+lilv_array[44]=new Array;&lt;br /&gt;<br />
+lilv_array[44][1]=new Array;&lt;br /&gt;<br />
+lilv_array[44][2]=new Array;&lt;br /&gt;<br />
+lilv_array[44][1][5]=0.0576;//商贷 1～5年 5.76%&lt;br /&gt;<br />
+lilv_array[44][1][10]=0.0594;//商贷 5-30年 5.94%&lt;br /&gt;<br />
+lilv_array[44][2][5]=0.0333;//公积金 1～5年 3.33%&lt;br /&gt;<br />
+lilv_array[44][2][10]=0.0387;//公积金 5-30年 3.87%&lt;/p&gt;<br />
+&lt;p&gt;//2008年 12月23日新利率(第二套房)(1.1倍)&lt;br /&gt;<br />
+lilv_array[45]=new Array;&lt;br /&gt;<br />
+lilv_array[45][1]=new Array;&lt;br /&gt;<br />
+lilv_array[45][2]=new Array;&lt;br /&gt;<br />
+lilv_array[45][1][5]=0.0634;//商贷 1～5年 6.34%&lt;br /&gt;<br />
+lilv_array[45][1][10]=0.0653;//商贷 5-30年 6.53%&lt;br /&gt;<br />
+lilv_array[45][2][5]=0.0333;//公积金 1～5年 3.33%&lt;br /&gt;<br />
+lilv_array[45][2][10]=0.0387;//公积金 5-30年 3.87%&lt;/p&gt;<br />
+&lt;p&gt;function exc_zuhe(fmobj,v){&lt;br /&gt;<br />
+&nbsp;//var fmobj=document.calc1;&lt;br /&gt;<br />
+&nbsp;if (fmobj.name==&quot;calc1&quot;){&lt;br /&gt;<br />
+&nbsp; if (v==3){&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc1_zuhe.style.display='block';&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.jisuan_radio[1].checked = true;&lt;br /&gt;<br />
+&nbsp;&nbsp; exc_js(fmobj,2);&lt;br /&gt;<br />
+&nbsp; }else{document.all.calc1_zuhe.style.display='none';}&lt;br /&gt;<br />
+&nbsp;}else{&lt;br /&gt;<br />
+&nbsp; if (v==3){&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc2_zuhe.style.display='block';&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.jisuan_radio[1].checked = true;&lt;br /&gt;<br />
+&nbsp;&nbsp; exc_js(fmobj,2);&lt;br /&gt;<br />
+&nbsp; }else{document.all.calc2_zuhe.style.display='none';}&lt;br /&gt;<br />
+&nbsp;}&lt;br /&gt;<br />
+}&lt;br /&gt;<br />
+function exc_js(fmobj,v){&lt;br /&gt;<br />
+&nbsp;//var fmobj=document.calc1;&lt;br /&gt;<br />
+&nbsp;if (fmobj.name==&quot;calc1&quot;){&lt;br /&gt;<br />
+&nbsp; if (v==1){&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc1_js_div1.style.display='block';&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc1_js_div2.style.display='none';&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc1_zuhe.style.display='none';&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.type.value=1;&lt;br /&gt;<br />
+&nbsp; }else{&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc1_js_div1.style.display='none';&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc1_js_div2.style.display='block';&lt;br /&gt;<br />
+&nbsp; }&lt;br /&gt;<br />
+&nbsp;}else{&lt;br /&gt;<br />
+&nbsp; if (v==1){&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc2_js_div1.style.display='block';&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc2_js_div2.style.display='none';&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc2_zuhe.style.display='none';&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.type.value=1;&lt;br /&gt;<br />
+&nbsp; }else{&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc2_js_div1.style.display='none';&lt;br /&gt;<br />
+&nbsp;&nbsp; document.all.calc2_js_div2.style.display='block';&lt;br /&gt;<br />
+&nbsp; }&lt;br /&gt;<br />
+&nbsp;}&lt;br /&gt;<br />
+}&lt;br /&gt;<br />
+function formReset(fmobj){&lt;br /&gt;<br />
+&nbsp;//var fmobj=document.calc1;&lt;br /&gt;<br />
+&nbsp;if (fmobj.name==&quot;calc1&quot;){&lt;br /&gt;<br />
+&nbsp; document.all.calc1_js_div1.style.display='block';&lt;br /&gt;<br />
+&nbsp; document.all.calc1_js_div2.style.display='none';&lt;br /&gt;<br />
+&nbsp; document.all.calc1_zuhe.style.display='none';&lt;br /&gt;<br />
+&nbsp; document.all.calc1_benjin.style.display='none';&lt;br /&gt;<br />
+&nbsp;}else{&lt;br /&gt;<br />
+&nbsp; document.all.calc2_js_div1.style.display='block';&lt;br /&gt;<br />
+&nbsp; document.all.calc2_js_div2.style.display='none';&lt;br /&gt;<br />
+&nbsp; document.all.calc2_zuhe.style.display='none';&lt;br /&gt;<br />
+&nbsp; document.all.calc2_benxi.style.display='none';&lt;br /&gt;<br />
+&nbsp;}&lt;br /&gt;<br />
+}&lt;/p&gt;<br />
+&lt;p&gt;//显示右边的比较div&lt;br /&gt;<br />
+function showRightDiv(fmobj){&lt;br /&gt;<br />
+&nbsp;if (ext_total(fmobj)==false){return;}&lt;br /&gt;<br />
+&nbsp;//alert(document.calc1.month_money2.value);&lt;br /&gt;<br />
+&nbsp;var a=window.open('','calc_win','status=yes,scrollbars=yes,resizable=yes,width=550,height=500,left=0,top=0')//790*520&lt;br /&gt;<br />
+&nbsp;if (fmobj.name==&quot;calc1&quot;){&lt;br /&gt;<br />
+&nbsp; document.calc1.target = &quot;calc_win&quot;;&lt;br /&gt;<br />
+&nbsp; document.calc1.submit();&lt;br /&gt;<br />
+&nbsp;}else{&lt;br /&gt;<br />
+&nbsp; document.calc2.target = &quot;calc_win&quot;;&lt;br /&gt;<br />
+&nbsp; document.calc2.submit();&lt;br /&gt;<br />
+&nbsp;}&lt;/p&gt;<br />
+&lt;p&gt;}&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+//验证是否为数字&lt;br /&gt;<br />
+function reg_Num(str){&lt;br /&gt;<br />
+&nbsp;if (str.length==0){return false;}&lt;br /&gt;<br />
+&nbsp;var Letters = &quot;1234567890.&quot;;&lt;/p&gt;<br />
+&lt;p&gt; for (i=0;i&lt;str.length;i++){&lt;br /&gt;<br />
+&nbsp; var CheckChar = str.charAt(i);&lt;br /&gt;<br />
+&nbsp; if (Letters.indexOf(CheckChar) == -1){return false;}&lt;br /&gt;<br />
+&nbsp;}&lt;br /&gt;<br />
+&nbsp;return true;&lt;br /&gt;<br />
+}&lt;/p&gt;<br />
+&lt;p&gt;//得到利率&lt;br /&gt;<br />
+function getlilv(lilv_class,type,years){&lt;br /&gt;<br />
+&nbsp;var lilv_class = parseInt(lilv_class);&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; if (years&lt;=5){&lt;br /&gt;<br />
+&nbsp;&nbsp; return lilv_array[lilv_class][type][5];&lt;br /&gt;<br />
+&nbsp;}else{&lt;br /&gt;<br />
+&nbsp; return lilv_array[lilv_class][type][10];&lt;br /&gt;<br />
+&nbsp;}&lt;br /&gt;<br />
+}&lt;/p&gt;<br />
+&lt;p&gt;//本金还款的月还款额(参数: 年利率 / 贷款总额 / 贷款总月份 / 贷款当前月0～length-1)&lt;br /&gt;<br />
+function getMonthMoney2(lilv,total,month,cur_month){&lt;br /&gt;<br />
+&nbsp;var lilv_month = lilv / 12;//月利率&lt;br /&gt;<br />
+&nbsp;//return total * lilv_month * Math.pow(1 + lilv_month, month) / ( Math.pow(1 + lilv_month, month) -1 );&lt;br /&gt;<br />
+&nbsp;var benjin_money = total/month;&lt;br /&gt;<br />
+&nbsp;return (total - benjin_money * cur_month) * lilv_month + benjin_money;&lt;/p&gt;<br />
+&lt;p&gt;}&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+//本息还款的月还款额(参数: 年利率/贷款总额/贷款总月份)&lt;br /&gt;<br />
+function getMonthMoney1(lilv,total,month){&lt;br /&gt;<br />
+&nbsp;var lilv_month = lilv / 12;//月利率&lt;br /&gt;<br />
+&nbsp;return total * lilv_month * Math.pow(1 + lilv_month, month) / ( Math.pow(1 + lilv_month, month) -1 );&lt;br /&gt;<br />
+}&lt;/p&gt;<br />
+&lt;p&gt;function ext_total(fmobj){&lt;br /&gt;<br />
+&nbsp;//var fmobj=document.calc1;&lt;br /&gt;<br />
+&nbsp;//先清空月还款数下拉框&lt;br /&gt;<br />
+&nbsp;while ((k=fmobj.month_money2.length-1)&gt;=0){&lt;br /&gt;<br />
+&nbsp; fmobj.month_money2.options.remove(k);&lt;br /&gt;<br />
+&nbsp;}&lt;br /&gt;<br />
+&nbsp;var years = fmobj.years.value;&lt;br /&gt;<br />
+&nbsp;var month = fmobj.years.value * 12;&lt;/p&gt;<br />
+&lt;p&gt; fmobj.month1.value = month+&quot;(月)&quot;;&lt;br /&gt;<br />
+&nbsp;fmobj.month2.value = month+&quot;(月)&quot;;&lt;br /&gt;<br />
+&nbsp;if (fmobj.type.value == 3 ){&lt;br /&gt;<br />
+&nbsp; //--&nbsp; 组合型贷款(组合型贷款的计算，只和商业贷款额、和公积金贷款额有关，和按贷款总额计算无关)&lt;br /&gt;<br />
+&nbsp;&nbsp; if (!reg_Num(fmobj.total_sy.value)){alert(&quot;混合型贷款请填写商贷比例&quot;);fmobj.total_sy.focus();return false;}&lt;br /&gt;<br />
+&nbsp;&nbsp; if (!reg_Num(fmobj.total_gjj.value)){alert(&quot;混合型贷款请填写公积金比例&quot;);fmobj.total_gjj.focus();return false;}&lt;br /&gt;<br />
+&nbsp;&nbsp; if (fmobj.total_sy.value==null){fmobj.total_sy.value=0;}&lt;br /&gt;<br />
+&nbsp;&nbsp; if (fmobj.total_gjj.value==null){fmobj.total_gjj.value=0;}&lt;br /&gt;<br />
+&nbsp;&nbsp; var total_sy = fmobj.total_sy.value;&lt;br /&gt;<br />
+&nbsp;&nbsp; var total_gjj = fmobj.total_gjj.value;&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.fangkuan_total1.value = &quot;略&quot;;//房款总额&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.fangkuan_total2.value = &quot;略&quot;;//房款总额&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.money_first1.value = 0;//首期付款&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.money_first2.value = 0;//首期付款&lt;/p&gt;<br />
+&lt;p&gt;&nbsp;&nbsp; //贷款总额&lt;br /&gt;<br />
+&nbsp;&nbsp; var total_sy = parseInt(fmobj.total_sy.value);&lt;br /&gt;<br />
+&nbsp;&nbsp; var total_gjj = parseInt(fmobj.total_gjj.value);&lt;br /&gt;<br />
+&nbsp;&nbsp; var daikuan_total = total_sy + total_gjj;&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.daikuan_total1.value = daikuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp; fmobj.daikuan_total2.value = daikuan_total;&lt;/p&gt;<br />
+&lt;p&gt;&nbsp;&nbsp; //月还款&lt;br /&gt;<br />
+&nbsp;&nbsp; var lilv_sd = getlilv(fmobj.lilv.value,1, years);//得到商贷利率&lt;br /&gt;<br />
+&nbsp;&nbsp; var lilv_gjj = getlilv(fmobj.lilv.value,2, years);//得到公积金利率&lt;/p&gt;<br />
+&lt;p&gt;&nbsp;&nbsp; //1.本金还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //月还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var all_total2 = 0;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var month_money2 = &quot;&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; for(j=0;j&lt;month;j++) {&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; //调用函数计算: 本金月还款额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; huankuan = getMonthMoney2(lilv_sd,total_sy,month,j) + getMonthMoney2(lilv_gjj,total_gjj,month,j);&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; all_total2 += huankuan;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; huankuan = Math.round(huankuan*100)/100;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; //fmobj.month_money2.options[j] = new Option( (j+1) +&quot;月,&quot; + huankuan + &quot;(元)&quot;, huankuan);&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; month_money2 += (j+1) +&quot;月,&quot; + huankuan + &quot;(元)n&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; }&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.month_money2.value = month_money2;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //还款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.all_total2.value = Math.round(all_total2*100)/100;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //支付利息款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.accrual2.value = Math.round( (all_total2 - daikuan_total) *100)/100;&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+&nbsp;&nbsp; //2.本息还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //月均还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var month_money1 = getMonthMoney1(lilv_sd,total_sy,month) + getMonthMoney1(lilv_gjj,total_gjj,month);//调用函数计算&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.month_money1.value = Math.round(month_money1*100)/100 + &quot;(元)&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //还款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var all_total1 = month_money1 * month;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.all_total1.value = Math.round(all_total1*100)/100;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //支付利息款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.accrual1.value = Math.round( (all_total1 - daikuan_total) *100)/100;&lt;/p&gt;<br />
+&lt;p&gt; }else{&lt;br /&gt;<br />
+&nbsp; //--&nbsp; 商业贷款、公积金贷款&lt;br /&gt;<br />
+&nbsp;&nbsp; var lilv = getlilv(fmobj.lilv.value,fmobj.type.value, fmobj.years.value);//得到利率&lt;br /&gt;<br />
+&nbsp;&nbsp; if (fmobj.jisuan_radio[0].checked == true){&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //------------ 根据单价面积计算&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; if (!reg_Num(fmobj.price.value)){alert(&quot;请填写单价&quot;);fmobj.price.focus();return false;}&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; if (!reg_Num(fmobj.sqm.value)){alert(&quot;请填写面积&quot;);fmobj.sqm.focus();return false;}&lt;/p&gt;<br />
+&lt;p&gt;&nbsp;&nbsp;&nbsp; //房款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var fangkuan_total = fmobj.price.value * fmobj.sqm.value;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.fangkuan_total1.value = fangkuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.fangkuan_total2.value = fangkuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //贷款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var daikuan_total = (fmobj.price.value * fmobj.sqm.value) * (fmobj.anjie.value/10);&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.daikuan_total1.value = daikuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.daikuan_total2.value = daikuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //首期付款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var money_first = fangkuan_total - daikuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.money_first1.value = money_first&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.money_first2.value = money_first;&lt;br /&gt;<br />
+&nbsp;&nbsp; }else{&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //------------ 根据贷款总额计算&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; if (fmobj.daikuan_total000.value.length==0){alert(&quot;请填写贷款总额&quot;);fmobj.daikuan_total000.focus();return false;}&lt;/p&gt;<br />
+&lt;p&gt;&nbsp;&nbsp;&nbsp; //房款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.fangkuan_total1.value = &quot;略&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.fangkuan_total2.value = &quot;略&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //贷款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var daikuan_total = fmobj.daikuan_total000.value*10000;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.daikuan_total1.value = daikuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.daikuan_total2.value = daikuan_total;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //首期付款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.money_first1.value = 0;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.money_first2.value = 0;&lt;/p&gt;<br />
+&lt;p&gt;&nbsp;&nbsp; }&lt;br /&gt;<br />
+&nbsp;&nbsp; //1.本金还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //月还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var all_total2 = 0;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var month_money2 = &quot;&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; for(j=0;j&lt;month;j++) {&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; //调用函数计算: 本金月还款额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; huankuan = getMonthMoney2(lilv,daikuan_total,month,j);&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; all_total2 += huankuan;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; huankuan = Math.round(huankuan*100)/100;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; //fmobj.month_money2.options[j] = new Option( (j+1) +&quot;月,&quot; + huankuan + &quot;(元)&quot;, huankuan);&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp; month_money2 += (j+1) +&quot;月,&quot; + huankuan + &quot;(元)n&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; }&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.month_money2.value = month_money2;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //还款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.all_total2.value = Math.round(all_total2*100)/100;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //支付利息款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.accrual2.value = Math.round( (all_total2 - daikuan_total) *100)/100;&lt;/p&gt;<br />
+&lt;p&gt;&lt;br /&gt;<br />
+&nbsp;&nbsp; //2.本息还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //月均还款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var month_money1 = getMonthMoney1(lilv,daikuan_total,month);//调用函数计算&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.month_money1.value = Math.round(month_money1*100)/100 + &quot;(元)&quot;;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //还款总额&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; var all_total1 = month_money1 * month;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.all_total1.value = Math.round(all_total1*100)/100;&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; //支付利息款&lt;br /&gt;<br />
+&nbsp;&nbsp;&nbsp; fmobj.accrual1.value = Math.round( (all_total1 - daikuan_total) *100)/100;&lt;/p&gt;<br />
+&lt;p&gt; }&lt;br /&gt;<br />
+}&lt;/p&gt;<br />
+&lt;p&gt;//提前还<br />
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('js 房产税费计算器代码_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/888.html">常用的JS后台导航菜单</a>&nbsp;&nbsp;下一条： <a href="/html/News/833.html">js 代码GB2312转UTF8和UTF8转GB2312</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return false preventDefault 和 stopPropagation详解" >return false preventDefault…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuer…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/773.html" title="ajax&nbsp;清除缓存的两种方法">ajax 清除缓存的两种方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/644.html" title="js日历控件点击日期显示在文本框中">js日历控件点击日期显示在文本框中…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1316.html" title="HTML、JS与FLASH&nbsp;之间的静态传值方法">HTML、JS与FLASH 之间的静态传值方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/489.html" title="主题：ajax请求JSP，为什么GET就是乱码，POST就没问题">主题：ajax请求JSP，为什么GET就是…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/800.html" title="javascript&nbsp;改变iframe(框架)的方法">javascript 改变iframe(框架)的方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/616.html" title="javascript取鼠标当前坐标">javascript取鼠标当前坐标</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1241.html" title="推荐一款网页软键盘&nbsp;很漂亮的哦">推荐一款网页软键盘 很漂亮的哦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/409.html" title="ajax&nbsp;session过期问题的几个解决方案">ajax session过期问题的几个解决方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1106.html" title="js文字间隔停顿向上滚动效果">js文字间隔停顿向上滚动效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/413.html" title="ajax&nbsp;服务器文本框自动填值">ajax 服务器文本框自动填值</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/546.html" title="js技术技巧收藏（200例）---1">js技术技巧收藏（200例）---1</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/412.html" title="ajax&nbsp;数据库中随机读取5条数据动态在页面中刷新">ajax 数据库中随机读取5条数据动态…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/488.html" title="主题：这是否是个捷径？Ajax利用Struts转发到的jsp作为数据传回">主题：这是否是个捷径？Ajax利用S…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/406.html" title="揭开AJAX神秘的面纱(AJAX个人学习笔记)">揭开AJAX神秘的面纱(AJAX个人学习…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/888.html" title="常用的JS后台导航菜单">常用的JS后台导航菜单</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各样的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return&nbsp;false&nbsp;preventDefault&nbsp;和&nbsp;stopPropagation详解" >return false preventDefault 和 …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuery的r…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1784.html" title="ES6中使用箭头定义函数" >ES6中使用箭头定义函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1783.html" title="正则表达式学习笔记" >正则表达式学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1782.html" title="javascript数组详解" >javascript数组详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1772.html" title="JavaScript是世界上最流行的脚本语言" >JavaScript是世界上最流行的脚本语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1709.html" title="onSelectStart事件详解" >onSelectStart事件详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1706.html" title="js中的classList详解" >js中的classList详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "871" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

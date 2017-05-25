@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>什么是模块捆绑_Jquery_Ajax_Javascript_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="在这篇文章的第一部分，我谈到了什么是模块，开发者为什么使用它们，以及，在你的程序中实现模块的不同方式。<br />
+在这第二部分，将会回答捆绑模块到底意味着什么：为什么要捆绑，捆绑的不同方法，以及在网页开发中模块的未来发展。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Jquery_Ajax_Javascript
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        什么是模块捆绑
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2016/11/7 0:04:51
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        在这篇文章的第一部分，我谈到了什么是模块，开发者为什么使用它们，以及，在你的程序中实现模块的不同方式。<br />
+在这第二部分，将会回答捆绑模块到底意味着什么：为什么要捆绑，捆绑的不同方法，以及在网页开发中模块的未来发展。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><br/></p><p><br/></p><p>1. 什么是模块捆绑</p><p>抽象的概括，模块捆绑就是这样一个简单的处理：把一组模块以及它们的依赖，按照正确的次序，拼接在一个文件或一组文件里。</p><p><br/></p><p>但正如网页开发的其它方方面面，棘手的总是潜藏在具体细节里。</p><p><br/></p><p>2. 为什么一定要捆绑模块?</p><p>当你将程序划分成模块时，一般把它们组织成不同的文件或文件夹。很可能你还有一组所用库的模块，比如 Underscore、React。</p><p><br/></p><p>结果，这些文件每一个都得用 &lt;script&gt; 标签引入你的主 HTML 文件，当用户访问你的主页时再由浏览器加载进来。每个文件都用单独的 &lt;script&gt; 标签引入，意味着浏览器不得不分别挨个加载它们。</p><p><br/></p><p>对网页加载时间来说这简直是噩梦。</p><p><br/></p><p>于是，为了解决这个问题，我们把所有文件捆绑，或“拼接”到一个文件（有时也是一组文件）中，正是为了减少请求数。当你听到开发人员谈论“构建步骤”或“构建过程”时，他们谈的就是这个。</p><p><br/></p><p>另一个加速构建操作的常用方法是，“缩减”捆绑后的代码。缩减，是把源代码中不需要的字符（如空格、评论、换行符等等）移除，从而减小了代码的总体积，却不改变其功能。</p><p><br/></p><p>数据更少，浏览器处理的时间就更短，便减少了下载文件花费的时间。如果你见过带 “min” 扩展名的文件，比如 “underscore-min.js”，可能就已经留意到，相比完整版，缩减版小了好多（不过很难阅读）。</p><p><br/></p><p>任务执行工具，如 Gulp、Grunt，让开发者操作拼接和缩减更简单便捷。一边是展示给开发者看的人类可读代码，另一边是提供给浏览器的捆绑后的计算机可读代码。</p><p><br/></p><p>3. 捆绑模块有哪些不同的方法？</p><p>如果你用的是一种标准模块模式（在第一部分讨论过）来定义模块，那么拼接和缩减文件不会出任何岔子，你其实就是把几堆纯 JavaScript 代码捆成一束。</p><p><br/></p><p>但如果你用的是非原生模块系统，浏览器不能像 CommonJS、AMD、甚至原生 ES6 模块格式那样解析，你就需要用专门工具先转化成排列正确、浏览器可识别的代码。这正是 Browserify、RequireJS、Webpack 和其他模块捆绑工具，或模块加载工具粉墨登场的时候。</p><p><br/></p><p>除了捆绑或加载你的模块，模块捆绑工具还有许多额外的功能，比如，当你修改或为了调试生成源码映射时，它会自动重编译你的代码。</p><p><br/></p><p>下面就来过一遍常用的模块捆绑方法：</p><p><br/></p><p>4. 捆绑 CommonJS</p><p>从第一部分已经知道，CommonJS 是同步加载模块，虽然没什么毛病，但对浏览器来说不太现实。我曾提过有方法可以解决——其中之一就是模块捆绑工具 Browserify ，它是为浏览器编译 CommonJS 模块的工具。</p><p><br/></p><p>举个例子，假如你有一个个文件，它引入一个模块以计算一组数值的平均值：</p><p><br/></p><p>var myDependency = require(‘myDependency’);</p><p>var myGrades = [93, 95, 88, 0, 91];</p><p>var myAverageGrade = myDependency.average(myGrades);</p><p>在这个场景中，我们只有一个依赖。用下面的这个命令，Browserify 会以这个文件为入口把所有依赖的模块递归地捆绑进一个文件：</p><p><br/></p><p>browserify main.js &nbsp;-o bundle.js</p><p>Browserify 实际做的是，跳入文件为每一个依赖分析它的抽象语法树，从而遍历出工程的整个依赖关系。一旦它搞懂了你的依赖结构，就把它们按照正确的顺序捆绑进一个文件。那时，你只需用一个 &lt;script&gt; 标签，引入 bundle.js 到你的 HTML，从而只要一个 http 请求，就把你的所有源代码下载下来了。哇，还不去捆绑！</p><p><br/></p><p>与之类似，如果你有多个文件，每个文件又有多个依赖，你要做的也很简单：告诉他你的入口文件，然后就可以瘫坐在椅子上看好戏。</p><p><br/></p><p>最后生成的捆绑文件，可以直接导向到一些工具做压缩处理。</p><p><br/></p><p>5. 捆绑 AMD</p><p>如果你用的是 AMD， 就需要像 RequireJS、Curl 那样的 AMD 模块加载工具。模块加载工具（与模块捆绑工具不同）会动态加载你的程序所需的模块。</p><p><br/></p><p>再提醒一下，AMD 跟 CommonJS 最大不同在于，AMD 会异步加载模块。所以，如果你用 AMD，就无需捆绑模块到一个文件里，技术上讲也就不需要执行捆绑模块动作的构建过程。因为异步加载模块意味着在运行过程中逐步下载那些程序所必需的文件，而不是用户刚进入页面就一下把所有文件都下载下来。</p><p><br/></p><p>然后实际中，每个用户动作会额外产生大数据量的请求，这对产品而言很不合理。所以大多数网页开发者仍然为了更优的性能，使用构建工具捆绑、缩减他们的 AMD 模块，比如像 RequireJS 优化器 r.js 一样的工具。</p><p><br/></p><p>概括地说，在捆绑方面 AMD 和 CommonJS 的区别在于：开发时, 用 AMD 的程序可以省去构建过程。直到实际运行时，再让 r.js 那些优化工具介入处理。</p><p><br/></p><p>要想围观 CommonJS 和 AMD 更有意思的“互撕”，看看这篇Tom Dale 的博文。</p><p><br/></p><p>6. Webpack</p><p>捆绑工具算有些年头了，Webpack 则是初来乍到的新人。它的设计基于不知道你所用的模块系统是什么，从而让开发者各依所需选用 CommonJS、AMD 或 ES6。</p><p><br/></p><p>你是不是纳闷，已经有像 Browserify、RequireJS 那样的捆绑工具各司其职、表现优异，为什么还需要 Webpack？好吧，至少因为一点，Webpack 额外提供了一些有用的特性，如“代码分割”——把你的代码库分割成按需加载的“块”。</p><p><br/></p><p>比如，你有一个网页应用程序，其中相当一块代码只在特定条件下才用到，那么把整个代码库都捆绑进一个大文件就不是很高效。这时，你可以用代码分割功能，将那部分代码抽离、捆绑到另外一块，在执行时按需加载，从而避免在最开始就遇到大量负载的麻烦。其实大部分用户只会用到你应用程序的核心代码。</p><p><br/></p><p>代码分割仅仅是 Webpack 提供的众多亮眼功能之一。关于 Webpack 与 Browserify 哪个更好，网络上充斥着各种观点，下面的是一些客观冷静的讨论，助我稍微理清了头绪：</p><p><br/></p><p>https://gist.github.com/substack/68f8d502be42d5cd4942</p><p>http://mattdesl.svbtle.com/browserify-vs-webpack</p><p>http://blog.namangoel.com/browserify-vs-webpack-js-drama</p><p>7. ES6 模块</p><p>看完了吗？好，接下来我想谈谈 ES6 模块，它在未来会减少捆绑工具的使用。（你很快就会明白我的意思。）先来弄懂 ES6 模块是怎么被加载的。</p><p><br/></p><p>ES6 模块同现有的 JS 模块格式最关键的区别是，它在设计之初就考虑到了静态分析。什么意思呢？当你导入模块时，导入的模块会在编译阶段，即代码开始运行之前，被解析。于是，我们能够在运行程序之前，把导出模块中不被其他模块使用的部分移除。这节省了很大的空间，减少了浏览器的压力。</p><p><br/></p><p>那么问题来了。你在用一些工具，像 Uglify.js，缩减代码时，有一个死代码去除的处理，它和 ES6 移除没用的模块又有什么不同呢？只能说“得看情况”。</p><p><br/></p><p>（注：死代码去除是可选步骤，即去除未使用的代码和变量。就把它想成，扔掉捆绑后代码中不需要运行的冗余部分，一定在捆绑之后。）</p><p><br/></p><p>有时，死代码去除在 Uglify.js 和 ES6 模块中表现完全一样，而有时也不同。如果你想验证一下，Rollup’s wiki 里有个很好的示例。</p><p><br/></p><p>ES6 的不同在于，它去除死代码的方法不同，叫做“tree shaking”，本质上它是死代码去除的反过程。它只保留你运行所需的代码，而非排除你运行所不需要的。来看个例子：</p><p><br/></p><p>我们有一个 util.js 文件，里面写了一些函数，再用 ES6 语法将它们一一导出（exports）：</p><p><br/></p><p>export function each(collection, iterator) {</p><p>&nbsp; if (Array.isArray(collection)) {</p><p>&nbsp; &nbsp; for (var i = 0; i &lt; collection.length; i++) {</p><p>&nbsp; &nbsp; &nbsp; iterator(collection[i], i, collection);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; } else {</p><p>&nbsp; &nbsp; for (var key in collection) {</p><p>&nbsp; &nbsp; &nbsp; iterator(collection[key], key, collection);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; }</p><p>}</p><p>export function filter(collection, test) {</p><p>&nbsp; var filtered = [];</p><p>&nbsp; each(collection, function (item) {</p><p>&nbsp; &nbsp; if (test(item)) {</p><p>&nbsp; &nbsp; &nbsp; filtered.push(item);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; });</p><p>&nbsp; return filtered;</p><p>}</p><p>export function map(collection, iterator) {</p><p>&nbsp; var mapped = [];</p><p>&nbsp; each(collection, function (value, key, collection) {</p><p>&nbsp; &nbsp; mapped.push(iterator(value));</p><p>&nbsp; });</p><p>&nbsp; return mapped;</p><p>}</p><p>export function reduce(collection, iterator, accumulator) {</p><p>&nbsp; var startingValueMissing = accumulator === undefined;</p><p>&nbsp; each(collection, function (item) {</p><p>&nbsp; &nbsp; if (startingValueMissing) {</p><p>&nbsp; &nbsp; &nbsp; accumulator = item;</p><p>&nbsp; &nbsp; &nbsp; startingValueMissing = false;</p><p>&nbsp; &nbsp; } else {</p><p>&nbsp; &nbsp; &nbsp; accumulator = iterator(accumulator, item);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; });</p><p>&nbsp; return accumulator;</p><p>}</p><p>然后，假设我们不知道自己的程序将要用到哪个功能函数，所以把这些模块全都导入（import）到 main.js：</p><p><br/></p><p>import &nbsp;* &nbsp;as &nbsp;Utils &nbsp;from ‘./utils.js’;</p><p>但到最后我们只用了 each 函数：</p><p><br/></p><p>import * as Utils from ‘./utils.js’;</p><p><br/></p><p>Utils.each([1, 2, 3], function (x) { console.log(x) });</p><p>经过“tree shaking”之后，把相应的模块加载进来，新的 main.js 会是这个样子：</p><p><br/></p><p>function each(collection, iterator) {</p><p>&nbsp; if (Array.isArray(collection)) {</p><p>&nbsp; &nbsp; for (var i = 0; i &lt; collection.length; i++) {</p><p>&nbsp; &nbsp; &nbsp; iterator(collection[i], i, collection);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; } else {</p><p>&nbsp; &nbsp; for (var key in collection) {</p><p>&nbsp; &nbsp; &nbsp; iterator(collection[key], key, collection);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; }</p><p>};</p><p><br/></p><p>each([1, 2, 3], function (x) { console.log(x) });</p><p>注意到了吗，导出模块中只有我们用到的 each 被引入进来了。</p><p><br/></p><p>另外，如果我们突然决定用 filter 函数而非 each，结果就会是这样：</p><p><br/></p><p>import * as Utils from ‘./utils.js’;</p><p><br/></p><p>Utils.filter([1, 2, 3], function (x) { return x === 2 });</p><p>“tree shaking” 之后的样子：</p><p><br/></p><p>function each(collection, iterator) {</p><p>&nbsp; if (Array.isArray(collection)) {</p><p>&nbsp; &nbsp; for (var i = 0; i &lt; collection.length; i++) {</p><p>&nbsp; &nbsp; &nbsp; iterator(collection[i], i, collection);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; } else {</p><p>&nbsp; &nbsp; for (var key in collection) {</p><p>&nbsp; &nbsp; &nbsp; iterator(collection[key], key, collection);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; }</p><p>};</p><p><br/></p><p>function filter(collection, test) {</p><p>&nbsp; var filtered = [];</p><p>&nbsp; each(collection, function (item) {</p><p>&nbsp; &nbsp; if (test(item)) {</p><p>&nbsp; &nbsp; &nbsp; filtered.push(item);</p><p>&nbsp; &nbsp; }</p><p>&nbsp; });</p><p>&nbsp; return filtered;</p><p>};</p><p><br/></p><p>filter([1, 2, 3], function (x) { return x === 2 });</p><p>注意了（敲黑板），这次 each 和 filter 都包括了进来。这是因为 filter 定义中用到了 each，所以要把两者都导入才能让模块正常运行。</p><p><br/></p><p>很炫吧？</p><p><br/></p><p>想来点有难度的吗，可以去 Rollup.js 的 live demo and editor 鼓捣鼓捣 “tree shaking”。</p><p><br/></p><p>8. 构建 ES6 模块</p><p>现在我们已经知道 ES6 模块的加载方式与其它模块格式不同，但仍未谈到使用 ES6 模块时它的构建过程是怎样的？</p><p><br/></p><p>而不尽完美的是，ES6 模块还需要一些额外的处理，因为有关浏览器如何加载 ES6 模块还没有原生的实现方法。</p><p><br/></p><p><br/></p><p><br/></p><p>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import</p><p><br/></p><p>下面列出一些可选方案来构建或转换 ES6 模块，以便在浏览器中运行。其中第一条是当下最常用的方法：</p><p><br/></p><p>使用转译工具（如 Babel、Traceur）将你的 ES6 代码转译成 ES5 中 CommonJS、AMD或 UMD 中任一格式。再以管道的方式导向一个模块捆绑工具，如 Browserify、Webpack，捆绑成一个或多个文件。</p><p><br/></p><p>用 Rollup.js。它和第一条很类似，但捎带上了 ES6 模块的特性——在构建之前静态分析 ES6 代码和它的依赖关系。它利用“tree shaking”让你的代码包最小。大体来说，使用 Rollup.js 处理你的 ES6 模块比使用 Browserify 或 Webpack 最主要的好处就是，“tree shaking”能让你的代码包更小。有一点要谨慎，Rollup 能让你把代码捆绑成多种格式，包括 ES6、CommonJS、AMD、UMD 和 IIFE。IIFE 和 UMD 代码包在浏览器中照常运行，但如果你捆绑成 AMD、CommonJS 或 ES6，就得用另外的方法再将其转化成浏览器能解析的格式（比如用 Browserify、Webpack、RequireJS 等等）。</p><p><br/></p><p>9. 过关斩将</p><p>一个网页开发者不得不过五关斩六将。把我们养眼的 ES6 模块转化成浏览器可解析的东西往往不是那么轻而易举。</p><p><br/></p><p>有人会问，什么时候 ES6 模块可以直接运行在浏览器中，不用再做额外的修修补补？</p><p><br/></p><p>庆幸的是，“迟早会的”。</p><p><br/></p><p>ECMAScript 目前有一个解决方案叫ECMAScript 6 module loader API。概括地说，它是基于 Promise 的程序 API，将会动态加载模块，并缓存起来，以免后面再引入时不再重新加载新版本。</p><p><br/></p><p>像这样：</p><p><br/></p><p>myModule.js</p><p><br/></p><p>export class myModule {</p><p>&nbsp; constructor() {</p><p>&nbsp; &nbsp; console.log(&#39;Hello, I am a module&#39;);</p><p>&nbsp; }</p><p><br/></p><p>&nbsp; hello() {</p><p>&nbsp; &nbsp; console.log(&#39;hello!&#39;);</p><p>&nbsp; }</p><p><br/></p><p>&nbsp; goodbye() {</p><p>&nbsp; &nbsp; console.log(&#39;goodbye!&#39;);</p><p>&nbsp; }</p><p>}</p><p>main.js</p><p><br/></p><p>System.import(‘myModule’).then(function (myModule) {</p><p>&nbsp; new myModule.hello();</p><p>});</p><p><br/></p><p>// ‘Hello!, I am a module!’</p><p>还有另一种方式，你可以在 script 标签直接指定 “type=module” 来定义模块：</p><p><br/></p><p>&lt;script type=&quot;module&quot;&gt;</p><p>&nbsp; // loads the &#39;myModule&#39; export from &#39;mymodule.js&#39;</p><p>&nbsp; import { hello } from &#39;mymodule&#39;;</p><p>&nbsp; new Hello(); // &#39;Hello, I am a module!&#39;</p><p>&lt;/script&gt;</p><p>如果你还没看过模块加载器 API 的代码库，我强烈建议去瞟一眼。</p><p><br/></p><p>另外，如果你想以测试驱动方式推动这个方案，去看下 SystemJS，它正是基于 ES6 Module Loader polyfill。SystemJS 在浏览器和 Node 中动态加载任何格式的模块（ES6 模块、AMD、CommonJS、全局代码）。它在一个“注册表”里记录所有加载过的模块，以免重复加载已有的模块。而且，它可以自动转译 ES6 模块（你只需简单设置一个选项），还能够从其它任何类型的模块中加载成任何类型的模块。相当利索！</p><p><br/></p><p>10. 有了原生 ES6 模块，我们仍然需要捆绑工具吗？</p><p>ES6 模块的日益盛行引起了一些有趣的现象：</p><p><br/></p><p>10.1、HTTP/2 会让模块捆绑工具被废弃吗？</p><p><br/></p><p>HTTP/1 只允许一次 TCP 连接发送一个请求，所以在加载多个资源时得要多个请求。用HTTP/2 的话，一切都不一样了。它是完全的多路复用，多个请求和响应可以并行发生。于是，我们可以用一个连接同时处理多个请求。</p><p><br/></p><p>因为每个 HTTP 请求的代价大大低于 HTTP/1，长远来看，加载一批模块不再导致严重的性能问题。有人便说，这表示没必要再捆绑模块了。这肯定是大有可能，但实际上要看情况而定。</p><p><br/></p><p>因为一点，模块捆绑还有 HTTP/2 所没有的好处，比如移除冗余的导出模块以节省空间。如果你是建一个网站，性能至关重要、分秒必争，那么长久下来，捆绑模块或许能给你额外的优势。不过，如果说你对性能要求没有如此苛刻，那么跳过构建步骤是可以省下一些为了减小代码包而花去的时间。</p><p><br/></p><p>总的来说，绝大多数网站都用上 HTTP/2 的那个时候离我们现在还很远。我预测构建过程将会保留，至少在近期内。</p><p><br/></p><p>附注：HTTP/2 还有其它不同，如果你感兴趣，这是很好的资源。</p><p><br/></p><p>10.2、CommonJS、AMD、UMD 会被废弃吗?</p><p><br/></p><p>一旦 ES6 真成了绝对的标准，我们还需要其它非原生的模块格式吗？</p><p><br/></p><p>我觉得还有。</p><p><br/></p><p>遵循单一标准在 JavaScript 中导入、导出模块，而不需要中间步骤——网页开发长期受益于此。得要多久才能来到 ES6 成为模块标准的那一天？</p><p><br/></p><p>有可能要相当一段时间。</p><p><br/></p><p>况且很多人都喜欢有多种“口味”可选，“仅此一款”可能永远不会成真。</p><p><br/></p><p>11. 总结</p><p>我希望这篇分上下两部分的文章有助于理清开发者谈论模块捆绑时所用的一些术语概念。如果你还不甚了了，倒回去再看看第一部分</p><p><br/></p><p>一如既往，请在评论中自由交流、提问。</p><p><br/></p><p>祝你“捆绑”愉快！</p><p><br/></p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('什么是模块捆绑_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1786.html">产品图片放大镜效果</a>&nbsp;&nbsp;下一条： <a href="/html/News/1784.html">ES6中使用箭头定义函数</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return false preventDefault 和 stopPropagation详解" >return false preventDefault…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuer…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/773.html" title="ajax&nbsp;清除缓存的两种方法">ajax 清除缓存的两种方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/644.html" title="js日历控件点击日期显示在文本框中">js日历控件点击日期显示在文本框中…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1316.html" title="HTML、JS与FLASH&nbsp;之间的静态传值方法">HTML、JS与FLASH 之间的静态传值方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/489.html" title="主题：ajax请求JSP，为什么GET就是乱码，POST就没问题">主题：ajax请求JSP，为什么GET就是…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/800.html" title="javascript&nbsp;改变iframe(框架)的方法">javascript 改变iframe(框架)的方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/616.html" title="javascript取鼠标当前坐标">javascript取鼠标当前坐标</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1241.html" title="推荐一款网页软键盘&nbsp;很漂亮的哦">推荐一款网页软键盘 很漂亮的哦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/409.html" title="ajax&nbsp;session过期问题的几个解决方案">ajax session过期问题的几个解决方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1106.html" title="js文字间隔停顿向上滚动效果">js文字间隔停顿向上滚动效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/413.html" title="ajax&nbsp;服务器文本框自动填值">ajax 服务器文本框自动填值</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/546.html" title="js技术技巧收藏（200例）---1">js技术技巧收藏（200例）---1</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/412.html" title="ajax&nbsp;数据库中随机读取5条数据动态在页面中刷新">ajax 数据库中随机读取5条数据动态…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/488.html" title="主题：这是否是个捷径？Ajax利用Struts转发到的jsp作为数据传回">主题：这是否是个捷径？Ajax利用S…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/406.html" title="揭开AJAX神秘的面纱(AJAX个人学习笔记)">揭开AJAX神秘的面纱(AJAX个人学习…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/888.html" title="常用的JS后台导航菜单">常用的JS后台导航菜单</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各样的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return&nbsp;false&nbsp;preventDefault&nbsp;和&nbsp;stopPropagation详解" >return false preventDefault 和 …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuery的r…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1784.html" title="ES6中使用箭头定义函数" >ES6中使用箭头定义函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1783.html" title="正则表达式学习笔记" >正则表达式学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1782.html" title="javascript数组详解" >javascript数组详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1772.html" title="JavaScript是世界上最流行的脚本语言" >JavaScript是世界上最流行的脚本语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1709.html" title="onSelectStart事件详解" >onSelectStart事件详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1706.html" title="js中的classList详解" >js中的classList详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1785" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

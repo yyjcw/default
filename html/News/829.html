@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>JSP&nbsp;技术&nbsp;——&nbsp;是敌是友？（3）_Android_IOS_移动互联网_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="我刚刚介绍了一种良好的表示技术应该提供的功能，以及&nbsp;JSP&nbsp;技术尝试解决的具体问题。现在，我将转入正题：JSP&nbsp;技术虽然建立在良好理念的基础之上，但是却出现了一些问题。在选择&nbsp;JSP&nbsp;编写您的应用程序之前（您可能仍然会这样做），至少应该注意一些容易出现的问题。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Android_IOS_移动互联网
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        JSP 技术 —— 是敌是友？（3）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/22 20:33:45
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        我刚刚介绍了一种良好的表示技术应该提供的功能，以及&nbsp;JSP&nbsp;技术尝试解决的具体问题。现在，我将转入正题：JSP&nbsp;技术虽然建立在良好理念的基础之上，但是却出现了一些问题。在选择&nbsp;JSP&nbsp;编写您的应用程序之前（您可能仍然会这样做），至少应该注意一些容易出现的问题。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><a name="h8"><span class="atitle">出现的问题</span></a></p>
+<p>我刚刚介绍了一种良好的表示技术应该提供的功能，以及 JSP 技术尝试解决的具体问题。现在，我将转入正题：JSP 技术虽然建立在良好理念的基础之上，但是却出现了一些问题。在选择 JSP 编写您的应用程序之前（您可能仍然会这样做），至少应该注意一些容易出现的问题。 </p>
+<p>您还需要注意经常被忽略的 J2EE 编程平台：仅仅因为平台附带了 API 并不意味着一定要使用它。和这种想法同样可笑的是，很多开发人员在使用 JSP、EJB 或 JMS API 时，都在想如果不使用这些 API 的话，他们的应用程序就不是真正的 &ldquo;J2EE 应用程序&rdquo; 了。实际上，平台提供的 API 远远超过大多数应用程序的需要。如果您不能使用或对 JSP 技术还持有怀疑态度，那么<em>可以不使用它</em>！在选择 JSP 编写应用程序之前，仔细研究它的优点<em>和</em> 缺点。让我们看看其中一些缺点。</p>
+<p><a name="m1"><span class="smalltitle">可移植性和语言锁定</span></a></p>
+<p>JSP 技术将您锁定到某种特定的语言。这一点不应该给予太多的关注。至少在我看来，Java 技术是企业应用程序的<em>惟一</em> 选择。在这个领域，根本不存在可以独立于语言的解决方案。当然，在这个时候，我没有把 Microsoft .NET 平台牵涉进来。只有时间可以告诉我们这个平台是否可以真正独立于语言（我很怀疑这一点）。 </p>
+<p>然而，选择 JSP 技术将强制您使用 Java 语言，至少对于内容和表示是这样的。尽管 CORBA 可以用于业务逻辑，JSP 编码要求必须熟悉 servlet 和核心 Java 语言。因为很多开发人员通过 J2EE 平台接触 JSP 编码，因此这通常算不成问题。 </p>
+<p><a name="m2"><span class="smalltitle">混合和独立</span></a></p>
+<p>在本篇文章中，我始终围绕分离内容和表示这一概念。您可能对此已经感到不耐烦，那么现在让我们看看 JSP 究竟能不能实现这个目标。正如我们之前讨论的一样，JSP <em>宣称</em> 一直致力于实现内容和表示分离，那么我们可以因此认为它实现了目标，是吗？未必如此。 </p>
+<p><a name="m3"><span class="smalltitle">内容和表示之间的界限变得模糊</span></a></p>
+<p>JSP 允许将 Java 代码插入到标记语言页面中，这个非常危险的特性允许将内容混合到表示中。更糟糕的是，业务逻辑通常会进入到 JSP 页面中，如清单 5 所示。 </p>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">&lt;%@ page import=&quot;com.ibm.display.PageUtils&quot; %&gt;
+&lt;%@ page import=&quot;com.ibm.display.PageInfo&quot; %&gt;
+<span class="boldcode">&lt;%@ page import=&quot;com.ibm.logic.AdminUtils&quot; %&gt;
+</span>&lt;%@ page import=&quot;com.ibm.people.Actor&quot; %&gt;
+&lt;%@ page import=&quot;java.util.Iterator&quot; %&gt;
+&lt;%@ page import=&quot;java.util.Vector&quot; %&gt;
+&lt;%
+PageInfo pageInfo = (PageInfo)session.getAttribute(&quot;PAGE_DATA&quot;)
+%&gt;
+&lt;HTML&gt;
+&lt;HEAD&gt;
+ &lt;TITLE&gt;
+  &lt;%=pageInfo.getTitle()%&gt;
+ &lt;/TITLE&gt;
+&lt;/HEAD&gt;
+&lt;BODY&gt;
+ &lt;H2 ALIGN=&quot;center&quot;&gt;Search Results: Actors&lt;/H2&gt;
+ &lt;CENTER&gt;
+  &lt;HR width=&quot;85%&quot;&gt;   
+  &lt;TABLE width=&quot;50%&quot; CELLPADDING=&quot;3&quot; CELLSPACING=&quot;3&quot; border=&quot;1&quot;
+         BGCOLOR=&quot;#FFFFCC&quot;&gt;
+&lt;%
+<span class="boldcode"> // Based on user's permissions, perform search differently (business logic!)
+ Vector actors = pageInfo.getActors()
+ if (pageInfo.getUserInfo().hasPermission(&quot;ADMINISTRATOR&quot;)) {
+   actors = AdminUtils.getActors(pageInfo.getSearchCriteria());
+ } else {
+   actors = pageInfo.getActors();
+ }
+</span> for (Iterator i = actors.iterator(); i.hasNext()) {
+  Actor actor = (Actor)i.next();
+%&gt;
+    &lt;TR BGCOLOR=&quot;#FFCCCC&quot;&gt;
+      &lt;TH width=&quot;50%&quot; ALIGN=&quot;center&quot;&gt;
+       &lt;%=actor.getLastName()%&gt;
+      &lt;/TH&gt;
+      &lt;TH width=&quot;50%&quot; ALIGN=&quot;center&quot;&gt;
+       &lt;%=actor.getFirstName()%&gt;
+      &lt;/TH&gt;
+    &lt;/TR&gt;
+&lt;%
+ }
+%&gt;
+  &lt;/TABLE&gt;
+ &lt;/CENTER&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>JSP 的拥护者会很快告诉您 JSP <em>标记库</em> 可以帮助您避免这个问题。标记库允许将自定义标记（例如 <code>&lt;AUTHORS /&gt;</code>）添加到 JSP 页面，然后在运行时在标记库内将其解析为代码片段。</p>
+<p>使用自定义标记和相关的标记库允许把以上示例转换为清单 6 所示的内容。 </p>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">&lt;CENTER&gt;
+  &lt;TABLE width=&quot;50%&quot; CELLPADDING=&quot;3&quot; CELLSPACING=&quot;3&quot; border=&quot;1&quot;
+         BGCOLOR=&quot;#FFFFCC&quot;&gt;
+<span class="boldcode">   &lt;ACTORS /&gt;
+</span>  &lt;/TABLE&gt;
+ &lt;/CENTER&gt;</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>在运行时，将执行标记的代码并把正确的结果插入到页面中。但是这并没有解决问题。反对 JSP 技术的理由并不在于<em>能否</em> 分离内容和表示，而是在于是否<em>必须</em> 分离。只要 JSP 编码允许内联编码，那么就可以很方便地对内联代码进行最后的修改（特别是逼近最后期限时），而不是将代码转换为一个标记库。如果这不是真的，那么 Java 语言为何会马上比 C 和 C++ 更流行：Java 禁用了 C 中大量有问题的特性，例如指针相加。虽然您可以总是强调您不<em>需要</em> 在 C 中执行指针相加，或者优秀的程序员将插入代码 scriptlet，我们都知道实际会发生什么。Java 语言是一种更好的选择，因为它<em>严禁</em> 使用这些不好的习惯。但是 JSP 在这方面更类似于 C，允许实现一些非常糟糕的实践。 </p>
+<p>检验 JSP 技术是否成功达到其所述目标的另一种方法是看它能否在实践中实现这个目标；显然，如果认为 JSP 无法实际实现目标，这是不公平的。大多数模板引擎，比如 FreeMarker 和 WebMacro，都提供了相同的内联编码功能，通常附带了一种类似 Perl 的语言。然而，诸如 Enhydra 的 XMLC 这样的技术<em>不</em> 允许进行这种类型的编码。相反，这些技术将一个纯标记语言页面作为输入，然后生成 Java 方法。这实际上改变了编程流程；应用程序并不像 JSP 技术那样使用页面从应用程序调用逻辑，而是使用方法影响页面的值（Enhydra）。以 Enhydra 为例，使用 XMLC 将页面转换为一个 DOM 树，然后使用 DOM 的 HTML 绑定更新页面中的 &ldquo;字段&rdquo;（有关 Enhydra XMLC 的更多信息，请查阅 <a cmimpressionsent="1" href="#resources">参考资料</a>）。</p>
+<p>这里的重点是，JSP 技术实现目标的能力远远超过 XMLC，例如，仅仅是允许标记库这一项就比 XMLC 强很多。但是 Sun 规范总体趋向于始终维护向后兼容性，或至少在相当长的一段时间内维护向后兼容性。JSP 规范的当前版本为 1.1，它允许使用 scriptlets，因此在未来几年内 JSP 页面内都会支持这个特性。在深入探究 JSP 编码之前，请注意，在其强调的完全分离内容和表示的理念和实际实现之间存在一个很大的缺口，它充其量只是假装分离了用户界面和驱动应用程序的代码。 </p>
+<br />
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td><img alt="" width="100%" height="1" src="//www.ibm.com/i/v14/rules/blue_rule.gif" /><br />
+            <img border="0" alt="" width="8" height="6" src="//www.ibm.com/i/c.gif" /></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<p><a name="h9"><span class="atitle">单处理和多任务处理</span></a></p>
+<p>如前所述，理想状态下，设计师应该能够执行单独处理，只关注图形设计，而开发人员应该能够将注意力集中在编程上。因此，设计师可以在将页面转换为适合应用程序的格式后，再对其进行处理。对于 JSP 页面来说，将页面转换为适合应用程序的格式就是指向页面导入 JavaBeans、插入内联编码并添加自定义标记库。问题是有些设计师使用的是 HTML 编辑器，比如 HoTMetaL、Macromedia Dreamweaver 或 FrontPage，这些编辑器无法识别代码 scriptlets 或标记库，这意味着设计师实际上只收到了页面的一部分。想象一下，标记库或代码片段只生成了表的若干行，或是页面中其他格式化的细节，这是多么麻烦的事情。设计师使用了不兼容的 HTML 编辑器，无法看到这些元素的外观。在开发人员完成编码后，设计师不能轻松地对页面进行修改，这时，不仅没有清晰地划分角色，JSP 编码实际上将这两种角色合二为一：开发人员必须执行多个任务，必须担当开发人员、设计师以及其他角色。 </p>
+<p>如果您仍然对此表示怀疑，那么请下载 J2EE Reference Implementation 并将其中一个附带的 JSP 页面加载到一个 WYSIWYG HTML 编辑器，例如 Dreamweaver。页面立即被一些黄色区域填充，告诉您页面中包含的所有 &ldquo;错误&rdquo; 标记。当然，黄色内容来自于 JSP 标记和代码，而不是页面出现了什么真正的错误。 </p>
+<p>迄今为止，尚未出现支持 JSP 功能的 WYSIWYG 编辑器，我也没有听说过任何与此相关的项目。尽管模板引擎也具有相同的问题，但是很多基于 Java 的解决方案，例如我最喜欢的 Enhydra，都允许您将标记页面作为输入提供给表示技术。在这种情况下，设计师可以根据需要频繁地进行修改，并重新提供标记页面。运行表示技术的引擎或编译程序将标记页面转换为适当的格式，并且不需要修改任何代码（典型情况下）。最终获得了理想的结果：设计师和开发人员各司其职。 </p>
+<p>因此，要注意 JSP 技术作出的承诺和它实际交付的实现。在实际中，要在一个 JSP 技术驱动的环境下发挥功效，必须让开发人员处理大部分标记，或至少让设计师学习一些 JSP 编码。</p>
+<p><a name="m4"><span class="smalltitle">HTML 和 XML</span></a></p>
+<p>JSP 技术最严重的缺陷之一（也是经常被忽视的一个缺陷）就是它与 XML 不兼容。更确切地说，并且特别针对 HTML 领域，JSP 页面不要求具备 XHTML 兼容性。XHTML 是一个 World Wide Web Consortium (W3C) 规范，目前正在取代 HTML 4.0。XHTML 在实现格式良好的 XML 文档方面定义了 HTML 标记集。例如，<code>&lt;br&gt;</code> 标记必须被转换为 <code>&lt;br/&gt;</code> 才能确保 XML 兼容性（如果这个例子没有解释清楚的话，可以查阅 <a cmimpressionsent="1" href="#resources">参考资料</a> 列出的 XML 规范，以及关于 XHTML 的 developerWorks 文章）。同样的规则适用于图像标记，并且在 XHTML 1.1（即将到来）中，大部分字体属性和其他样式被移入到 CSS 样式表中。另外，大多数标准 HTML 文档可以轻松地转换为 XHTML 1.0，这意味着可以使用任何与 XML 兼容的解析器读取，例如 Apache Xerces，并且可以作为 XML 进行处理。 </p>
+<p>您会问 &ldquo;这有什么关系呢？&rdquo;。答案是关系重大。因为 XML 正在快速成为一个在应用程序之间和应用程序内部进行通信的全球标准。使用 XML 格式传递书籍，可以让任何使用基本 XML 数据绑定功能的应用程序轻松地使用您的应用程序的数据。想象一下，通过将您的数据迁移到 XML 格式，您就可以与信用卡公司进行网上交易！多数情况下，您的数据表示还需要与其他公司进行交互。最常见的情况是门户应用程序，它接受来自各种提供者的内容（例如，天气信息、股票报价和新闻），通常附带有提供者的标记。然而，由于 JSP 页面将代码和自定义标记库相混合，因此无法在这种环境下良好地工作。 </p>
+<p>JSP 页面很少具有格式良好的 XML 文档，并且不重视是否符合 XHTML，而 XHTML 这种标记语言并不允许使用各种 JSP 自定义标记库。然而，更重要的是，插入到 JSP 页面的代码片段并不属于任何标记形式，因此当另一个应用程序处理它们时，将产生解析器加载错误。 </p>
+<p>在您提出质疑之前，让我们先了解一下整个情况。如果应用程序允许 JSP 页面由初始客户机处理，结果将产生纯 HTML（或 WML、VoXML 等）。然而，大多数请求这个数据的应用程序使用了一定程度的缓存，因为网络往返开销很昂贵。在这些情况下，缓存过的页面将返回过时的数据。因此，您可能更愿意返回与 XML 兼容的结果，最好使用静态的形式。而 JSP 技术在这些情况下无能为力；JSP 页面必须<em>始终</em> 在运行时进行处理，以去掉 JSP 代码 scriptlets 和标记库。</p>
+<p>看看最关键的考验：其他一些表示技术能做到这一点吗？答案是可以。这个领域最权威的领导者是 Apache Cocoon 项目，它完全建立在 XML 和一个 XSLT 样式表应用程序（可以在运行时或静态状态下应用）的基础之上。由于 XML Server Pages（在 Cocoon 框架中称为 XSP）实际上是 XML 文档，因此始终与 XML 兼容。像 Tea 和 Enhydra XMLC 等允许输入纯标记语言页面的技术也可以做到这点，虽然它们的目的并不在此。在这些情况下，用户可以使用 XHTML 或标准的 HTML。此外，这比 JSP 技术要好，因为 JSP <em>不能</em> 静态地实现格式良好的 XML。</p>
+<br />
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tbody>
+        <tr>
+            <td><img alt="" width="100%" height="1" src="//www.ibm.com/i/v14/rules/blue_rule.gif" /><br />
+            <img border="0" alt="" width="8" height="6" src="//www.ibm.com/i/c.gif" /></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<p><a name="h10"><span class="atitle">结束语</span></a></p>
+<p>希望我的努力能够让您进一步了解 JSP 技术的优缺点，并且您可以将 JSP 技术看作是众多其他表示技术的替代品。现在，您可能对整个 J2EE 编程模型也产生了一点怀疑。如果您希望进一步研究平台选择，那么可以在 Apache Cocoon、Enhydra 和各种模板引擎中寻找 JSP 技术的替代选择。 </p>
+<p>最后，请记住，本文并不是建议您使用 JSP 或避免使用它，尽管表面上像是这样。我的目的是鼓励您对任何技术进行详细的分析，确保它是正确的选择。就像编程模型一样，有时它们是合适的，然而有些时候它们并不适合。多进行一些比较，找到最适合自己的技术并作出明智的决定，而不是仓促地决定。 </p>
+<p>祝您愉快，我们网上见！</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('JSP 技术 —— 是敌是友？（3）_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/855.html">应用实例 JSP+JavaScript打造级连…</a>&nbsp;&nbsp;下一条： <a href="/html/News/828.html">JSP 技术 —— 是敌是友？（2）</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1850.html" title="推荐使用的meta标签" >推荐使用的meta标签</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1775.html" title="手机网站用Bootstrap还是jQuery Mobile布局" >手机网站用Bootstrap还是jQue…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1744.html" title="如何让手机访问PC网站自动跳转到手机网站" >如何让手机访问PC网站自动跳转…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1725.html" title="提升HTML5的性能体验系列之一 避免切页白屏" >提升HTML5的性能体验系列之一…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1715.html" title="Android和IOS 字体该做多大合适？" >Android和IOS 字体该做多大合…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1714.html" title="px，dp，dip，dpi，sp区别" >px，dp，dip，dpi，sp区别</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1713.html" title="逻辑分辨率和物理分辨率区别" >逻辑分辨率和物理分辨率区别</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1712.html" title="关于智能手机屏幕的分辨率尺寸的问题" >关于智能手机屏幕的分辨率尺寸…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1711.html" title="WebApp开发尺寸单位的解决方案" >WebApp开发尺寸单位的解决方案…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/727.html" title="在Struts&nbsp;2中使用JSON&nbsp;Ajax支持">在Struts 2中使用JSON Ajax支持</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/726.html" title="解决JSP中使用request乱码问题">解决JSP中使用request乱码问题</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1020.html" title="JSP+JavaScript打造二级级联下拉菜单">JSP+JavaScript打造二级级联下拉菜…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/951.html" title="Tomcat中文手册(1)">Tomcat中文手册(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1084.html" title="JSP及Servlet中遇到的多线程同步">JSP及Servlet中遇到的多线程同步</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/680.html" title="详解：JSP和Servlet中的绝对路径和相对路径问题">详解：JSP和Servlet中的绝对路径和…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1100.html" title="JSP&nbsp;Struts之HTML标签库详解&nbsp;">JSP Struts之HTML标签库详解 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1085.html" title="自定义JSP标签">自定义JSP标签</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1150.html" title="JSP中的include指令">JSP中的include指令</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1051.html" title="errorPage设置方法--JSP">errorPage设置方法--JSP</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/722.html" title="JSP&nbsp;国际化－格式化货币和日期">JSP 国际化－格式化货币和日期</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1149.html" title="九个隐含对象使用总结JSP的">九个隐含对象使用总结JSP的</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/950.html" title="Tomcat中文手册(2)">Tomcat中文手册(2)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/678.html" title="tomcat6关于EL表达式的一个错误">tomcat6关于EL表达式的一个错误</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/906.html" title="jsp分页技术代码">jsp分页技术代码</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1850.html" title="推荐使用的meta标签" >推荐使用的meta标签</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1775.html" title="手机网站用Bootstrap还是jQuery&nbsp;Mobile布局" >手机网站用Bootstrap还是jQuery M…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1744.html" title="如何让手机访问PC网站自动跳转到手机网站" >如何让手机访问PC网站自动跳转到手…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1725.html" title="提升HTML5的性能体验系列之一&nbsp;避免切页白屏" >提升HTML5的性能体验系列之一 避免…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1715.html" title="Android和IOS&nbsp;字体该做多大合适？" >Android和IOS 字体该做多大合适？…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1714.html" title="px，dp，dip，dpi，sp区别" >px，dp，dip，dpi，sp区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1713.html" title="逻辑分辨率和物理分辨率区别" >逻辑分辨率和物理分辨率区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1712.html" title="关于智能手机屏幕的分辨率尺寸的问题" >关于智能手机屏幕的分辨率尺寸的问…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1711.html" title="WebApp开发尺寸单位的解决方案" >WebApp开发尺寸单位的解决方案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1679.html" title="&nbsp;float:left与display:inline-block的区别" > float:left与display:inline-blo…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1678.html" title="设计人员需要考虑&nbsp;移动端多分辨率的情况" >设计人员需要考虑 移动端多分辨率…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1676.html" title="关于html5的Web&nbsp;App与Native&nbsp;App的技术分析" >关于html5的Web App与Native App的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1587.html" title="如何用Chrome模拟手机浏览器（iOS/Android）" >如何用Chrome模拟手机浏览器（iOS…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1575.html" title="什么是Viewport" >什么是Viewport</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1574.html" title="html5开发移动应用是最好的选择" >html5开发移动应用是最好的选择</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "829" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

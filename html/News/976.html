@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>理解JavaScript闭包_Jquery_Ajax_Javascript_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="本文结合&nbsp;ECMA&nbsp;262&nbsp;规范详解了闭包的内部工作机制，让&nbsp;JavaScript&nbsp;编程人员对闭包的理解从“嵌套的函数”深入到“标识符解析、执行环境和作用域链”等等&nbsp;JavaScript&nbsp;对象背后的运行机制当中，真正领会到闭包的实质。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Jquery_Ajax_Javascript
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        理解JavaScript闭包
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/29 14:27:58
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        本文结合&nbsp;ECMA&nbsp;262&nbsp;规范详解了闭包的内部工作机制，让&nbsp;JavaScript&nbsp;编程人员对闭包的理解从“嵌套的函数”深入到“标识符解析、执行环境和作用域链”等等&nbsp;JavaScript&nbsp;对象背后的运行机制当中，真正领会到闭包的实质。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        本文结合 ECMA 262 规范详解了闭包的内部工作机制，让 JavaScript 编程人员对闭包的理解从&ldquo;嵌套的函数&rdquo;深入到&ldquo;标识符解析、执行环境和作用域链&rdquo;等等 JavaScript 对象背后的运行机制当中，真正领会到闭包的实质。
+<p><br />
+简介</p>
+<p>Closure<br />
+所谓&ldquo;闭包&rdquo;，指的是一个拥有许多变量和绑定了这些变量的环境的表达式（通常是一个函数），因而这些变量也是该表达式的一部分。 <br />
+闭包是 ECMAScript （JavaScript）最强大的特性之一，但用好闭包的前提是必须理解闭包。闭包的创建相对容易，人们甚至会在不经意间创建闭包，但这些无意创建的闭包却存在潜在的危害，尤其是在比较常见的浏览器环境下。如果想要扬长避短地使用闭包这一特性，则必须了解它们的工作机制。而闭包工作机制的实现很大程度上有赖于标识符（或者说对象属性）解析过程中作用域的角色。 <br />
+关于闭包，最简单的描述就是 ECMAScript 允许使用内部函数－－即函数定义和函数表达式位于另一个函数的函数体内。而且，这些内部函数可以访问它们所在的外部函数中声明的所有局部变量、参数和声明的其他内部函数。当其中一个这样的内部函数在包含它们的外部函数之外被调用时，就会形成闭包。也就是说，内部函数会在外部函数返回后被执行。而当这个内部函数执行时，它仍然必需访问其外部函数的局部变量、参数以及其他内部函数。这些局部变量、参数和函数声明（最初时）的值是外部函数返回时的值，但也会受到内部函数的影响。 <br />
+遗憾的是，要适当地理解闭包就必须理解闭包背后运行的机制，以及许多相关的技术细节。虽然本文的前半部分并没有涉及 ECMA 262 规范指定的某些算法，但仍然有许多无法回避或简化的内容。对于个别熟悉对象属性名解析的人来说，可以跳过相关的内容，但是除非你对闭包也非常熟悉，否则最好是不要跳下面几节。 </p>
+<p>对象属性名解析</p>
+<p>ECMAScript 认可两类对象：原生（Native）对象和宿主（Host）对象，其中宿主对象包含一个被称为内置对象的原生对象的子类（ECMA 262 3rd Ed Section 4.3）。原生对象属于语言，而宿主对象由环境提供，比如说可能是文档对象、DOM 等类似的对象。 </p>
+<p>原生对象具有松散和动态的命名属性（对于某些实现的内置对象子类别而言，动态性是受限的－－但这不是太大的问题）。对象的命名属性用于保存值，该值可以是指向另一个对象（Objects）的引用（在这个意义上说，函数也是对象），也可以是一些基本的数据类型，比如：String、Number、 Boolean、Null 或 Undefined。其中比较特殊的是 Undefined 类型，因为可以给对象的属性指定一个 Undefined 类型的值，而不会删除对象的相应属性。而且，该属性只是保存着 undefined 值。 </p>
+<p>下面简要介绍一下如何设置和读取对象的属性值，并最大程度地体现相应的内部细节。 </p>
+<p>值的赋予<br />
+对象的命名属性可以通过为该命名属性赋值来创建，或重新赋值。即，对于： </p>
+<p>var objectRef = new Object(); //创建一个普通的 JavaScript 对象。</p>
+<p>可以通过下面语句来创建名为 &ldquo;testNumber&rdquo; 的属性：</p>
+<p>objectRef.testNumber = 5;<br />
+/* &ndash; 或- */<br />
+objectRef[&quot;testNumber&quot;] = 5;</p>
+<p>在赋值之前，对象中没有&ldquo;testNumber&rdquo; 属性，但在赋值后，则创建一个属性。之后的任何赋值语句都不需要再创建这个属性，而只会重新设置它的值：</p>
+<p>objectRef.testNumber = 8;<br />
+/* &ndash; or:- */<br />
+objectRef[&quot;testNumber&quot;] = 8;</p>
+<p>稍后我们会介绍，Javascript 对象都有原型（prototypes）属性，而这些原型本身也是对象，因而也可以带有命名的属性。但是，原型对象命名属性的作用并不体现在赋值阶段。同样，在将值赋给其命名属性时，如果对象没有该属性则会创建该命名属性，否则会重设该属性的值。</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; </p>
+<p>值的读取</p>
+<p>当读取对象的属性值时，原型对象的作用便体现出来。如果对象的原型中包含属性访问器（property accessor）所使用的属性名，那么该属性的值就会返回： </p>
+<p>/* 为命名属性赋值。如果在赋值前对象没有相应的属性，那么赋值后就会得到一个：*/<br />
+objectRef.testNumber = 8;</p>
+<p>/* 从属性中读取值 */<br />
+var val = objectRef.testNumber;</p>
+<p>/* 现在， &ndash; val &ndash; 中保存着刚赋给对象命名属性的值 8*/</p>
+<p>而且，由于所有对象都有原型，而原型本身也是对象，所以原型也可能有原型，这样就构成了所谓的原型链。原型链终止于链中原型为 null 的对象。Object 构造函数的默认原型就有一个 null 原型，因此：</p>
+<p>我测试的实例如下： </p>
+<p>var youmila = new Object();//创建一个object对象</p>
+<p>console.debug(youmila.__proto__);//查看它的原型是object</p>
+<p>var root = youmila.__proto__;</p>
+<p>console.debug(root.__proto__);//查看object的原型 是null</p>
+<p>var rootParent = root.__proto__;</p>
+<p>console.debug(rootParent.__proto__);//null是原型链表的终端所以会报TypeError: rootParent is null错误<br />
+输出结果如下：</p>
+<p>&gt;&gt;&gt; var youmila = new Object(); console.debug(youmila&hellip;t.__proto__; console.debug(rootParent.__proto__);<br />
+Object<br />
+null<br />
+TypeError: rootParent is null</p>
+<p><br />
+var objectRef = new Object(); //创建一个普通的 JavaScript 对象。</p>
+<p>创建了一个原型为 Object.prototype 的对象，而该原型自身则拥有一个值为 null 的原型。也就是说， objectRef 的原型链中只包含一个对象－－ Object.prototype。但对于下面的代码而言：</p>
+<p>/* 创建 &ndash; MyObject1 &ndash; 类型对象的函数*/<br />
+function MyObject1(formalParameter){<br />
+/* 给创建的对象添加一个名为 &ndash; testNumber &ndash; 的属性<br />
+并将传递给构造函数的第一个参数指定为该属性的值：*/<br />
+this.testNumber = formalParameter;<br />
+}<br />
+/* 创建 &ndash; MyObject2 &ndash; 类型对象的函数*/<br />
+function MyObject2(formalParameter){<br />
+/* 给创建的对象添加一个名为 &ndash; testString &ndash; 的属性<br />
+并将传递给构造函数的第一个参数指定为该属性的值：*/<br />
+this.testString = formalParameter;<br />
+}</p>
+<p>/* 接下来的操作用 MyObject1 类的实例替换了所有与 MyObject2 类的实例相关联的原型。而且，为 MyObject1 构造函数传递了参数 &ndash; 8 &ndash; ，因而其 &ndash; testNumber &ndash; 属性被赋予该值：*/<br />
+MyObject2.prototype = new MyObject1( 8 );</p>
+<p>/* 最后，将一个字符串作为构造函数的第一个参数，创建一个 &ndash; MyObject2 &ndash; 的实例，并将指向该对象的引用赋给变量 &ndash; objectRef &ndash; ：*/<br />
+var objectRef = new MyObject2( &ldquo;String_Value&rdquo; );</p>
+<p>被变量 objectRef 所引用的 MyObject2 的实例拥有一个原型链。该链中的第一个对象是在创建后被指定给 MyObject2 构造函数的 prototype 属性的 MyObject1 的一个实例。MyObject1 的实例也有一个原型，即与 Object.prototype 所引用的对象对应的默认的 Object 对象的原型。最后， Object.prototype 有一个值为 null 的原型，因此这条原型链到此结束。</p>
+<p>当某个属性访问器尝试读取由 objectRef 所引用的对象的属性值时，整个原型链都会被搜索。在下面这种简单的情况下：</p>
+<p>var val = objectRef.testString;</p>
+<p>因为 objectRef 所引用的 MyObject2 的实例有一个名为&ldquo;testString&rdquo;的属性，因此被设置为&ldquo;String_Value&rdquo;的该属性的值被赋给了变量 val。但是：</p>
+<p>var val = objectRef.testNumber;</p>
+<p>则不能从 MyObject2 实例自身中读取到相应的命名属性值，因为该实例没有这个属性。然而，变量 val 的值仍然被设置为 8，而不是未定义－－这是因为在该实例中查找相应的命名属性失败后，解释程序会继续检查其原型对象。而该实例的原型对象是 MyObject1 的实例，这个实例有一个名为&ldquo;testNumber&rdquo;的属性并且值为 8，所以这个属性访问器最后会取得值 8。而且，虽然 MyObject1 和 MyObject2 都没有定义 toString 方法，但是当属性访问器通过 objectRef 读取 toString 属性的值时：</p>
+<p>var val = objectRef.toString;</p>
+<p>变量 val 也会被赋予一个函数的引用。这个函数就是在 Object.prototype 的 toString 属性中所保存的函数。之所以会返回这个函数，是因为发生了搜索 objectRef 原型链的过程。当在作为对象的 objectRef 中发现没有&ldquo;toString&rdquo;属性存在时，会搜索其原型对象，而当原型对象中不存在该属性时，则会继续搜索原型的原型。而原型链中最终的原型是 Object.prototype，这个对象确实有一个 toString 方法，因此该方法的引用被返回。</p>
+<p>最后：</p>
+<p>var val = objectRef.madeUpProperty;</p>
+<p>返回 undefined，因为在搜索原型链的过程中，直至 Object.prototype 的原型－－null，都没有找到任何对象有名为&ldquo;madeUpPeoperty&rdquo;的属性，因此最终返回 undefined。</p>
+<p>不论是在对象或对象的原型中，读取命名属性值的时候只返回首先找到的属性值。而当为对象的命名属性赋值时，如果对象自身不存在该属性则创建相应的属性。</p>
+<p>这意味着，如果执行像 objectRef.testNumber = 3 这样一条赋值语句，那么这个 MyObject2 的实例自身也会创建一个名为&ldquo;testNumber&rdquo;的属性，而之后任何读取该命名属性的尝试都将获得相同的新值。这时候，属性访问器不会再进一步搜索原型链，但 MyObject1 实例值为 8 的&ldquo;testNumber&rdquo;属性并没有被修改。给 objectRef 对象的赋值只是遮挡了其原型链中相应的属性。</p>
+<p>注意：ECMAScript 为 Object 类型定义了一个内部 [[prototype]] 属性。这个属性不能通过脚本直接访问，但在属性访问器解析过程中，则需要用到这个内部 [[prototype]] 属性所引用的对象链－－即原型链。可以通过一个公共的 prototype 属性，来对与内部的 [[prototype]] 属性对应的原型对象进行赋值或定义。这两者之间的关系在 ECMA 262（3rd edition）中有详细描述，但超出了本文要讨论的范畴。</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<p>执行环境</p>
+<p>执行环境是 ECMAScript 规范（ECMA 262 第 3 版）用于定义 ECMAScript 实现必要行为的一个抽象的概念。对如何实现执行环境，规范没有作规定。但由于执行环境中包含引用规范所定义结构的相关属性，因此执行环境中应该保有（甚至实现）带有属性的对象－－即使属性不是公共属性。 </p>
+<p>所有 JavaScript 代码都是在一个执行环境中被执行的。全局代码（作为内置的JS 文件执行的代码，或者 HTML 页面加载的代码）是在我称之为&ldquo;全局执行环境&rdquo;的执行环境中执行的，而对函数的每次调用（<br />
+有可能是作为构造函数）同样有关联的执行环境。通过 eval 函数执行的代码也有截然不同的执行环境，但因为 JavaScript 程序员在正常情况下一般不会使用 eval，所以这里不作讨论。有关执行环境的详细说明请参阅 ECMA 262（3rd edition）第 10.2 节。</p>
+<p>当调用一个 JavaScript 函数时，该函数就会进入相应的执行环境。如果又调用了另外一个函数（或者递归地调用同一个函数），则又会创建一个新的执行环境，并且在函数调用期间执行过程都处于该环境中。当调用的函数返回后，执行过程会返回原始执行环境。因而，运行中的 JavaScript 代码就构成了一个执行环境栈。</p>
+<p>在创建执行环境的过程中，会按照定义的先后顺序完成一系列操作。首先，在一个函数的执行环境中，会创建一个&ldquo;活动&rdquo;对象。活动对象是规范中规定的另外一种机制。之所以称之为对象，是因为它拥有可访问的命名属性，但是它又不像正常对象那样具有原型（至少没有预定义的原型），而且不能通过 JavaScript 代码直接引用活动对象。</p>
+<p>为函数调用创建执行环境的下一步是创建一个 arguments 对象，这是一个类似数组的对象，它以整数索引的数组成员一一对应地保存着调用函数时所传递的参数。这个对象也有 length 和 callee 属性（这两个属性与我们讨论的内容无关，详见规范）。然后，会为活动对象创建一个名为&ldquo;arguments&rdquo;的属性，该属性引用前面创建的 arguments对象。</p>
+<p>接着，为执行环境分配作用域。作用域由对象列表（链）组成。每个函数对象都有一个内部的 [[scope]] 属性（该属性我们稍后会详细介绍），这个属性也由对象列表（链）组成。指定给一个函数调用执行环境的作用域，由该函数对象的 [[scope]] 属性所引用的对象列表（链）组成，同时，活动对象被添加到该对象列表的顶部（链的前端）。</p>
+<p>之后会发生由 ECMA 262 中所谓&ldquo;可变&rdquo;对象完成的&ldquo;变量实例化&rdquo;的过程。只不过此时使用活动对象作为可变对象（这里很重要，请注意：它们是同一个对象）。此时会将函数的形式参数创建为可变对象的命名属性，如果调用函数时传递的参数与形式参数一致，则将相应参数的值赋给这些命名属性（否则，会给命名属性赋 undefined 值）。对于定义的内部函数，会以其声明时所用名称为可变对象创建同名属性，而相应的内部函数则被创建为函数对象并指定给该属性。变量实例化的最后一步是将在函数内部声明的所有局部变量创建为可变对象的命名属性。</p>
+<p>根据声明的局部变量创建的可变对象的属性在变量实例化过程中会被赋予 undefined 值。在执行函数体内的代码、并计算相应的赋值表达式之前不会对局部变量执行真正的实例化。</p>
+<p>事实上，拥有 arguments 属性的活动对象和拥有与函数局部变量对应的命名属性的可变对象是同一个对象。因此，可以将标识符 arguments 作为函数的局部变量来看待。</p>
+<p>最后，要为使用 this 关键字而赋值。如果所赋的值引用一个对象，那么前缀以 this 关键字的属性访问器就是引用该对象的属性。如果所赋（内部）值是 null，那么 this 关键字则引用全局对象。</p>
+<p>创建全局执行环境的过程会稍有不同，因为它没有参数，所以不需要通过定义的活动对象来引用这些参数。但全局执行环境也需要一个作用域，而它的作用域链实际上只由一个对象－－全局对象－－组成。全局执行环境也会有变量实例化的过程，它的内部函数就是涉及大部分 JavaScript 代码的、常规的顶级函数声明。而且，在变量实例化过程中全局对象就是可变对象，这就是为什么全局性声明的函数是全局对象属性的原因。全局性声明的变量同样如此。</p>
+<p>全局执行环境也会使用 this 对象来引用全局对象。 </p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<p>作用域链与 [[scope]]</p>
+<p>调用函数时创建的执行环境会包含一个作用域链，这个作用域链是通过将该执行环境的活动（可变）对象添加到保存于所调用函数对象的 [[scope]] 属性中的作用域链前端而构成的。所以，理解函数对象内部的 [[scope]] 属性的定义过程至关重要。 </p>
+<p>在 ECMAScript 中，函数也是对象。函数对象在变量实例化过程中会根据函数声明来创建，或者是在计算函数表达式或调用 Function 构造函数时创建。</p>
+<p>通过调用 Function 构造函数创建的函数对象，其内部的 [[scope]] 属性引用的作用域链中始终只包含全局对象。</p>
+<p>通过函数声明或函数表达式创建的函数对象，其内部的 [[scope]] 属性引用的则是创建它们的执行环境的作用域链。</p>
+<p>在最简单的情况下，比如声明如下全局函数：-</p>
+<p>function exampleFunction(formalParameter){<br />
+&hellip; // 函数体内的代码<br />
+}</p>
+<p>- 当为创建全局执行环境而进行变量实例化时，会根据上面的函数声明创建相应的函数对象。因为全局执行环境的作用域链中只包含全局对象，所以它就给自己创建的、并以名为&ldquo;exampleFunction&rdquo;的属性引用的这个函数对象的内部 [[scope]] 属性，赋予了只包含全局对象的作用域链。</p>
+<p>当在全局环境中计算函数表达式时，也会发生类似的指定作用域链的过程：-</p>
+<p>var exampleFuncRef = function(){<br />
+&hellip; // 函数体代码<br />
+}</p>
+<p>在这种情况下，不同的是在全局执行环境的变量实例化过程中，会先为全局对象创建一个命名属性。而在计算赋值语句之前，暂时不会创建函数对象，也不会将该函数对象的引用指定给全局对象的命名属性。但是，最终还是会在全局执行环境中创建这个函数对象（当计算函数表达式时。译者注），而为这个创建的函数对象的 [[scope]] 属性指定的作用域链中仍然只包含全局对象。内部的函数声明或表达式会导致在包含它们的外部函数的执行环境中创建相应的函数对象，因此这些函数对象的作用域链会稍微复杂一些。在下面的代码中，先定义了一个带有内部函数声明的外部函数，然后调用外部函数：</p>
+<p>/* 创建全局变量 &ndash; y &ndash; 它引用一个对象：- */ var y = {x:5}; // 带有一个属性 &ndash; x &ndash; 的对象直接量 function exampleFuncWith(){ var z; /* 将全局对象 &ndash; y &ndash; 引用的对象添加到作用域链的前端：- */ with(y){ /* 对函数表达式求值，以创建函数对象并将该函数对象的引用指定给局部变量 &ndash; z &ndash; :- */ z = function(){ &hellip; // 内部函数表达式中的代码; } } &hellip; } /* 执行 &ndash; exampleFuncWith &ndash; 函数:- */</p>
+<p>exampleFuncWith();在调用 exampleFuncWith 函数创建的执行环境中包含一个由其活动对象后跟全局对象构成的作用域链。而在执行 with 语句时，又会把全局变量 y 引用的对象添加到这个作用域链的前端。在对其中的函数表达式求值的过程中，所创建函数对象的 [[scope]] 属性与创建它的执行环境的作用域保持一致－－即，该属性会引用一个由对象 y 后跟调用外部函数时所创建执行环境的活动对象，后跟全局对象的作用域链。</p>
+<p>当与 with 语句相关的语句块执行结束时，执行环境的作用域得以恢复（y 会被移除），但是已经创建的函数对象（z。译者注）的 [[scope]] 属性所引用的作用域链中位于最前面的仍然是对象 y。</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;</p>
+<p>例 3：包装相关的功能</p>
+<p>闭包可以用于创建额外的作用域，通过该作用域可以将相关的和具有依赖性的代码组织起来，以便将意外交互的风险降到最低。假设有一个用于构建字符串的函数，为了避免重复性的连接操作（和创建众多的中间字符串），我们的愿望是使用一个数组按顺序来存储字符串的各个部分，然后再使用 Array.prototype.join 方法（以空字符串作为其参数）输出结果。这个数组将作为输出的缓冲器，但是将数组作为函数的局部变量又会导致在每次调用函数时都重新创建一个新数组，这在每次调用函数时只重新指定数组中的可变内容的情况下并不是必要的。 </p>
+<p>一种解决方案是将这个数组声明为全局变量，这样就可以重用这个数组，而不必每次都建立新数组。但这个方案的结果是，除了引用函数的全局变量会使用这个缓冲数组外，还会多出一个全局属性引用数组自身。如此不仅使代码变得不容易管理，而且，如果要在其他地方使用这个数组时，开发者必须要再次定义函数和数组。这样一来，也使得代码不容易与其他代码整合，因为此时不仅要保证所使用的函数名在全局命名空间中是唯一的，而且还要保证函数所依赖的数组在全局命名空间中也必须是唯一的。</p>
+<p>而通过闭包可以使作为缓冲器的数组与依赖它的函数关联起来（优雅地打包），同时也能够维持在全局命名空间外指定的缓冲数组的属性名，免除了名称冲突和意外交互的危险。</p>
+<p>其中的关键技巧在于通过执行一个单行（in-line）函数表达式创建一个额外的执行环境，而将该函数表达式返回的内部函数作为在外部代码中使用的函数。此时，缓冲数组被定义为函数表达式的一个局部变量。这个函数表达式只需执行一次，而数组也只需创建一次，就可以供依赖它的函数重复使用。</p>
+<p>下面的代码定义了一个函数，这个函数用于返回一个 HTML 字符串，其中大部分内容都是常量，但这些常量字符序列中需要穿插一些可变的信息，而可变的信息由调用函数时传递的参数提供。</p>
+<p>通过执行单行函数表达式返回一个内部函数，并将返回的函数赋给一个全局变量，因此这个函数也可以称为全局函数。而缓冲数组被定义为外部函数表达式的一个局部变量。它不会暴露在全局命名空间中，而且无论什么时候调用依赖它的函数都不需要重新创建这个数组。</p>
+<p>/* 声明一个全局变量 &ndash; getImgInPositionedDivHtml &ndash; 并将一次调用一个外部函数表达式返回的内部函数赋给它。 这个内部函数会返回一个用于表示绝对定位的 DIV 元素 包围着一个 IMG 元素 的 HTML 字符串，这样一来， 所有可变的属性值都由调用该函数时的参数提供： */ var getImgInPositionedDivHtml = (function(){ /* 外部函数表达式的局部变量 &ndash; buffAr &ndash; 保存着缓冲数组。 这个数组只会被创建一次，生成的数组实例对内部函数而言永远是可用的 因此，可供每次调用这个内部函数时使用。 其中的空字符串用作数据占位符，相应的数据 将由内部函数插入到这个数组中： */ var buffAr = [ ' </p>
+<p>如果一个函数依赖于另一（或多）个其他函数，而其他函数又没有必要被其他代码直接调用，那么可以运用相同的技术来包装这些函数，而通过一个公开暴露的函数来调用它们。这样，就将一个复杂的多函数处理过程封装成了一个具有移植性的代码单元。 <br />
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br />
+其他例子</p>
+<p>有关闭包的一个可能是最广为人知的应用是 Douglas Crockford&rsquo;s technique for the emulation of private instance variables in ECMAScript objects。这种应用方式可以扩展到各种嵌套包含的可访问性（或可见性）的作用域结构，包括 the emulation of private static members for ECMAScript objects。 <br />
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-<br />
+闭包可能的用途是无限的，可能理解其工作原理才是把握如何使用它的最好指南。</p>
+<p>意外的闭包</p>
+<p>在创建可访问的内部函数的函数体之外解析该内部函数就会构成闭包。这表明闭包很容易创建，但这样一来可能会导致一种结果，即没有认识到闭包是一种语言特性的 JavaScript 作者，会按照内部函数能完成多种任务的想法来使用内部函数。但他们对使用内部函数的结果并不明了，而且根本意识不到创建了闭包，或者那样做意味着什么。 </p>
+<p>正如下一节谈到 IE 中内存泄漏问题时所提及的，意外创建的闭包可能导致严重的负面效应，而且也会影响到代码的性能。问题不在于闭包本身，如果能够真正做到谨慎地使用它们，反而会有助于创建高效的代码。换句话说，使用内部函数会影响到效率。</p>
+<p>使用内部函数最常见的一种情况就是将其作为 DOM 元素的事件处理器。例如，下面的代码用于向一个链接元素添加 onclick 事件处理器：</p>
+<p>/* 定义一个全局变量，通过下面的函数将它的值 作为查询字符串的一部分添加到链接的 &ndash; href &ndash; 中： */ var quantaty = 5; /* 当给这个函数传递一个链接（作为函数中的参数 &ndash; linkRef -）时， 会将一个 onclick 事件处理器指定给该链接，该事件处理器 将全局变量 &ndash; quantaty &ndash; 的值作为字符串添加到链接的 &ndash; href &ndash; 属性中，然后返回 true 使该链接在单击后定位到由 &ndash; href &ndash; 属性包含的查询字符串指定的资源： */ function addGlobalQueryOnClick(linkRef){ /* 如果可以将参数 &ndash; linkRef &ndash; 通过类型转换为 ture （说明它引用了一个对象）： */ if(linkRef){ /* 对一个函数表达式求值，并将对该函数对象的引用 指定给这个链接元素的 onclick 事件处理器： */ linkRef.onclick = function(){ /* 这个内部函数表达式将查询字符串 添加到附加事件处理器的元素的 &ndash; href &ndash; 属性中： */ this.href += (&rsquo;?quantaty=&rsquo;+escape(quantaty)); return true; }; } }</p>
+<p>无论什么时候调用 addGlobalQueryOnClick 函数，都会创建一个新的内部函数（通过赋值构成了闭包）。从效率的角度上看，如果只是调用一两次 addGlobalQueryOnClick 函数并没有什么大的妨碍，但如果频繁使用该函数，就会导致创建许多截然不同的函数对象（每对内部函数表达式求一次值，就会产生一个新的函数对象）。</p>
+<p>上面例子中的代码没有关注内部函数在创建它的函数外部可以访问（或者说构成了闭包）这一事实。实际上，同样的效果可以通过另一种方式来完成。即单独地定义一个用于事件处理器的函数，然后将该函数的引用指定给元素的事件处理属性。这样，只需创建一个函数对象，而所有使用相同事件处理器的元素都可以共享对这个函数的引用：</p>
+<p>/* 定义一个全局变量，通过下面的函数将它的值 作为查询字符串的一部分添加到链接的 &ndash; href &ndash; 中： */ var quantaty = 5; /* 当把一个链接（作为函数中的参数 &ndash; linkRef -）传递给这个函数时， 会给这个链接添加一个 onclick 事件处理器，该事件处理器会 将全局变量 &ndash; quantaty &ndash; 的值作为查询字符串的一部分添加到 链接的 &ndash; href &ndash; 中，然后返回 true，以便单击链接时定位到由 作为 &ndash; href &ndash; 属性值的查询字符串所指定的资源： */ function addGlobalQueryOnClick(linkRef){ /* 如果 &ndash; linkRef &ndash; 参数能够通过类型转换为 true （说明它引用了一个对象）： */ if(linkRef){ /* 将一个对全局函数的引用指定给这个链接 的事件处理属性，使函数成为链接元素的事件处理器： */ linkRef.onclick = forAddQueryOnClick; } } /* 声明一个全局函数，作为链接元素的事件处理器， 这个函数将一个全局变量的值作为要添加事件处理器的 链接元素的 &ndash; href &ndash; 值的一部分： */ function forAddQueryOnClick(){ this.href += (&rsquo;?quantaty=&rsquo;+escape(quantaty)); return true; }</p>
+<p>在上面例子的第一个版本中，内部函数并没有作为闭包发挥应有的作用。在那种情况下，反而是不使用闭包更有效率，因为不用重复创建许多本质上相同的函数对象。</p>
+<p>类似地考量同样适用于对象的构造函数。与下面代码中的构造函数框架类似的代码并不罕见：</p>
+<p>function ExampleConst(param){ /* 通过对函数表达式求值创建对象的方法， 并将求值所得的函数对象的引用赋给要创建对象的属性： */ this.method1 = function(){ &hellip; // 方法体。 }; this.method2 = function(){ &hellip; // 方法体。 }; this.method3 = function(){ &hellip; // 方法体。 }; /* 把构造函数的参数赋给对象的一个属性：*/ this.publicProp = param; }</p>
+<p>每当通过 new ExampleConst(n) 使用这个构造函数创建一个对象时，都会创建一组新的、作为对象方法的函数对象。因此，创建的对象实例越多，相应的函数对象也就越多。</p>
+<p>Douglas Crockford 提出的模仿 JavaScript 对象私有成员的技术，就利用了将对内部函数的引用指定给在构造函数中构造对象的公共属性而形成的闭包。如果对象的方法没有利用在构造函数中形成的闭包，那么在实例化每个对象时创建的多个函数对象，会使实例化过程变慢，而且将有更多的资源被占用，以满足创建更多函数对象的需要。</p>
+<p>这那种情况下，只创建一次函数对象，并把它们指定给构造函数 prototype 的相应属性显然更有效率。这样一来，它们就能被构造函数创建的所有对象共享了：</p>
+<p>function ExampleConst(param){ /* 将构造函数的参数赋给对象的一个属性：*/ this.publicProp = param; } /* 通过对函数表达式求值，并将结果函数对象的引用 指定给构造函数原型的相应属性来创建对象的方法： */ ExampleConst.prototype.method1 = function(){ &hellip; // 方法体。 }; ExampleConst.prototype.method2 = function(){ &hellip; // 方法体。 }; ExampleConst.prototype.method3 = function(){ &hellip; // 方法体。 };</p>
+<p>Internet Explorer 的内存泄漏问题</p>
+<p>Internet Explorer Web 浏览器（在 IE 4 到 IE 6 中核实）的垃圾收集系统中存在一个问题，即如果 ECMAScript 和某些宿主对象构成了 &ldquo;循环引用&rdquo;，那么这些对象将不会被当作垃圾收集。此时所谓的宿主对象指的是任何 DOM 节点（包括 document 对象及其后代元素）和 ActiveX 对象。如果在一个循环引用中包含了一或多个这样的对象，那么这些对象直到浏览器关闭都不会被释放，而它们所占用的内存同样在浏览器关闭之前都不会交回系统重用。 </p>
+<p>当两个或多个对象以首尾相连的方式相互引用时，就构成了循环引用。比如对象 1 的一个属性引用了对象 2 ，对象 2 的一个属性引用了对象 3，而对象 3 的一个属性又引用了对象 1。对于纯粹的 ECMAScript 对象而言，只要没有其他对象引用对象 1、2、3，也就是说它们只是相互之间的引用，那么仍然会被垃圾收集系统识别并处理。但是，在 Internet Explorer 中，如果循环引用中的任何对象是 DOM 节点或者 ActiveX 对象，垃圾收集系统则不会发现它们之间的循环关系与系统中的其他对象是隔离的并释放它们。最终它们将被保留在内存中，直到浏览器关闭。</p>
+<p>闭包非常容易构成循环引用。如果一个构成闭包的函数对象被指定给，比如一个 DOM 节点的事件处理器，而对该节点的引用又被指定给函数对象作用域中的一个活动（或可变）对象，那么就存在一个循环引用。DOM_Node.onevent -&gt;function_object.[[scope]] -&gt;scope_chain -&gt;Activation_object.nodeRef -&gt;DOM_Node。形成这样一个循环引用是轻而易举的，而且稍微浏览一下包含类似循环引用代码的网站（通常会出现在网站的每个页面中），就会消耗大量（甚至全部）系统内存。</p>
+<p>多加注意可以避免形成循环引用，而在无法避免时，也可以使用补偿的方法，比如使用 IE 的 onunload 事件来来清空（null）事件处理函数的引用。时刻意识到这个问题并理解闭包的工作机制是在 IE 中避免此类问题的关键。</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('理解JavaScript闭包_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1055.html">JQuery AJAX调用WCF服务 </a>&nbsp;&nbsp;下一条： <a href="/html/News/975.html">Javascript函数类型判断完美解决方案</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return false preventDefault 和 stopPropagation详解" >return false preventDefault…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuer…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/773.html" title="ajax&nbsp;清除缓存的两种方法">ajax 清除缓存的两种方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/644.html" title="js日历控件点击日期显示在文本框中">js日历控件点击日期显示在文本框中…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1316.html" title="HTML、JS与FLASH&nbsp;之间的静态传值方法">HTML、JS与FLASH 之间的静态传值方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/489.html" title="主题：ajax请求JSP，为什么GET就是乱码，POST就没问题">主题：ajax请求JSP，为什么GET就是…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/800.html" title="javascript&nbsp;改变iframe(框架)的方法">javascript 改变iframe(框架)的方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/616.html" title="javascript取鼠标当前坐标">javascript取鼠标当前坐标</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1241.html" title="推荐一款网页软键盘&nbsp;很漂亮的哦">推荐一款网页软键盘 很漂亮的哦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/409.html" title="ajax&nbsp;session过期问题的几个解决方案">ajax session过期问题的几个解决方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1106.html" title="js文字间隔停顿向上滚动效果">js文字间隔停顿向上滚动效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/413.html" title="ajax&nbsp;服务器文本框自动填值">ajax 服务器文本框自动填值</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/546.html" title="js技术技巧收藏（200例）---1">js技术技巧收藏（200例）---1</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/412.html" title="ajax&nbsp;数据库中随机读取5条数据动态在页面中刷新">ajax 数据库中随机读取5条数据动态…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/488.html" title="主题：这是否是个捷径？Ajax利用Struts转发到的jsp作为数据传回">主题：这是否是个捷径？Ajax利用S…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/406.html" title="揭开AJAX神秘的面纱(AJAX个人学习笔记)">揭开AJAX神秘的面纱(AJAX个人学习…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/888.html" title="常用的JS后台导航菜单">常用的JS后台导航菜单</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各样的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return&nbsp;false&nbsp;preventDefault&nbsp;和&nbsp;stopPropagation详解" >return false preventDefault 和 …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuery的r…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1784.html" title="ES6中使用箭头定义函数" >ES6中使用箭头定义函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1783.html" title="正则表达式学习笔记" >正则表达式学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1782.html" title="javascript数组详解" >javascript数组详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1772.html" title="JavaScript是世界上最流行的脚本语言" >JavaScript是世界上最流行的脚本语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1709.html" title="onSelectStart事件详解" >onSelectStart事件详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1706.html" title="js中的classList详解" >js中的classList详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "976" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

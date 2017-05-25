@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>SQL&nbsp;Server&nbsp;2008新功能_sql2016_sql2012_sql2015_sql2008_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="SQL&nbsp;Server&nbsp;2008出现在微软数据平台愿景上是因为它使得公司可以运行他们最关键任务的应用程序，同时降低了管理数据基础设施和发送观察和信息给所有用户的成本。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; sql2016_sql2012_sql2015_sql2008
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        SQL Server 2008新功能
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/11 19:51:55
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        SQL&nbsp;Server&nbsp;2008出现在微软数据平台愿景上是因为它使得公司可以运行他们最关键任务的应用程序，同时降低了管理数据基础设施和发送观察和信息给所有用户的成本。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        SQL Server 2008出现在微软数据平台愿景上是因为它使得公司可以运行他们最关键任务的应用程序，同时降低了管理数据基础设施和发送观察和信息给所有用户的成本。<br />
+<div class="spctrl"></div>
+　　这个平台有以下特点：<br />
+<div class="spctrl"></div>
+　　&middot; 可信任的&mdash;&mdash;使得公司可以以很高的安全性、可靠性和可扩展性来运行他们最关键任务的应用程序。<br />
+<div class="spctrl"></div>
+　　&middot; 高效的&mdash;&mdash;使得公司可以降低开发和管理他们的数据基础设施的时间和成本。<br />
+<div class="spctrl"></div>
+　　&middot; 智能的&mdash;&mdash;提供了一个全面的平台，可以在你的用户需要的时候给他发送观察和信息。<br />
+<div class="spctrl"></div>
+　　<em><strong>　一、可信任的</strong></em><br />
+<div class="spctrl"></div>
+　　在今天数据驱动的世界中，公司需要继续访问他们的数据。SQL Server 2008为关键任务应用程序提供了强大的安全特性、可靠性和可扩展性。<br />
+<div class="spctrl"></div>
+　　<strong>　（一）保护你的信息</strong><br />
+<div class="spctrl"></div>
+　　在过去的SQL Server 2005的基础之上，SQL Server 2008做了以下方面的增强来扩展它的安全性：<br />
+<div class="spctrl"></div>
+　　<em><br />
+<div class="spctrl"></div>
+　　简单的数据加密</em><br />
+<div class="spctrl"></div>
+　　SQL Server 2008可以对整个数据库、数据文件和日志文件进行加密，而不需要改动应用程序。进行加密使公司可以满足遵守规范和及其关注数据隐私的要求。简单的数据加密的好处包括使用任何范围或模糊查询搜索加密的数据、加强数据安全性以防止未授权的用户访问、还有数据加密。这些可以在不改变已有的应用程序的情况下进行。<br />
+<div class="spctrl"></div>
+　　<em>外键管理</em><br />
+<div class="spctrl"></div>
+　　SQL Server 2008为加密和密钥管理提供了一个全面的解决方案。为了满足不断发展的对数据中心的信息的更强安全性的需求，公司投资给供应商来管理公司内的安全密钥。SQL Server 2008通过支持第三方密钥管理和硬件安全模块(HSM)产品为这个需求提供了很好的支持。<br />
+<div class="spctrl"></div>
+　　<em>　增强了审查</em><br />
+<div class="spctrl"></div>
+　　SQL Server 2008使你可以审查你的数据的操作，从而提高了遵从性和安全性。审查不只包括对数据修改的所有信息，还包括关于什么时候对数据进行读取的信息。SQL Server 2008具有像服务器中加强的审查的配置和管理这样的功能，这使得公司可以满足各种规范需求。SQL Server 2008还可以定义每一个数据库的审查规范，所以审查配置可以为每一个数据库作单独的制定。为指定对象作审查配置使审查的执行性能更好，配置的灵活性也更高。<br />
+<div class="spctrl"></div>
+　　<em><strong>　（二）确保业务可持续性</strong></em><br />
+<div class="spctrl"></div>
+　　有了SQL Server 2008，微软继续使公司具有提供简化了管理并具高可靠性的应用的能力。<br />
+<div class="spctrl"></div>
+　　<strong>　改进了数据库镜像</strong><br />
+<div class="spctrl"></div>
+　　SQL Server 2008基于SQL Server 2005，并提供了更可靠的加强了数据库镜像的平台。新的特性包括：<br />
+<div class="spctrl"></div>
+　　&middot; 页面自动修复。SQL Server 2008通过请求获得一个从镜像合作机器上得到的出错页面的重新拷贝，使主要的和镜像的计算机可以透明的修复数据页面上的823和824错误。<br />
+<div class="spctrl"></div>
+　　&middot; 提高了性能。SQL Server 2008压缩了输出的日志流，以便使数据库镜像所要求的网络带宽达到最小。<br />
+<div class="spctrl"></div>
+　　&middot; 加强了可支持性<br />
+<div class="spctrl"></div>
+　　(1) SQL Server 2008包括了新增加的执行计数器，它使得可以更细粒度的对数据库管理系统(Database Management Syste，DBMS)日志记录的不同阶段所耗费的时间进行计时。<br />
+<div class="spctrl"></div>
+　　(2) SQL Server 2008包括动态管理视图(Dynamic Management View)和对现有的视图的扩展，以此来显示镜像会话的更多信息。<br />
+<div class="spctrl"></div>
+　　<strong>　热添加CPU</strong><br />
+<div class="spctrl"></div>
+　　为了在线添加内存资源而扩展SQL Server中的已有的支持，热添加CPU使数据库可以按需扩展。事实上，CPU资源可以添加到SQL Server 2008所在的硬件平台上而不需要停止应用程序。<br />
+<div class="spctrl"></div>
+　　<em><strong><br />
+<div class="spctrl"></div>
+　　（三）最佳的和可预测的系统性能<br />
+<div class="spctrl"></div>
+　　</strong></em><br />
+<div class="spctrl"></div>
+　　公司在面对不断增长的压力，要提供可预计的响应和对随着用户数目的增长而不断增长的数据量进行管理。SQL Server 2008提供了一个广泛的功能集合，使你的数据平台上的所有工作负载的执行都是可扩展的和可预测的。<br />
+<div class="spctrl"></div>
+　　<strong>　性能数据的采集</strong><br />
+<div class="spctrl"></div>
+　　性能调整和排除故障对于管理员来说是耗费时间的工作。为了给管理员提供全面的执行洞察力，SQL Server 2008推出了范围更大的数据采集，一个用于存储性能数据的新的集中的数据库，以及新的报表和监控工具。<br />
+<div class="spctrl"></div>
+　　<strong><br />
+<div class="spctrl"></div>
+　　扩展事件</strong><br />
+<div class="spctrl"></div>
+　　SQL Server扩展事件是一个用于服务器系统的一般的事件处理系统。扩展事件基础设施是一个轻量级的机制，它支持对服务器运行过程中产生的事件的捕获、过滤和响应。这个对事件进行响应的能力使用户可以通过增加前后文关联数据，例如Transact SQL对所有事件调用堆栈或查询计划句柄，以此来快速的诊断运行时问题。事件捕获可以按几种不同的类型输出，包括Windows事件跟踪(Event Tracing for Windows，ETW)。当扩展事件输出到ETW时，操作系统和应用程序就可以关联了，这使得可以作更全面的系统跟踪。<br />
+<div class="spctrl"></div>
+　　<strong><br />
+<div class="spctrl"></div>
+　　备份压缩</strong><br />
+<div class="spctrl"></div>
+　　保持在线进行基于磁盘的备份是很昂贵而且很耗时的。有了SQL Server 2008备份压缩，需要的磁盘I/O 减少了，在线备份所需要的存储空间也减少了，而且备份的速度明显加快了。<br />
+<div class="spctrl"></div>
+　　<strong><br />
+<div class="spctrl"></div>
+　　数据压缩</strong><br />
+<div class="spctrl"></div>
+　　改进的数据压缩使数据可以更有效的存储，并且降低了数据的存储要求。数据压缩还为大型的限制输入/输出的工作负载例如数据仓库提供了显著的性能改进。<br />
+<div class="spctrl"></div>
+　　<strong>　资源监控器</strong><br />
+<div class="spctrl"></div>
+　　SQL Server 2008随着资源监控器的推出使公司可以提供持续的和可预测的响应给终端用户。资源监控器使数据库管理员可以为不同的工作负载定义资源限制和优先权，这使得并发工作负载可以为终端用户提供稳定的性能。<br />
+<div class="spctrl"></div>
+　　<strong>　稳定的计划</strong><br />
+<div class="spctrl"></div>
+　　SQL Server 2008通过提供了一个新的制定查询计划的功能，从而提供了更好的查询执行稳定性和可预测性，使公司可以在硬件服务器更换、服务器升级和产品部署中提供稳定的查询计划。<br />
+<div class="spctrl"></div>
+　　<em><strong>　二、高效的</strong></em><br />
+<div class="spctrl"></div>
+　　SQL Server 2008降低了管理系统、.NET架构和Visual Studio&amp;reg; Team System的时间和成本，使得开发人员可以开发强大的下一代数据库应用程序。<br />
+<div class="spctrl"></div>
+　　（一）基于政策的管理<br />
+<div class="spctrl"></div>
+　　作为微软正在努力降低公司的总成本所作的工作的一部分，SQL Server 2008推出了陈述式管理架构(DMF)，它是一个用于SQL Server数据库引擎的新的基于策略的管理框架。陈述式管理提供了以下优点：<br />
+<div class="spctrl"></div>
+　　&middot; 遵从系统配置的政策<br />
+<div class="spctrl"></div>
+　　&middot; 监控和防止通过创建不符合配置的政策来改变系统<br />
+<div class="spctrl"></div>
+　　&middot; 通过简化管理工作来减少公司的总成本<br />
+<div class="spctrl"></div>
+　　&middot; 使用SQL Server 管理套件查找遵从性问题<br />
+<div class="spctrl"></div>
+　　DMF是一个基于政策的用于管理一个或多个SQL Server 2008实例的系统。要使用DMF，SQL Server政策管理员使用SQL Server 管理套件创建政策，这些政策管理服务器上的实体，例如SQL Server的实例、数据库、和其它SQL Server对象。DMF由三个组件组成：政策管理、创建政策的政策管理员，和显式管理。管理员选择一个或多个要管理的对象，并显式检查这些对象是否遵守指定的政策，或显式地使这些对象遵守某个政策。<br />
+<div class="spctrl"></div>
+　　自动管理<br />
+<div class="spctrl"></div>
+　　政策管理员使用下面的执行模式之一，使政策自动执行：<br />
+<div class="spctrl"></div>
+　　&middot; 强制&mdash;&mdash;使用DDL触发器阻止违反政策的操作<br />
+<div class="spctrl"></div>
+　　&middot; 对改动进行检查&mdash;&mdash;当一个与某个政策相关的改动发生时，使用事件通知来评估这个政策<br />
+<div class="spctrl"></div>
+　　&middot; 检查时间表&mdash;&mdash;使用一个SQL Server Agent 工作定期的评估一个政策<br />
+<div class="spctrl"></div>
+　　<em><strong><br />
+<div class="spctrl"></div>
+　　（二）改进了安装</strong></em><br />
+<div class="spctrl"></div>
+　　SQL Server 2008对SQL Server的服务生命周期提供了显著的改进，它重新设计了安装、建立和配置架构。这些改进将计算机上的各个安装与SQL Server 软件的配置分离开来，这使得公司和软件合作伙伴可以提供推荐的安装配置。<br />
+<div class="spctrl"></div>
+　　<em><strong><br />
+<div class="spctrl"></div>
+　　（三）加速开发过程</strong></em><br />
+<div class="spctrl"></div>
+　　SQL Server提供了集成的开发环境和更高级的数据提取，使开发人员可以创建下一代数据应用程序，同时简化了对数据的访问。<br />
+<div class="spctrl"></div>
+　　ADO.NET实体框架<br />
+<div class="spctrl"></div>
+　　在数据库开发人员中的一个趋势是定义高级的业务对象，或实体，然后他们可以将它们匹配到数据库中的表和字段，开发人员使用高级实体例如&ldquo;客户&rdquo;或&ldquo;订单&rdquo;来显示背后的数据。ADO.NET 实体框架使开发人员可以以这样的实体来设计关系数据。在这一提取级别的设计是非常高效的，并使开发人员可以充分利用实体关系建模。<br />
+<div class="spctrl"></div>
+　　语言级集成查询能力<br />
+<div class="spctrl"></div>
+　　微软的语言级集成查询能力(LINQ)使开发人员可以通过使用管理程序语言例如C#或Visual Basic.NET，而不是SQL语句来对数据进行查询。LINQ 使可以用.NET 框架语言编写的无缝和强大的面向集合的查询运行于ADO.NET(LINQ到SQL)，ADO.NET 数据集(LINQ到数据集)，ADO.NET 实体框架(LINQ到实体)，和到实体数据服务匹配供应商。SQL Server 2008提供了一个新的LINQ到SQL供应商，使得开发人员可以直接将LINQ用于SQL Server 2008的表和字段。<br />
+<div class="spctrl"></div>
+　　CLR集成和ADO.NET对象服务<br />
+<div class="spctrl"></div>
+　　ADO.NET 的对象服务层使得可以进行具体化检索、改变跟踪、和实现作为公共语言运行时(CLR)的数据的可持续性。开发人员使用ADO.NET 实体框架可以通过使用由ADO.NET 管理的CLR对象对数据库进行编程。SQL Server 2008提供了提高性能和简化开发过程的更有效的和最佳的支持。<br />
+<div class="spctrl"></div>
+　　Service Broker可扩展性<br />
+<div class="spctrl"></div>
+　　SQL Server 2008继续加强了Service Broker 的能力。<br />
+<div class="spctrl"></div>
+　　&middot; 会话优先权&mdash;&mdash;使你可以配置优先权，使得最重要的数据会第一个被发送和进行处理。<br />
+<div class="spctrl"></div>
+　　&middot; 诊断工具&mdash;&mdash;诊断工具提高了你开发、配置和管理使用了Service Broker的解决方案的能力，例如在应用程序部署之前诊断分支丢失情况或配置不正确的安全问题。<br />
+<div class="spctrl"></div>
+　　Transact-SQL的改进<br />
+<div class="spctrl"></div>
+　　SQL Server 2008通过几个关键的改进增强了Transact-SQL编程人员的开发体验。<br />
+<div class="spctrl"></div>
+　　&middot; Table Value Parameters &ndash; 在许多客户的场景中，要传递一个表结构的值(行)的集合到服务器上的一个存储过程或函数中。这些值可能直接用于插入表或更新表，或者是用于更复杂的数据操作。值为表的参数为定义一个表类型和使应用程序创建、赋值和传递表结构的参数到存储过程和函数中提供了更简单的方式。<br />
+<div class="spctrl"></div>
+　　&middot; 对象相关性&mdash;&mdash;对象相关性的改进通过新推出的种类查看和动态管理功能使能够可靠的找出对象间的相关性。相关性信息总是关于绑定架构和未绑定架构的对象的最新的信息。这个相关性会跟踪存储过程、表、视图、函数、触发器、用户定义的类型、XML schema集合和其他对象。<br />
+<div class="spctrl"></div>
+　　&middot; 日期/时间数据类型&mdash;&mdash;SQL Server 2008推出了新的日期和时间数据类型：<br />
+<div class="spctrl"></div>
+　　(1)　DATE&mdash;&mdash;一个只包含日期的类型<br />
+<div class="spctrl"></div>
+　　(2)　TIME&mdash;&mdash;一个只包含时间的类型<br />
+<div class="spctrl"></div>
+　　(3)　DATETIMEOFFSET &ndash; 一个可辨别时区的日期/时间类型<br />
+<div class="spctrl"></div>
+　　(4)　DATETIME2 &mdash;&mdash;一个具有比现有的DATETIME类型更精确的秒和年范围的日期/时间类型<br />
+<div class="spctrl"></div>
+　　新的数据类型使应用程序可以有单独的日期和时间类型，同时为用户定义的时间值的精度提供较大的数据范围。<br />
+<div class="spctrl"></div>
+　　（四）偶尔连接系统<br />
+<div class="spctrl"></div>
+　　有了移动设备和活动式工作人员，偶尔连接成为了一种工作方式。SQL Server 2008推出了一个统一的同步平台，使得在应用程序、数据存储和数据类型之间达到一致性同步。在与Visual Studio 的合作下，SQL Server 2008使得可以通过ADO.NET中提供的新的同步服务和Visual Studio中的脱机设计器快速的创建偶尔连接系统。SQL Server 2008提供了支持，使得可以改变跟踪和使客户可以以最小的执行消耗进行功能强大的执行，以此来开发基于缓存的、基于同步的和基于通知的应用程序。<br />
+<div class="spctrl"></div>
+　　（五）不只是关系数据<br />
+<div class="spctrl"></div>
+　　应用程序正在结合使用越来越多的数据类型，而不仅仅是过去数据库所支持的那些。SQL Server 2008基于过去对非关系数据的强大支持，提供了新的数据类型使得开发人员和管理员可以有效的存储和管理非结构化数据，例如文档和图片。还增加了对管理高级地理数据的支持。除了新的数据类型，SQL Server 2008还提供了一系列对不同数据类型的服务，同时为数据平台提供了可靠性、安全性和易管理性。这篇白皮书的下一章节将介绍非关系数据存储的一些优点。<br />
+<div class="spctrl"></div>
+　　HIERARCHY ID<br />
+<div class="spctrl"></div>
+　　SQL Server 2008使数据库应用程序以比以前更有效的方式建立树结构。HierarchyId是一个新的系统类型，它可以存储一个层次树中显示的结点的值。这个新的类型提供了一个灵活的编程模型。它作为一个CLR用户定义的类型(UDT)来执行，它提供了几种用于创建和操作层次结点的有效的及有用的内置方法。<br />
+<div class="spctrl"></div>
+　　FILESTREAM数据<br />
+<div class="spctrl"></div>
+　　新的SQL Server 2008 FILESTREAM 数据类型使大型的二进制数据，像文档和图片等可以直接存储到一个NTFS文件系统中;文档和图片仍然是数据库的主要组成部分，并维护事务的一致性。<br />
+<div class="spctrl"></div>
+　　FILESTREAM 使传统的由数据库管理的大型二进制数据可以作为单独的文件存储在数据库之外，它们可以通过使用一个NTFS流API进行访问。使用NTFS流API使普通文件操作可以有效的执行，同时提供所有丰富的数据库服务，包括安全和备份。<br />
+<div class="spctrl"></div>
+　　集成的全文检索<br />
+<div class="spctrl"></div>
+　　集成的全文检索使得在全文检索和关系数据之间可以无缝的转换，同时使全文索引可以对大型文本字段进行高速的文本检索。<br />
+<div class="spctrl"></div>
+　　稀疏列<br />
+<div class="spctrl"></div>
+　　这个功能使NULL数据不占物理空间，从而提供了一个非常有效的管理数据库中的空数据的方法。例如，稀疏列使得一般包含极多要存储在一个SQL Server 2008数据库中的空值的对象模型不会占用很大的空间。稀疏列还允许管理员创建1024列以上的表。<br />
+<div class="spctrl"></div>
+　　大型的用户定义的类型<br />
+<div class="spctrl"></div>
+　　SQL Server 2008删除了对用户定义的类型的8,000字节的限制，使用户可以显著的扩大他们的UDT的规模。<br />
+<div class="spctrl"></div>
+　　地理信息<br />
+<div class="spctrl"></div>
+　　SQL Server 2008为在基于空间的应用程序中消耗、扩展和使用位置信息提供了广泛的空间支持。<br />
+<div class="spctrl"></div>
+　　&middot; 地理数据类型<br />
+<div class="spctrl"></div>
+　　这个功能使你可以存储符合行业空间标准例如开放地理空间联盟(Open Geospatial Consortium，OGC)的平面的空间数据。这使得开发人员可以通过存储与设计的平面表面和自然的平面数据例如内部空间等相关联的多边形、点和线来实现&ldquo;平面地球&rdquo;解决方案。<br />
+<div class="spctrl"></div>
+　　&middot; 几何数据类型<br />
+<div class="spctrl"></div>
+　　这个功能使你可以存储地理空间数据并对其执行操作。使用纬度和经度的组合来定义地球表面的区域，并结合了地理数据和行业标准椭圆体(例如用于全球GPS解决方案的WGS84)。<br />
+<div class="spctrl"></div>
+　　三、智能的<br />
+<div class="spctrl"></div>
+　　商业智能(BI)继续作为大多数公司投资的关键领域和对于公司所有层面的用户来说的一个无价的信息源。SQL Server 2008提供了一个全面的平台，用于当用户需要时你可以为其提供智能化。<br />
+<div class="spctrl"></div>
+　　（一）集成任何数据<br />
+<div class="spctrl"></div>
+　　公司继续投资于商业智能和数据仓库解决方案，以便从他们的数据中获取商业价值。SQL Server 2008提供了一个全面的和可扩展的数据仓库平台，它可以用一个单独的分析存储进行强大的分析，以满足成千上万的用户在几兆字节的数据中的需求。下面是SQL Server 2008中在数据仓库方面的一些优点。<br />
+<div class="spctrl"></div>
+　　数据压缩<br />
+<div class="spctrl"></div>
+　　数据仓库中的数据容量随着操作系统数目的快速增加而在持续增长。内嵌在SQL Server 2008中的数据压缩使得公司可以更有效的存储数据，同时还提高了性能，因为降低了I/O 要求。<br />
+<div class="spctrl"></div>
+　　备份压缩<br />
+<div class="spctrl"></div>
+　　保持一直在线做基于磁盘的备份是花费很昂贵的，并且很耗时。有了SQL Server 2008的备份压缩，保持在线备份所需的存储降低了，并且备份速度明显变快了，因为所需要的磁盘I/O 减少了。<br />
+<div class="spctrl"></div>
+　　分区表并行<br />
+<div class="spctrl"></div>
+　　分割使公司能够更有效的管理大型的、不断增长的数据表，只要简单的将它们分割为易管理的数据块。SQL Server 2008是在SQL Server 2005中的分割的优势之上建立的，它改进了对大型的分区表的操作性能。<br />
+<div class="spctrl"></div>
+　　星型联接查询优化器<br />
+<div class="spctrl"></div>
+　　SQL Server 2008为普通的数据仓库场景提供了改进的查询性能。星型联接查询优化器通过辨别数据仓库连接模式降低了查询响应时间。<br />
+<div class="spctrl"></div>
+　　资源监控器<br />
+<div class="spctrl"></div>
+　　SQL Server 2008随着资源监控器的推出，使公司可以给终端用户提供一致的和可预测的响应。资源监控器使公司可以为不同的工作负载定义资源限制和优先权，这使得并发工作负载可以提供稳定的性能。<br />
+<div class="spctrl"></div>
+　　分组设置<br />
+<div class="spctrl"></div>
+　　分组设置(GROUPING SETS)是对 GROUP BY 条件语句的扩展，它使得用户可以在同一个查询中定义多个分组。分组设置生成一个单独的结果集，这个结果集相当于对不同分组的行进行了UNION ALL 的操作，这使得聚合查询和报表更加简单和快速。<br />
+<div class="spctrl"></div>
+　　捕获变更数据<br />
+<div class="spctrl"></div>
+　　有了捕获变更数据，变更会被捕获并被放在变更表中。它捕获变更的完整内容，维护交叉表的一致性，甚至是对交叉的schema变更也起作用。这使得公司可以将最新的信息集成到数据仓库中。<br />
+<div class="spctrl"></div>
+　　MERGESQL语句<br />
+<div class="spctrl"></div>
+　　有了MERGE SQL 语句，开发人员可以更有效地处理数据仓库的场景，例如检查一行数据是否存在然后执行插入或更新。<br />
+<div class="spctrl"></div>
+　　可扩展的集成服务<br />
+<div class="spctrl"></div>
+　　集成服务的可扩展性方面的两个关键优势是：<br />
+<div class="spctrl"></div>
+　　&middot; SQL Server集成服务 (SQL Server Integration Services，SSIS)管道改进<br />
+<div class="spctrl"></div>
+　　数据集成包现在可以更有效地扩展、使用有效的资源和管理最大的企业级的工作负载。这个新的设计将运行时间的可扩展性提高到多个处理器中。<br />
+<div class="spctrl"></div>
+　　&middot; SSIS持久查找<br />
+<div class="spctrl"></div>
+　　执行查找是最常见的抽取、转换和加载(ETL)操作。这在数据仓库中尤为普遍，当实际记录必须使用查找来转换业务键到它们相应的替代中去时。SSIS 增强了查找的性能以支持大型表。<br />
+<div class="spctrl"></div>
+　　（二）发送相应的报表<br />
+<div class="spctrl"></div>
+　　SQL Server 2008提供了一个可扩展的商业智能基础设施，使得IT人员可以在整个公司内使用商业智能来管理报表以及任何规模和复杂度的分析。SQL Server 2008使得公司可以有效的以用户想要的格式和他们的地址发送相应的、个人的报表给成千上万的用户。通过提供了交互发送用户需要的企业报表，获得报表服务的用户数目大大增加了。这使得用户可以获得对他们各自领域的洞察的相关信息的及时访问，使得他们可以作出更好、更快、更符合的决策。SQL Server 2008使得所有的用户可以通过下面的报表改进之处来制作、管理和使用报表：<br />
+<div class="spctrl"></div>
+　　企业报表引擎<br />
+<div class="spctrl"></div>
+　　有了简化的部署和配置，可以在企业内部更简单的发送报表。这使得用户能够轻松的创建和共享所有规模和复杂度的报表。<br />
+<div class="spctrl"></div>
+　　新的报表设计器<br />
+<div class="spctrl"></div>
+　　改进的报表设计器可以创建广泛的报表，使公司可以满足所有的报表需求。独特的显示能力使报表可以被设计为任何结构，同时增强的可视化进一步丰富了用户的体验。<br />
+<div class="spctrl"></div>
+　　此外，报表服务2008使商业用户可以在一个可以使用Microsoft Office的环境中编辑或更新现有的报表，不论这个报表最初是在哪里设计的，从而使公司能够从现有的报表中获得更多的价值。<br />
+<div class="spctrl"></div>
+　　强大的可视化<br />
+<div class="spctrl"></div>
+　　SQL Server 2008扩展了报表中可用的可视化组件。可视化工具例如地图、量表和图表等使得报表更加友好和易懂。<br />
+<div class="spctrl"></div>
+　　Microsoft Office渲染<br />
+<div class="spctrl"></div>
+　　SQL Server 2008提供了新的Microsoft Office渲染，使得用户可以从Word里直接访问报表。此外，现有的Excel&amp;reg; 渲染器被极大的增强了，它被用以支持像嵌套数据区域、子报表和合并单元格等功能。这使得用户可以维护显示保真度和改进Microsoft Office应用中所创建的报表的全面可用性。<br />
+<div class="spctrl"></div>
+　　Microsoft SharePoint&amp;reg; 集成<br />
+<div class="spctrl"></div>
+　　SQL Server 2008报表服务将Microsoft Office SharePoint Server 2007和Microsoft SharePoint Services 深度集成，提供了企业报表和其它商业洞察的集中发送和管理。这使得用户可以访问包含了与他们直接在商业门户中所做的决策相关的结构化和非结构化信息的报表。<br />
+<div class="spctrl"></div>
+　　（三）使用户获得全面的洞察力<br />
+<div class="spctrl"></div>
+　　及时访问准确信息，使用户快速对问题、甚至是非常复杂的问题作出反应，这是在线分析处理的前提(Online Analytical Processing，OLAP)。SQL Server 2008基于SQL Server 2005强大的OLAP能力，为所有用户提供了更快的查询速度。这个性能的提升使得公司可以执行具有许多维度和聚合的非常复杂的分析。这个执行速度与Microsoft Office的深度集成相结合，使SQL Server 2008可以让所有用户获得全面的洞察力。SQL Server分析服务具有下面的分析优势：<br />
+<div class="spctrl"></div>
+　　设计为可扩展的<br />
+<div class="spctrl"></div>
+　　SQL Server 2008加强了分析能力和提供了更复杂的计算和聚合，使得能进行的分析更宽广。新的立方体设计工具帮助用户将分析基础设施的开发工作流线化，使他们可以为优化性能建立解决方案。这个设计里内嵌了Best Practice Design Alerts，使得开发人员可以在设计时集成实时警告，这优化了设计。Dimension Designer使得可以简单的查看和编辑属性关系，还可以提供多个内置的对理想尺度设计的支持的验证，而在数据挖掘结构中增强的灵活性使得可以创建多个不同的模型，而不仅仅是过滤数据。<br />
+<div class="spctrl"></div>
+　　块计算<br />
+<div class="spctrl"></div>
+　　块计算提供了一个在处理性能方面的显著提高，使得用户可以增加他们的层级深度和计算的复杂度。<br />
+<div class="spctrl"></div>
+　　回写到MOLAP<br />
+<div class="spctrl"></div>
+　　SQL Server 2008分析服务中的新的基于MOLAP 的回写功能使得不再需要查询ROLAP 分区。这给用户提供了更强的用于分析应用程序中的回写设定，而不需要以OLAP 性能为代价。<br />
+<div class="spctrl"></div>
+　　资源监控器<br />
+<div class="spctrl"></div>
+　　在SQL Server 2008中一个新的资源监控器提供了对资源利用情况的详细观察。有了这个资源监控器，数据库管理员可以快速并轻松的监控和控制分析工作负载，包括识别哪个用户在运行什么查询和他们会运行多久，这使得管理员可以更好的优化服务器的使用。<br />
+<div class="spctrl"></div>
+　　预测分析<br />
+<div class="spctrl"></div>
+　　一个改进的时间序列算法扩大了预测能力。这个查询数据挖掘结构的能力使得报表可以很容易的包含从挖掘模型的外部得来的属性。新的交叉验证特性对数据进行多处对比，发送给你可靠的结果。这些数据挖掘的改进之处一起为更好的洞察和更丰富的信息提供了机会。
+<h2 class=""><a name="3"></a><font size="2">总结</font></h2>
+　　SQL Server 2008提供了公司可依靠的技术和能力来接受不断发展的对于管理数据和给用户发送全面的洞察的挑战。具有在关键领域方面的显著的优势，SQL Server 2008是一个可信任的、高效的、智能的数据平台。SQL Server 2008是微软数据平台愿景中的一个主要部分，旨在满足目前和将来管理和使用数据的需求。<br />
+<div class="spctrl"></div>
+　　SQL Server 2008是一个重大的产品版本，它推出了许多新的特性和关键的改进，使得它成为至今为止的最强大和最全面的SQL Server版本。<br />
+<div class="spctrl"></div>
+　　SQL Server 2008预计于2008年第三季度正式上市。<br />
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('SQL Server 2008新功能_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/575.html">MYSQL教程:mysqldump使用说明</a>&nbsp;&nbsp;下一条： <a href="/html/News/551.html">sql server 2008</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1861.html" title="一条sql语句批量插入多条记录" >一条sql语句批量插入多条记录…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1767.html" title="sql2016下载" >sql2016下载</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1752.html" title="sql server2008 r2 密钥 " >sql server2008 r2 密钥 </a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1749.html" title="sql2016安装密钥" >sql2016安装密钥</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1748.html" title="sql2016安装图解教程" >sql2016安装图解教程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1718.html" title="sql server 2012提示评估期已过的解决方法" >sql server 2012提示评估期已…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1708.html" title="sql 设置主键、自动增长列、默认值" >sql 设置主键、自动增长列、默…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1702.html" title="SQL Server 2016将提供更好的数据安全性能" >SQL Server 2016将提供更好的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1701.html" title="SQL Server2016 新功能实时查询统计信息" >SQL Server2016 新功能实时查…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/736.html" title="牛人是怎样处理海量数据的">牛人是怎样处理海量数据的</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/610.html" title="MYSQL与MSSQL&nbsp;UPDATE两表更新语法的区别如下">MYSQL与MSSQL UPDATE两表更新语法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1187.html" title="SQL&nbsp;SERVER常用日期函数的详解">SQL SERVER常用日期函数的详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/399.html" title="随机查询ORDER&nbsp;BY&nbsp;NEWID()&nbsp;">随机查询ORDER BY NEWID() </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/632.html" title="批量插入数据&nbsp;延时&nbsp;SQL">批量插入数据 延时 SQL</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/353.html" title="用sql转换汉字为拼音">用sql转换汉字为拼音</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/403.html" title="定时同步服务器上的数据">定时同步服务器上的数据</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1040.html" title="SQL&nbsp;Server&nbsp;2008与SQL&nbsp;Server&nbsp;2005的区别">SQL Server 2008与SQL Server 200…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/404.html" title="在XP下安装SQL&nbsp;Server2000&nbsp;清除安装暂挂项目&nbsp;">在XP下安装SQL Server2000 清除安…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/402.html" title="SQL触发器实例">SQL触发器实例</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/611.html" title="Mssql触发器学习例子之UPDATE触发器">Mssql触发器学习例子之UPDATE触发…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1144.html" title="两表连接的SQL语句">两表连接的SQL语句</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1169.html" title="写一个HTML代码或C++代码分析器是极其简单的">写一个HTML代码或C++代码分析器是…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/400.html" title="分页存储过程！&nbsp;">分页存储过程！ </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/631.html" title="普通行列转换&nbsp;SQL（1）">普通行列转换 SQL（1）</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1861.html" title="一条sql语句批量插入多条记录" >一条sql语句批量插入多条记录</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1767.html" title="sql2016下载" >sql2016下载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1752.html" title="sql&nbsp;server2008&nbsp;r2&nbsp;密钥&nbsp;" >sql server2008 r2 密钥 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1749.html" title="sql2016安装密钥" >sql2016安装密钥</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1748.html" title="sql2016安装图解教程" >sql2016安装图解教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1718.html" title="sql&nbsp;server&nbsp;2012提示评估期已过的解决方法" >sql server 2012提示评估期已过的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1708.html" title="sql&nbsp;设置主键、自动增长列、默认值" >sql 设置主键、自动增长列、默认值…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1702.html" title="SQL&nbsp;Server&nbsp;2016将提供更好的数据安全性能" >SQL Server 2016将提供更好的数据…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1701.html" title="SQL&nbsp;Server2016&nbsp;新功能实时查询统计信息" >SQL Server2016 新功能实时查询统…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1699.html" title="服务器处于单用户模式下&nbsp;目前只有一位管理员能够连接" >服务器处于单用户模式下 目前只有…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1669.html" title="存储过程与一般的SQL语句有什么区别" >存储过程与一般的SQL语句有什么区…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1597.html" title="sql2016新功能介绍" >sql2016新功能介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1596.html" title="sql&nbsp;server&nbsp;2015中文版下载" >sql server 2015中文版下载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1576.html" title="SQL&nbsp;Server数据库常用的T-SQL命令&nbsp;" >SQL Server数据库常用的T-SQL命令…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1542.html" title="SQL&nbsp;Server&nbsp;2008报表服务详解" >SQL Server 2008报表服务详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "552" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Flash摄像头游戏课件的设计原则_技术辅导_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="摘要】摄像头游戏是随着技术的进步产生出来的一种新的游戏形式，它摆脱了鼠标与键盘的限制，给游戏者以全新的互动体验。&nbsp;Flash&nbsp;8提供的位图处理功能为&nbsp;Flash&nbsp;摄像头游戏的实现提供了可能。将摄像头游戏技术引入到Flash课件的开发，可以充分发挥其互动性和" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 技术辅导
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        Flash摄像头游戏课件的设计原则
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/28 17:29:09
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        摘要】摄像头游戏是随着技术的进步产生出来的一种新的游戏形式，它摆脱了鼠标与键盘的限制，给游戏者以全新的互动体验。&nbsp;Flash&nbsp;8提供的位图处理功能为&nbsp;Flash&nbsp;摄像头游戏的实现提供了可能。将摄像头游戏技术引入到Flash课件的开发，可以充分发挥其互动性和
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <font size="2">【摘要】摄像头游戏是随着技术的进步产生出来的一种新的游戏形式，它摆脱了鼠标与键盘的限制，给游戏者以全新的互动体验。<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/"><font size="3">Flash</font></a> 8提供的位图处理功能为<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/"><font size="3">Flash</font></a>摄像头游戏的实现提供了可能。将摄像头游戏技术引入到Flash课件的开发，可以充分发挥其互动性和趣味性，与传统Flash课件相比，具有其不可替代的优势。该文提出设计<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/"><font size="3">Flash</font></a>摄像头游戏课件的基本原则，并以《水果乐园》课件为例，详细介绍了开发的过程和主要实现方法，为摄像头游戏类课件制作提供了参考。 <br />
+　　【关键词】<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/"><font size="3">Flash</font></a>；摄像头游戏；课件&nbsp; 西南大学计算机与信息科学<br />
+　　【中图分类号】G434【文献标识码】B【论文编号】1009&mdash;8097 (2008) 01&mdash;0107&mdash;05 <br />
+　　<br />
+　　一、引言 <br />
+　　 <br />
+　　摄像头游戏是随着摄像头的普及和图形图像技术的不断发展而出现的。它摆脱了鼠标键盘的限制，给游戏者带来全新的游戏体验，能够实现许多传统游戏无法实现的游戏效果。它通过摄像头将玩家投影到游戏中，由玩家自己做动作与游戏进行交互。画面中登场的敌人或道具都将对玩家的动作即刻做出反应，让玩家体验到前所未有的新鲜感。 <br />
+　　Flash课件是用Flash的形式表现教学内容一种课件形式。Flash课件充分利用了Flash的直观性、互动性以及娱乐性，能够有效的调动学生的学习积极性，激发学生的学习乐趣，在当前的教学过程中发挥着越来越大的作用。Flash摄像头游戏课件整合了摄像头游戏和Flash课件的优点，充分体现了&ldquo;寓教于乐&rdquo;的教学思想。它带给学生全新的游戏感受，能够极大的激发学生的学习兴趣。它能够激发学生的多种感观刺激，建立强烈的真实感，通过游戏过程中学生与游戏的互动，还能够促进学生手、耳、眼以及肢体的相互协调，达到较好的教学效果。 <br />
+　　 <br />
+　　二、Flash摄像头游戏课件的设计原则 <br />
+　　 <br />
+　　Flash摄像头游戏课件具有较好参与性、体验性，能够有效增强学习效果，提高学习效率，特别适合于学生动作类技能的训练。在设计的过程中，应遵循如下原则，体现其独特的优势。 <br />
+　　（1）教学性原则 <br />
+　　这是所有课件，应用于教学的最基本的要求，该类课件也不例外，在设计的过程中，必须针对一定的教学目标，遵循认知过程的一般规律，组织教学内容和教学活动。紧密围绕&ldquo;以学生学习为中心&rdquo;的设计思路。 <br />
+　　（2）易用性原则 <br />
+　　摄像头游戏课件的交互，计算机对于学习者的动作回应，都是建立在动作检测，捕捉学习者动作影像的基础上。设计过程中应考虑让学习者的操作尽量简便，易于上手使用。做好课件使用的帮助或者使用手册。 <br />
+　　（3）科学性原则 <br />
+　　课件的内容，不能有科学性的错误，这也是设计中基本要求，必须对课件所有呈示的内容，进行严格仔细的审查，保证学生看到的所有知识点，都必须科学、准确，一般由课件开发小组中学科专家把好关。 <br />
+　　（4）艺术性原则 <br />
+　　如果一个课件的展示不但取得良好的教学效果，而日&lsquo;使人赏心悦目，使人获得美的享受，则说课件具有较高的艺术性。这样的课件是好的内容与美的形式的统一，美的形式能激发学生的兴趣，史好地表现内容。其表现有:展示的对象结构对称，色彩柔和，搭配合理，有审美性。 <br />
+　　（5）体验性原则 <br />
+　　摄像头游戏课件因其交互的多维化，全方位，检测学习者动作，使得学习者的沉浸感很强，要求学习者的个人形象和课件环境融合的过程中，能让学习能有身临其境的感觉，所以课件在设计的过程中，注意课件环境，界面的元素，声音的效果，都必然能激发学习者的投入感。该原则是摄像头游戏课件设计过程中最重要的原则，也是整个课件制作的关键，成败所在。 <br />
+　　 <br />
+　　三、<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/"><font size="3">Flash</font></a>摄像头游戏课件的设计与实现 <br />
+　　 <br />
+　　在儿童英语教学中，引入Flash摄像头游戏课件，使得儿童摆脱键盘和鼠标的单一化的交互方式，而进行身体动作与计算机的交互，增强儿童学习的体验感，能较好的辅助英语的学习。以下是设计与开发的&ldquo;水果乐园&rdquo;课件的实现步骤和主要功能代码。 <br />
+　　1.摄像头图像的捕获 <br />
+　　使用Camera类实现对摄像头图像的捕获。Camera.get()方法返回对用于捕获视频的 Camera 对象的引用。当 SWF 文件尝试访问 Camera.get() 返回的摄像头时，Flash Player 显示&ldquo;拒绝&rdquo;对话框，用户可从中选择是允许还是拒绝对摄像头的访问。<br />
+<p>setMode()方法将摄像头的捕获模式设置为最符合指定要求的本机模式。 <br />
+　　//新建一个Camera对象，实例名为my_cam，并设置对象属性。 <br />
+　　var my_cam:Camera = Camera.get(); <br />
+　　my_cam.setMode(160,120,30,true); <br />
+　　2.摄像头图像的显示 <br />
+　　1)显示图像 <br />
+　　若要实际开始捕获视频，必须将 Camera 对象附加到 Video 对象。attachVideo(source:Object) : Void指定将在舞台上的 Video 对象的边界内显示的视频流 (source)。 <br />
+　　//新建一个Video对象，将Camera对象附加到Video上。 <br />
+　　var my_video:Video; <br />
+　　my_video.attachVideo(my_cam); <br />
+　　2)水平翻转图像 <br />
+　　由于摄像头中看到的图像与游戏者本人的方向相反。为了方便游戏者操作游戏，在加载图像时应该把图像左右翻转。这一操作非常重要，将直接影响游戏者的游戏体验。 <br />
+　　Video._rotation 属性可以实现对Video图像的旋转，但是无法实现左右翻转的效果。 <br />
+　　Video._xscale 属性指示从 Video 对象注册点开始应用的 Video 对象的水平缩放比例 。当x轴的水平缩放比例为-100时，则可以实现对Video对象的水平翻转。默认注册点为 (0，0)。缩放本地坐标系统将影响 _x 和 _y 属性设置，这些设置是以整像素定义的。由于翻转时是以左上角主测点为中心，因此在水平翻转之后，Video对象的坐标虽然未发生改变，但是整体位置向左平移了Video. _width个像素。因此翻转之后我们需要设置Video的新坐标为Video._x = Video._x+Video._width。 <br />
+　　3.获取图像信息 <br />
+　　要对获取的图像进行分析，必须将从摄像头获取的图像信息提取出来。在Flash8中， Bitmap对象存储了图像中各点的RGB通道信息以及Alpha通道信息，可以使用new方法建立一个Bitmap对象。然后使用draw（）方法提取某一时刻video对象中的像素信息。 <br />
+　　draw(source:Object,[matrix:Matrix],[colorTransform.:ColorTransform], [blendMode:Object], [clipRect:Rectangle], [smooth:Boolean]) : Void使用 Flash Player 矢量呈现器在目标图像上绘制源图像。使用 Matrix、ColorTransform、BlendMode 对象以及目标 Rectangle 对象来控制呈现的执行方式。或者也可以指定缩放时是否应对位图进行平滑处理。这只适用于当源对象是 BitmapData 对象时的情况。 <br />
+　　import Flash.display.BitmapData; <br />
+　　<br />
+　　//创建BitmapData对象 <br />
+　　Var snapshot:BitmapData=new <br />
+　　BitmapData(output_vid._width，output_vid._height); <br />
+　　//从my_video获取当前图像 <br />
+　　now.draw(my_video); <br />
+　　4.运动检测的实现 <br />
+　　该部分是整个摄像头游戏实现的核心。主要利用了<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/">Flash</a> 8的位图处理功能，即BitmapData类。 <br />
+　　1)基本思路 <br />
+　　我们可以使用getPixel(x，y)获取前一张图片上每个像素点的像素值，然后对比后一张图片中的每一点的像素值，当像素的亮度差值变化达到一定程度时，认为该点发生了运动变化。通过这种方式，得到前后两张图片的负片效果图。 <br />
+　　//阀值 <br />
+　　tolerance=10; <br />
+　　//获取当前图像now某一点的RGB值 <br />
+　　nc=now.getPixel(x，y); <br />
+　　//红色通道 <br />
+　　nr=nc&gt;&gt;16&amp;0xff; <br />
+　　//绿色通道 <br />
+　　ng=nc&gt;&gt;8&amp;0xff; <br />
+　　//蓝色通道 <br />
+　　nb=nc&amp;0xff; <br />
+　　//计算该点亮度值 <br />
+　　nl=Math.sqrt(nr*nr + ng*ng + nb*nb) <br />
+　　//获取前一快照before同一点的RGB值 <br />
+　　bc=before.getPixel(x，y);</p>
+<p>//红色通道 <br />
+　　br=bc&gt;&gt;16&amp;0xff; <br />
+　　//绿色通道 <br />
+　　bg=bc&gt;&gt;8&amp;0xff; <br />
+　　//蓝色通道 <br />
+　　bb=bc&amp;0xff; <br />
+　　//计算该点亮度值 <br />
+　　bl=Math.sqrt(br*br + bg*bg + bb*bb); <br />
+　　//计算亮度值的变化 <br />
+　　d=Math.round(Math.abs(bl-nl)); <br />
+　　if(d&gt;tolerance) <br />
+　　{ <br />
+　　//该点发生了变化 <br />
+　　} <br />
+　　但是这种方法存在计算效率问题。按图像大小为180*160像素，每秒30帧计算，每计算一副图片需要的计算次数为180*160*30。图像的像素越大，需要的计算次数就越多。采用隔点检测的方法可以在一定程度上缓解计算压力，即每隔n个像素检测一次，这样电脑的计算次数减少为原来的1/n。 <br />
+　　2)改进思路 <br />
+　　<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/">Flash</a>8提供的图像混合模式可以解决上面遇到的效率问题。Flash8提供了11种图像混合模式。每一种混合模式可以得到不同的混合效果。Different 混合模式是基于两张图片之间的亮度差值进行计算，从而得到图片的负片效果。利用该模式，便可以得到移动像素的检测图像。 <br />
+　　//将前一张快照before的图像绘制到当前快照now上，使用different混合模式 <br />
+　　now.draw(before， new Matrix()， null， &quot;difference&quot;); <br />
+　　图像中黑色表示没有发生移动，其他颜色表示发生了移动。由于Flash8提供的混合模式是采用C++编码实现的，因此运行效率要比Action Script编码更加高效。 <br />
+　　5.动态显示检测图像 <br />
+　　1)处理检测图像 <br />
+　　通过以上两种方式得到的图像中色彩范围较广，这增加了统计上面的困难。通过使用 threshold() 方法，可以隔离和替换图像中的颜色范围，并对图像像素执行其它逻辑操作。threshold（）函数根据指定的阈值测试图像中的像素值，并将通过测试的像素设置为新的颜色值。这样，便得到了清晰醒目的检测图像。 <br />
+　　//将大于阀值0xFF111111的像素替换为绿色。 <br />
+　　myBitmap.threshold(myBitmap， myBitmap.rectangle， myBitmap.rectangle.topLeft， &quot;&gt;&quot;， 0xFF111111， 0xFF00FF00， 0x00FFFFFF， false); <br />
+　　2)检测图像的显示 <br />
+　　Bitmap对象无法直接在舞台上显示，必须附着在MovieClip上面才能显示。因此可以使用MovieClip类的attachBitmap()方法，将获取的图像信息显示出来。 <br />
+　　//创建一个影片剪辑来显示当前图像 <br />
+　　this.createEmptyMovieClip(&ldquo;当前&rdquo;，this.getNextHighest Depth()); <br />
+　　//将摄像头获取的图像显示在影片剪辑内 <br />
+　　bitmap_mc.attachBitmap(now，1); <br />
+　　3)检测图像的动态显示 <br />
+　　要实现检测图像的动态显示，必须不断的更新当前图像now和历史图像before，并进行混合处理。可以把检测图像的功能写成方法snapshot()，每隔100毫秒调用一次。 <br />
+　　伪代码如下： <br />
+　　function snapshot() { <br />
+　　//获取当前图像 <br />
+　　//获取检测图像 <br />
+　　//将检测图像绘制到 <br />
+　　//将检测图像中RGB超过阀值0xFF111111的部分替换成绿色 <br />
+　　//显示检测图像 <br />
+　　//本次检测完成之后，当前图像便成为了历史图像。为下一次检测做好准备。 <br />
+　　preBitmap = nowBitmap.clone(); <br />
+　　 } <br />
+　　在该方法中，关键在于每次检测完成之后当前图像和历史图像的更新。 <br />
+　　6.检测特定区域内的运动状态 <br />
+　　经过上面几步操作，已经得到了检测图像。检测图像是对整幅图像的运动情况的反映。在游戏中，经常需要检测的是某一特定区域的运动状态。 <br />
+　　1)检测某点的运动状态 <br />
+　　因为已经到了检测图像，所以在检测某一点运动状态时，只需要判断检测图像上该点的RGB值是否大于阀值。 <br />
+　　伪代码如下： <br />
+　　pix = myBitmap.getPixel(x， y);</p>
+<p>if (pix大于阀值) { <br />
+　　 //该点发生了运动 <br />
+　　 } <br />
+　　2)检测某区域的运动状态 <br />
+　　由于灯光因素、摄像头图像噪点等干扰因素的存在，每次只检测一个点容易造成检测结果的不稳定。因此，大多采用区域检测的方式。即在检测某点运动状态时，检测的不仅仅是这个点，而是以该点开始的n*n个像素的区域（n的取值根据实际情况确定，在检测点数量较多时，n的值不宜取太大。）。如果检测区域内的像素点变化数量超过一定阀值，如60％，则认为该区域发生了运动。 <br />
+　　需要注意的一点是，由于看到的图像是经过水平翻转的，但原有的图像内部坐标系并没有发生变化，因此，检测时的取点位置也要水平翻转。 <br />
+　　//以(rectx，recty)为顶点的rectw*recth的矩形区域的运动情况 <br />
+　　function ismove(a， rectx， recty， rectw， recth) { <br />
+　　 var i， j; <br />
+　　 var sum = 0; <br />
+　　 var pix; <br />
+　　 for (i=1; i&lt;=rectw; i++) { <br />
+　　 for (j=1; j&lt;=recth; j++) { <br />
+　　//图像水平翻转后取点位置相对变化 <br />
+　　 pix = a.getPixel(160-i-rectx， j+recty); <br />
+　　 if (pix&gt;132361) { <br />
+　　 sum++; <br />
+　　 } <br />
+　　 } <br />
+　　 } <br />
+　　 //trace(&quot;sum=&quot;+sum); <br />
+　　 if (sum&gt;(recth*rectw/2)) { <br />
+　　 return (sum); <br />
+　　 //该区域发生了运动 <br />
+　　 } else { <br />
+　　 return 0; <br />
+　　 } <br />
+　　} <br />
+　　<br />
+　　在该方法中，检测图像、检测区域顶点坐标、检测区域大小都为作为变量输入。采用这种方法，提高了程序的重用性，还可以实现对运动物体的检测。 <br />
+　　3)检测点的设置 <br />
+　　所谓检测点，实际是一个影片剪辑。在进行区域检测时，以该影片剪辑的坐标（x，y）确定检测区域的坐标位置。检测点可以是一个不可见的辅助点，也可以是舞台中运动的物体。当把运动物体做为检测点时，随着物体的移动，检测区域也随之移动，因此可以实现对运动物体的检测。检测点的作用：一是可以起到辅助点的作用，简化了检测区域定位的繁琐工作，使定位操作可视化。二是实现了代码的重用，起到了简化程序的作用。 <br />
+　　7.实现摄像头运动检测的控制接口 <br />
+　　游戏中检测点接口的作用就是返回舞台中被触碰的检测点编号。在接口函数中，调用了以上几个功能函数。返回值为检测点编号。 <br />
+　　function istouch() { <br />
+　　 var max:Number = 0; <br />
+　　 var min:Number; <br />
+　　 var num:Number; <br />
+　　 for (var i = 1; i&lt;=9; i++) { <br />
+　　 //检测第i个检测点是否被触碰 <br />
+　　 min = ismove(myBitmap, this[&quot;point&quot;+i]._x-xpoint, this[&quot;point&quot;+i]._y-ypoint, 10, 10); <br />
+　　 //每次只能激发一个点，选择9个点中移动最显著的一个 <br />
+　　 if (max　　 max = min; <br />
+　　 num = i; <br />
+　　 } <br />
+　　 } <br />
+　　 if (num) { <br />
+　　 //返回被触碰的点的序号 <br />
+　　 return (num); <br />
+　　 } else { <br />
+　　 //一个检测点也没碰到！; <br />
+　　 return 0; <br />
+　　 } <br />
+　　} <br />
+　　8.游戏交互功能的实现 <br />
+　　游戏功能交互的实现方法和其他Flash游戏大体类似。在此游戏中，主要包括3大功能模块：子弹系统，气球系统 和主控制系统。<br />
+1)子弹系统的实现 <br />
+　　该部分主要是实现子弹的运动。游戏中有9个检测点，每个检测点都可以发射子弹。各位置发射的子弹运动方向是不同的。第i个检测点的子弹方向为rot=i*20，初始位置在界面底部中央。 </p>
+<p>this._x = this._x-30*Math.cos(rot*Math.PI/180); <br />
+　　this._y = this._y-30*Math.sin(rot*Math.PI/180); <br />
+　　当子弹出界时，要使用this.unloadMovie()方法将该子弹实例销毁，释放内存。 <br />
+　　2)气球系统的实现 <br />
+　　该部分主要是实现气球的碰撞检测，判断气球是否被子弹击中需使用hitTest()函数。该函数有两种用法： <br />
+　　用法 1：根据 shapeFlag 设置，将 x 和 y 坐标与指定实例的形状或边框进行比较。如果 shapeFlag 设置为 true，则只计算在舞台上的实例实际占据的区域，并且如果 x 和 y 在任意一点重叠，则返回 true 值。 <br />
+　　用法 2：计算 target 和指定实例的边框，如果它们在任意一点上重叠或交叉，则返回 true。 <br />
+　　3)主控制系统的实现 <br />
+　　主控制系统是实现互动功能的核心部分。主要工作就是把游戏中所有的功能模块集成起来，对各功能模块进行调度和显示。一方面，主控制系统要接收从摄像头功能接口传递的信息；一方面根据接收的信息执行相应的功能代码。 <br />
+　　 <br />
+　　四、结束语 <br />
+　　 <br />
+　　<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/">Flash</a>摄像头游戏课件能够实现很多传统Flash课件难以实现的效果，特别是对操作技能的培养。我们开发的《水果乐园》课件提供给一些小学，进行了英语学习实践,效果还不错。但是，对于<a target="_blank" href="http://www.yindaoxian.com/html/design/flash/">Flash</a>摄像头游戏课件应用于学生高级思维策略的训练，还没有进行深入的研究，特别是角色扮演型、问题探究型等学习模式等实施，有待进一步的的探索和实践。</p>
+</font>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('Flash摄像头游戏课件的设计原则_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/523.html">FLASH AS教程：响应键盘事件的四种…</a>&nbsp;&nbsp;下一条： <a href="/html/News/422.html">入门要领：视频编辑的一些指导性原则</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码">FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/605.html" title="Flash,Actionscript,AS延时执行语句,延时播放影片">Flash,Actionscript,AS延时执行语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0">入门Flash CS3 ActionScript 3.0</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法">播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/384.html" title="JavaScript控制Flash播放器的方法汇总&nbsp;">JavaScript控制Flash播放器的方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/379.html" title="FLASH变量和作用域[这是一篇比较好的文章]">FLASH变量和作用域[这是一篇比较好…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/283.html" title="用FLASH8.0轻松制作简易计算器">用FLASH8.0轻松制作简易计算器</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1035.html" title="FLASH动画禁止右键菜单">FLASH动画禁止右键菜单</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/523.html" title="FLASH&nbsp;AS教程：响应键盘事件的四种方法">FLASH AS教程：响应键盘事件的四种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/541.html" title="最常用的Flash语句(汇总)">最常用的Flash语句(汇总)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/278.html" title="Flash制作坦克游戏视频教程">Flash制作坦克游戏视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/998.html" title="创建FLEX自定义组件(1)">创建FLEX自定义组件(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/370.html" title="FLASH与ASP通信原理入门&nbsp;">FLASH与ASP通信原理入门 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/524.html" title="Flash教程：加载外部文本文件的3种方法">Flash教程：加载外部文本文件的3种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/996.html" title="创建FLEX自定义组件(3)">创建FLEX自定义组件(3)</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设计与…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1482.html" title="常用UML建模工具" >常用UML建模工具</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码" >FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1250.html" title="视频教程卡住的解决办法" >视频教程卡住的解决办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法" >播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1174.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0" >入门Flash CS3 ActionScript 3.0</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "427" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

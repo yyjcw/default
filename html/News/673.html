@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>总结：J2EE学习的思维方式和理念_Java_Jsp_Jdk_eclipse_tomcat_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="这篇文章写在我研究J2SE、J2EE近三年后。前3年我研究了J2SE的Swing、Applet、Net、RMI、Collections、IO、JNI……研究了J2EE的JDBC、Sevlet、JSP、JNDI…..不久我发现这些好像太浮浅了：首先，我发现自己知道的仅仅是java提供的大量的API，根本不能很好地使用它;&nbsp;其次，我根本就没有学到任何有助于写程序的知识，此时我也只不过能写个几页的小程序。出于这个幼稚的想法我研究了JDK中Collections、Logger、IO…..的源代码，发现这个世界真的很神奇，竟然有如此的高手――利用java语言最最基本的语法，创造了这些优秀的Framework。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Java_Jsp_Jdk_eclipse_tomcat
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        总结：J2EE学习的思维方式和理念
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/16 13:20:51
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        这篇文章写在我研究J2SE、J2EE近三年后。前3年我研究了J2SE的Swing、Applet、Net、RMI、Collections、IO、JNI……研究了J2EE的JDBC、Sevlet、JSP、JNDI…..不久我发现这些好像太浮浅了：首先，我发现自己知道的仅仅是java提供的大量的API，根本不能很好地使用它;&nbsp;其次，我根本就没有学到任何有助于写程序的知识，此时我也只不过能写个几页的小程序。出于这个幼稚的想法我研究了JDK中Collections、Logger、IO…..的源代码，发现这个世界真的很神奇，竟然有如此的高手――利用java语言最最基本的语法，创造了这些优秀的Framework。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>这篇文章写在我研究J2SE、J2EE近三年后。前3年我研究了J2SE的Swing、Applet、Net、RMI、Collections、IO、JNI&hellip;&hellip;研究了J2EE的JDBC、Sevlet、JSP、JNDI&hellip;..不久我发现这些好像太浮浅了：首先，我发现自己知道的仅仅是java提供的大量的API，根本不能很好地使用它; 其次，我根本就没有学到任何有助于写程序的知识，此时我也只不过能写个几页的小程序。出于这个幼稚的想法我研究了JDK中Collections、Logger、IO&hellip;..的源代码，发现这个世界真的很神奇，竟然有如此的高手――利用java语言最最基本的语法，创造了这些优秀的Framework。<span id="more-376"></span></p>
+<p>从此一发不可收拾，我继续研究了J2EE的部分，又发现这是一个我根本不能理解的方向(曾经有半年停滞不前)，为什么只有接口没有实现啊!后来由于一直使用Tomcat、Derby等软件突然发现：哦!原来J2EE仅仅是一个标准，只是一个架构。真正的实现是不同提供商提供的。</p>
+<p>接着我研究了MOM4J、OpenJMS、Mocki、HSQLD&hellip;&hellip;发现这些就是J2EE的实现啊!原来软件竟会如此复杂，竟会如此做&hellip;.规范和实现又是如何成为一体的呢?通过上面的研究发现：原来J2EE后面竟然有太多太多理念、太多太多的相似!这些相似就是其背后的理念――设计模式!(很幸运，在我学java的时候，我一般学java的一个方向就会读一些关于设计模式的书!很幸运，到能领略一点的时候能真正知道这是为什么!)其实模式就是一种思维方式、就是一种理念&hellip;&hellip;模式是要运用到程序中的，只有从真正的项目中才能领会模式的含义&hellip;&hellip;<br />
+学得越多，发现懂得越少!在学习过程中发现一些很有用，很值得学习的开源项目，今天在此推荐给大家。</p>
+<p>一、JavaServlet和JSP方向</p>
+<p>很多人都是从Servlet和JSP步入J2EE的。它就是J2EE的表现层，用于向客户呈现服务器上的内容。J2EE很重要的方面。不罗嗦了!大家都知道的!下面就开始推荐吧!</p>
+<p>1. Jakarta Tomcat</p>
+<p>Apache基金会提供的免费的开源的Serlvet容器，它是的Jakarta项目中的一个核心项目，由Apache、Sun和其它一些公司(都是IT界的大鳄哦)及个人共同开发而成，全世界绝大部分Servlet和Jsp的容器都是使用它哦!由于Sun的参与和支持，最新的Servlet和Jsp规范总能在Tomcat中得到体现。</p>
+<p>不过它是一个非常非常全的Serlvet容器，全部源码可能有4000页，对于初学者或者一般的老手可能还是比较大了!在你有能力时推荐研究!下载地址：http://jakarta.apache.org/tomcat/index.html</p>
+<p>下面推荐两个小一点的吧!</p>
+<p>2. Jetty</p>
+<p>Jetty是一个开放源码的HTTP服务器和Java serverlet容器。源代码只有1000页左右，很值得研究。有兴趣可以去http://jetty.mortbay.com/下载看看。我曾经翻了一下，只是目前没有时间。(都化在博客上了，等博客基本定型，且内容完整了，再干我热衷的事件吧!)</p>
+<p>3. Jigsaw</p>
+<p>Jigsaw是W3C开发的HTTP，基于Java 的服务器，提供了未来 Web 技术发展的蓝图。W3C知道吧!(太有名气了，很多标准都是它制订的!有空经常去看看吧!)下载网址：http://www.w3.org/Jigsaw代码仅仅1000页左右。</p>
+<p>4. Jo!</p>
+<p>Jo!是一个纯Java的实现了Servlet API 2.2, JSP 1.1, 和HTTP/1.1的Web服务器。它的特性包括支持servlet tag,支持SSI，高级线程管理，虚拟主机，数据缓存，自动压缩text或HTML文件进行传输，国际化支持，自动重新加载Servlet、Jsp，自动重新加载web工程文件(WARs)，支持WAR热部署和一个Swing控制台。jo!可以被用做jboss和jakarta avalon-phoenix的web容器。下载地址http://www.tagtraum.com/ 。我极力推荐大家在研究Tomcat之前研究该软件，主要是其比Tomcat小多了，且开发者提供比较全的手册。该方向研究这两个也就可以了!</p>
+<p>二、JDBC方向</p>
+<p>很多人都喜欢JDBC，数据库吗!很深奥的东西，一听就可以糊弄人。其实等你真正研究了数据库的实现后发现，接口其实真的太简单，太完美了!要想设计如此优秀的框架还是需要学习的。下面就推荐几个数据库的实现吧!</p>
+<p>1. Hypersonic SQL</p>
+<p>Hypersonic SQL开源数据库方向比较流行的纯Java开发的关系型数据库。好像不是JDBC兼容的，JDBC的很多高级的特性都没有支持，不过幸好支持ANSI-92 标准 SQL语法。我推荐它主要是它的代码比较少1600页左右，如此小的数据库值得研究，而且他占的空间很小，大约只有160K，拥有快速的数据库引擎。推荐你的第一个开源数据库。下载地址：http://hsqldb.sourceforge.net/。</p>
+<p>2. Mckoi DataBase</p>
+<p>McKoiDB 和Hypersonic SQL差不多，它是GPL 的license的纯Java开发的数据库。他的 JDBC Driver 是使用 JDBC version 3 的 Specifaction。 他也是遵循 SQL-92 的标准，也尽量支持新的 SQL 特色, 并且支持 Transaction 的功能。两个可以选一个吧!下载地址：http://mckoi.com/database/。</p>
+<p>3. Apache Derby</p>
+<p>学Java的数据库我建议使用Apache Derby ，研究数据库想成为一个数据库的高手我建议你先研究Apache Derby。Apache Derby是一个高质量的、纯 Java开发的嵌入式关系数据库引擎，IBM&reg; 将其捐献给Apache开放源码社区，同时IBM的产品CloudSpace是它对应的产品。Derby是基于文件系统，具有高度的可移植性，并且是轻量级的，这使得它非常便于发布。主要是没有商业用户的很好的界面，没有其太多的功能。不过对于我们使用数据库、研究数据库还是极其有用的。对于中小型的企业说老实话你也不要用什么Oracle、SqlServer了，用Derby就可以了，何况是开源的呢!只要能发挥其长处也不容易啊!下载地址：http://incubator.apache.org/derby。</p>
+<p>不过在没有足够的能力前，不要试图读懂它!注释和源代码15000页左右，我一年的阅读量!能读下来并且能真正领会它，绝对高手!你能读完Derby的源代码只有两种可能：1.你成为顶尖的高手――至少是数据库这部分; 2.你疯了。选择吧!!!!作为我自己我先选择Hypersonic SQL这样的数据库先研究，能过这一关，再继续研究Derby!不就是一年的阅读量吗!我可以化3年去研究如何做一个数据库其实还是很值得的!有的人搞IT一辈子自己什么都没有做，也根本没有研究别人的东西!</p>
+<p>作为一个IT落后于别国若干年的、从事IT的下游产业&ldquo;外包&rdquo;的国家的IT从业人员，我认为还是先研究别人的优秀的东西比较好!可以先研究别人的，然后消化，学为己用!一心闭门造车实在遗憾!</p>
+<p>三、JMS方向</p>
+<p>JMS可能对大家来说是一个比较陌生的方向!其实JMS是一个比较容易理解，容易上手的方向。主要是Java消息服务，API也是相当简单的。不过在企业应用中相当广泛。下面就介绍几个吧!</p>
+<p>1. MOM4J</p>
+<p>MOM4J是一个完全实现JMS1.1规范的消息中间件并且向下兼容JMS1.0与1.02。它提供了自己的消息处理存储使它独立于关系数据与语言，它的客户端可以用任何语言开发。它可以算是一个小麻雀，很全实现也比较简单!它包含一个命名服务器，一个消息服务器，同时提供自己的持续层。设计也相当的巧妙，完全利用操作系统中文件系统设计的观念。代码也很少，250页左右，最近我在写该实现的源代码阅读方面的书，希望明年年中能与大家见面!下载地址：http://mom4j.sourceforge.net/index.html。</p>
+<p>2. OpenJMS</p>
+<p>OpenJMS是一个开源的Java Message Service API 1.0.2 规范的实现，它包含有以下特性：<br />
+1. 它既支持点到点(point-to-point)(PTP)模型和发布/订阅(Pub/Sub)模型。</p>
+<p>2. 支持同步与异步消息发送 。</p>
+<p>3. JDBC持久性管理使用数据库表来存储消息 。</p>
+<p>4. 可视化管理界面。</p>
+<p>5. Applet支持。</p>
+<p>6. 能够与Jakarta Tomcat这样的Servlet容器结合。</p>
+<p>7. 支持RMI, TCP, HTTP 与SSL协议。</p>
+<p>8. 客户端验证 。</p>
+<p>9. 提供可靠消息传输、事务和消息过滤。</p>
+<p>很好的JMS方向的开源项目!我目前也在研究它的源代码!学习它可以顺便研究JNDI的实现、以及网络通信的细节。这是我JMS方向研究的第二个开源项目。代码量1600页左右吧!下载地址：http://openjms.sourceforge.net/index.html</p>
+<p>3. ActiveMQ</p>
+<p>ActiveMQ是一个开放源码基于Apache 2.0 licenced 发布并实现了JMS 1.1。它能够与Geronimo，轻量级容器和任Java应用程序无缝的给合。主要是Apache的可以任意的使用和发布哦!个人比较喜欢Apache的源代码!下载地址：http://activemq.codehaus.org/</p>
+<p>4. JORAM</p>
+<p>JORAM一个类似于openJMS分布在ObjectWeb之下的JMS消息中间件。ObjectWeb的产品也是非常值得研究的!下面我还会给大家另外一个ObjectWeb的产品。下载地址：http://joram.objectweb.org/</p>
+<p>我个人推荐：OpenJMS和ActiveMQ!</p>
+<p>四、EJB方向</p>
+<p>EJB一个比较&ldquo;高级&rdquo;的方向。Sun公司曾经以此在分布式计算领域重拳出击。不过自从出现了Spring、Hibernation&hellip;&hellip;后似乎没落了!这个方向单独开源的也比较少，主要EJB是和JNDI、JDBC、JMS、JTS、JTA结合在一起的是以很少有单独的。下面推荐两个不过好像也要下载其它类库。</p>
+<p>1. EasyBeans</p>
+<p>ObjectWeb的一个新的项目，一个轻量级的EJB3容器，虽然还没有正式发布，但是已经可以从它们的subversion仓库中检出代码。代码量比较小600页左右，熟读它可以对网络编程、架构、RMI、容器的状态设计比较了解了!即学会EJB又能学习其它设计方法何乐而不为哦!下载地址：http://easybeans.objectweb.org/<br />
+2. OpenEJB</p>
+<p>OpenEJB是一个预生成的、自包含的、可移植的EJB容器系统，可以被插入到任意的服务器环境，包括应用程序服务器，Web服务器，J2EE平台， CORBA ORB和数据库等等。OpenEJB 被用于 Apple的WebObjects。听起来很好，我目前没有研究过。不知道我就不推荐了。下载地址：http://www.openejb.org/</p>
+<p>五、J2EE容器</p>
+<p>上面谈了这么多，都是J2EE的各个方向的。其实J2EE是一个规范，J2EE的产品一般要求专业提供商必须提供它们的实现。这些实现本身就是J2EE容器。市场上流行的J2EE容器很多，在开源领域流行的只有很少，很少。其中最著名的是JBoss。</p>
+<p>1. JBoss</p>
+<p>在J2EE应用服务器领域，Jboss是发展最为迅速的应用服务器。由于Jboss遵循商业友好的LGPL授权分发，并且由开源社区开发，这使得Jboss广为流行。另外，Jboss应用服务器还具有许多优秀的特质。</p>
+<p>其一，它将具有革命性的JMX微内核服务作为其总线结构;</p>
+<p>其二，它本身就是面向服务的架构(Service-Oriented Architecture，SOA);</p>
+<p>其三，它还具有统一的类装载器，从而能够实现应用的热部署和热卸载能力。因此，它是高度模块化的和松耦合的。Jboss用户的积极反馈告诉我们，Jboss应用服务器是健壮的、高质量的，而且还具有良好的性能。为满足企业级市场日益增长的需求，Jboss公司从2003年开始就推出了24*7、专业级产品支持服务。同时，为拓展Jboss的企业级市场，Jboss公司还签订了许多渠道合作伙伴。比如，Jboss公司同HP、Novell、Computer Associates、Unisys等都是合作伙伴。</p>
+<p>在2004年6月，Jboss公司宣布，Jboss应用服务器通过了Sun公司的J2EE认证。这是Jboss应用服务器发展史上至今为止最重要的里程碑。与此同时，Jboss一直在紧跟最新的J2EE规范，而且在某些技术领域引领J2EE规范的开发。因此，无论在商业领域，还是在开源社区，Jboss成为了第一个通过J2EE 1.4认证的主流应用服务器。现在，Jboss应用服务器已经真正发展成具有企业强度(即，支持关键级任务的应用)的应用服务器。</p>
+<p>Jboss 4.0作为J2EE认证的重要成果之一，已经于2004年9月顺利发布了。同时，Jboss 4.0还提供了Jboss AOP(Aspect-Oriented Programming，面向方面编程)组件。近来，AOP吸引了大量开发者的关注。它提供的新的编程模式使得用户能够将方面(比如，事务)从底层业务逻辑中分离出来，从而能够缩短软件开发周期。用户能够单独使用Jboss AOP，即能够在Jboss应用服务器外部使用它。或者，用户也可以在应用服务器环境中使用它。Jboss AOP 1.0已经在2004年10月发布了。 很有名吧!可以下载一个用一下，下载地址：http://www.jboss.org/</p>
+<p>关于JBoss的使用资料也非常多，甚至比商业软件的还多。有机会研究吧!</p>
+<p>2. JOnAS</p>
+<p>JOnAS是一个开放源代码的J2EE实现，在ObjectWeb协会中开发。整合了Tomcat或Jetty成为它的Web容器，以确保符合Servlet 2.3和JSP 1.2规范。JOnAS服务器依赖或实现以下的Java API：JCA、JDBC、JTA 、JMS、JMX、JNDI、JAAS、JavaMail 。下载地址：http://jonas.objectweb.org/<br />
+3.Apache Geronimo</p>
+<p>Apache Geronimo 是 Apache 软件基金会的开放源码J2EE服务器，它集成了众多先进技术和设计理念。 这些技术和理念大多源自独立的项目，配置和部署模型也各不相同。 Geronimo能将这些项目和方法的配置及部署完全整合到一个统一、易用的模型中。作为符合J2EE标准的服务器，Geronimo提供了丰富的功能集和无责任 Apache 许可，具备&ldquo;立即部署&rdquo;式J2EE 1.4容器的各种优点，其中包括：</p>
+<p>1. 符合J2EE1.4标准的服务器 。</p>
+<p>2. 预集成的开放源码项目 。</p>
+<p>3. 统一的集成模型 。</p>
+<p>4. 可伸缩性、可管理性和配置管理功能。</p>
+<p>我一直比较推荐Apache的产品。主要是可以任意自由地使用。下载地址：http://incubator.apache.org/projects/geronimo/</p>
+<p>六、其它</p>
+<p>讲了这么多大家可能很厌烦了!是不是很多很多啊!其实不然，我们不会的太多太多了!不会的太多太多了。不管你是不是J2EE高手，还是J2SE高手，有些东西你要绝对很精明的。例如：1.Java的Collections Framework就是java的数据结构了，不仅要吃透它，还要能按照需要扩展它，利用其思想创建一个自己的数据结构。2.网络编程肯定要会吧，现在以及以后很多程序都是不在同一台机器上的，不会网络怎么行哦!3.IO肯定要会的吧!你的程序难道不用输入输出数据啊!整个IO包加NIO也有600多页的源代码哦!4.JDBC你要会吧!数据库都不会，在你的企业应用中你的数据又保存到哪里啊!文件中――太落后了吧!典型的没有学过J2EE。尽管数据库背后也是采用文件保存的。5.Serverlet、JSp你要是做网页做网站，肯定要做到。问你一个简单的问题，网页中如何实现分页啊!有具体方法的就在本文章后发言吧!6. Ant要会吧!java语言中发布的工具，类似与c中的make工具。7.JUnit用过吧!单元测试软件。你不要啊!你的软件就没有bug!你牛!(建议大家研究研究其源代码，很有用的框架，包含大量的设计模式，源代码不到100页!看了只能感叹――高手就是高手)细心的朋友可以看到在你使用的很多IDE工具中都有JUnit哦!就是它。</p>
+<p>一切的一切才刚刚开始!有兴趣，有需要你可以研究数据库连接池的框架，如：C3P0、Jakarta DBCP、 DBPool&hellip;.可以研究J2EE框架Spring&hellip;&hellip;. Web框架Struts&hellip;&hellip;持久层框架Hibernate&hellip;..甚至开发工具Eclipse&hellip;..Sun领导的点对点通信的JXTA&hellip;..报表工具JFreeChart、JasperReports&hellip;..分布式网络编程的CORBA、网络通信的JGROUPS、XML解析的xerces&hellip;..(在不经意间开源已经步入你的电脑，不信啊!你JDK的安装目录jdk1.6.0 src com sun org apache就是Xerces，一个XML解析的著名的开源 项目)</p>
+<p>不管怎么样我还是建议从基本的做起，学精J2SE，熟读它的源码，准确了解其设计理念，然后分头击破J2EE――一口吃不成一个胖子!不要贪多贪广!脚踏实地就可以了!</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('总结：J2EE学习的思维方式和理念_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/674.html">Java教程：Java程序员必须了解的七…</a>&nbsp;&nbsp;下一条：已经是最后一条了
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1751.html" title="Windows Server 2016新功能" >Windows Server 2016新功能</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1500.html" title="MyEclipse 8.5 汉化方法" >MyEclipse 8.5 汉化方法</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1468.html" title="jquery实现无刷新分页" >jquery实现无刷新分页</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1467.html" title="什么是JSON？" >什么是JSON？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1465.html" title="什么是回调函数" >什么是回调函数</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1446.html" title="jQuery 1.7下载" >jQuery 1.7下载</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1443.html" title="jquery加载XML文档" >jquery加载XML文档</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1390.html" title="什么是MVC(三层架构) " >什么是MVC(三层架构) </a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1362.html" title="网页中如何实现音乐和歌词同步" >网页中如何实现音乐和歌词同步…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1285.html" title="初学教程：Java&nbsp;Socket网络编程浅析">初学教程：Java Socket网络编程浅…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1143.html" title="Java随机数总结">Java随机数总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/704.html" title="java读取文本文件内容并获取文件大小">java读取文本文件内容并获取文件大…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1142.html" title="字节流和字符流Java">字节流和字符流Java</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/705.html" title="java常用图片读写程序">java常用图片读写程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/707.html" title="怎样成为一个优秀的Java程序员">怎样成为一个优秀的Java程序员</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/963.html" title="C++程序员转Java容易吗？难点在哪里？">C++程序员转Java容易吗？难点在哪…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1183.html" title="思科培训与华为培训在教材和内容方面的差别">思科培训与华为培训在教材和内容方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1018.html" title="Java注释的使用和定义">Java注释的使用和定义</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/825.html" title="使用&nbsp;Java&nbsp;实现&nbsp;Comet&nbsp;风格的&nbsp;Web&nbsp;应用2">使用 Java 实现 Comet 风格的 Web…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/954.html" title="利用Java实现zip压缩/解压缩">利用Java实现zip压缩/解压缩</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1019.html" title="Java&nbsp;Web三层架构的配置详解">Java Web三层架构的配置详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/677.html" title="Java&nbsp;Socket编程之我见">Java Socket编程之我见</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/826.html" title="使用&nbsp;Java&nbsp;实现&nbsp;Comet&nbsp;风格的&nbsp;Web&nbsp;应用3">使用 Java 实现 Comet 风格的 Web…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1082.html" title="两种J2ME网络编程的方法之一">两种J2ME网络编程的方法之一</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1751.html" title="Windows&nbsp;Server&nbsp;2016新功能" >Windows Server 2016新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1500.html" title="MyEclipse&nbsp;8.5&nbsp;汉化方法" >MyEclipse 8.5 汉化方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1468.html" title="jquery实现无刷新分页" >jquery实现无刷新分页</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1467.html" title="什么是JSON？" >什么是JSON？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1465.html" title="什么是回调函数" >什么是回调函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1446.html" title="jQuery&nbsp;1.7下载" >jQuery 1.7下载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1443.html" title="jquery加载XML文档" >jquery加载XML文档</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1390.html" title="什么是MVC(三层架构)&nbsp;" >什么是MVC(三层架构) </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1362.html" title="网页中如何实现音乐和歌词同步" >网页中如何实现音乐和歌词同步</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1285.html" title="初学教程：Java&nbsp;Socket网络编程浅析" >初学教程：Java Socket网络编程浅…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1183.html" title="思科培训与华为培训在教材和内容方面的差别" >思科培训与华为培训在教材和内容方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1143.html" title="Java随机数总结" >Java随机数总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1142.html" title="字节流和字符流Java" >字节流和字符流Java</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1083.html" title="两种J2ME网络编程的方法之二" >两种J2ME网络编程的方法之二</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1082.html" title="两种J2ME网络编程的方法之一" >两种J2ME网络编程的方法之一</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "673" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FLASH变量和作用域[这是一篇比较好的文章]_技术辅导_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="&nbsp;&nbsp;在函数体中使用本地变量是一个很好的习惯，这样该函数可以充当独立的代码。只能在本地变量的代码块中对它进行更改。如果函数中的表达式使用全局变量，则该函数外部的代码或事件也可以更改它的值，这样也更改了该函数。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 技术辅导
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        FLASH变量和作用域[这是一篇比较好的文章]
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/28 13:11:06
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        &nbsp;&nbsp;在函数体中使用本地变量是一个很好的习惯，这样该函数可以充当独立的代码。只能在本地变量的代码块中对它进行更改。如果函数中的表达式使用全局变量，则该函数外部的代码或事件也可以更改它的值，这样也更改了该函数。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <div style="FONT-SIZE: 12px" id="blogDetailDiv">关于变量和作用域&nbsp;&nbsp; <br />
+&nbsp;&nbsp;变量的作用域是指识别（定义）变量的区域和可以引用变量的区域。变量在其中被识别的区域可能在某个时间轴中或在某个函数内部，也可能在整个应用程序中是全局已知的。有关作用域的更多信息，请参见关于作用域和目标设定。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;在使用&nbsp;&nbsp; ActionScript&nbsp;&nbsp; 开发&nbsp;&nbsp; Flash&nbsp;&nbsp; 应用程序时，了解变量作用域是非常重要的。作用域不仅表示可以在什么时间和位置引用变量，还表示一个特定的变量可以在应用程序中存在多长时间。在函数体中定义变量时，一旦指定的函数结束，变量就不再存在了。如果您试图在错误的作用域内引用对象或引用已过期的变量，您的&nbsp;&nbsp; Flash&nbsp;&nbsp; 文档中将会出错，这将导致出现意外情况或使功能受到破坏。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;在&nbsp;&nbsp; ActionScript&nbsp;&nbsp; 中有三种类型的变量作用域：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;a.全局变量和函数对于文档中的每个时间轴和作用域均可见。因此，全局变量是在代码的所有区域中定义的。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;b.时间轴变量可用于该时间轴上的任何脚本。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;c.本地变量在声明它们的函数体（由大括号界定）内可用。因此，本地变量仅是在代码的一部分中定义的。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;全局变量&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;全局变量和函数对于您的文档中的每一时间轴和作用域而言都是可见的。要声明（或创建）具有全局作用域的变量，请在变量名前使用&nbsp;&nbsp; _global&nbsp;&nbsp; 标识符，而不要使用&nbsp;&nbsp; var&nbsp;&nbsp; =&nbsp;&nbsp; 语法。例如，以下代码创建全局变量&nbsp;&nbsp; myName：&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;var&nbsp;&nbsp; _global.myName&nbsp;&nbsp; =&nbsp;&nbsp; &quot;George&quot;;&nbsp;&nbsp; //&nbsp;&nbsp; 全局变量的错误语法&nbsp;&nbsp; <br />
+&nbsp;&nbsp;_global.myName&nbsp;&nbsp; =&nbsp;&nbsp; &quot;George&quot;;&nbsp;&nbsp; //&nbsp;&nbsp; 全局变量的正确语法&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;但是，如果您使用与全局变量相同的名称初始化一个本地变量，则在处于该本地变量的作用域内时对该全局变量不具有访问权限，如下面的示例所示：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;_global.counter&nbsp;&nbsp; =&nbsp;&nbsp; 100;&nbsp;&nbsp; //&nbsp;&nbsp; 声明全局变量&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(counter);&nbsp;&nbsp; //&nbsp;&nbsp; 访问全局变量并显示&nbsp;&nbsp; 100&nbsp;&nbsp; <br />
+&nbsp;&nbsp;function&nbsp;&nbsp; count():Void&nbsp;&nbsp; {&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;&nbsp; (var&nbsp;&nbsp; counter:Number&nbsp;&nbsp; =&nbsp;&nbsp; 0;&nbsp;&nbsp; counter&nbsp;&nbsp; &lt;=&nbsp;&nbsp; 2;&nbsp;&nbsp; counter++)&nbsp;&nbsp; {&nbsp;&nbsp; //&nbsp;&nbsp; 本地变量&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trace(counter);&nbsp;&nbsp; //&nbsp;&nbsp; 访问本地变量并显示&nbsp;&nbsp; 0&nbsp;&nbsp; 到&nbsp;&nbsp; 2&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;count();&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(counter);&nbsp;&nbsp; //&nbsp;&nbsp; 访问全局变量并显示&nbsp;&nbsp; 100&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;此示例只是表明在&nbsp;&nbsp; count()&nbsp;&nbsp; 函数作用域内未访问该全局变量。但是，如果加上一个&nbsp;&nbsp; _global&nbsp;&nbsp; 前缀，您就可以访问具有全局作用域的变量了。例如，如果为&nbsp;&nbsp; counter&nbsp;&nbsp; 加上前缀&nbsp;&nbsp; _global，就可以访问它，如下面的代码所示：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;trace(_global.counter);&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;您不能为在&nbsp;&nbsp; _global&nbsp;&nbsp; 作用域中创建的值指定严格的数据类型，因为在指定数据类型时必须使用&nbsp;&nbsp; var&nbsp;&nbsp; 关键字。例如，您不能执行以下操作：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;_global.foo:String&nbsp;&nbsp; =&nbsp;&nbsp; &quot;foo&quot;;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //语法错误&nbsp;&nbsp; <br />
+&nbsp;&nbsp;var&nbsp;&nbsp; _global.foo:String&nbsp;&nbsp; =&nbsp;&nbsp; &quot;foo&quot;;&nbsp;&nbsp; //语法错误&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;时间轴变量&nbsp;&nbsp; <br />
+&nbsp;&nbsp;时间轴变量可用于该特定时间轴上的任何脚本。要声明时间轴变量，请使用&nbsp;&nbsp; var&nbsp;&nbsp; 语句并在该时间轴中的任一帧上初始化这些变量。该变量可以用于该帧和其后的所有帧，如下面的示例所示。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;在文档中使用时间轴变量：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;创建一个新的&nbsp;&nbsp; Flash&nbsp;&nbsp; 文档并将它命名为&nbsp;&nbsp; timelinevar.fla。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;将下面的&nbsp;&nbsp; ActionScript&nbsp;&nbsp; 添加到时间轴中的第&nbsp;&nbsp; 1&nbsp;&nbsp; 帧：&nbsp;&nbsp; var&nbsp;&nbsp; myNum:Number&nbsp;&nbsp; =&nbsp;&nbsp; 15;&nbsp;&nbsp; /*&nbsp;&nbsp; 在第&nbsp;&nbsp; 1&nbsp;&nbsp; 帧中初始化，这样它可用于所有帧&nbsp;&nbsp; */&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;选择时间轴上的第&nbsp;&nbsp; 20&nbsp;&nbsp; 帧。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;选择&quot;插入&quot;&gt;&quot;时间轴&quot;&gt;&quot;空白关键帧&quot;。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;选择了新的关键帧之后，在&quot;动作&quot;面板中键入以下&nbsp;&nbsp; ActionScript：&nbsp;&nbsp; trace(myNum);&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;选择&quot;控制&quot;&gt;&quot;测试影片&quot;对该新文档进行测试。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;大约一秒钟之后，在&quot;输出&quot;面板中出现值&nbsp;&nbsp; 15。因为默认情况下&nbsp;&nbsp; Flash&nbsp;&nbsp; 文档是循环播放的，所以每次播放头到达时间轴上的第&nbsp;&nbsp; 20&nbsp;&nbsp; 帧时，值&nbsp;&nbsp; 15&nbsp;&nbsp; 就会在&quot;输出&quot;面板中再次出现。要停止循环动作，请在&nbsp;&nbsp; trace()&nbsp;&nbsp; 语句之后添加&nbsp;&nbsp; stop();。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;必须首先声明时间轴变量，然后再尝试在脚本中访问它。例如，如果将代码&nbsp;&nbsp; var&nbsp;&nbsp; myNum:Number&nbsp;&nbsp; =&nbsp;&nbsp; 15;&nbsp;&nbsp; 放置在第&nbsp;&nbsp; 20&nbsp;&nbsp; 帧中，则附加到第&nbsp;&nbsp; 20&nbsp;&nbsp; 帧之前的任何帧上的脚本都无法访问&nbsp;&nbsp; myNum，它们都是未定义的，而不包含值&nbsp;&nbsp; 15。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;本地变量&nbsp;&nbsp; <br />
+&nbsp;&nbsp;在函数体内使用&nbsp;&nbsp; var&nbsp;&nbsp; 语句时，声明的是本地变量。在函数块（又称函数定义）内声明一个本地变量时，该变量是在该函数块的作用域内定义的，因而在该函数块结束时会过期。因此，本地变量仅存在于该函数中。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;例如，如果在名为&nbsp;&nbsp; localScope&nbsp;&nbsp; 的函数中声明一个名为&nbsp;&nbsp; myStr&nbsp;&nbsp; 的变量，该变量在该函数外部将不可用。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;function&nbsp;&nbsp; localScope():Void&nbsp;&nbsp; {&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp; myStr:String&nbsp;&nbsp; =&nbsp;&nbsp; &quot;local&quot;;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;localScope();&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(myStr);&nbsp;&nbsp; //&nbsp;&nbsp; Undefined，因为&nbsp;&nbsp; myStr&nbsp;&nbsp; 不是在全局作用域内定义的&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;如果用于本地变量的变量名已经被声明为时间轴变量，则当本地变量在作用域内时，本地定义优先于时间轴定义。时间轴变量在该函数外部仍然存在。例如，下面的代码创建了一个名为&nbsp;&nbsp; str1&nbsp;&nbsp; 的时间轴字符串变量，然后在&nbsp;&nbsp; scopeTest()&nbsp;&nbsp; 函数中创建一个具有相同名称的本地变量。该函数中的&nbsp;&nbsp; trace&nbsp;&nbsp; 语句生成该变量的本地定义，而函数外部的&nbsp;&nbsp; trace&nbsp;&nbsp; 语句生成变量的时间轴定义。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;var&nbsp;&nbsp; str1:String&nbsp;&nbsp; =&nbsp;&nbsp; &quot;Timeline&quot;;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;function&nbsp;&nbsp; scopeTest():Void&nbsp;&nbsp; {&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp; str1:String&nbsp;&nbsp; =&nbsp;&nbsp; &quot;Local&quot;;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trace(str1);&nbsp;&nbsp; //&nbsp;&nbsp; 本地&nbsp;&nbsp; <br />
+&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;scopeTest();&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(str1);&nbsp;&nbsp; //&nbsp;&nbsp; 时间轴&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;在下一个示例中您可以看到，某些变量仅在特定函数的生命期内有效，如果尝试在该函数的作用域外引用该变量，就会生成错误。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;在应用程序中使用本地变量：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;创建一个新的&nbsp;&nbsp; Flash&nbsp;&nbsp; 文档。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;打开&quot;动作&quot;面板（&quot;窗口&quot;&gt;&quot;动作&quot;），在时间轴的第&nbsp;&nbsp; 1&nbsp;&nbsp; 帧上添加下面的&nbsp;&nbsp; ActionScript：&nbsp;&nbsp; function&nbsp;&nbsp; sayHello(nameStr:String):Void&nbsp;&nbsp; {&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp; greetingStr:String&nbsp;&nbsp; =&nbsp;&nbsp; &quot;Hello,&nbsp;&nbsp; &quot;&nbsp;&nbsp; +&nbsp;&nbsp; nameStr;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;trace(greetingStr);&nbsp;&nbsp; <br />
+&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;sayHello(&quot;world&quot;);&nbsp;&nbsp; //&nbsp;&nbsp; Hello,&nbsp;&nbsp; world&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(nameStr);&nbsp;&nbsp; //&nbsp;&nbsp; undefined&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(greetingStr);&nbsp;&nbsp; //&nbsp;&nbsp; undefined&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;选择&quot;控制&quot;&gt;&quot;测试影片&quot;来测试该文档。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;Flash&nbsp;&nbsp; 在&quot;输出&quot;面板中显示字符串&quot;Hello,&nbsp;&nbsp; world&quot;，并显示&nbsp;&nbsp; nameStr&nbsp;&nbsp; 和&nbsp;&nbsp; greetingStr&nbsp;&nbsp; 的值为&nbsp;&nbsp; undefined，因为这些变量在当前的作用域内不再可用。仅能在&nbsp;&nbsp; sayHello&nbsp;&nbsp; 函数执行时引用&nbsp;&nbsp; nameStr&nbsp;&nbsp; 和&nbsp;&nbsp; greetingStr。函数退出后，这些变量将不再存在。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;变量&nbsp;&nbsp; i&nbsp;&nbsp; 和&nbsp;&nbsp; j&nbsp;&nbsp; 经常用作循环计数器。在下面的示例中，将&nbsp;&nbsp; i&nbsp;&nbsp; 用作本地变量；它只存在于&nbsp;&nbsp; initArray()&nbsp;&nbsp; 函数的内部：&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;var&nbsp;&nbsp; myArr:Array&nbsp;&nbsp; =&nbsp;&nbsp; new&nbsp;&nbsp; Array();&nbsp;&nbsp; <br />
+&nbsp;&nbsp;function&nbsp;&nbsp; initArray(arrayLength:Number):Void&nbsp;&nbsp; {&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;&nbsp; i:Number;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(i&nbsp;&nbsp; =&nbsp;&nbsp; 0;&nbsp;&nbsp; i&nbsp;&nbsp; &lt;&nbsp;&nbsp; arrayLength;&nbsp;&nbsp; i++)&nbsp;&nbsp; {&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;myArr<span style="FONT-STYLE: italic"><wbr></wbr>&nbsp;&nbsp; =&nbsp;&nbsp; i&nbsp;&nbsp; +&nbsp;&nbsp; 1;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;}&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(myArr);&nbsp;&nbsp; //&nbsp;&nbsp; &lt;blank&gt;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;initArray(3);&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(myArr);&nbsp;&nbsp; //&nbsp;&nbsp; 1,2,3&nbsp;&nbsp; <br />
+&nbsp;&nbsp;trace(i);&nbsp;&nbsp; //&nbsp;&nbsp; undefined&nbsp;&nbsp; <br />
+&nbsp;&nbsp;注意&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;下面的&nbsp;&nbsp; for&nbsp;&nbsp; 循环语法也很常见：for&nbsp;&nbsp; (var&nbsp;&nbsp; i:Number&nbsp;&nbsp; =&nbsp;&nbsp; 0;&nbsp;&nbsp; i&nbsp;&nbsp; &lt;&nbsp;&nbsp; arrayLength;&nbsp;&nbsp; i++)&nbsp;&nbsp; {...}。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;因为变量&nbsp;&nbsp; i&nbsp;&nbsp; 不是在主时间轴中定义的，所以此示例在&nbsp;&nbsp; Flash&nbsp;&nbsp; 测试环境中显示&nbsp;&nbsp; undefined。它仅存在于&nbsp;&nbsp; initArray()&nbsp;&nbsp; 函数中。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;可以使用本地变量防止出现名称冲突，名称冲突可能会导致应用程序出现意外结果。例如，如果将&nbsp;&nbsp; age&nbsp;&nbsp; 用作本地变量，可以用它在一个上下文中存储一个人的年龄，而在另一个上下文中存储此人的孩子的年龄。因为是在不同的作用域中使用这些变量的，因此在这种情况下不会有冲突。&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;在函数体中使用本地变量是一个很好的习惯，这样该函数可以充当独立的代码。只能在本地变量的代码块中对它进行更改。如果函数中的表达式使用全局变量，则该函数外部的代码或事件也可以更改它的值，这样也更改了该函数。&nbsp;&nbsp;&nbsp;&nbsp; <br />
+<!--v:3.2--></span>
+<div id="paperBottom" class="clear"></div>
+<!--E 文章--><!--S 翻页--></div>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('FLASH变量和作用域[这是一篇比较好的文章]_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/380.html">有关Flash AS3编程的一些总结</a>&nbsp;&nbsp;下一条： <a href="/html/News/378.html">as3 类的编写[积累] </a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码">FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/605.html" title="Flash,Actionscript,AS延时执行语句,延时播放影片">Flash,Actionscript,AS延时执行语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0">入门Flash CS3 ActionScript 3.0</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法">播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/384.html" title="JavaScript控制Flash播放器的方法汇总&nbsp;">JavaScript控制Flash播放器的方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/379.html" title="FLASH变量和作用域[这是一篇比较好的文章]">FLASH变量和作用域[这是一篇比较好…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/283.html" title="用FLASH8.0轻松制作简易计算器">用FLASH8.0轻松制作简易计算器</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1035.html" title="FLASH动画禁止右键菜单">FLASH动画禁止右键菜单</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/523.html" title="FLASH&nbsp;AS教程：响应键盘事件的四种方法">FLASH AS教程：响应键盘事件的四种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/541.html" title="最常用的Flash语句(汇总)">最常用的Flash语句(汇总)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/278.html" title="Flash制作坦克游戏视频教程">Flash制作坦克游戏视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/998.html" title="创建FLEX自定义组件(1)">创建FLEX自定义组件(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/370.html" title="FLASH与ASP通信原理入门&nbsp;">FLASH与ASP通信原理入门 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/524.html" title="Flash教程：加载外部文本文件的3种方法">Flash教程：加载外部文本文件的3种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/996.html" title="创建FLEX自定义组件(3)">创建FLEX自定义组件(3)</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设计与…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1482.html" title="常用UML建模工具" >常用UML建模工具</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码" >FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1250.html" title="视频教程卡住的解决办法" >视频教程卡住的解决办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法" >播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1174.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0" >入门Flash CS3 ActionScript 3.0</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "379" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

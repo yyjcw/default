@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自定义JSP标签_Android_IOS_移动互联网_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="标签是一种XML元素，通过标签可以使JSP网页变得简洁并且易于维护，还可以方便地实现同一个JSP文件支持多种语言版本。由于标签是XML元素，所以它的名称和属性都是大小写敏感的" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Android_IOS_移动互联网
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        自定义JSP标签
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/30 14:35:21
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        标签是一种XML元素，通过标签可以使JSP网页变得简洁并且易于维护，还可以方便地实现同一个JSP文件支持多种语言版本。由于标签是XML元素，所以它的名称和属性都是大小写敏感的
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><strong>一、基本概念：</strong></p>
+<p>1.标签(Tag):</p>
+<p>标签是一种XML元素，通过标签可以使JSP网页变得简洁并且易于维护，还可以方便地实现同一个JSP文件支持多种语言版本。由于标签是XML元素，所以它的名称和属性都是大小写敏感的</p>
+<p>2.标签库(Tag library):</p>
+<p>由一系列功能相似、逻辑上互相联系的标签构成的集合称为标签库。</p>
+<p>3.标签库描述文件(Tag Library Descriptor):</p>
+<p>标签库描述文件是一个XML文件，这个文件提供了标签库中类和JSP中对标签引用的映射关系。它是一个配置文件，和web.xml是类似的。</p>
+<p>4.标签处理类(Tag Handle Class):</p>
+<p>标签处理类是一个Java类，这个类继承了TagSupport或者扩展了SimpleTag接口，通过这个类可以实现自定义JSP标签的具体功能</p>
+<p><strong>二、自定义JSP标签的格式：</strong></p>
+<p>1.</p>
+<p>&lt;% @ taglib prefix=&rdquo;someprefix&rdquo;　uri=&rdquo;/sometaglib&rdquo; %&gt;<br />
+&nbsp;</p>
+<p>为了使到JSP容器能够使用标签库中的自定义行为，必须满足以下两个条件：</p>
+<p>1)从一个指定的标签库中识别出代表这种自定义行为的标签</p>
+<p>2)找到实现这些自定义行为的具体类</p>
+<p>第一个必需条件－找出一个自定义行为属于那个标签库－是由标签指令的前缀(Taglib Directive's Prefix)属性完成，所以在同一个页面中使用相同前缀的元素都属于这个标签库。每个标签库都定义了一个默认的前缀，用在标签库的文档中或者页面中插入自定义标签。所以，你可以使用除了诸如jsp,jspx,java,servlet,sun,sunw(它们都是在JSP白皮书中指定的保留字)之类的前缀。 　</p>
+<p>uri属性满足了以上的第二个要求。为每个自定义行为找到对应的类。这个uri包含了一个字符串，容器用它来定位TLD文件。在TLD文件中可以找到标签库中所有标签处理类的名称</p>
+<p>2. 当web应用程序启动时，容器从WEB-INF文件夹的目录结构的META-INF搜索所有以.tld结尾的文件。也就是说它们会定位所有的TLD文件。对于每个TLD文件，容器会先获取标签库的URI，然后为每个TLD文件和对应的URI创建映射关系。</p>
+<p>在JSP页面中，我们仅需通过使用带有URI属性值的标签库指令来和具体的标签库匹配</p>
+<p><strong>三、自定义JSP标签的处理过程：</strong></p>
+<p>1．在JSP中引入标签库：</p>
+<p>&lt;% @ taglib prefix=&rdquo;taglibprefix&rdquo; uri=&rdquo;tagliburi&rdquo; %&gt;<br />
+&nbsp;</p>
+<p>2．在JSP中使用标签库标签</p>
+<p>3．Web容器根据第二个步骤中的prefix，获得第一个步骤中声明的taglib的uri属性值</p>
+<p>4．Web容器根据uri属性在web.xml找到对应的元素 5．从元素中获得对应的元素的值 6．Web容器根据元素的值从WEB-INF/目录下找到对应的.tld文件 7．从.tld文件中找到与tagname对应的元素 8．凑元素中获得对应的元素的值 9．Web容器根据元素的值创建相应的tag handle class的实例 10. Web容器调用这个实例的doStartTag/doEndTag方法完成相应的处理</p>
+<p><strong>四、创建和使用一个Tag Library的基本步骤：</strong></p>
+<p>1.创建标签的处理类(Tag Handler Class)</p>
+<p>2.创建标签库描述文件(Tag Library Descrptor File)</p>
+<p>3.在web.xml文件中配置元素 4.在JSP文件中引人标签库</p>
+<p><strong>五、TagSupport类简介：</strong></p>
+<p>1.处理标签的类必须扩展javax.servlet.jsp.TagSupport.</p>
+<p>2.TagSupport类的主要属性：</p>
+<p>A.parent属性：代表嵌套了当前标签的上层标签的处理类</p>
+<p>B.pageContex属性：代表Web应用中的javax.servlet.jsp.PageContext对象</p>
+<p>3.JSP容器在调用doStartTag或者doEndTag方法前，会先调用setPageContext和setParent方法，设置pageContext和parent。因此在标签处理类中可以直接访问pageContext变量</p>
+<p>4.在TagSupport的构造方法中不能访问pageContext成员变量，因为此时JSP容器还没有调用</p>
+<p>setPageContext方法对pageContext进行初始化</p>
+<p><strong>六、TagSupport处理标签的方法：</strong></p>
+<p>1.TagSupport类提供了两个处理标签的方法：</p>
+<p>public int doStartTag() throws JspException<br />
+public int doEndTag() throws JspException</p>
+<p>2.doStartTag：但JSP容器遇到自定义标签的起始标志，就会调用doStartTag()方法。</p>
+<p>doStartTag()方法返回一个整数值，用来决定程序的后续流程。</p>
+<p>A.Tag.SKIP_BODY：表示?&gt;&hellip;之间的内容被忽略</p>
+<p>B.Tag.EVAL_BODY_INCLUDE：表示标签之间的内容被正常执行</p>
+<p>3.doEndTag：但JSP容器遇到自定义标签的结束标志，就会调用doEndTag()方法。doEndTag()方法也返回一个整数值，用来决定程序后续流程。</p>
+<p>A.Tag.SKIP_PAGE：表示立刻停止执行网页，网页上未处理的静态内容和JSP程序均被忽略任何已有的输出内容立刻返回到客户的浏览器上。</p>
+<p>B.Tag_EVAL_PAGE：表示按照正常的流程继续执行JSP网页</p>
+<p><strong>七、用户自定义的标签属性：</strong></p>
+<p>如果在标签中还包含了自定义的属性，那么在标签处理类中应该将这个属性作为成员变量，并且分别提供设置和读取属性的方法。</p>
+<p><strong>八、创建标签处理类的步骤：</strong></p>
+<p>1.创建包含JSP网页静态文本的文件(即是要替换自定义JSP标签的文本)</p>
+<p>2.在Web应用启动时装载静态文本</p>
+<p>3.创建标签处理类</p>
+<p><strong>九、如何创建包含JSP网页静态文本的文件：</strong></p>
+<p>1.使用java.util.Properties类来存放要替换网页中自定义JSP标签的静态文本</p>
+<p>2.Properties类代表了一系列属性的集合，其实例既可以被保存到流中，也可以从流中加载。这些文本以key/value的形式存放在WEB-INF目录下，例如key=value，在属性列表中这些key/value都是String类型的</p>
+<p><strong>十、Properties类的常用API：</strong></p>
+<p>1.setProperty(String key, String value)：调用Hashtable类的put方法添加属性</p>
+<p>2.getProperty(String key)：获取属性列表中key对应的属性值</p>
+<p>3.load(InputStream in)：从输入流对象InputStream中读取属性列表(Properties list)</p>
+<p>4.store(OutputStream out,String coMMent)：使用适当的格式将属性列表的属性对写入输出流对象中，默认使用ISO-88590-1编码格式,以行的方式处理输入。属性的key/value之间以&rdquo;=、:&rdquo;配对，以回车、换行分隔key/value配对</p>
+<p><strong>十一、ServletContext类的常用API：</strong></p>
+<p>1.getContext(String uripath)：返回服务器中uripath所代表的ServletContext对象</p>
+<p>2.getInitParameter(String name)：返回ServletConfig对象中name参数的值</p>
+<p>3.getMineType(String file)：返回file参数代表的文件的MIME类型</p>
+<p>4.getRequestDispatcher(String path)：返回path代表的RequestDispacher对象</p>
+<p>5.getResourceAsStream(String path)：以输入流的形式返回path对应的资源，在输入留中对象可以为任意形式的数据，path参数必须以&ldquo;/&rdquo;开始且相对于Context Root</p>
+<p><strong>十二、如何使用ServletContxt读取并保存属性文件：</strong></p>
+<p>1.创建java.util.Properties类对象</p>
+<p>2.获取ServletContext对象</p>
+<p>3.将属性文件以输入流的形式读入到某个输入流对象中</p>
+<p>4.将输入流对象加载到Properties对象中</p>
+<p>5.将Properties对象保存到ServletContext对象中</p>
+<p><strong>十三、如何在Web应用启动时装载静态文本：</strong></p>
+<p>1.创建继承了HttpServlet类的子类，在web.xml中配置这Servlet时设置load-on-startup属性：</p>
+<p>someclass</p>
+<p>somepackage.SomeClass1</p>
+<p>2.在这个Servlet的init()方法中创建java.util.Properties类</p>
+<p>3.获取当前Web应用的ServletContext对象</p>
+<p>4.将WEB-INF目录下的属性文件读入到输入流InputStream中：</p>
+<p>InputStream in = context.getResourceAsString(&quot;WEB-INF/someproperties.properties&quot;);</p>
+<p>5.将输入流加载到属性对象中</p>
+<p>ps.load(in);</p>
+<p>6.将属性对象保存到上</p>
+<p>context.setAttribute(&quot;attributeName&quot;,ps);</p>
+<p><strong>十四、如何创建标签处理类：</strong></p>
+<p>1.引入必需的资源：</p>
+<p>import javax.servlet.jsp.*;</p>
+<p>import javax.servlet.http.*;</p>
+<p>import java.util.*;</p>
+<p>import java.io.*;</p>
+<p>2.继承TagSupport类并覆盖doStartTag()/doEndTag()方法</p>
+<p>3.从ServletContext对象中获取java.util.Properties对象</p>
+<p>4.从Properties对象中获取key对应的属性值</p>
+<p>5.对获取的属性进行相应的处理并输出结果</p>
+<p><strong>十五、创建标签库描述文件(Tag Library Descriptor)：</strong></p>
+<p>1.标签库描述文件，简称TLD，采用XML文件格式，定义了用户的标签库。TLD文件中的元素可以分成3类：</p>
+<p>A.：标签库元素</p>
+<p>B.：标签元素</p>
+<p>C.：标签属性元素</p>
+<p>2.标签库元素用来设定标签库的相关信息，它的常用属性有：</p>
+<p>A.shortname： 指定Tag Library默认的前缀名(prefix)</p>
+<p>B.uri： 设定Tag Library的惟一访问表示符</p>
+<p>3.标签元素用来定义一个标签，它的常见属性有：</p>
+<p>A.name： 设定Tag的名字</p>
+<p>B.tagclass： 设定Tag的处理类</p>
+<p>C.bodycontent： 设定标签的主体(body)内容</p>
+<p>1).empty：表示标签中没有body</p>
+<p>2).JSP：表示标签的body中可以加入JSP程序代码</p>
+<p>3).tagdependent：表示标签中的内容由标签自己去处理</p>
+<p>4.标签属性元素用来定义标签的属性，它的常见属性有：</p>
+<p>A.name：属性名称</p>
+<p>B.required：属性是否必需的，默认为false</p>
+<p>C.rtexprvalue：属性值是否可以为request-time表达式，也就是类似于&lt; %=&hellip;% &gt;的表达式</p>
+<p><strong>十六、在Web应用中使用标签：</strong></p>
+<p>1.如果Web应用中用到了自定义JSP标签，则必须在web.xml文件中加入元素，它用于声明所引用的标签所在的标签库</p>
+<p>/sometaglib</p>
+<p>/WEB-INF/someTLD.tld</p>
+<p>2.：设定Tag Library的惟一标示符，在Web应用中将根据它来引用Tag Libray</p>
+<p>3.：指定和Tag Library对应的TLD文件的位置</p>
+<p>4.在JSP文件中需要加入&lt;% @ taglib% &gt;指令来声明对标签库的引用。例如：</p>
+<p>&lt;% @ taglib prefix = &ldquo;somePrefix&rdquo; uri = &quot;/someuri&quot; %&gt;</p>
+<p>5.prefix表示在JSP网页中引用这个标签库的标签时的前缀，uri用来指定Tag Library的标识符，它必须和web.xml中的属性保持一致。</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('自定义JSP标签_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1100.html">JSP Struts之HTML标签库详解 </a>&nbsp;&nbsp;下一条： <a href="/html/News/1084.html">JSP及Servlet中遇到的多线程同步</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1850.html" title="推荐使用的meta标签" >推荐使用的meta标签</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1775.html" title="手机网站用Bootstrap还是jQuery Mobile布局" >手机网站用Bootstrap还是jQue…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1744.html" title="如何让手机访问PC网站自动跳转到手机网站" >如何让手机访问PC网站自动跳转…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1725.html" title="提升HTML5的性能体验系列之一 避免切页白屏" >提升HTML5的性能体验系列之一…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1715.html" title="Android和IOS 字体该做多大合适？" >Android和IOS 字体该做多大合…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1714.html" title="px，dp，dip，dpi，sp区别" >px，dp，dip，dpi，sp区别</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1713.html" title="逻辑分辨率和物理分辨率区别" >逻辑分辨率和物理分辨率区别</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1712.html" title="关于智能手机屏幕的分辨率尺寸的问题" >关于智能手机屏幕的分辨率尺寸…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1711.html" title="WebApp开发尺寸单位的解决方案" >WebApp开发尺寸单位的解决方案…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/727.html" title="在Struts&nbsp;2中使用JSON&nbsp;Ajax支持">在Struts 2中使用JSON Ajax支持</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/726.html" title="解决JSP中使用request乱码问题">解决JSP中使用request乱码问题</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1020.html" title="JSP+JavaScript打造二级级联下拉菜单">JSP+JavaScript打造二级级联下拉菜…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/951.html" title="Tomcat中文手册(1)">Tomcat中文手册(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1084.html" title="JSP及Servlet中遇到的多线程同步">JSP及Servlet中遇到的多线程同步</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/680.html" title="详解：JSP和Servlet中的绝对路径和相对路径问题">详解：JSP和Servlet中的绝对路径和…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1100.html" title="JSP&nbsp;Struts之HTML标签库详解&nbsp;">JSP Struts之HTML标签库详解 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1085.html" title="自定义JSP标签">自定义JSP标签</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1150.html" title="JSP中的include指令">JSP中的include指令</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1051.html" title="errorPage设置方法--JSP">errorPage设置方法--JSP</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/722.html" title="JSP&nbsp;国际化－格式化货币和日期">JSP 国际化－格式化货币和日期</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1149.html" title="九个隐含对象使用总结JSP的">九个隐含对象使用总结JSP的</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/950.html" title="Tomcat中文手册(2)">Tomcat中文手册(2)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/678.html" title="tomcat6关于EL表达式的一个错误">tomcat6关于EL表达式的一个错误</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/906.html" title="jsp分页技术代码">jsp分页技术代码</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1850.html" title="推荐使用的meta标签" >推荐使用的meta标签</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1775.html" title="手机网站用Bootstrap还是jQuery&nbsp;Mobile布局" >手机网站用Bootstrap还是jQuery M…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1744.html" title="如何让手机访问PC网站自动跳转到手机网站" >如何让手机访问PC网站自动跳转到手…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1725.html" title="提升HTML5的性能体验系列之一&nbsp;避免切页白屏" >提升HTML5的性能体验系列之一 避免…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1715.html" title="Android和IOS&nbsp;字体该做多大合适？" >Android和IOS 字体该做多大合适？…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1714.html" title="px，dp，dip，dpi，sp区别" >px，dp，dip，dpi，sp区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1713.html" title="逻辑分辨率和物理分辨率区别" >逻辑分辨率和物理分辨率区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1712.html" title="关于智能手机屏幕的分辨率尺寸的问题" >关于智能手机屏幕的分辨率尺寸的问…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1711.html" title="WebApp开发尺寸单位的解决方案" >WebApp开发尺寸单位的解决方案</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1679.html" title="&nbsp;float:left与display:inline-block的区别" > float:left与display:inline-blo…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1678.html" title="设计人员需要考虑&nbsp;移动端多分辨率的情况" >设计人员需要考虑 移动端多分辨率…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1676.html" title="关于html5的Web&nbsp;App与Native&nbsp;App的技术分析" >关于html5的Web App与Native App的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1587.html" title="如何用Chrome模拟手机浏览器（iOS/Android）" >如何用Chrome模拟手机浏览器（iOS…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1575.html" title="什么是Viewport" >什么是Viewport</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1574.html" title="html5开发移动应用是最好的选择" >html5开发移动应用是最好的选择</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1085" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

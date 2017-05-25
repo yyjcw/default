@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>C#正则表达式提取网址、标题、图片_成都网站建设_成都网页设计_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="无论你用什么语言，正则表达式的处理方法都是非常灵活、高效的，尤其是对某些字符串的抓取、过滤方面，更显其优势。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 成都网站建设_成都网页设计
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        C#正则表达式提取网址、标题、图片
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2015/10/27 11:31:53
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        无论你用什么语言，正则表达式的处理方法都是非常灵活、高效的，尤其是对某些字符串的抓取、过滤方面，更显其优势。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p>无论你用什么语言，正则表达式的处理方法都是非常灵活、高效的，尤其是对某些字符串的抓取、过滤方面，更显其优势。</p><p>正则表达式的写法通常比较简单，几行短代码便能轻松完成看似很复杂的事情，更值得称赞的是，它的执行效率非常高，运行速度相当快。因此我在项目的开发中，通常把正则表达式作为处理问题的首选方法。</p><p>正则表达式的运用，在各种语言里都是相通的，也就是说，当你懂得在PHP中使用正则表达式，那么在任何一种语言中也能轻驾就熟。</p><p>这里给出两个asp.net实例。</p><p><strong>1、asp.net正则表达式提取网址、标题、图片等</strong></p><p>例如，有如下的字符串：</p><p>&lt;li&gt;&lt;a 
+href=&quot;http://www.webkaka.com/blog/archives/how-to-add-links-on-baidu-blog.html&quot;&nbsp;&nbsp;
+ title=&quot;怎样在百度空间添加友情链接&quot;&gt;&lt;span 
+class=&quot;article-date&quot;&gt;[14/11]&lt;/span&gt;怎样在百度空间添加友情链接&lt;/a&gt;&lt;
+/li&gt;</p><p>现在，需要提取 href 后面的网址，[]内的日期，和 链接的文字。</p><p>asp.net的实现方式如下：</p><p><span style="color:#0000ff">string</span> strHTML = &quot;&lt;li&gt;&lt;a 
+href=\http://www.webkaka.com/blog/archives/how-to-add-links-on-baidu-blog.html\&nbsp;&nbsp;
+ title=\&quot;怎样在百度空间添加友情链接\&quot;&gt;&lt;span 
+class=\&quot;article-date\&quot;&gt;[14/11]&lt;/span&gt;怎样在百度空间添加友情链接&lt;/a&gt;&amp;
+lt;/li&gt;&quot;;</p><p>string pattern = &quot;http://([^\\s]+)\&quot;.+?span.+?\\[(.+?)\\].+?&gt;(.+?)&lt;&quot;;<br/>Regex reg = new Regex( pattern, RegexOptions.IgnoreCase );</p><p>MatchCollection mc = reg.Matches( strHTML );<br/>if (mc.Count &gt; 0)<br/>{<br/>&nbsp;&nbsp;&nbsp; foreach (Match m in mc)<br/>&nbsp;&nbsp;&nbsp; {<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine( m.Groups[1].Value );<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine( m.Groups[2].Value );<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine( m.Groups[3].Value );<br/>&nbsp;&nbsp;&nbsp; }<br/>}</p><p><strong>2、asp.net正则表达式删除HTML代码</strong></p><p class="code">public static string NoHTML(string Htmlstring)&nbsp; //替换HTML标记<br/>{<br/>&nbsp;&nbsp;&nbsp; //删除脚本<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&lt;script[^&gt;]*?&gt;.*?&lt;/script&gt;&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; //删除HTML<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&lt;(.[^&gt;]*)&gt;&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;([\r\n])[\s]+&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;--&gt;&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&lt;!--.*&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(quot|#34);&quot;, &quot;\&quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(amp|#38);&quot;, &quot;&amp;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(lt|#60);&quot;, &quot;&lt;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(gt|#62);&quot;, &quot;&gt;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(nbsp|#160);&quot;, &quot; &quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(iexcl|#161);&quot;, &quot;\xa1&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(cent|#162);&quot;, &quot;\xa2&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(pound|#163);&quot;, &quot;\xa3&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;(copy|#169);&quot;, &quot;\xa9&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&amp;#(\d+);&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = Regex.Replace(Htmlstring, @&quot;&lt;img[^&gt;]*&gt;;&quot;, &quot;&quot;, RegexOptions.IgnoreCase);<br/>&nbsp;&nbsp;&nbsp; Htmlstring.Replace(&quot;&lt;&quot;, &quot;&quot;);<br/>&nbsp;&nbsp;&nbsp; Htmlstring.Replace(&quot;&gt;&quot;, &quot;&quot;);<br/>&nbsp;&nbsp;&nbsp; Htmlstring.Replace(&quot;\r\n&quot;, &quot;&quot;);<br/>&nbsp;&nbsp;&nbsp; Htmlstring = HttpContext.Current.Server.HtmlEncode(Htmlstring).Trim();<br/>&nbsp;&nbsp;&nbsp; return Htmlstring;<br/>}</p><p><span style="font-size:16px"><strong>知识扩展</strong></span></p><p><strong>正则表达式语法</strong></p><p>一个正则表达式就是由普通字符（例如字符 a 到 z）以及特殊字符（称为<em>元字符</em>）组成的文字模式。该模式描述在查找文字主体时待匹配的一个或多个字符串。正则表达式作为一个模板，将某个字符模式与所搜索的字符串进行匹配。</p><p>这里有一些可能会遇到的正则表达式示例：</p><table cellpadding="1" cellspacing="1" width="540"><tbody><tr class="firstRow"><td width="240"><strong>Visual Basic Scripting Edition</strong></td><td width="100"><strong>VBScript</strong></td><td width="200"><strong>匹配</strong></td></tr><tr><td>/^\[ \t]*$/</td><td>&quot;^\[ \t]*$&quot;</td><td>匹配一个空白行。</td></tr><tr><td>/\d{2}-\d{5}/</td><td>&quot;\d{2}-\d{5}&quot;</td><td>验证一个ID 号码是否由一个2位数字，一个连字符以及一个5位数字组成。</td></tr><tr><td>/&lt;(.*)&gt;.*&lt;\/\1&gt;/</td><td>&quot;&lt;(.*)&gt;.*&lt;\/\1&gt;&quot;</td><td>匹配一个 HTML 标记。</td></tr></tbody></table><p>下表是元字符及其在正则表达式上下文中的行为的一个完整列表：</p><table rules="all" frame="box" cols="2" cellspacing="0"><tbody><tr class="firstRow" valign="top"><th width="16%">字符</th><th width="84%">描述</th></tr><tr valign="top"><td width="16%">\</td><td width="84%">将下一个字符标记为一个特殊字符、或一个原义字符、或一个 后向引用、或一个八进制转义符。例如，&#39;n&#39; 匹配字符 &quot;n&quot;。&#39;\n&#39; 匹配一个换行符。序列 &#39;\\&#39; 匹配 &quot;\&quot; 而 &quot;\(&quot; 则匹配 &quot;(&quot;。</td></tr><tr valign="top"><td width="16%">^</td><td width="84%">匹配输入字符串的开始位置。如果设置了 <strong>RegExp</strong> 对象的 <strong>Multiline</strong> 属性，^ 也匹配 &#39;\n&#39; 或 &#39;\r&#39; 之后的位置。</td></tr><tr valign="top"><td width="16%">$</td><td width="84%">匹配输入字符串的结束位置。如果设置了<strong>RegExp</strong> 对象的 <strong>Multiline</strong> 属性，$ 也匹配 &#39;\n&#39; 或 &#39;\r&#39; 之前的位置。</td></tr><tr valign="top"><td width="16%">*</td><td width="84%">匹配前面的子表达式零次或多次。例如，zo* 能匹配 &quot;z&quot; 以及 &quot;zoo&quot;。 * 等价于{0,}。</td></tr><tr valign="top"><td width="16%">+</td><td width="84%">匹配前面的子表达式一次或多次。例如，&#39;zo+&#39; 能匹配 &quot;zo&quot; 以及 &quot;zoo&quot;，但不能匹配 &quot;z&quot;。+ 等价于 {1,}。</td></tr><tr valign="top"><td width="16%">?</td><td width="84%">匹配前面的子表达式零次或一次。例如，&quot;do(es)?&quot; 可以匹配 &quot;do&quot; 或 &quot;does&quot; 中的&quot;do&quot; 。? 等价于 {0,1}。</td></tr><tr valign="top"><td width="16%">{<em>n</em>}</td><td width="84%"><em>n</em> 是一个非负整数。匹配确定的 <em>n</em> 次。例如，&#39;o{2}&#39; 不能匹配 &quot;Bob&quot; 中的 &#39;o&#39;，但是能匹配 &quot;food&quot; 中的两个 o。</td></tr><tr valign="top"><td width="16%">{<em>n</em>,}</td><td width="84%"><em>n</em> 是一个非负整数。至少匹配<em>n</em> 次。例如，&#39;o{2,}&#39; 不能匹配 &quot;Bob&quot; 中的 &#39;o&#39;，但能匹配 &quot;foooood&quot; 中的所有 o。&#39;o{1,}&#39; 等价于 &#39;o+&#39;。&#39;o{0,}&#39; 则等价于 &#39;o*&#39;。</td></tr><tr valign="top"><td width="16%">{<em>n</em>,<em>m</em>}</td><td width="84%"><em>m</em> 和 <em>n</em> 均为非负整数，其中<em>n</em> &lt;= <em>m</em>。最少匹配 <em>n</em> 次且最多匹配 <em>m</em> 次。刘， &quot;o{1,3}&quot; 将匹配 &quot;fooooood&quot; 中的前三个 o。&#39;o{0,1}&#39; 等价于 &#39;o?&#39;。请注意在逗号和两个数之间不能有空格。</td></tr><tr valign="top"><td width="16%">?</td><td width="84%">当该字符紧跟在任何一个其他限制符 (*, +, ?, {<em>n</em>}, {<em>n</em>,}, {<em>n</em>,<em>m</em>}) 后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串 &quot;oooo&quot;，&#39;o+?&#39; 将匹配单个 &quot;o&quot;，而 &#39;o+&#39; 将匹配所有 &#39;o&#39;。</td></tr><tr valign="top"><td width="16%">.</td><td width="84%">匹配除 &quot;\n&quot; 之外的任何单个字符。要匹配包括 &#39;\n&#39; 在内的任何字符，请使用象 &#39;[.\n]&#39; 的模式。</td></tr><tr valign="top"><td width="16%">(<em>pattern</em>)</td><td width="84%">匹配<em>pattern</em> 并获取这一匹配。所获取的匹配可以从产生的 Matches 集合得到，在VBScript 中使用<strong>SubMatches</strong> 集合，在Visual Basic Scripting Edition 中则使用 <strong>$0</strong>…<strong>$9</strong> 属性。要匹配圆括号字符，请使用 &#39;<span class="MathJax_Preview"></span><span style="" role="textbox" id="MathJax-Element-1-Frame" class="MathJax"><nobr><span style="width: 1.804em; display: inline-block;" id="MathJax-Span-1" class="math"><span style="display: inline-block; position: relative; width: 1.353em; height: 0px; font-size: 132%;"><span style="position: absolute; clip: rect(-0.111em, 1000em, 1.336em, -0.487em); top: -0.974em; left: 0em;"><span id="MathJax-Span-2" class="mrow"><span id="MathJax-Span-3" class="msup"><span style="display: inline-block; position: relative; width: 0.291em; height: 0px;"><span style="position: absolute; clip: rect(3.842em, 1000em, 4.167em, -0.487em); top: -4.004em; left: 0em;"><span id="MathJax-Span-4" class="mi"></span><span style="display: inline-block; width: 0px; height: 4.004em;"></span></span><span style="position: absolute; top: -2.149em; left: 0em;"><span style="font-size: 70.7%; font-family: MathJax_Main;" id="MathJax-Span-5" class="mo">′</span><span style="display: inline-block; width: 0px; height: 1.786em;"></span></span></span></span><span id="MathJax-Span-6" class="msup"><span style="display: inline-block; position: relative; width: 1.049em; height: 0px;"><span style="position: absolute; clip: rect(1.04em, 1000em, 2.365em, -0.487em); top: -2.002em; left: 0em;"><span id="MathJax-Span-7" class="texatom"><span id="MathJax-Span-8" class="mrow"><span id="MathJax-Span-9" class="mo"><span style="font-family: STIXGeneral,&quot;Arial Unicode MS&quot;,serif; font-size: 76%; font-style: normal; font-weight: normal;">或</span></span></span></span><span style="display: inline-block; width: 0px; height: 2.002em;"></span></span><span style="position: absolute; top: -2.313em; left: 0.758em;"><span style="font-size: 70.7%; font-family: MathJax_Main;" id="MathJax-Span-10" class="mo">′</span><span style="display: inline-block; width: 0px; height: 1.786em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 0.974em;"></span></span></span><span style="border-left: 0em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.625em; vertical-align: -0.335em;"></span></span></nobr></span>&#39;。</td></tr><tr valign="top"><td width="16%">(?:<em>pattern</em>)</td><td width="84%">匹配 <em>pattern</em> 但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用 &quot;或&quot; 字符 (|) 来组合一个模式的各个部分是很有用。例如， &#39;industr(?:y|ies) 就是一个比 &#39;industry|industries&#39; 更简略的表达式。</td></tr><tr valign="top"><td width="16%">(?=<em>pattern</em>)</td><td width="84%">正向预查，在任何匹配 <em>pattern</em> 的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如， &#39;Windows 
+(?=95|98|NT|2000)&#39; 能匹配 &quot;Windows 2000&quot; 中的 &quot;Windows&quot; ，但不能匹配 &quot;Windows 3.1&quot; 
+中的 
+&quot;Windows&quot;。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始。</td></tr><tr valign="top"><td width="16%">(?!<em>pattern</em>)</td><td width="84%">负向预查，在任何不匹配Negative lookahead matches the search string at any point where a string not matching<em>pattern</em> 的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如&#39;Windows 
+(?!95|98|NT|2000)&#39; 能匹配 &quot;Windows 3.1&quot; 中的 &quot;Windows&quot;，但不能匹配 &quot;Windows 2000&quot; 
+中的 &quot;Windows&quot;。预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次匹配的搜索，而不是从包含预查的字符之后开始</td></tr><tr valign="top"><td width="16%"><em>x</em>|<em>y</em></td><td width="84%">匹配 <em>x</em> 或 <em>y</em>。例如，&#39;z|food&#39; 能匹配 &quot;z&quot; 或 &quot;food&quot;。&#39;(z|f)ood&#39; 则匹配 &quot;zood&quot; 或 &quot;food&quot;。</td></tr><tr valign="top"><td width="16%">[<em>xyz</em>]</td><td width="84%">字符集合。匹配所包含的任意一个字符。例如， &#39;[abc]&#39; 可以匹配 &quot;plain&quot; 中的 &#39;a&#39;。</td></tr><tr valign="top"><td width="16%">[^<em>xyz</em>]</td><td width="84%">负值字符集合。匹配未包含的任意字符。例如， &#39;[^abc]&#39; 可以匹配 &quot;plain&quot; 中的&#39;p&#39;。</td></tr><tr valign="top"><td width="16%">[<em>a-z</em>]</td><td width="84%">字符范围。匹配指定范围内的任意字符。例如，&#39;[a-z]&#39; 可以匹配 &#39;a&#39; 到 &#39;z&#39; 范围内的任意小写字母字符。</td></tr><tr valign="top"><td width="16%">[^<em>a-z</em>]</td><td width="84%">负值字符范围。匹配任何不在指定范围内的任意字符。例如，&#39;[^a-z]&#39; 可以匹配任何不在 &#39;a&#39; 到 &#39;z&#39; 范围内的任意字符。</td></tr><tr valign="top"><td width="16%">\b</td><td width="84%">匹配一个单词边界，也就是指单词和空格间的位置。例如， &#39;er\b&#39; 可以匹配&quot;never&quot; 中的 &#39;er&#39;，但不能匹配 &quot;verb&quot; 中的 &#39;er&#39;。</td></tr><tr valign="top"><td width="16%">\B</td><td width="84%">匹配非单词边界。&#39;er\B&#39; 能匹配 &quot;verb&quot; 中的 &#39;er&#39;，但不能匹配 &quot;never&quot; 中的 &#39;er&#39;。</td></tr><tr valign="top"><td width="16%">\c<em>x</em></td><td width="84%">匹配由<em>x</em>指明的控制字符。例如， \cM 匹配一个 Control-M 或回车符。 <em>x</em> 的值必须为 A-Z 或 a-z 之一。否则，将 c 视为一个原义的 &#39;c&#39; 字符。</td></tr><tr valign="top"><td width="16%">\d</td><td width="84%">匹配一个数字字符。等价于 [0-9]。</td></tr><tr valign="top"><td width="16%">\D</td><td width="84%">匹配一个非数字字符。等价于 [^0-9]。</td></tr><tr valign="top"><td width="16%">\f</td><td width="84%">匹配一个换页符。等价于 \x0c 和 \cL。</td></tr><tr valign="top"><td width="16%">\n</td><td width="84%">匹配一个换行符。等价于 \x0a 和 \cJ。</td></tr><tr valign="top"><td width="16%">\r</td><td width="84%">匹配一个回车符。等价于 \x0d 和 \cM。</td></tr><tr valign="top"><td width="16%">\s</td><td width="84%">匹配任何空白字符，包括空格、制表符、换页符等等。等价于 [&nbsp;\f\n\r\t\v]。</td></tr><tr valign="top"><td width="16%">\S</td><td width="84%">匹配任何非空白字符。等价于 [^&nbsp;\f\n\r\t\v]。</td></tr><tr valign="top"><td width="16%">\t</td><td width="84%">匹配一个制表符。等价于 \x09 和 \cI。</td></tr><tr valign="top"><td width="16%">\v</td><td width="84%">匹配一个垂直制表符。等价于 \x0b 和 \cK。</td></tr><tr valign="top"><td width="16%">\w</td><td width="84%">匹配包括下划线的任何单词字符。等价于&#39;[A-Za-z0-9_]&#39;。</td></tr><tr valign="top"><td width="16%">\W</td><td width="84%">匹配任何非单词字符。等价于 &#39;[^A-Za-z0-9_]&#39;。</td></tr><tr valign="top"><td width="16%">\x<em>n</em></td><td width="84%">匹配 <em>n</em>，其中 <em>n</em> 为十六进制转义值。十六进制转义值必须为确定的两个数字长。例如， &#39;\x41&#39; 匹配 &quot;A&quot;。&#39;\x041&#39; 则等价于 &#39;\x04&#39; &amp; &quot;1&quot;。正则表达式中可以使用 ASCII 编码。.</td></tr><tr valign="top"><td width="16%">\<em>num</em></td><td width="84%">匹配 <em>num</em>，其中 <em>num</em> 是一个正整数。对所获取的匹配的引用。例如，&#39;(.)\1&#39; 匹配两个连续的相同字符。</td></tr><tr valign="top"><td width="16%">\<em>n</em></td><td width="84%">标识一个八进制转义值或一个后向引用。如果 \<em>n</em> 之前至少 <em>n</em> 个获取的子表达式，则 <em>n</em> 为后向引用。否则，如果<em>n</em> 为八进制数字 (0-7)，则 <em>n</em> 为一个八进制转义值。</td></tr><tr valign="top"><td width="16%">\<em>nm</em></td><td width="84%">标识一个八进制转义值或一个后向引用。如果 \<em>nm</em> 之前至少有is preceded by at least <em>nm</em> 个获取得子表达式，则 <em>nm</em> 为后向引用。如果 \<em>nm</em> 之前至少有 <em>n</em> 个获取，则 <em>n</em> 为一个后跟文字<em>m </em>的后向引用。如果前面的条件都不满足，若&nbsp; <em>n</em> 和 <em>m</em> 均为八进制数字 (0-7)，则 \<em>nm</em> 将匹配八进制转义值<em>nm</em>。</td></tr><tr valign="top"><td width="16%">\<em>nml</em></td><td width="84%">如果 <em>n</em> 为八进制数字 (0-3)，且 <em>m</em> 和 <em>l</em> 均为八进制数字 (0-7)，则匹配八进制转义值<em>nml。</em></td></tr><tr valign="top"><td width="16%">\u<em>n</em></td><td width="84%">匹配 <em>n</em>，其中 <em>n</em> 是一个用四个十六进制数字表示的 Unicode 字符。例如， \u00A9 匹配版权符号 (?)。</td></tr></tbody></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('C#正则表达式提取网址、标题、图片_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1644.html">如何使用百度地图API一些简单的功…</a>&nbsp;&nbsp;下一条： <a href="/html/News/1546.html">网站高并发解决思路(转)</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1644.html" title="如何使用百度地图API一些简单的功能" >如何使用百度地图API一些简单…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1613.html" title="C#正则表达式提取网址、标题、图片" >C#正则表达式提取网址、标题、…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1546.html" title="网站高并发解决思路(转)" >网站高并发解决思路(转)</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1457.html" title="安装好Discuz!NT论坛后首页是一片空白" >安装好Discuz!NT论坛后首页是…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1437.html" title="有哪些细节设计给你带来好的用户体验？" >有哪些细节设计给你带来好的用…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1373.html" title="抄袭来的东西进行拼装之后，属于我的抄袭作品就出来了" >抄袭来的东西进行拼装之后，属…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1351.html" title="成都最便宜网站建设 QQ：1416759661" >成都最便宜网站建设 QQ：1416…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1268.html" title="成都网站建设：私人网站建设的好处" >成都网站建设：私人网站建设的…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1267.html" title="夜鹰教程网网站建设常见问题集锦" >夜鹰教程网网站建设常见问题集…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/805.html" title="Dreamweaver&nbsp;CS4&nbsp;SN以及注册机、激活码和激活方法">Dreamweaver CS4 SN以及注册机、激…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1268.html" title="成都网站建设：私人网站建设的好处">成都网站建设：私人网站建设的好处…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/294.html" title="火狐浏览器FireFox常用插件介绍">火狐浏览器FireFox常用插件介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/628.html" title="向上下左右不间断无缝滚动图片的效果（兼容火狐和IE）">向上下左右不间断无缝滚动图片的效…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1265.html" title="网站建设需要准备哪些资料？">网站建设需要准备哪些资料？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1252.html" title="ASP无限级分类实例教程">ASP无限级分类实例教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/295.html" title="使用IE8常见问题问答">使用IE8常见问题问答</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/462.html" title="网页制作有关知识">网页制作有关知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/463.html" title="如何加入网页代码的基本知识">如何加入网页代码的基本知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/456.html" title="QQ空间开心农场升级最快的方法">QQ空间开心农场升级最快的方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/292.html" title="不让你的QQ好友删除你">不让你的QQ好友删除你</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/606.html" title="HTML框架(Frames)">HTML框架(Frames)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1263.html" title="什么域名？如何注册域名？如何解析域名？">什么域名？如何注册域名？如何解析…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1221.html" title="如何做好需求分析：需求管理是项目管理的重点之一">如何做好需求分析：需求管理是项目…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/291.html" title="QQ远程协助后黑屏或花屏故障解决办法">QQ远程协助后黑屏或花屏故障解决办…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1644.html" title="如何使用百度地图API一些简单的功能" >如何使用百度地图API一些简单的功…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1613.html" title="C#正则表达式提取网址、标题、图片" >C#正则表达式提取网址、标题、图片…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1546.html" title="网站高并发解决思路(转)" >网站高并发解决思路(转)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1457.html" title="安装好Discuz!NT论坛后首页是一片空白" >安装好Discuz!NT论坛后首页是一片…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1437.html" title="有哪些细节设计给你带来好的用户体验？" >有哪些细节设计给你带来好的用户体…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1373.html" title="抄袭来的东西进行拼装之后，属于我的抄袭作品就出来了" >抄袭来的东西进行拼装之后，属于我…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1351.html" title="成都最便宜网站建设&nbsp;QQ：1416759661" >成都最便宜网站建设 QQ：14167596…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1268.html" title="成都网站建设：私人网站建设的好处" >成都网站建设：私人网站建设的好处…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1267.html" title="夜鹰教程网网站建设常见问题集锦" >夜鹰教程网网站建设常见问题集锦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1266.html" title="浅谈网站建设的十二大误区" >浅谈网站建设的十二大误区</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1265.html" title="网站建设需要准备哪些资料？" >网站建设需要准备哪些资料？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1264.html" title="怎样才能写好一篇软文呢：越低俗越有前途！" >怎样才能写好一篇软文呢：越低俗越…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1263.html" title="什么域名？如何注册域名？如何解析域名？" >什么域名？如何注册域名？如何解析…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1262.html" title="站长如何将网站的访客变为顾客？" >站长如何将网站的访客变为顾客？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1261.html" title="夜鹰教程网打造成都私人网站建设的摇篮" >夜鹰教程网打造成都私人网站建设的…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1613" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

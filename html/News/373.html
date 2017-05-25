@@ -1,0 +1,915 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FLASH脚本文字教程[献给初学的朋友]&nbsp;_技术辅导_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="ActionScript是Flash的脚本语言，是一种面向对象编程语言。使用ActionScript可以控制Flash动画中的对象，创建导航元素和交互元素，扩展Flash创作交互动画和网络应用的能力。本文主要介绍Flash&nbsp;" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 技术辅导
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        FLASH脚本文字教程[献给初学的朋友] 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/28 13:02:08
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        ActionScript是Flash的脚本语言，是一种面向对象编程语言。使用ActionScript可以控制Flash动画中的对象，创建导航元素和交互元素，扩展Flash创作交互动画和网络应用的能力。本文主要介绍Flash&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <div style="FONT-SIZE: 12px" id="blogDetailDiv">ActionScript是Flash的脚本语言，是一种面向对象编程语言。使用ActionScript可以控制Flash动画中的对象，创建导航元素和交互元素，扩展Flash创作交互动画和网络应用的能力。本文主要介绍Flash <br />
+<br />
+MX中最常用到的ActionScript****。 <br />
+<br />
+一、动作 <br />
+动作部分的Action是用来控制影片播放状态的脚本****。以利于Flash脚本编写人员速查。 <br />
+<br />
+(一)影片控制 <br />
+1.goto <br />
+<br />
+语法：gotoAndPlay(scene, frame) <br />
+<br />
+参数：scene 播放头将转到场景的名称。frame 播放头将转到的帧的编号或标签。 <br />
+<br />
+描述：动作；将播放头转到场景中指定的帧并从该帧开始播放。如果未指定场景，则播放头将转到当前场景中的指定帧。 <br />
+<br />
+2.on <br />
+<br />
+语法：on(mouseEvent) {statement(s);} <br />
+<br />
+参数： statement(s)是指发生mouseEvent时要执行的指令。 <br />
+<br />
+mouseEvent是&ldquo;事件&rdquo;触发器。当发生此事件时，执行事件后面花括号中的语句。可为mouseEvent参数指定下面的任何值： <br />
+<br />
+press在鼠标指针经过按钮时按下鼠标；release在鼠标指针经过按钮时释放鼠标按钮；releaseOutside当鼠标指针在按钮之内时按下按钮后，将鼠标指针移到按钮之外，此时释放鼠标；rollOut鼠标指针移 <br />
+<br />
+出按钮区域；rollOver；鼠标指针滑过按钮；dragOut在鼠标指针滑过按钮时按下鼠标，然后滑出此按钮区域；dragOver在鼠标指针移过按钮时按下鼠标，然后移出此按钮，再移回此按钮；keyPress(key) <br />
+<br />
+按下指定的key。此参数的key部分可使用Flash&ldquo;键盘键和键控代码值&rdquo;中所列的任何键控代码进行指定，或者使用Key对象的属性摘要中列出的任何键常量进行指定。 <br />
+<br />
+描述：事件处理函数；指定触发动作的鼠标事件或按键事件。 <br />
+<br />
+3.play <br />
+<br />
+语法：play() <br />
+<br />
+描述：动作；在时间轴中向前移动播放头。 <br />
+<br />
+4.stop <br />
+<br />
+语法：stop <br />
+<br />
+描述：动作；停止当前正在播放的影片。此动作最通常的用法是用按钮控制影片剪辑。 <br />
+<br />
+5.stopAllSounds <br />
+<br />
+语法：stopAllSounds() <br />
+<br />
+描述：动作；在不停止播放头的情况下停止影片中当前正在播放的所有声音。设置到流的声音在播放头移过它们所在的帧时将恢复播放。 <br />
+<br />
+(二)浏览器/网络 <br />
+该部分的Action是Flash MX用来与影片或外部文件进行交互操作的脚本****。 <br />
+<br />
+1.fsCommand <br />
+<br />
+语法：fscommand(〃command〃, 〃parameters〃) <br />
+<br />
+参数：command。parameters均是一个传递给宿主应用程序用于任何用途的字符串；或者一个传递给Flash Player的值。 <br />
+<br />
+描述：动作；使Flash影片能够与Flash Player或承载Flash Player的程序(如Web浏览器)进行通讯。还可使用fsCommand动作将消息传递给Director，或者传递给VB、VC++和其他可承载ActiveX控件的程序 <br />
+<br />
+。 <br />
+<br />
+2.getURL <br />
+<br />
+语法：getURL(url [, window [, 〃variables〃]]) <br />
+<br />
+参数：url可从该处获取文档的URL。 <br />
+<br />
+window一个可选参数，指定文档应加载到其中的窗口或HTML框架。你可输入特定窗口的名称，或从下面的保留目标名称中选择：_self指定当前窗口中的当前框架；_blank指定一个新窗口；_parent指定当 <br />
+<br />
+前框架的父级；_top指定当前窗口中的顶级框架；variables用于发送变量的GET或POST方法。如果没有变量，则省略此参数。GET方法将变量追加到URL的末尾，该方法用于发送少量变量。POST方法在单独 <br />
+<br />
+的HTTP 标头中发送变量，该方法用于发送长的变量字符串。 <br />
+<br />
+描述：动作；将来自特定URL的文档加载到窗口中，或将变量传递到位于所定义URL的另一个应用程序。若要测试此动作，请确保要加载的文件位于指定的位置。若要使用绝对URL，则需要网络连接。 <br />
+<br />
+3.loadMovie <br />
+<br />
+语法：loadMovie(〃url〃,level/target[, variables]) <br />
+<br />
+参数：url要加载的SWF文件或JPEG文件的绝对或相对URL。 <br />
+<br />
+target指向目标影片剪辑的路径。目标影片剪辑将替换为加载的影片或图像。只能指定target影片剪辑或目标影片的level这两者之一。 <br />
+<br />
+level一个整数，指定Flash Player中影片将被加载到的级别。在将影片或图像加载到级别时，标准模式下&ldquo;动作&rdquo;面板中的loadMovie动作将切换为loadMovieNum；在专家模式下，必须指定loadMovieNum <br />
+<br />
+或从&ldquo;动作&rdquo;工具箱中选择它。 <br />
+<br />
+variables一个可选参数，指定发送变量所使用的HTTP方法。该参数须是字符串GET或POST。 <br />
+<br />
+描述：动作；在播放原始影片的同时将SWF或JPEG文件加载到Flash Player中。loadMovie动作使你可以同时显示几个影片，并且无需加载另一个HTML文档就可在影片之间切换。 <br />
+<br />
+使用unloadMovie动作可删除使用loadMovie动作加载的影片。 <br />
+<br />
+4.loadVariables <br />
+<br />
+语法：loadVariables (〃url〃 ,level/〃target〃[, variables]) <br />
+<br />
+参数：url变量所处位置的绝对或相对URL。 <br />
+<br />
+level指定Flash Player中接收这些变量的级别的整数。参数具体用法同loadmovie。 <br />
+<br />
+target指向接收所加载变量的影片剪辑的目标路径。 <br />
+<br />
+variables一个可选参数，指定发送变量所使用的HTTP方法。 <br />
+<br />
+描述：动作；从外部文件(例如文本文件，或由CGI脚本、ASP、PHP脚本生成的文本)读取数据，并设置Flash Player 级别或目标影片剪辑中变量的值。此动作还可用于使用新值更新活动影片中的变量。 <br />
+<br />
+5.unloadMovie <br />
+<br />
+语法：unloadMovie[Num](level/〃target〃) <br />
+<br />
+参数：level加载影片的级别(_levelN)。从一个级别卸载影片时，在标准模式下，&ldquo;动作&rdquo;面板中的 unloadMovie动作切换为unloadMovieNum；在专家模式下，必须指定unloadMovieNum，或者从&ldquo;动作&rdquo; <br />
+<br />
+工具箱中选择它。 <br />
+<br />
+target影片剪辑的目标路径。 <br />
+<br />
+描述：动作；从Flash Player中删除一个已加载的影片或影片剪辑。 <br />
+<br />
+(三)影片编辑控制 <br />
+1.duplicateMovieclip <br />
+<br />
+语法：duplicateMovieClip(target, newname,depth) <br />
+<br />
+参数：target要复制的影片剪辑的目标路径。 <br />
+<br />
+newname复制的影片剪辑的唯一标识符。 <br />
+<br />
+depth复制的影片剪辑的唯一深度级别。深度级别是复制的影片剪辑的堆叠顺序。这种堆叠顺序很像时间轴中图层的堆叠顺序；较低深度级别的影片剪辑隐藏在较高堆叠顺序的剪辑之下。必须为每个复制的 <br />
+<br />
+影片剪辑分配一个唯一的深度级别，以防止它替换现有深度上的影片。 <br />
+<br />
+描述：动作；当影片正在播放时，创建一个影片剪辑的实例。无论播放头在原始影片剪辑(或&ldquo;父级&rdquo;)中处于什么位置，复制的影片剪辑的播放头始终从第一帧开始。如果删除父影片剪辑，则复制的影片 <br />
+<br />
+剪辑也被删除。 <br />
+<br />
+2.onClipEvent <br />
+<br />
+语法：onClipEvent(movieEvent){ <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：movieEvent是一个称作&ldquo;事件&rdquo;的触发器。当事件发生时，执行该事件后面花括号中的语句。可以为movieEvent参数指定下面的任何值：load影片剪辑一旦被实例化并出现在时间轴中时，即启动此 <br />
+<br />
+动作。；unload在从时间轴中删除影片剪辑之后，此动作在第一帧中启动。处理与Unload影片剪辑事件关联的动作之前，不向受影响的帧附加任何动作；enterFrame以影片帧频不断地触发此动作。首先处 <br />
+<br />
+理与enterFrame 剪辑事件关联的动作，然后才处理附加到受影响帧的所有帧动作脚本；mouseMove每次移动鼠标时启动此动作。_xmouse和_ymouse属性用于确定当前鼠标位置；mouseDown当按下鼠标左键时 <br />
+<br />
+启动此动作；mouseUp当释放鼠标左键时启动此动作；keyDown当按下某个键时启动此动作。使用Key.getCode方法获取最近按下的键的有关信息；keyUp当释放某个键时启动此动作。使用Key.getCode方法获 <br />
+<br />
+取最近按下的键的有关信息；data当在loadVariables或loadMovie动作中接收数据时启动此动作。当与loadVariables动作一起指定时，data事件只发生一次，即加载最后一个变量时。当与loadMovie动作 <br />
+<br />
+一起指定时，获取数据的每一部分时，data事件都重复发生。 <br />
+<br />
+statement(s)发生mouseEvent时要执行的指令。 <br />
+<br />
+描述：事件处理函数；触发为特定影片剪辑实例定义的动作。 <br />
+<br />
+3.removeMovieClip <br />
+<br />
+语法：removeMovieClip(target) <br />
+<br />
+参数：target用duplicateMovieClip创建的影片剪辑实例的目标路径，或者用MovieClip对象的 attachMovie或duplicateMovieClip方法创建的影片剪辑的实例名。 <br />
+<br />
+描述：动作；删除用MovieClip对象的attachMovie或duplicateMovieClip方法创建的，或者用 duplicateMovieClip动作创建的影片剪辑实例。 <br />
+<br />
+4.setProperty <br />
+<br />
+语法：setProperty(〃target〃,property,value/expression) <br />
+<br />
+参数：target到要设置其属性的影片剪辑实例名称的路径。 <br />
+<br />
+property要设置的属性。 <br />
+<br />
+value属性的新文本值。 <br />
+<br />
+expression计算结果为属性新值的公式。 <br />
+<br />
+描述：动作；当影片播放时，更改影片剪辑的属性值。 <br />
+<br />
+5.startDrag <br />
+<br />
+语法：startDrag(target,[lock ,left ,top ,right,bottom]) <br />
+<br />
+参数：target要拖动的影片剪辑的目标路径。 <br />
+<br />
+lock一个布尔值，指定可拖动影片剪辑是锁定到鼠标位置****(true)，还是锁定到用户首次点击该影片剪辑的位置上(false)。此参数是可选的。 <br />
+<br />
+left、top、right、bottom相对于影片剪辑父级坐标的值，这些坐标指定该影片剪辑的约束矩形。这些参数是可选的。 <br />
+<br />
+描述：动作；使target影片剪辑在影片播放过程中可拖动。一次只能拖动一个影片剪辑。执行startDrag动作后，影片剪辑将保持可拖动状态，直到被stopDrag动作明确停止为止，或者直到为其他影片剪辑 <br />
+<br />
+调用了 startDrag动作为止。 <br />
+<br />
+6.stopDrag <br />
+<br />
+语法：stopDrag() <br />
+<br />
+描述：动作；停止当前的拖动操作。 <br />
+<br />
+7.updateAfterEvent <br />
+<br />
+语法：updateAfterEvent() <br />
+<br />
+描述：动作；当在onClipEvent处理函数中调用它时，或作为传递给setInterval的函数或方法的一部分进行调用时，该动作更新显示(与为影片设置的每秒帧数无关)。如果对updateAfterEvent的调用不在 <br />
+<br />
+onClipEvent处理函数中，也不是传递给setInterval的函数或方法的一部分，则Flash忽略该调用。 <br />
+<br />
+(四)变量 <br />
+该部分Action是Flash MX脚本语言中的变量及对应操作的脚本****。 <br />
+<br />
+1.delete <br />
+<br />
+语法：delete reference <br />
+<br />
+参数：reference要消除的变量或对象的名称。 <br />
+<br />
+描述：运算符；销毁由reference参数指定的对象或变量，如果该对象被成功删除，则返回true；否则返回false值。 <br />
+<br />
+2.set variable <br />
+<br />
+语法：set(variable,expression) <br />
+<br />
+参数：variable保存expression参数值的标识符；expression分配给变量的值。 <br />
+<br />
+描述：动作；为变量赋值。variable是保存数据的容器。变量可以保存任何类型的数据(例如，字符串、数字、布尔值、对象或影片剪辑)。每个影片和影片剪辑的时间轴都有其自己的变量集，每个变量又 <br />
+<br />
+都有其自己独立于其他时间轴上的变量的值。 <br />
+<br />
+3.var <br />
+<br />
+语法：var variableName1 [= value1][...,variableNameN [=valueN]] <br />
+<br />
+参数：variableName标识符；value分配给变量的值。 <br />
+<br />
+描述：动作；用于声明局部变量。如果在函数内声明局部变量，那么变量就是为该函数定义的，且在该函数调用结束时到期。如果变量不是在块({})内声明的，但使用call动作执行该动作列表，则该变量 <br />
+<br />
+为局部变量，且在当前列表结束时到期。如果变量不是在块中声明的，且不使用call动作执行当前动作列表，则这些变量不是局部变量。 <br />
+<br />
+4.with <br />
+<br />
+语法：with (object) { <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：object动作脚本对象或影片剪辑的实例；statement(s)花括号中包含的动作或一组动作。 <br />
+<br />
+描述：动作；允许你使用object参数指定一个对象(比如影片剪辑)，并使用statement(s)参数计算对象中的表达式和动作。这可以使你不必重复书写对象的名称或路径。 <br />
+<br />
+(五)条件/循环 <br />
+该部分Action是Flash MX脚本中如何操作影片逻辑的脚本****。 <br />
+<br />
+1.break <br />
+<br />
+语法：break <br />
+<br />
+描述：动作；出现在一个循环(for、for..in、do while或while 循环)中，或者出现在与switch动作内特定case语句相关联的语句块中。break动作可命令Flash跳过循环体的其余部分，停止循环动作，并 <br />
+<br />
+执行循环语句之后的语句。当使用break动作时，Flash解释程序会跳过该case块中的其余语句，转到包含它的 switch动作后的第一个语句。使用break动作可跳出一系列嵌套的循环。 <br />
+<br />
+2.case <br />
+<br />
+语法：case expression: statements <br />
+<br />
+参数：expression任何表达式；statements任何语句。 <br />
+<br />
+描述：关键字；定义用于switch动作的条件。如果case关键字后的expression参数在使用全等(===)的情况下等于switch动作的expression参数，则执行statements参数中的语句。如果在switch语句外部使 <br />
+<br />
+用case动作，则将产生错误，脚本不能编译。 <br />
+<br />
+3.continue <br />
+<br />
+语法：continue <br />
+<br />
+描述：动作；出现在几种类型的循环语句中；它在每种类型的循环中的行为方式各不相同。 <br />
+<br />
+在while循环中，continue可使Flash解释程序跳过循环体的其余部分，并转到循环的顶端(在该处进行条件测试)。在do while循环中，continue可使Flash解释程序跳过循环体的其余部分，并转到循环的底 <br />
+<br />
+端(在该处进行条件测试)。在for循环中，continue可使Flash解释程序跳过循环体的其余部分，并转而计算for循环的后表达式(post-expression)。在for..in循环中，continue可使Flash解释程序跳过循 <br />
+<br />
+环体的其余部分，并跳回循环的顶端(在该处处理下一个枚举值)。 <br />
+<br />
+4.Default <br />
+<br />
+语法：default: statements <br />
+<br />
+参数：statements任何语句。 <br />
+<br />
+描述：关键字；定义switch动作的默认情况。对于一个给定的switch动作，如果该switch动作的 Expression参数与case关键字后面的任何一个Expression参数都不相等(使用全等)，则执行这些语句。 <br />
+<br />
+5.do while <br />
+<br />
+语法：do { <br />
+<br />
+statement(s) <br />
+<br />
+} while (condition) <br />
+<br />
+参数：condition要计算的条件。 <br />
+<br />
+statement(s)只要condition参数计算结果为true就会执行的语句。 <br />
+<br />
+描述：动作；执行语句，然后只要条件为true，就计算循环中的条件。 <br />
+<br />
+6.else <br />
+<br />
+语法：else statement <br />
+<br />
+else {...statement(s)...} <br />
+<br />
+参数：ondition计算结果为true或false的表达式。 <br />
+<br />
+statement(s)如果if语句中指定的条件为false，则运行的替代语句系列。 <br />
+<br />
+描述：动作；指定当if语句中的条件返回false时要运行的语句。 <br />
+<br />
+7.else if <br />
+<br />
+语法：if (condition){ <br />
+<br />
+statement(s); <br />
+<br />
+} else if (condition){ <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：condition计算结果为true或false的表达式。 <br />
+<br />
+statement(s)如果if语句中指定的条件为false，则运行的替代语句系列。 <br />
+<br />
+描述：动作；计算条件，并指定当初始if语句中的条件返回false时要运行的语句。如果else if条件返回true，则Flash解释程序运行该条件后面花括号({})中的语句。如果else if条件为false，则Flash <br />
+<br />
+跳过花括号中的语句，运行花括号之后的语句。在脚本中可以使用else if动作创建分支逻辑。 <br />
+<br />
+8.for <br />
+<br />
+语法：for(init; condition; next) { <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：init一个在开始循环序列前要计算的表达式，通常为赋值表达式。此参数还允许使用Var语句。 <br />
+<br />
+condition计算结果为true或false的表达式。在每次循环迭代前计算该条件；当条件的计算结果为false时退出循环。 <br />
+<br />
+next一个在每次循环迭代后要计算的表达式；通常为使用递增或递减运算符的赋值表达式。 <br />
+<br />
+statement(s)在循环体内要执行的指令。 <br />
+<br />
+描述：动作；一种循环结构，首先计算init(初始化)表达式一次，只要condition的计算结果为true，则按照以下顺序开始循环序列，执行statement，然后计算next表达式。 <br />
+<br />
+9.For..in <br />
+<br />
+语法：for(variableIterant in object){ <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：variableIterant作为迭代变量的变量名，引用数组中对象或元素的每个属性。 <br />
+<br />
+object要重复的对象的名称。 <br />
+<br />
+statement(s)要为每次迭代执行的指令。 <br />
+<br />
+描述：动作；循环通过数组中对象或元素的属性，并为对象的每个属性执行statement。 <br />
+<br />
+10.if <br />
+<br />
+语法：if(condition) { <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：condition计算结果为true或false的表达式。 <br />
+<br />
+statement(s)如果或当条件的计算结果为true时要执行的指令。 <br />
+<br />
+描述：动作；对条件进行计算以确定影片中的下一步动作。如果条件为true，则Flash将运行条件后面花括号({})内的语句。如果条件为false，则Flash跳过花括号内的语句，运行花括号后面的语句。使用 <br />
+<br />
+if动作可在脚本中创建分支逻辑。 <br />
+<br />
+11.switch <br />
+<br />
+语法：switch (expression){ <br />
+<br />
+caseClause: <br />
+<br />
+[defaultClause:] <br />
+<br />
+} <br />
+<br />
+参数：expression任意表达式。 <br />
+<br />
+caseClause一个Case关键字，其后跟表达式、冒号和一组语句，如果在使用全等的情况下，此处的表达式与switch expression参数相匹配，则执行这组语句。 <br />
+<br />
+defaultClause一个default关键字，其后跟着如果这些Case表达式都不与switch expression参数全等匹配时要执行的语句。 <br />
+<br />
+描述：动作；创建动作脚本语句的分支结构。像If动作一样，Switch 动作测试一个条件，并在条件返回true值时执行语句。 <br />
+<br />
+12.while <br />
+<br />
+语法：while(condition) { <br />
+<br />
+statement(s); <br />
+<br />
+} <br />
+<br />
+参数：condition每次执行while动作时都要重新计算的表达式。如果该语句的计算结果为 true，则运行statement(s)。 <br />
+<br />
+statement(s)条件的计算结果为true时要执行的代码。 <br />
+<br />
+描述：动作；测试表达式，只要该表达式为true，就重复运行循环中的语句或语句序列。 <br />
+<br />
+(六)用户定义的函数 <br />
+该部分的Action可以通过用户自己组合开发更具灵活的程序脚本。 <br />
+<br />
+1.call <br />
+<br />
+语法：call(frame) <br />
+<br />
+参数：frame时间轴中帧的标签或编号。 <br />
+<br />
+描述：动作；执行被调用帧中的脚本，而不将播放头移动到该帧。一旦执行完该脚本，局部变量将不存在。 <br />
+<br />
+2.call function <br />
+<br />
+语法：object.function([parameters]) <br />
+<br />
+参数：object其中定义了函数的对象(可以是影片剪辑)。 <br />
+<br />
+function指定用户定义的函数的标识符。 <br />
+<br />
+parameters可选参数，指示函数所需的任何参数。 <br />
+<br />
+描述：动作；允许你在标准模式下，使用&ldquo;动作&rdquo;面板中的参数字段来调用用户定义的函数。 <br />
+<br />
+3.function <br />
+<br />
+语法：function functionname ([parameter0, parameter1,...parameterN]){ <br />
+<br />
+statement(s) <br />
+<br />
+} <br />
+<br />
+function ([parameter0, parameter1,...parameterN]){ <br />
+<br />
+statement(s) <br />
+<br />
+} <br />
+<br />
+参数：functionname新函数的名称。 <br />
+<br />
+parameter一个标识符，表示要传递给函数的参数。这些参数是可选的。 <br />
+<br />
+statement(s)为function的函数体定义的任何动作脚本指令。 <br />
+<br />
+描述：你定义的用来执行特定任务的一组语句。可以在影片的一个地方&ldquo;声明&rdquo;或定义函数，然后从影片的其他脚本调用它。定义函数时，还可以为其指定参数。参数是函数要对其进行操作的值的占位符 <br />
+<br />
+。每次调用函数时，可以向其传递不同的参数。这使你可以在不同场合重复使用一个函数。 <br />
+<br />
+4.method <br />
+<br />
+语法：object.method = function ([parameters]) { <br />
+<br />
+...body of function... <br />
+<br />
+}; <br />
+<br />
+参数：object对象的标识符。 <br />
+<br />
+method方法的标识符。 <br />
+<br />
+parameters要传递给函数的参数。可选参数。 <br />
+<br />
+描述：动作(仅限标准模式)；用于在标准模式下使用&ldquo;动作&rdquo;面板来定义对象的方法。 <br />
+<br />
+5.Return <br />
+<br />
+语法：return[expression] <br />
+<br />
+return <br />
+<br />
+参数：expression要作为函数值计算并返回的字符串、数字、数组或对象。此参数是可选的。 <br />
+<br />
+返回值：如果提供了expression参数，则返回计算的结果。 <br />
+<br />
+描述：动作；指定由函数返回的值。return动作计算expression并将结果作为它在其中执行的函数的值返回。return动作导致函数停止运行，并用返回值代替函数。如果单独使用return语句，它返回null <br />
+<br />
+。 <br />
+<br />
+二、函数 <br />
+函数是Flash MX中至关重要的部分，是完成复杂的程序操作的必要组合。 <br />
+<br />
+(一)常用函数 <br />
+顾名思义，该部分的内容是介绍Flash MX中常用逻辑函数脚本****。 <br />
+<br />
+1.escape <br />
+<br />
+语法：escape(expression) <br />
+<br />
+参数：expression要转换为字符串并以URL编码格式进行编码的表达式。 <br />
+<br />
+描述：函数；将参数转换为字符串，并以URL编码格式进行编码，在这种格式中，将所有非字母数字的字符都转义为十六进制序列。 <br />
+<br />
+2.eval <br />
+<br />
+语法：eval(expression) <br />
+<br />
+参数：expression包含要获取的变量、属性、对象或影片剪辑的名称的字符串。 <br />
+<br />
+描述：函数；按照名称访问变量、属性、对象或影片剪辑。如果expression是一个变量或属性，则返回该变量或属性的值。如果expression是一个对象或影片剪辑，则返回指向该对象或影片剪辑的引用。 <br />
+<br />
+如果无法找到expression中指定的元素，则返回undefined。 <br />
+<br />
+3.getProperty <br />
+<br />
+语法：getProperty(instancename , property) <br />
+<br />
+参数：instancename 要获取其属性的影片剪辑的实例名称。 <br />
+<br />
+property影片剪辑的属性。 <br />
+<br />
+描述：函数；返回影片剪辑instancename的指定property的值。 <br />
+<br />
+4.getTimer <br />
+<br />
+语法：getTimer() <br />
+<br />
+描述：函数；返回自影片开始播放时起已经过的毫秒数。 <br />
+<br />
+5.targetPath <br />
+<br />
+语法：targetpath(movieClipObject) <br />
+<br />
+参数：movieClipObject对要获取其目标路径的影片剪辑的引用(例如，_root或_parent)。 <br />
+<br />
+描述：函数；返回包含movieClipObject的目标路径的字符串。此目标路径以点记号表示形式返回。若要获取以斜杠记号表示的目标路径，请使用_target属性。 <br />
+<br />
+6.unescape <br />
+<br />
+语法：unescape(x) <br />
+<br />
+参数：x要转义的十六进制序列字符串。 <br />
+<br />
+描述：顶级函数；将参数x作为字符串计算，将该字符串从URL编码格式(这种格式将所有十六进制序列转换为ASCII字符)进行解码，并返回该字符串。 <br />
+<br />
+(二)数学函数 <br />
+该部分的Action帮助开发人员完成程序中的数学运算。 <br />
+<br />
+1.isFinite <br />
+<br />
+语法：isFinite(expression) <br />
+<br />
+参数：expression要计算的布尔表达式、变量表达式或其他表达式。 <br />
+<br />
+描述：顶级函数；对expression进行计算，如果其为有限数，则返回true，如果为无穷大或负无穷大，则返回false。无穷大或负无穷大的出现指示有错误的数学条件，例如被0除。 <br />
+<br />
+2.isNaN <br />
+<br />
+语法：isNaN(expression) <br />
+<br />
+参数：expression要计算的布尔表达式、变量表达式或其他表达式。 <br />
+<br />
+描述：顶级函数；对参数进行计算，如果值不是数字(NaN)，则返回true，指示存在数学错误。 <br />
+<br />
+3.parseFloat <br />
+<br />
+语法：parseFloat(string) <br />
+<br />
+参数：string要读取并转换为浮点数的字符串。 <br />
+<br />
+描述：函数；将字符串转换为浮点数。此函数读取(或&ldquo;分析&rdquo;)并返回字符串中的数字，直到它到达不是数字(其初始含义为数字)部分的字符。如果字符串不是以一个可以分析的数字开始的，则 <br />
+<br />
+parseFloat返回NaN。有效整数前面的空白将被忽略，有效整数后面的非数值字符也将被忽略。 <br />
+<br />
+4.parseInt <br />
+<br />
+语法：parseInt(expression, [radix]) <br />
+<br />
+参数：expression转换为整数的字符串。 <br />
+<br />
+radix表示要分析数字的基数(基)的整数。合法值为2～36。此参数是可选的。 <br />
+<br />
+描述：函数；将字符串转换为整数。如果参数中指定的字符串不能转换为数字，则此函数返回NaN。以0开头的整数或指定基数为8的整数被解释为八进制数字。以0x开头的字符串被解释为十六进制数字。有 <br />
+<br />
+效整数前面的空白将被忽略，有效整数后面的非数值字符也将被忽略。 <br />
+<br />
+(三)转换函数 <br />
+该部分的Action是Flash MX用来处理内容格式转换的脚本****。 <br />
+<br />
+1.Boolean(函数) <br />
+<br />
+语法：Boolean(expression) <br />
+<br />
+参数：expression一个可转换为布尔值的表达式。 <br />
+<br />
+描述：函数；将参数expression转换为布尔值，并以如下形式返回值：如果expression是布尔值，则返回值为expression。如果expression是数字，则在该数字不为零时返回值为true，否则为false。如果 <br />
+<br />
+expression是字符串，则调用toNumber方法，并且在该数字不为零时返回值为true，否则为false。如果expression未定义，则返回值为false。如果expression 是影片剪辑或对象，则返回值为true。 <br />
+<br />
+2.Number(函数) <br />
+<br />
+语法：Number(expression) <br />
+<br />
+参数：expression要转换为数字的表达式。 <br />
+<br />
+描述：函数；将参数expression转换为数字并按如下规则返回一个值： <br />
+<br />
+如果expression为数字，则返回值为expression。如果expression为布尔值，当 expression为true时，返回值为1；当expression为false时，返回值为0。如果expression 为字符串，则该函数尝试将 <br />
+<br />
+expression解析为一个带有可选尾随指数的十进制数字。如果expression为undefined，则返回值为0。 <br />
+<br />
+3.String(函数) <br />
+<br />
+语法：String(expression) <br />
+<br />
+参数：expression要转换为字符串的表达式。 <br />
+<br />
+描述：函数；返回指定参数的字符串表示形式，规则如下所示： <br />
+<br />
+如果expression为布尔值，则返回字符串为true或false。如果expression是数字，则返回的字符串为此数字的文本表示形式。如果expression为字符串，则返回的字符串是 expression。如果expression <br />
+<br />
+是一个对象，则返回值为该对象的字符串表示形式，它是通过调用该对象的字符串属性而生成的，如果不存在此类属性，则通过调用Object.toString 而生成。如果expression是一个影片剪辑，则返回值 <br />
+<br />
+是以斜杠(/)记号表示的此影片剪辑的目标路径。如果expression为undefined，则返回值为空字符串()。 <br />
+<br />
+三、常量 <br />
+该部分的aAction罗列出Flash MX中常用的常量脚本****。 <br />
+<br />
+1.false <br />
+<br />
+语法：false <br />
+<!--v:3.2--></div>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('FLASH脚本文字教程[献给初学的朋友] _夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/375.html">入门：关于Flash中注册点与中心点…</a>&nbsp;&nbsp;下一条： <a href="/html/News/372.html">Flash简单实现网页中的Flash动画全屏</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码">FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/605.html" title="Flash,Actionscript,AS延时执行语句,延时播放影片">Flash,Actionscript,AS延时执行语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0">入门Flash CS3 ActionScript 3.0</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法">播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/384.html" title="JavaScript控制Flash播放器的方法汇总&nbsp;">JavaScript控制Flash播放器的方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/379.html" title="FLASH变量和作用域[这是一篇比较好的文章]">FLASH变量和作用域[这是一篇比较好…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/283.html" title="用FLASH8.0轻松制作简易计算器">用FLASH8.0轻松制作简易计算器</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1035.html" title="FLASH动画禁止右键菜单">FLASH动画禁止右键菜单</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/523.html" title="FLASH&nbsp;AS教程：响应键盘事件的四种方法">FLASH AS教程：响应键盘事件的四种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/541.html" title="最常用的Flash语句(汇总)">最常用的Flash语句(汇总)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/278.html" title="Flash制作坦克游戏视频教程">Flash制作坦克游戏视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/998.html" title="创建FLEX自定义组件(1)">创建FLEX自定义组件(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/370.html" title="FLASH与ASP通信原理入门&nbsp;">FLASH与ASP通信原理入门 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/524.html" title="Flash教程：加载外部文本文件的3种方法">Flash教程：加载外部文本文件的3种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/996.html" title="创建FLEX自定义组件(3)">创建FLEX自定义组件(3)</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设计与…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1482.html" title="常用UML建模工具" >常用UML建模工具</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码" >FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1250.html" title="视频教程卡住的解决办法" >视频教程卡住的解决办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法" >播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1174.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0" >入门Flash CS3 ActionScript 3.0</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "373" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

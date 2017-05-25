@@ -1,0 +1,466 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Web2.0时代的核心应用：Ajax简介_Jquery_Ajax_Javascript_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="Web2.0时代的核心应用：Ajax简介" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Jquery_Ajax_Javascript
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        Web2.0时代的核心应用：Ajax简介
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/26 19:47:53
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        Web2.0时代的核心应用：Ajax简介
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <span id="zoom" class="mainfont">&nbsp; 作为J2EE开发人员，我们似乎经常关注&ldquo;后端机制（backend mechanics）&rdquo;。我们通常会忘记，J2EE的主要成功之处在Web应用程序方面；许多原因使得人们喜欢利用Web开发应用程序，但主要还是因为其易于部署的特点允许站点以尽可能低的成本拥有上百万的用户。遗憾的是，在过去几年中，我们在后端投入了太多的时间，而在使我们的Web用户界面对用户自然和响应灵敏方面却投入不足。
+<p style="TEXT-INDENT: 2em">本文介绍一种方法，Ajax，使用它可以构建更为动态和响应更灵敏的Web应用程序。该方法的关键在于对浏览器端的JavaScript、DHTML和与服务器异步通信的组合。本文也演示了启用这种方法是多么简单：利用一个Ajax框架（指DWR）构造一个应用程序，它直接从浏览器与后端服务进行通信。如果使用得当，这种强大的力量可以使应用程序更加自然和响应灵敏，从而提升用户的浏览体验。</p>
+<p style="TEXT-INDENT: 2em">该应用程序中所使用的示例代码已打包为单独的WAR文件，可供下载。</p>
+<p style="TEXT-INDENT: 2em"><strong>简介</strong></p>
+<p style="TEXT-INDENT: 2em">术语Ajax用来描述一组技术，它使浏览器可以为用户提供更为自然的浏览体验。在Ajax之前，Web站点强制用户进入提交/等待/重新显示范例，用户的动作总是与服务器的&ldquo;思考时间&rdquo;同步。Ajax提供与服务器异步通信的能力，从而使用户从请求/响应的循环中解脱出来。借助于Ajax，可以在用户单击按钮时，使用JavaScript和DHTML立即更新UI，并向服务器发出异步请求，以执行更新或查询数据库。当请求返回时，就可以使用JavaScript和CSS来相应地更新UI，而不是刷新整个页面。最重要的是，用户甚至不知道浏览器正在与服务器通信：Web站点看起来是即时响应的。</p>
+<p style="TEXT-INDENT: 2em">虽然Ajax所需的基础架构已经出现了一段时间，但直到最近异步请求的真正威力才得到利用。能够拥有一个响应极其灵敏的Web站点确实激动人心，因为它最终允许开发人员和设计人员使用标准的HTML/CSS/JavaScript堆栈创建&ldquo;桌面风格的（desktop-like）&rdquo;可用性。</p>
+<p style="TEXT-INDENT: 2em">通常，在J2EE中，开发人员过于关注服务和持久性层的开发，以至于用户界面的可用性已经落后。在一个典型的J2EE开发周期中，常常会听到这样的话，&ldquo;我们没有可投入UI的时间&rdquo;或&ldquo;不能用HTML实现&rdquo;。但是，以下Web站点证明，这些理由再也站不住脚了： </p>
+<ul>
+    <li>BackPack </li>
+    <li>Google Suggest </li>
+    <li>Google Maps </li>
+    <li>PalmSphere </li>
+</ul>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">所有这些Web站点都告诉我们，Web应用程序不必完全依赖于从服务器重新载入页面来向用户呈现更改。一切似乎就在瞬间发生。简而言之，在涉及到用户界面的响应灵敏度时，基准设得更高了。</p>
+<p style="TEXT-INDENT: 2em"><strong>定义Ajax</strong></p>
+<p style="TEXT-INDENT: 2em">Adaptive Path公司的Jesse James Garrett这样定义Ajax：</p>
+<p style="TEXT-INDENT: 2em">Ajax不是一种技术。实际上，它由几种蓬勃发展的技术以新的强大方式组合而成。Ajax包含： </p>
+<ul>
+    <li>基于XHTML和CSS标准的表示； </li>
+    <li>使用Document Object Model进行动态显示和交互； </li>
+    <li>使用XMLHttpRequest与服务器进行异步通信； </li>
+    <li>使用JavaScript绑定一切。 </li>
+</ul>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">这非常好，但为什么要以Ajax命名呢？其实术语Ajax是由Jesse James Garrett创造的，他说它是&ldquo;Asynchronous JavaScript + XML的简写&rdquo;。</p>
+<p style="TEXT-INDENT: 2em"><strong>Ajax的工作原理</strong></p>
+<p style="TEXT-INDENT: 2em">Ajax的核心是JavaScript对象XmlHttpRequest。该对象在Internet Explorer 5中首次引入，它是一种支持异步请求的技术。简而言之，XmlHttpRequest使您可以使用JavaScript向服务器提出请求并处理响应，而不阻塞用户。</p>
+<p style="TEXT-INDENT: 2em">在创建Web站点时，在客户端执行屏幕更新为用户提供了很大的灵活性。下面是使用Ajax可以完成的功能： </p>
+<ul>
+    <li>动态更新购物车的物品总数，无需用户单击Update并等待服务器重新发送整个页面。 </li>
+    <li>提升站点的性能，这是通过减少从服务器下载的数据量而实现的。例如，在Amazon的购物车页面，当更新篮子中的一项物品的数量时，会重新载入整个页面，这必须下载32K的数据。如果使用Ajax计算新的总量，服务器只会返回新的总量值，因此所需的带宽仅为原来的百分之一。 </li>
+    <li>消除了每次用户输入时的页面刷新。例如，在Ajax中，如果用户在分页列表上单击Next，则服务器数据只刷新列表而不是整个页面。 </li>
+    <li>直接编辑表格数据，而不是要求用户导航到新的页面来编辑数据。对于Ajax，当用户单击Edit时，可以将静态表格刷新为内容可编辑的表格。用户单击Done之后，就可以发出一个Ajax请求来更新服务器，并刷新表格，使其包含静态、只读的数据。 </li>
+</ul>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">一切皆有可能！但愿它能够激发您开始开发自己的基于Ajax的站点。然而，在开始之前，让我们介绍一个现有的Web站点，它遵循传统的提交/等待/重新显示的范例，我们还将讨论Ajax如何提升用户体验。</p>
+<p style="TEXT-INDENT: 2em"><strong>Ajax可用于那些场景？&mdash;&mdash;一个例子：MSN Money页面</strong></p>
+<p style="TEXT-INDENT: 2em">前几天，在浏览MSN Money页面的时候，有一篇关于房地产投资的文章引起了我的好奇心。我决定使用站点的&ldquo;Rate this article&rdquo;（评价本文）功能，鼓励其他的用户花一点时间来阅读这篇文章。在我单击vote按钮并等待了一会儿之后，整个页面被刷新，在原来投票问题所在的地方出现了一个漂亮的感谢画面。</p>
+<p style="TEXT-INDENT: 2em">&nbsp;</p>
+<center><img alt="" src="http://pic.arkoo.com/cary/picture/2006527133033.jpg" /></center>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">&nbsp;</p>
+<p style="TEXT-INDENT: 2em">而Ajax能够使用户的体验更加愉快，它可以提供响应更加灵敏的UI，并消除页面刷新所带来的闪烁。目前，由于要刷新整个页面，需要传送大量的数据，因为必须重新发送整个页面。如果使用Ajax，服务器可以返回一个包含了感谢信息的500字节的消息，而不是发送26,813字节的消息来刷新整个页面。即使使用的是高速Internet，传送26K和1/2K的差别也非常大。同样重要的是，只需要刷新与投票相关的一小节，而不是刷新整个屏幕。</p>
+<p style="TEXT-INDENT: 2em">让我们利用Ajax实现自己的基本投票系统。</p>
+<p style="TEXT-INDENT: 2em"><strong>原始的Ajax：直接使用XmlHttpRequest</strong></p>
+<p style="TEXT-INDENT: 2em">如上所述，Ajax的核心是JavaScript对象XmlHttpRequest。下面的示例文章评价系统将带您熟悉Ajax的底层基本知识：http://tearesolutions.com/ajax-demo/raw-ajax.html。注：如果您已经在本地WebLogic容器中安装了ajax-demo.war，可以导航到http://localhost:7001/ajax-demo/raw-ajax.html，</p>
+<p style="TEXT-INDENT: 2em">浏览应用程序，参与投票，并亲眼看它如何运转。熟悉了该应用程序之后，继续阅读，进一步了解其工作原理细节。首先，您拥有一些简单的定位点标记，它连接到一个JavaScriptcastVote(rank)函数。 </p>
+<p style="TEXT-INDENT: 2em">function castVote(rank) ｛ var url = &quot;/ajax-demo/static-article-ranking.html&quot;; var callback = processAjaxResponse; executeXhr(callback, url);｝</p>
+<p style="TEXT-INDENT: 2em">该函数为您想要与之通信的服务器资源创建一个URL并调用内部函数executeXhr，提供一个回调JavaScript函数，一旦服务器响应可用，该函数就被执行。由于我希望它运行在一个简单的Apache环境中，&ldquo;cast vote URL&rdquo;只是一个简单的HTML页面。在实际情况中，被调用的URL将记录票数并动态地呈现包含投票总数的响应。下一步是发出一个XmlHttpRequest请求： </p>
+<p style="TEXT-INDENT: 2em">function executeXhr(callback, url) ｛ // branch for native XMLHttpRequest object if (window.XMLHttpRequest) ｛ req = new XMLHttpRequest(); req.onreadystatechange = callback; req.open(&quot;GET&quot;, url, true); req.send(null); ｝ // branch for IE/Windows ActiveX version else if (window.ActiveXObject) ｛ req = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;); if (req) ｛ req.onreadystatechange = callback; req.open(&quot;GET&quot;, url, true); req.send(); ｝ ｝｝</p>
+<p style="TEXT-INDENT: 2em">如您所见，执行一个XmlHttpRequest并不简单，但非常直观。和平常一样，在JavaScript领域，大部分的工作量都花在确保浏览器兼容方面。在这种情况下，首先要确定XmlHttpRequest是否可用。如果不能用，很可能要使用Internet Explorer，这样就要使用所提供的ActiveX实现。</p>
+<p style="TEXT-INDENT: 2em">executeXhr()方法中最关键的部分是这两行： </p>
+<p style="TEXT-INDENT: 2em">req.onreadystatechange = callback;req.open(&quot;GET&quot;, url, true);</p>
+<p style="TEXT-INDENT: 2em">第一行定义了JavaScript回调函数，您希望一旦响应就绪它就自动执行，而req.open()方法中所指定的&ldquo;true&rdquo;标志说明您想要异步执行该请求。一旦服务器处理完XmlHttpRequest并返回给浏览器，使用req.onreadystatechange指派所设置的回调方法将被自动调用。 </p>
+<p style="TEXT-INDENT: 2em">function processAjaxResponse() ｛ </p>
+<p style="TEXT-INDENT: 2em">// only if req shows &quot;loaded&quot; if (req.readyState == 4) ｛ </p>
+<p style="TEXT-INDENT: 2em">// only if &quot;OK&quot; if (req.status == 200) ｛ </p>
+<p style="TEXT-INDENT: 2em">502 502&quot;votes&quot;).innerHTML = req.responseText; ｝ else ｛ </p>
+<p style="TEXT-INDENT: 2em">alert(&quot;There was a problem retrieving the XML data:&quot; + req.statusText); </p>
+<p style="TEXT-INDENT: 2em">｝ ｝｝</p>
+<p style="TEXT-INDENT: 2em">该代码相当简洁，并且使用了几个幻数，这使得难以一下子看出发生了什么。为了弄清楚这一点，下面的表格（引用自http://developer.apple.com/internet/webcontent/xmlhttpreq.html）列举了常用的XmlHttpRequest对象属性。 </p>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">&nbsp;</p>
+<table border="0" cellspacing="1" cellpadding="0" width="80%" bgcolor="#cccccc" align="center">
+    <tbody>
+        <tr bgcolor="#ffffff">
+            <td height="22">
+            <p><strong>属性</strong></p>
+            </td>
+            <td>
+            <p><strong>描述</strong></p>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td height="22" valign="top">
+            <p>onreadystatechange</p>
+            </td>
+            <td valign="top">
+            <p>每次状态改变所触发事件的事件处理程序</p>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td height="22" valign="top">
+            <p>readyState</p>
+            </td>
+            <td valign="top">
+            <p>对象状态值： </p>
+            <ul>
+                <li>0 = 未初始化（uninitialized） </li>
+                <li>1 = 正在加载（loading） </li>
+                <li>2 = 加载完毕（loaded） </li>
+                <li>3 = 交互（interactive） </li>
+                <li>4 = 完成（complete） </li>
+            </ul>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td height="22" valign="top">
+            <p>responseText</p>
+            </td>
+            <td valign="top">
+            <p>从服务器进程返回的数据的字符串形式</p>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td height="22" valign="top">
+            <p>responseXML</p>
+            </td>
+            <td valign="top">
+            <p>从服务器进程返回的DOM兼容的文档数据对象</p>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td height="22" valign="top">
+            <p>status</p>
+            </td>
+            <td valign="top">
+            <p>从服务器返回的数字代码，比如404（未找到）或200（就绪）</p>
+            </td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td height="22" valign="top">
+            <p>statusText</p>
+            </td>
+            <td valign="top">
+            <p>伴随状态码的字符串信息</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">现在processVoteResponse()函数开始显示出其意义了。它首先检查XmlHttpRequest的整体状态以保证它已经完成（readyStatus == 4），然后根据服务器的设定询问请求状态。如果一切正常（status == 200）,就使用innerHTML属性重写DOM的&ldquo;votes&rdquo;节点的内容。</p>
+<p style="TEXT-INDENT: 2em">既然您亲眼看到了XmlHttpRequest对象是如何工作的，就让我们利用一个旨在简化JavaScript与Java应用程序之间的异步通信的框架来对具体的细节进行抽象。</p>
+<p style="TEXT-INDENT: 2em"><strong>Ajax: DWR方式</strong></p>
+<p style="TEXT-INDENT: 2em">按照与文章评价系统相同的流程，我们将使用Direct Web Remoting（DWR）框架实现同样的功能。</p>
+<p style="TEXT-INDENT: 2em">假定文章和投票结果存储在一个数据库中，使用某种对象/关系映射技术来完成抽取工作。为了部署起来尽可能地简单，我们不会使用数据库进行持久性存储。此外，为使应用程序尽可能通用，也不使用Web框架。相反，应用程序将从一个静态HTML文件开始，可以认为它由服务器动态地呈现。除了这些简化措施，应用程序还应该使用Spring Framework关联一切，以便轻松看出如何在一个&ldquo;真实的&rdquo;应用程序中使用DWR。</p>
+<p style="TEXT-INDENT: 2em">现在应该下载示例应用程序并熟悉它。该应用程序被压缩为标准的WAR文件，因此您可以把它放置到任何一个Web容器中&mdash;&mdash;无需进行配置。部署完毕之后，就可以导航到http://localhost:7001/ajax_demo/dwr-ajax.html来运行程序。</p>
+<p style="TEXT-INDENT: 2em">可以查看HTML 源代码，了解它如何工作。给人印象最深的是，代码如此简单&mdash;&mdash;所有与服务器的交互都隐藏在JavaScript对象ajaxSampleSvc的后面。更加令人惊讶的是，ajaxSampleSvc服务不是由手工编写而是完全自动生成的！让我们继续，看看这是如何做到的。</p>
+<p style="TEXT-INDENT: 2em"><strong>引入DWR</strong></p>
+<p style="TEXT-INDENT: 2em">如同在&ldquo;原始的Ajax&rdquo;一节所演示的那样，直接使用XmlHttpRequest创建异步请求非常麻烦。不仅JavaScript代码冗长，而且必须考虑服务器端为定位Ajax请求到适当的服务所需做的工作，并将结果封送到浏览器。</p>
+<p style="TEXT-INDENT: 2em">设计DWR的目的是要处理将Web页面安装到后端服务上所需的所有信息管道。它是一个Java框架，可以很轻松地将它插入到Web应用程序中，以便JavaScript代码可以调用服务器上的服务。它甚至直接与Spring Framework集成，从而允许用户直接向Web客户机公开bean。</p>
+<p style="TEXT-INDENT: 2em">DWR真正的巧妙之处是，在用户配置了要向客户机公开的服务之后，它使用反射来生成JavaScript对象，以便Web页面能够使用这些对象来访问该服务。然后Web页面只需接合到生成的JavaScript对象，就像它们是直接使用服务一样；DWR无缝地处理所有有关Ajax和请求定位的琐碎细节。</p>
+<p style="TEXT-INDENT: 2em">让我们仔细分析一下示例代码，弄清它是如何工作的。</p>
+<p style="TEXT-INDENT: 2em"><strong>应用程序细节：DWR分析</strong></p>
+<p style="TEXT-INDENT: 2em">关于应用程序，首先要注意的是，它是一个标准的Java应用程序，使用分层架构（Layered Architecture）设计模式。使用DWR通过JavaScript公开一些服务并不影响您的设计。 </p>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">下面是一个简单的Java服务，我们将使用DWR框架直接将其向JavaScript代码公开：</p>
+<p style="TEXT-INDENT: 2em">package com.tearesolutions.service;public interface AjaxSampleSvc ｛ Article castVote(int rank);｝</p>
+<p style="TEXT-INDENT: 2em">这是一个被简化到几乎不可能的程度的例子，其中只有一篇文章可以投票。该服务由Spring管理，它使用的bean名是ajaxSampleSvc，它的持久性需求则依赖于ArticleDao。详情请参见applicationContext.xml。</p>
+<p style="TEXT-INDENT: 2em">为了把该服务公开为JavaScript对象，需要配置DWR，添加dwr.xml文件到WEB-INF目录下： </p>
+<p style="TEXT-INDENT: 2em"><dwr></dwr><allow></allow><create javascript="ajaxSampleSvc" creator="spring"></create></p>
+<p style="TEXT-INDENT: 2em"><convert match="com.tearesolutions.model.Article" converter="bean"></convert><exclude method="toString"></exclude><exclude method="setArticleDao"></exclude></p>
+<p style="TEXT-INDENT: 2em">dwr.xml文件告诉DWR哪些服务是要直接向JavaScript代码公开的。注意，已经要求公开Spring bean ajaxSampleSvc。DWR将自动找到由应用程序设置的SpringApplicationContext。为此，必须使用标准的servlet过滤器ContextLoaderListener来初始化Spring ApplicationContext。DWR被设置为一个servlet，所以把它的定义添加到web.xml： </p>
+<p style="TEXT-INDENT: 2em"><web-app></web-app><display-name></display-name>Ajax Examples </p>
+<p style="TEXT-INDENT: 2em">
+<listener></listener>
+<listener-class></listener-class>
+org.springframework.web.context.ContextLoaderListener <servlet></servlet></p>
+<p style="TEXT-INDENT: 2em"><servlet-name></servlet-name>ajax_sample <servlet-class></servlet-class>com.tearesolutions.web.AjaxSampleServlet <load-on-startup></load-on-startup>1 <servlet></servlet></p>
+<p style="TEXT-INDENT: 2em"><servlet-name></servlet-name>dwr-invoker <display-name></display-name>DWR Servlet <description></description>Direct Web Remoter Servlet <servlet-class></servlet-class>uk.ltd.getahead.dwr.DWRServlet <init-param></init-param></p>
+<p style="TEXT-INDENT: 2em">debug </p>
+<p style="TEXT-INDENT: 2em">true <servlet-mapping></servlet-mapping></p>
+<p style="TEXT-INDENT: 2em"><servlet-name></servlet-name>ajax_sample <url-pattern></url-pattern>/ajax_sample <servlet-mapping></servlet-mapping></p>
+<p style="TEXT-INDENT: 2em"><servlet-name></servlet-name>dwr-invoker <url-pattern></url-pattern>/dwr/* </p>
+<p style="TEXT-INDENT: 2em">做完这些之后，可以加载<a href="http://localhost:7001/ajax-demo/dwr">http://localhost:7001/ajax-demo/dwr</a>，看看哪些服务可用。结果如下：</p>
+<p style="TEXT-INDENT: 2em">ajaxSampleSvc.js是动态生成的：</p>
+<p style="TEXT-INDENT: 2em">function ajaxSampleSvc() ｛ ｝ajaxSampleSvc.castVote = function(callback, p0)｛ DWREngine._execute(callback, &quot;/ajax-demo/dwr&quot;, &quot;ajaxSampleSvc&quot;, &quot;castVote&quot;, p0);｝</p>
+<p style="TEXT-INDENT: 2em">现在可以使用JavaScript对象ajaxSampleSvc替换所有的XmlHttpRequest代码，从而重构raw-ajax.html文件。可以在dwr-ajax.html文件中看到改动的结果；下面是新的JavaScript函数：</p>
+<p style="TEXT-INDENT: 2em">function castVote(rank) ｛ ajaxSampleSvc.castVote(processResponse, rank);｝function processResponse(data) ｛ var voteText = &quot;</p>
+<p style="TEXT-INDENT: 2em"><strong>Thanks for Voting!</strong>&quot; + &quot;</p>
+<p style="TEXT-INDENT: 2em">Current ranking: &quot; + data.voteAverage + &quot; out of 5&quot; + &quot;</p>
+<p style="TEXT-INDENT: 2em">Number of votes placed: &quot; + data.numberOfVotes + &quot;&quot;; 502 502&quot;votes&quot;).innerHTML = voteText; ｝</p>
+<p style="TEXT-INDENT: 2em">惊人地简单，不是吗？由ajaxSampleSvc对象返回的Article域对象序列化为一个JavaScript对象，允许在它上面调用诸如numberOfVotes()和voteAverage()之类的方法。在动态生成并插入到DIV元素&ldquo;votes&rdquo;中的HTML代码内使用这些数据。</p>
+<p style="TEXT-INDENT: 2em"><strong>下一步工作</strong></p>
+<p style="TEXT-INDENT: 2em">在后续文章中，我将继续有关Ajax的话题，涉及下面这些方面： </p>
+<ul>
+    <li>Ajax最佳实践 </li>
+</ul>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">像许多技术一样，Ajax是一把双刃剑。对于一些用例，其应用程序其实没有必要使用Ajax，使用了反而有损可用性。我将介绍一些不适合使用的模式，突出说明Ajax的一些消极方面，并展示一些有助于缓和这些消极方面的机制。例如，对Netflix电影浏览器来说，Ajax是合适的解决方案吗？或者，如何提示用户确实出了一些问题，而再次单击按钮也无济于事？ </p>
+<ul>
+    <li>管理跨请求的状态 </li>
+</ul>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">在使用Ajax时，最初的文档DOM会发生一些变化，并且有大量的页面状态信息存储在客户端变量中。当用户跟踪一个链接到应用程序中的另一个页面时，状态就丢失了。当用户按照惯例单击Back按钮时，呈现给他们的是缓存中的初始页面。这会使用户感到非常迷惑！ </p>
+<ul>
+    <li>调试技巧 </li>
+</ul>
+<p>&nbsp;</p>
+<p style="TEXT-INDENT: 2em">使用JavaScript在客户端执行更多的工作时，如果事情不按预期方式进行，就需要一些调试工具来帮助弄清出现了什么问题。</p>
+<p style="TEXT-INDENT: 2em"><strong>结束语</strong></p>
+<p style="TEXT-INDENT: 2em">本文介绍了Ajax方法，并展示了如何使用它来创建一个动态且响应灵敏的Web应用程序。通过使用DWR框架，可以轻松地把Ajax融合到站点中，而无需担心所有必须执行的实际管道工作。</p>
+<p style="TEXT-INDENT: 2em">特别感谢Getahead IT咨询公司的Joe Walker和他的团队开发出DWR这样神奇的工具。感谢你们与世界共享它！</p>
+</span>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('Web2.0时代的核心应用：Ajax简介_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/947.html">AJAX和Web开发新技术：Dynamic Fa…</a>&nbsp;&nbsp;下一条： <a href="/html/News/921.html">Web 2.0中AJAX技术应用详解 </a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return false preventDefault 和 stopPropagation详解" >return false preventDefault…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuer…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/773.html" title="ajax&nbsp;清除缓存的两种方法">ajax 清除缓存的两种方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/644.html" title="js日历控件点击日期显示在文本框中">js日历控件点击日期显示在文本框中…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1316.html" title="HTML、JS与FLASH&nbsp;之间的静态传值方法">HTML、JS与FLASH 之间的静态传值方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/489.html" title="主题：ajax请求JSP，为什么GET就是乱码，POST就没问题">主题：ajax请求JSP，为什么GET就是…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/800.html" title="javascript&nbsp;改变iframe(框架)的方法">javascript 改变iframe(框架)的方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/616.html" title="javascript取鼠标当前坐标">javascript取鼠标当前坐标</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1241.html" title="推荐一款网页软键盘&nbsp;很漂亮的哦">推荐一款网页软键盘 很漂亮的哦</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/409.html" title="ajax&nbsp;session过期问题的几个解决方案">ajax session过期问题的几个解决方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1106.html" title="js文字间隔停顿向上滚动效果">js文字间隔停顿向上滚动效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/413.html" title="ajax&nbsp;服务器文本框自动填值">ajax 服务器文本框自动填值</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/546.html" title="js技术技巧收藏（200例）---1">js技术技巧收藏（200例）---1</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/412.html" title="ajax&nbsp;数据库中随机读取5条数据动态在页面中刷新">ajax 数据库中随机读取5条数据动态…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/488.html" title="主题：这是否是个捷径？Ajax利用Struts转发到的jsp作为数据传回">主题：这是否是个捷径？Ajax利用S…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/406.html" title="揭开AJAX神秘的面纱(AJAX个人学习笔记)">揭开AJAX神秘的面纱(AJAX个人学习…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/888.html" title="常用的JS后台导航菜单">常用的JS后台导航菜单</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1858.html" title="JavaScript使用技巧" >JavaScript使用技巧</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1855.html" title="闭包是什么？" >闭包是什么？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1849.html" title="js正则表达式详解" >js正则表达式详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1848.html" title="改变src或者z-index实现图片切换" >改变src或者z-index实现图片切换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1847.html" title="搞混变量作用域将会带来各式各样的奇葩问题" >搞混变量作用域将会带来各式各样的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1836.html" title="return&nbsp;false&nbsp;preventDefault&nbsp;和&nbsp;stopPropagation详解" >return false preventDefault 和 …</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1835.html" title="对于body的onload事件和JQuery的ready方法相比" >对于body的onload事件和JQuery的r…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1786.html" title="产品图片放大镜效果" >产品图片放大镜效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1785.html" title="什么是模块捆绑" >什么是模块捆绑</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1784.html" title="ES6中使用箭头定义函数" >ES6中使用箭头定义函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1783.html" title="正则表达式学习笔记" >正则表达式学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1782.html" title="javascript数组详解" >javascript数组详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1772.html" title="JavaScript是世界上最流行的脚本语言" >JavaScript是世界上最流行的脚本语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1709.html" title="onSelectStart事件详解" >onSelectStart事件详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1706.html" title="js中的classList详解" >js中的classList详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "922" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

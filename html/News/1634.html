@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>使用Canvas及File&nbsp;API缩放并上传图片_Css3.0_css2.0_html5_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="Tom&nbsp;Trenka&nbsp;能为&quot;我&quot;的博客写一篇文章,对我来说是一个巨大的荣誉。Tom是Dojo框架的最初贡献者之一，也是我在SitePen公司的良师益友.我见证了他最顶&nbsp;级的天才能力，并且他总是第一个以前瞻性的解决方案预见了很多棘手的问题。他总是站在局外思考，打破常规但却又坚实可靠地解决边缘问题。本文就是一个完美&nbsp;的例证。&nbsp;" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Css3.0_css2.0_html5
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        使用Canvas及File API缩放并上传图片
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2015/11/2 14:06:16
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        Tom&nbsp;Trenka&nbsp;能为&quot;我&quot;的博客写一篇文章,对我来说是一个巨大的荣誉。Tom是Dojo框架的最初贡献者之一，也是我在SitePen公司的良师益友.我见证了他最顶&nbsp;级的天才能力，并且他总是第一个以前瞻性的解决方案预见了很多棘手的问题。他总是站在局外思考，打破常规但却又坚实可靠地解决边缘问题。本文就是一个完美&nbsp;的例证。&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        示例地址：<a rel="external nofollow" target="_blank" href="http://davidwalsh.name/demo/resize-image-canvas.php">Canvas Resize Demo <br/></a>原文作者：Dr. Tom Trenka <br/>原文日期： 2013年8月6日 <br/>翻译日期： 2013年8月8日 <br/><br/><br/>最近我总是被问道要创造一个用户接口API，允许用户上传图片到服务器上(伴随其他的事情),并能在我们公司提供支持的大量网站的客户
+端上使用。通常来说这都是很容易的事情——创建一个form表单，添加一个file类型的input输入框，让用户从电脑里选择图片，并在form标签上
+设置enctype=&quot;multipart/form-data&quot;表单属性，然后上传即可。非常简单，不是吗？事实上，这里有一个足够简单的例子；<a rel="external nofollow" target="_blank" href="http://davidwalsh.name/basic-file-uploading-php">点击进入</a> <br/>但是如果你想要通过某些方式预先处理一下图片再上传，那该怎么办？比如说，你必须先压缩图片尺寸，或者需要图片只能是某些种类的格式，如 png 或者jpg,你怎么办？ <br/>用canvas来解决! <br/><br/><strong>Canvas简介</strong> <br/>canvas
+ 
+是一个HTML5新增的DOM元素，允许用户在页面上直接地绘制图形，通常是使用JavaScript.而不同的格式标准也是不同的，比如SVG是光栅
+API(raster API) 而VML却是向量API(vector API).可以考虑使用Adobe 
+Illustrator(矢量图)作图与使用 Adobe Photoshop (光栅图)作图的区别。 <br/><br/>在canvas(画布)上能做
+的事情就是读取和渲染图像,并且允许你通过JavaScript操纵图像数据。已经有很多现存的文章来为你演示基本的图像处理——主要关注与各种不同的图
+像过滤技术( image filtering 
+techniques)——但我们需要的仅仅是缩放图片并转换到特定的文件格式，而canvas完全可以做到这些事情。 <br/><br/>我们假定的需求，比如图像高度不超过100像素，不管原始图像有多高。基本的代码如下所示: <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><p><br/>// 参数，最大高度 <br/>var MAX_HEIGHT = 100; <br/>// 渲染 <br/>function render(src){ <br/>// 创建一个 Image 对象 <br/>var image = new Image(); <br/>// 绑定 load 事件处理器，加载完成后执行 <br/>image.onload = function(){ <br/>// 获取 canvas DOM 对象 <br/>var canvas = document.getElementById(&quot;myCanvas&quot;); <br/>// 如果高度超标 <br/>if(image.height &gt; MAX_HEIGHT) { <br/>// 宽度等比例缩放 *= <br/>image.width *= MAX_HEIGHT / image.height; <br/>image.height = MAX_HEIGHT; <br/>} <br/>// 获取 canvas的 2d 环境对象, <br/>// 可以理解Context是管理员，canvas是房子 <br/>var ctx = canvas.getContext(&quot;2d&quot;); <br/>// canvas清屏 <br/>ctx.clearRect(0, 0, canvas.width, canvas.height); <br/>// 重置canvas宽高 <br/>canvas.width = image.width; <br/>canvas.height = image.height; <br/>// 将图像绘制到canvas上 <br/>ctx.drawImage(image, 0, 0, image.width, image.height); <br/>// !!! 注意，image 没有加入到 dom之中 <br/>}; <br/>// 设置src属性，浏览器会自动加载。 <br/>// 记住必须先绑定事件，才能设置src属性，否则会出同步问题。 <br/>image.src = src; <br/>}; <br/></p><br/>在上面的例子中，你可以使用canvas 的 toDataURL() 方法获取图像的 Base64编码的值(可以类似理解为16进制字符串,或者二进制数据流). <br/>注意： canvas 的 toDataURL() 获取的URL以字符串开头，有22个无用的数据 &quot;data:image/png;base64,&quot;，需要在客户端或者服务端进行过滤. <br/>原则上只要浏览器支持，URL地址的长度是没有限制的，而1024的长度限制，是老一代IE所独有的。 <br/><br/>请问,如何获取我们需要的图像呢？ <br/>好
+孩子,很高兴你能这么问。你并不能通过File 
+输入框来直接处理，你从这个文件输入框元素所能获取的仅仅是用户所选择文件的path路径。按照常规想象，你可以通过这个path路径信息来加载图像，但
+是，在浏览器里面这是不现实的。(译者注:浏览器厂商必须保证自己的浏览器绝对安全，才能获得市场，至少避免媒体的攻击，如果允许这样做，那恶意网址可以
+通过拼凑文件路径来尝试获取某些敏感信息). <br/>为了实现这个需求，我们可以使用HTML5的File API 来读取用户磁盘上的文件，并用这个file来作为图像的源(src,source). <br/><br/><strong>File API简介</strong> <br/>新的File API接口是在不违背任何安全沙盒规则下，读取和列出用户文件目录的一个途径—— 通过沙盒(sandbox)限制，恶意网站并不能将病毒写入用户磁盘，当然更不能执行。 <br/>我们要使用的文件读取对象叫做 FileReader,FileReader允许开发者读取文件的内容(具体浏览器的实现方式可能大不相同)。 <br/><br/>假设我们已经获取了图像文件的path路径，那么依赖前面的代码，使用FileReader来加载和渲染图像就变得很容易了： <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><p><br/>// 加载 图像文件(url路径) <br/>function loadImage(src){ <br/>// 过滤掉 非 image 类型的文件 <br/>if(!src.type.match(/image.*/)){ <br/>if(window.console){ <br/>console.log(&quot;选择的文件类型不是图片: &quot;, src.type); <br/>} else { <br/>window.confirm(&quot;只能选择图片文件&quot;); <br/>} <br/>return; <br/>} <br/>// 创建 FileReader 对象 并调用 render 函数来完成渲染. <br/>var reader = new FileReader(); <br/>// 绑定load事件自动回调函数 <br/>reader.onload = function(e){ <br/>// 调用前面的 render 函数 <br/>render(e.target.result); <br/>}; <br/>// 读取文件内容 <br/>reader.readAsDataURL(src); <br/>}; <br/></p><br/>请问，如何获取文件呢？ <br/>小白兔，要有耐心！我们的下一步就是获取文件，当然有好多方法可以实现啦。例如：你可以用文本框让用户输入文件路径，但很显然大多数用户都不是开发者，对输入什么值根本就不了解. <br/>为了用户使用方便，我们采用 Drag and Drop API接口。 <br/><br/><strong>使用 Drag and Drop API</strong> <br/>拖拽接口(Drag and Drop)非常简单——在大多数的DOM元素上，你都可以通过绑定事件处理器来实现. 只要用户从磁盘上拖动一个文件到dom对象上并放开鼠标，那我们就可以读取这个文件。代码如下： <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><p><br/>function init(){ <br/>// 获取DOM元素对象 <br/>var target = document.getElementById(&quot;drop-target&quot;); <br/>// 阻止 dragover(拖到DOM元素上方) 事件传递 <br/>target.addEventListener(&quot;dragover&quot;, function(e){e.preventDefault();}, true); <br/>// 拖动并放开鼠标的事件 <br/>target.addEventListener(&quot;drop&quot;, function(e){ <br/>// 阻止默认事件，以及事件传播 <br/>e.preventDefault(); <br/>// 调用前面的加载图像 函数，参数为dataTransfer对象的第一个文件 <br/>loadImage(e.dataTransfer.files[0]); <br/>}, true); <br/>var setheight = document.getElementById(&quot;setheight&quot;); <br/>var maxheight = document.getElementById(&quot;maxheight&quot;); <br/>setheight.addEventListener(&quot;click&quot;, function(e){ <br/>// <br/>var value = maxheight.value; <br/>if(/^\d+$/.test(value)){ <br/>MAX_HEIGHT = parseInt(value); <br/>} <br/>e.preventDefault(); <br/>},true); <br/>var btnsend = document.getElementById(&quot;btnsend&quot;); <br/>btnsend.addEventListener(&quot;click&quot;, function(e){ <br/>// <br/>sendImage(); <br/>},true); <br/>}; <br/></p><br/>我们还可以做一些其他的处理，比如显示预览图。但如果不想压缩图片的话，那很可能没什么用。我们将采用Ajax通过HTTP 的post方式上传图片数据。下面的例子是使用Dojo框架来完成请求的，当然你也可以采用其他的Ajax技术来实现. <br/>Dojo 代码如下: <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><p><br/>// 译者并不懂Dojo，所以将在后面附上jQuery的实现 <br/>// Remember that DTK 1.7+ is AMD! <br/>require([&quot;dojo/request&quot;], function(request){ <br/>// 设置请求URL,参数，以及回调。 <br/>request.post(&quot;image-handler.php&quot;, { <br/>data: { <br/>imageName: &quot;myImage.png&quot;, <br/>imageData: encodeURIComponent(document.getElementById(&quot;canvas&quot;).toDataURL(&quot;image/png&quot;)) <br/>} <br/>}).then(function(text){ <br/>console.log(&quot;The server returned: &quot;, text); <br/>}); <br/>}); <br/></p><br/>jQuery 实现如下： <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><p><br/>// 上传图片，jQuery版 <br/>function sendImage(){ <br/>// 获取 canvas DOM 对象 <br/>var canvas = document.getElementById(&quot;myCanvas&quot;); <br/>// 获取Base64编码后的图像数据，格式是字符串 <br/>// &quot;data:image/png;base64,&quot;开头,需要在客户端或者服务器端将其去掉，后面的部分可以直接写入文件。 <br/>var dataurl = canvas.toDataURL(&quot;image/png&quot;); <br/>// 为安全 对URI进行编码 <br/>// data%3Aimage%2Fpng%3Bbase64%2C 开头 <br/>var imagedata = encodeURIComponent(dataurl); <br/>//var url = $(&quot;#form&quot;).attr(&quot;action&quot;); <br/>// 1. 如果form表单不好处理,可以使用某个hidden隐藏域来设置请求地址 <br/>// &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;receive.jsp&quot; /&gt; <br/>var url = $(&quot;input[name=&#39;action&#39;]&quot;).val(); <br/>// 2. 也可以直接用某个dom对象的属性来获取 <br/>// &lt;input id=&quot;imageaction&quot; type=&quot;hidden&quot; action=&quot;receive.jsp&quot;&gt; <br/>// var url = $(&quot;#imageaction&quot;).attr(&quot;action&quot;); <br/>// 因为是string，所以服务器需要对数据进行转码，写文件操作等。 <br/>// 个人约定，所有http参数名字全部小写 <br/>console.log(dataurl); <br/>//console.log(imagedata); <br/>var data = { <br/>imagename: &quot;myImage.png&quot;, <br/>imagedata: imagedata <br/>}; <br/>jQuery.ajax( { <br/>url : url, <br/>data : data, <br/>type : &quot;POST&quot;, <br/>// 期待的返回值类型 <br/>dataType: &quot;json&quot;, <br/>complete : function(xhr,result) { <br/>//console.log(xhr.responseText); <br/>var $tip2 = $(&quot;#tip2&quot;); <br/>if(!xhr){ <br/>$tip2.text(&#39;网络连接失败!&#39;); <br/>return false; <br/>} <br/>var text = xhr.responseText; <br/>if(!text){ <br/>$tip2.text(&#39;网络错误!&#39;); <br/>return false; <br/>} <br/>var json = eval(&quot;(&quot;+text+&quot;)&quot;); <br/>if(!json){ <br/>$tip2.text(&#39;解析错误!&#39;); <br/>return false; <br/>} else { <br/>$tip2.text(json.message); <br/>} <br/>//console.dir(json); <br/>//console.log(xhr.responseText); <br/>} <br/>}); <br/>}; <br/></p><br/>OK,搞定！你还需要做的，就是创建一个只管的用户界面，并允许你控制图片的大小。上传到服务器端的数据，并不需要处理enctype为 multi-part/form-data 的情况，仅仅一个简单的POST表单处理程序就可以了. <br/>好了，下面附上完整的代码示例： <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><p><br/>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt; <br/>&lt;% <br/>String path = request.getContextPath(); <br/>String basePath = request.getScheme()+&quot;://&quot;+request.getServerName()+&quot;:&quot;+request.getServerPort()+path+&quot;/&quot;; <br/>%&gt; <br/>&lt;!DOCTYPE html&gt; <br/>&lt;html&gt; <br/>&lt;head&gt; <br/>&lt;title&gt;通过Canvas及File API缩放并上传图片&lt;/title&gt; <br/>&lt;meta http-equiv=&quot;pragma&quot; content=&quot;no-cache&quot;&gt; <br/>&lt;meta http-equiv=&quot;cache-control&quot; content=&quot;no-cache&quot;&gt; <br/>&lt;meta http-equiv=&quot;expires&quot; content=&quot;0&quot;&gt; <br/>&lt;meta http-equiv=&quot;keywords&quot; content=&quot;Canvas,File,Image&quot;&gt; <br/>&lt;meta http-equiv=&quot;description&quot; content=&quot;2013年8月8日,renfufei@qq.com&quot;&gt; <br/>&lt;script src=&quot;http://code.jquery.com/jquery-1.7.1.min.js&quot;&gt;&lt;/script&gt; <br/>&lt;script&gt; <br/>// 参数，最大高度 <br/>var MAX_HEIGHT = 100; <br/>// 渲染 <br/>function render(src){ <br/>// 创建一个 Image 对象 <br/>var image = new Image(); <br/>// 绑定 load 事件处理器，加载完成后执行 <br/>image.onload = function(){ <br/>// 获取 canvas DOM 对象 <br/>var canvas = document.getElementById(&quot;myCanvas&quot;); <br/>// 如果高度超标 <br/>if(image.height &gt; MAX_HEIGHT) { <br/>// 宽度等比例缩放 *= <br/>image.width *= MAX_HEIGHT / image.height; <br/>image.height = MAX_HEIGHT; <br/>} <br/>// 获取 canvas的 2d 环境对象, <br/>// 可以理解Context是管理员，canvas是房子 <br/>var ctx = canvas.getContext(&quot;2d&quot;); <br/>// canvas清屏 <br/>ctx.clearRect(0, 0, canvas.width, canvas.height); <br/>// 重置canvas宽高 <br/>canvas.width = image.width; <br/>canvas.height = image.height; <br/>// 将图像绘制到canvas上 <br/>ctx.drawImage(image, 0, 0, image.width, image.height); <br/>// !!! 注意，image 没有加入到 dom之中 <br/>}; <br/>// 设置src属性，浏览器会自动加载。 <br/>// 记住必须先绑定事件，才能设置src属性，否则会出同步问题。 <br/>image.src = src; <br/>}; <br/>// 加载 图像文件(url路径) <br/>function loadImage(src){ <br/>// 过滤掉 非 image 类型的文件 <br/>if(!src.type.match(/image.*/)){ <br/>if(window.console){ <br/>console.log(&quot;选择的文件类型不是图片: &quot;, src.type); <br/>} else { <br/>window.confirm(&quot;只能选择图片文件&quot;); <br/>} <br/>return; <br/>} <br/>// 创建 FileReader 对象 并调用 render 函数来完成渲染. <br/>var reader = new FileReader(); <br/>// 绑定load事件自动回调函数 <br/>reader.onload = function(e){ <br/>// 调用前面的 render 函数 <br/>render(e.target.result); <br/>}; <br/>// 读取文件内容 <br/>reader.readAsDataURL(src); <br/>}; <br/>// 上传图片，jQuery版 <br/>function sendImage(){ <br/>// 获取 canvas DOM 对象 <br/>var canvas = document.getElementById(&quot;myCanvas&quot;); <br/>// 获取Base64编码后的图像数据，格式是字符串 <br/>// &quot;data:image/png;base64,&quot;开头,需要在客户端或者服务器端将其去掉，后面的部分可以直接写入文件。 <br/>var dataurl = canvas.toDataURL(&quot;image/png&quot;); <br/>// 为安全 对URI进行编码 <br/>// data%3Aimage%2Fpng%3Bbase64%2C 开头 <br/>var imagedata = encodeURIComponent(dataurl); <br/>//var url = $(&quot;#form&quot;).attr(&quot;action&quot;); <br/>// 1. 如果form表单不好处理,可以使用某个hidden隐藏域来设置请求地址 <br/>// &lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;receive.jsp&quot; /&gt; <br/>var url = $(&quot;input[name=&#39;action&#39;]&quot;).val(); <br/>// 2. 也可以直接用某个dom对象的属性来获取 <br/>// &lt;input id=&quot;imageaction&quot; type=&quot;hidden&quot; action=&quot;receive.jsp&quot;&gt; <br/>// var url = $(&quot;#imageaction&quot;).attr(&quot;action&quot;); <br/>// 因为是string，所以服务器需要对数据进行转码，写文件操作等。 <br/>// 个人约定，所有http参数名字全部小写 <br/>console.log(dataurl); <br/>//console.log(imagedata); <br/>var data = { <br/>imagename: &quot;myImage.png&quot;, <br/>imagedata: imagedata <br/>}; <br/>jQuery.ajax( { <br/>url : url, <br/>data : data, <br/>type : &quot;POST&quot;, <br/>// 期待的返回值类型 <br/>dataType: &quot;json&quot;, <br/>complete : function(xhr,result) { <br/>//console.log(xhr.responseText); <br/>var $tip2 = $(&quot;#tip2&quot;); <br/>if(!xhr){ <br/>$tip2.text(&#39;网络连接失败!&#39;); <br/>return false; <br/>} <br/>var text = xhr.responseText; <br/>if(!text){ <br/>$tip2.text(&#39;网络错误!&#39;); <br/>return false; <br/>} <br/>var json = eval(&quot;(&quot;+text+&quot;)&quot;); <br/>if(!json){ <br/>$tip2.text(&#39;解析错误!&#39;); <br/>return false; <br/>} else { <br/>$tip2.text(json.message); <br/>} <br/>//console.dir(json); <br/>//console.log(xhr.responseText); <br/>} <br/>}); <br/>}; <br/>function init(){ <br/>// 获取DOM元素对象 <br/>var target = document.getElementById(&quot;drop-target&quot;); <br/>// 阻止 dragover(拖到DOM元素上方) 事件传递 <br/>target.addEventListener(&quot;dragover&quot;, function(e){e.preventDefault();}, true); <br/>// 拖动并放开鼠标的事件 <br/>target.addEventListener(&quot;drop&quot;, function(e){ <br/>// 阻止默认事件，以及事件传播 <br/>e.preventDefault(); <br/>// 调用前面的加载图像 函数，参数为dataTransfer对象的第一个文件 <br/>loadImage(e.dataTransfer.files[0]); <br/>}, true); <br/>var setheight = document.getElementById(&quot;setheight&quot;); <br/>var maxheight = document.getElementById(&quot;maxheight&quot;); <br/>setheight.addEventListener(&quot;click&quot;, function(e){ <br/>// <br/>var value = maxheight.value; <br/>if(/^\d+$/.test(value)){ <br/>MAX_HEIGHT = parseInt(value); <br/>} <br/>e.preventDefault(); <br/>},true); <br/>var btnsend = document.getElementById(&quot;btnsend&quot;); <br/>btnsend.addEventListener(&quot;click&quot;, function(e){ <br/>// <br/>sendImage(); <br/>},true); <br/>}; <br/>window.addEventListener(&quot;DOMContentLoaded&quot;, function() { <br/>// <br/>init(); <br/>},false); <br/>&lt;/script&gt; <br/>&lt;/head&gt; <br/>&lt;body&gt; <br/>&lt;div&gt; <br/>&lt;h1&gt;通过Canvas及File API缩放并上传图片&lt;/h1&gt; <br/>&lt;p&gt;从文件夹拖动一张照片到下方的盒子里， canvas 和 JavaScript将会自动的进行缩放.&lt;/p&gt; <br/>&lt;div&gt; <br/>&lt;input type=&quot;text&quot; id=&quot;maxheight&quot; value=&quot;100&quot;/&gt; <br/>&lt;button id=&quot;setheight&quot;&gt;设置图片最大高度&lt;/button&gt; <br/>&lt;input type=&quot;hidden&quot; name=&quot;action&quot; value=&quot;receive.jsp&quot; /&gt; <br/>&lt;/div&gt; <br/>&lt;div id=&quot;preview-row&quot;&gt; <br/>&lt;div
+ id=&quot;drop-target&quot; 
+style=&quot;width:400px;height:200px;min-height:100px;min-width:200px;
+background:#eee;cursor:pointer;&quot;&gt;拖动图片文件到这里...&lt;/div&gt; <br/>&lt;div&gt; <br/>&lt;div&gt; <br/>&lt;button id=&quot;btnsend&quot;&gt; 上 传 &lt;/button&gt; &lt;span id=&quot;tip2&quot; style=&quot;padding:8px 0;color:#f00;&quot;&gt;&lt;/span&gt; <br/>&lt;/div&gt; <br/>&lt;/div&gt; <br/>&lt;div&gt;&lt;h4&gt;缩略图：&lt;/h4&gt;&lt;/div&gt; <br/>&lt;div id=&quot;preview&quot; style=&quot;background:#f4f4f4;width:400px;height:200px;min-height:100px;min-width:200px;&quot;&gt; <br/>&lt;canvas id=&quot;myCanvas&quot;&gt;&lt;/canvas&gt; <br/>&lt;/div&gt; <br/>&lt;/div&gt; <br/>&lt;/div&gt; <br/>&lt;/body&gt; <br/>&lt;/html&gt; <br/></p><br/>服务端页面，receive.jsp <br/><br/><p><span style="CURSOR: pointer"><span style="text-decoration:underline;">复制代码</span></span></p><p>代码如下:</p><br/>&lt;%@ page language=&quot;java&quot; import=&quot;java.util.*&quot; pageEncoding=&quot;UTF-8&quot;%&gt; <br/>&lt;%@page import=&quot;sun.misc.BASE64Decoder&quot;%&gt; <br/>&lt;%@page import=&quot;java.io.*&quot;%&gt; <br/>&lt;%@page import=&quot;org.springframework.web.util.UriComponents&quot;%&gt; <br/>&lt;%@page import=&quot;java.net.URLDecoder&quot;%&gt; <br/>&lt;%! <br/>// 本文件：/receive.jsp <br/>// 图片存放路径 <br/>String photoPath = &quot;D:/blog/upload/photo/&quot;; <br/>File photoPathFile = new File(photoPath); <br/>// references: http://blog.csdn.net/remote_roamer/article/details/2979822 <br/>private boolean saveImageToDisk(byte[] data,String imageName) throws IOException{ <br/>int len = data.length; <br/>// <br/>// 写入到文件 <br/>FileOutputStream outputStream = new FileOutputStream(new File(photoPathFile,imageName)); <br/>outputStream.write(data); <br/>outputStream.flush(); <br/>outputStream.close(); <br/>// <br/>return true; <br/>} <br/>private byte[] decode(String imageData) throws IOException{ <br/>BASE64Decoder decoder = new BASE64Decoder(); <br/>byte[] data = decoder.decodeBuffer(imageData); <br/>for(int i=0;i&lt;data.length;++i) <br/>{ <br/>if(data[i]&lt;0) <br/>{ <br/>//调整异常数据 <br/>data[i]+=256; <br/>} <br/>} <br/>// <br/>return data; <br/>} <br/>%&gt; <br/>&lt;% <br/>String path = request.getContextPath(); <br/>String basePath = request.getScheme()+&quot;://&quot;+request.getServerName()+&quot;:&quot;+request.getServerPort()+path+&quot;/&quot;; <br/>%&gt; <br/>&lt;% <br/>//如果是IE，那么需要设置为text/html,否则会弹框下载 <br/>//response.setContentType(&quot;text/html;charset=UTF-8&quot;); <br/>response.setContentType(&quot;application/json;charset=UTF-8&quot;); <br/>// <br/>String imageName = request.getParameter(&quot;imagename&quot;); <br/>String imageData = request.getParameter(&quot;imagedata&quot;); <br/>int success = 0; <br/>String message = &quot;&quot;; <br/>if(null == imageData || imageData.length() &lt; 100){ <br/>// 数据太短，明显不合理 <br/>message = &quot;上传失败,数据太短或不存在&quot;; <br/>} else { <br/>// 去除开头不合理的数据 <br/>imageData = imageData.substring(30); <br/>imageData = URLDecoder.decode(imageData,&quot;UTF-8&quot;); <br/>//System.out.println(imageData); <br/>byte[] data = decode(imageData); <br/>int len = data.length; <br/>int len2 = imageData.length(); <br/>if(null == imageName || imageName.length() &lt; 1){ <br/>imageName = System.currentTimeMillis()+&quot;.png&quot;; <br/>} <br/>saveImageToDisk(data,imageName); <br/>// <br/>success = 1; <br/>message = &quot;上传成功,参数长度:&quot;+len2+&quot;字符，解析文件大小:&quot;+len+&quot;字节&quot;; <br/>} <br/>// 后台打印 <br/>System.out.println(&quot;message=&quot;+message); <br/>%&gt; <br/>{ <br/>&quot;message&quot;: &quot;&lt;%=message %&gt;&quot;, <br/>&quot;success&quot;: &lt;%=success %&gt; <br/>}
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('使用Canvas及File API缩放并上传图片_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1642.html">swiper触控滑块插件详解</a>&nbsp;&nbsp;下一条： <a href="/html/News/1633.html">HTML5通过video元素来加载视频的标准方…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1854.html" title="你必须知道的HTML5的新特性" >你必须知道的HTML5的新特性</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1846.html" title="html5 js控制音乐播放" >html5 js控制音乐播放</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1844.html" title="HTML+CSS代码规范" >HTML+CSS代码规范</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1843.html" title="css3学习笔记 transition与animation" >css3学习笔记 transition与an…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1842.html" title="css3学习笔记Transform" >css3学习笔记Transform</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1841.html" title="css3学习笔记2D或3D转换" >css3学习笔记2D或3D转换</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1840.html" title="css3学习笔记文本特效" >css3学习笔记文本特效</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1839.html" title="css3学习笔记颜色和透明度" >css3学习笔记颜色和透明度</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1838.html" title="css3学习笔记二" >css3学习笔记二</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/440.html" title="什么是css框架">什么是css框架</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/394.html" title="meta标签实现页面的动感效果">meta标签实现页面的动感效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/389.html" title="CSS半透明滤镜在FIREFOX和IE下面的能够通用的写法&nbsp;">CSS半透明滤镜在FIREFOX和IE下面的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/640.html" title="div+css鼠标悬停在div上,div背景色改变">div+css鼠标悬停在div上,div背景色…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/889.html" title="纯css下拉菜单特效">纯css下拉菜单特效</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/390.html" title="div+css的浏览器兼容问题">div+css的浏览器兼容问题</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/393.html" title="CSS定义表格线为单一线&nbsp;">CSS定义表格线为单一线 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/793.html" title="CSS滤镜效果收集(全)">CSS滤镜效果收集(全)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1329.html" title="列表显示文字和图片垂直居中对齐">列表显示文字和图片垂直居中对齐</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/395.html" title="在固定位置显示背景图片">在固定位置显示背景图片</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/608.html" title="网站变换图片的显示方法">网站变换图片的显示方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/396.html" title="在select外面套一个div或span,&nbsp;select自身要margin:-2px;&nbsp;">在select外面套一个div或span, se…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/391.html" title="常用的CSS命名规则&nbsp;">常用的CSS命名规则 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/397.html" title="闪字闪字闪字闪字闪字闪字闪字闪字小标签解决大问题一&nbsp;">闪字闪字闪字闪字闪字闪字闪字闪字…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1109.html" title="css让图片自动适应表格大小">css让图片自动适应表格大小</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1854.html" title="你必须知道的HTML5的新特性" >你必须知道的HTML5的新特性</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1846.html" title="html5&nbsp;js控制音乐播放" >html5 js控制音乐播放</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1844.html" title="HTML+CSS代码规范" >HTML+CSS代码规范</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1843.html" title="css3学习笔记&nbsp;transition与animation" >css3学习笔记 transition与animat…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1842.html" title="css3学习笔记Transform" >css3学习笔记Transform</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1841.html" title="css3学习笔记2D或3D转换" >css3学习笔记2D或3D转换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1840.html" title="css3学习笔记文本特效" >css3学习笔记文本特效</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1839.html" title="css3学习笔记颜色和透明度" >css3学习笔记颜色和透明度</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1838.html" title="css3学习笔记二" >css3学习笔记二</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1837.html" title="css3学习笔记一" >css3学习笔记一</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1834.html" title="HTML5触摸事件详解(touchstart、touchmove和touchend)" >HTML5触摸事件详解(touchstart、t…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1828.html" title="canvas制作奥运五环视频教程" >canvas制作奥运五环视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1827.html" title="canvas制作时钟视频教程" >canvas制作时钟视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1825.html" title="有人预测H5或成为未来应用的核心" >有人预测H5或成为未来应用的核心</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1824.html" title="H5技术打造的轻应用无限可能" >H5技术打造的轻应用无限可能</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1634" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

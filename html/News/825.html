@@ -1,0 +1,600 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>使用&nbsp;Java&nbsp;实现&nbsp;Comet&nbsp;风格的&nbsp;Web&nbsp;应用2_Java_Jsp_Jdk_eclipse_tomcat_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="探索&nbsp;Comet&nbsp;开发的不同实现。看看&nbsp;Jetty&nbsp;和&nbsp;Tomcat&nbsp;之类的流行&nbsp;Java?&nbsp;Web&nbsp;服务器如何支持&nbsp;Comet&nbsp;应用程序，并了解如何为不同的服务器编程。最后，了解&nbsp;Java&nbsp;中有关&nbsp;Comet&nbsp;的标准化建议，这些建议是即将到来的&nbsp;Servlet&nbsp;3.0&nbsp;和&nbsp;JavaEE&nbsp;6&nbsp;规范的一部分。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Java_Jsp_Jdk_eclipse_tomcat
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        使用 Java 实现 Comet 风格的 Web 应用2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/22 20:28:06
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        探索&nbsp;Comet&nbsp;开发的不同实现。看看&nbsp;Jetty&nbsp;和&nbsp;Tomcat&nbsp;之类的流行&nbsp;Java?&nbsp;Web&nbsp;服务器如何支持&nbsp;Comet&nbsp;应用程序，并了解如何为不同的服务器编程。最后，了解&nbsp;Java&nbsp;中有关&nbsp;Comet&nbsp;的标准化建议，这些建议是即将到来的&nbsp;Servlet&nbsp;3.0&nbsp;和&nbsp;JavaEE&nbsp;6&nbsp;规范的一部分。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><a name="N100C6"><span class="atitle">Java 中的 Comet</span></a></p>
+<p>现在有很多 Web 服务器是用 Java 构建的。一个原因是 Java 有一个丰富的本地线程模型。因此实现典型的每个连接一个线程的模型便非常简单。该模型对于 Comet 不大适用，但是，Java 对此同样有解决的办法。为了有效地处理 Comet，需要非阻塞 IO，Java 通过它的 NIO 库提供非阻塞 IO。两种最流行的开源服务器 Apache Tomcat 和 Jetty 都利用 NIO 增加非阻塞 IO，从而支持 Comet。然而，这两种服务器中的实现却各不相同。我们来看看 Tomcat 和 Jetty 对 Comet 的支持。</p>
+<p><a name="N100CF"><span class="smalltitle">Tomcat 和 Comet</span></a></p>
+<p>对于 Apache Tomcat，要使用 Comet，主要需要做两件事。首先，需要对 Tomcat 的配置文件 server.xml 稍作修改。默认情况下启用的是更典型的同步 IO 连接器。现在只需将它切换成异步版本，如清单 1 所示。</p>
+<br />
+<a name="listing1"><strong>清单 1. 修改 Tomcat 的 server.xml</strong></a><br />
+<table border="0" cellspacing="0" cellpadding="0" width="100">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">&lt;!-- This is the usual Connector, comment it out and add the NIO one --&gt;
+   &lt;!-- Connector URIEncoding=&quot;utf-8&quot; connectionTimeout=&quot;20000&quot; port=&quot;8084&quot; 
+protocol=&quot;HTTP/1.1&quot; redirectPort=&quot;8443&quot;/ --&gt;
+&lt;Connector connectionTimeout=&quot;20000&quot; port=&quot;8080&quot; protocol=&quot;org.apache.
+coyote.http11.Http11NioProtocol&quot; redirectPort=&quot;8443&quot;/&gt;
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>这使 Tomcat 可以处理更多的并发连接，但需要说明的是，其中大多数连接有很多时间都处于空闲状态。利用这一点的最容易的方式是创建一个实现 <code>org.apache.catalina.CometProcessor</code> 接口的 servlet。这显然是 Tomcat 特有的一个接口。清单 2 显示了一个这样的例子。</p>
+<br />
+<a name="listing2"><strong>清单 2. Tomcat Comet servlet</strong></a><br />
+<table border="0" cellspacing="0" cellpadding="0" width="100">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">public class TomcatWeatherServlet extends HttpServlet implements CometProcessor {
+
+    private MessageSender messageSender = null;
+    private static final Integer TIMEOUT = 60 * 1000;
+
+    @Override
+    public void destroy() {
+        messageSender.stop();
+        messageSender = null;
+
+    }
+
+    @Override
+    public void init() throws ServletException {
+        messageSender = new MessageSender();
+        Thread messageSenderThread =
+                new Thread(messageSender, &quot;MessageSender[&quot; + getServletContext()
+.getContextPath() + &quot;]&quot;);
+        messageSenderThread.setDaemon(true);
+        messageSenderThread.start();
+
+    }
+
+    public void event(final CometEvent event) throws IOException, ServletException {
+        HttpServletRequest request = event.getHttpServletRequest();
+        HttpServletResponse response = event.getHttpServletResponse();
+        if (event.getEventType() == CometEvent.EventType.BEGIN) {
+            request.setAttribute(&quot;org.apache.tomcat.comet.timeout&quot;, TIMEOUT);
+            log(&quot;Begin for session: &quot; + request.getSession(true).getId());
+            messageSender.setConnection(response);
+            Weatherman weatherman = new Weatherman(95118, 32408);
+            new Thread(weatherman).start();
+        } else if (event.getEventType() == CometEvent.EventType.ERROR) {
+            log(&quot;Error for session: &quot; + request.getSession(true).getId());
+            event.close();
+        } else if (event.getEventType() == CometEvent.EventType.END) {
+            log(&quot;End for session: &quot; + request.getSession(true).getId());
+            event.close();
+        } else if (event.getEventType() == CometEvent.EventType.READ) {
+            throw new UnsupportedOperationException(&quot;This servlet does not accept 
+data&quot;);
+        }
+
+    }
+}
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p><code>CometProcessor</code> 接口要求实现 <code>event</code> 方法。这是用于 Comet 交互的一个生命周期方法。Tomcat 将使用不同的 <code>CometEvent</code> 实例调用。通过检查 <code>CometEvent</code> 的 <code>eventType</code>，可以判断正处在生命周期的哪个阶段。当请求第一次传入时，即发生 <code>BEGIN</code> 事件。<code>READ</code> 事件表明数据正在被发送，只有当请求为 <code>POST</code> 时才需要该事件。遇到 <code>END</code> 或 <code>ERROR</code> 事件时，请求终止。 </p>
+<p>在清单 2 的例子中，servlet 使用一个 <code>MessageSender</code> 类发送数据。这个类的实例是在 servlet 的 init 方法中在其自身的线程中创建，并在 servlet 的 destroy 方法中销毁的。清单 3 显示了 <code>MessageSender</code>。</p>
+<br />
+<a name="N1012C"><strong>清单 3. <code>MessageSender</code></strong></a><br />
+<table border="0" cellspacing="0" cellpadding="0" width="100">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">private class MessageSender implements Runnable {
+
+    protected boolean running = true;
+    protected final ArrayList&lt;String&gt; messages = new ArrayList&lt;String&gt;();
+    private ServletResponse connection;
+    private synchronized void setConnection(ServletResponse connection){
+        this.connection = connection;
+        notify();
+    }
+    public void send(String message) {
+        synchronized (messages) {
+            messages.add(message);
+            log(&quot;Message added #messages=&quot; + messages.size());
+            messages.notify();
+        }
+    }
+    public void run() {
+        while (running) {
+            if (messages.size() == 0) {
+                try {
+                    synchronized (messages) {
+                        messages.wait();
+                    }
+                } catch (InterruptedException e) {
+                    // Ignore
+                }
+            }
+            String[] pendingMessages = null;
+            synchronized (messages) {
+                pendingMessages = messages.toArray(new String[0]);
+                messages.clear();
+            }
+            try {
+                if (connection == null){
+                    try{
+                        synchronized(this){
+                            wait();
+                        }
+                    } catch (InterruptedException e){
+                        // Ignore
+                    }
+                }
+                PrintWriter writer = connection.getWriter();
+                for (int j = 0; j &lt; pendingMessages.length; j++) {
+                    final String forecast = pendingMessages[j] + &quot;&lt;br&gt;&quot;;
+                    writer.println(forecast);
+                    log(&quot;Writing:&quot; + forecast);
+                }
+                writer.flush();
+                writer.close();
+                connection = null;
+                log(&quot;Closing connection&quot;);
+            } catch (IOException e) {
+                log(&quot;IOExeption sending message&quot;, e);
+            }
+        }
+    }
+}
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>这个类基本上是样板代码，与 Comet 没有直接的关系。但是，有两点要注意。这个类含有一个 <code>ServletResponse</code> 对象。回头看看清单 2 中的 <code>event</code> 方法，当事件为 <code>BEGIN</code> 时，response 对象被传入到 <code>MessageSender</code> 中。在 MessageSender 的 <code>run</code> 方法中，它使用 <code>ServletResponse</code> 将数据发送回客户机。注意，一旦发送完所有排队等待的消息后，它将关闭连接。这样就实现了长轮询。如果要实现流风格的 Comet，那么需要使连接保持开启，但是仍然刷新数据。</p>
+<p>回头看清单 2 可以发现，其中创建了一个 <code>Weatherman</code> 类。正是这个类使用 <code>MessageSender</code> 将数据发送回客户机。这个类使用 Yahoo RSS feed 获得不同地区的天气信息，并将该信息发送到客户机。这是一个特别设计的例子，用于模拟以异步方式发送数据的数据源。清单 4 显示了它的代码。</p>
+<br />
+<a name="listing4"><strong>清单 4. Weatherman</strong></a><br />
+<table border="0" cellspacing="0" cellpadding="0" width="100">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">private class Weatherman implements Runnable{
+
+    private final List&lt;URL&gt; zipCodes;
+    private final String YAHOO_WEATHER = &quot;http://weather.yahooapis.com/forecastrss?p=&quot;;
+
+    public Weatherman(Integer... zips) {
+        zipCodes = new ArrayList&lt;URL&gt;(zips.length);
+        for (Integer zip : zips) {
+            try {
+                zipCodes.add(new URL(YAHOO_WEATHER + zip));
+            } catch (Exception e) {
+                // dont add it if it sucks
+            }
+        }
+    }
+
+   public void run() {
+       int i = 0;
+       while (i &gt;= 0) {
+           int j = i % zipCodes.size();
+           SyndFeedInput input = new SyndFeedInput();
+           try {
+               SyndFeed feed = input.build(new InputStreamReader(zipCodes.get(j)
+.openStream()));
+               SyndEntry entry = (SyndEntry) feed.getEntries().get(0);
+               messageSender.send(entryToHtml(entry));
+               Thread.sleep(30000L);
+           } catch (Exception e) {
+               // just eat it, eat it
+           }
+           i++;
+       }
+   }
+
+    private String entryToHtml(SyndEntry entry){
+        StringBuilder html = new StringBuilder(&quot;&lt;h2&gt;&quot;);
+        html.append(entry.getTitle());
+        html.append(&quot;&lt;/h2&gt;&quot;);
+        html.append(entry.getDescription().getValue());
+        return html.toString();
+    }
+}
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>这个类使用 Project Rome 库解析来自 Yahoo Weather 的 RSS feed。如果需要生成或使用 RSS 或 Atom feed，这是一个非常有用的库。此外，这个代码中只有一个地方值得注意，那就是它产生另一个线程，用于每过 30 秒钟发送一次天气数据。最后，我们再看一个地方：使用该 servlet 的客户机代码。在这种情况下，一个简单的 JSP 加上少量的 JavaScript 就足够了。清单 5 显示了该代码。</p>
+<br />
+<a name="listing5"><strong>清单 5. 客户机 Comet 代码</strong></a><br />
+<table border="0" cellspacing="0" cellpadding="0" width="100">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">&lt;%@page contentType=&quot;text/html&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;
+   &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+        &lt;title&gt;Comet Weather&lt;/title&gt;
+        &lt;SCRIPT TYPE=&quot;text/javascript&quot;&gt;
+            function go(){
+                var url = &quot;http://localhost:8484/WeatherServer/Weather&quot;
+                var request =  new XMLHttpRequest();
+                request.open(&quot;GET&quot;, url, true);
+                request.setRequestHeader(&quot;Content-Type&quot;,&quot;application/x-javascript;&quot;);
+                request.onreadystatechange = function() {
+                    if (request.readyState == 4) {
+                        if (request.status == 200){
+                            if (request.responseText) {
+                                document.getElementById(&quot;forecasts&quot;).innerHTML = 
+request.responseText;
+                            }
+                        }
+                        go();
+                    }
+                };
+                request.send(null);
+            }
+        &lt;/SCRIPT&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Rapid Fire Weather&lt;/h1&gt;
+        &lt;input type=&quot;button&quot; onclick=&quot;go()&quot; value=&quot;Go!&quot;&gt;&lt;/input&gt;
+        &lt;div id=&quot;forecasts&quot;&gt;&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>该代码只是在用户单击 <strong>Go</strong> 按钮时开始长轮询。注意，它直接使用 <code>XMLHttpRequest</code> 对象，所以这在 Internet Explorer 6 中将不能工作。您可能需要使用一个 Ajax 库解决浏览器差异问题。除此之外，惟一需要注意的是回调函数，或者为请求的 <code>onreadystatechange</code> 函数创建的闭包。该函数粘贴来自服务器的新的数据，然后重新调用 go 函数。</p>
+<p>现在，我们看过了一个简单的 Comet 应用程序在 Tomcat 上是什么样的。有两件与 Tomcat 密切相关的事情要做：一是配置它的连接器，二是在 servlet 中实现一个特定于 Tomcat 的接口。您可能想知道，将该代码 &ldquo;移植&rdquo; 到 Jetty 有多大难度。接下来我们就来看看这个问题。</p>
+<p><a name="N10183"><span class="smalltitle">Jetty 和 Comet</span></a></p>
+<p>Jetty 服务器使用稍微不同的技术来支持 Comet 的可伸缩的实现。Jetty 支持被称作 continuations 的编程结构。其思想很简单。请求先被暂停，然后在将来的某个时间点再继续。规定时间到期，或者某种有意义的事件发生，都可能导致请求继续。当请求被暂停时，它的线程被释放。</p>
+<p>可以使用 Jetty 的 <code>org.mortbay.util.ajax.ContinuationSupport</code> 类为任何 <code>HttpServletRequest</code> 创建 <code>org.mortbay.util.ajax.Continuation</code> 的一个实例。这种方法与 Comet 有很大的不同。但是，continuations 可用于实现逻辑上等效的 Comet。清单 6 显示清单 2 中的 weather servlet &ldquo;移植&rdquo; 到 Jetty 后的代码。</p>
+<br />
+<a name="listing6"><strong>清单 6. Jetty Comet servlet</strong></a><br />
+<table border="0" cellspacing="0" cellpadding="0" width="100">
+    <tbody>
+        <tr>
+            <td class="code-outline">
+            <pre class="displaycode">public class JettyWeatherServlet extends HttpServlet {
+    private MessageSender messageSender = null;
+    private static final Integer TIMEOUT = 5 * 1000;
+    public void begin(HttpServletRequest request, HttpServletResponse response) 
+throws IOException, ServletException {
+        request.setAttribute(&quot;org.apache.tomcat.comet&quot;, Boolean.TRUE);
+        request.setAttribute(&quot;org.apache.tomcat.comet.timeout&quot;, TIMEOUT);
+        messageSender.setConnection(response);
+        Weatherman weatherman = new Weatherman(95118, 32408);
+        new Thread(weatherman).start();
+    }
+    public void end(HttpServletRequest request, HttpServletResponse response) 
+throws IOException, ServletException {
+        synchronized (request) {
+            request.removeAttribute(&quot;org.apache.tomcat.comet&quot;);
+            Continuation continuation = ContinuationSupport.getContinuation
+(request, request);
+            if (continuation.isPending()) {
+                continuation.resume();
+            }
+        }
+    }
+    public void error(HttpServletRequest request, HttpServletResponse response) 
+throws IOException, ServletException {
+        end(request, response);
+    }
+    public boolean read(HttpServletRequest request, HttpServletResponse response) 
+throws IOException, ServletException {
+        throw new UnsupportedOperationException();
+    }
+    @Override
+    protected void service(HttpServletRequest request, HttpServletResponse response) 
+throws IOException, ServletException {
+        synchronized (request) {
+            Continuation continuation = ContinuationSupport.getContinuation
+(request, request);
+            if (!continuation.isPending()) {
+                begin(request, response);
+            }
+            Integer timeout = (Integer) request.getAttribute
+(&quot;org.apache.tomcat.comet.timeout&quot;);
+            boolean resumed = continuation.suspend(timeout == null ? 10000 : 
+timeout.intValue());
+
+            if (!resumed) {
+                error(request, response);
+            }
+        }
+    }
+    public void setTimeout(HttpServletRequest request, HttpServletResponse response, 
+int timeout) throws IOException, ServletException,
+            UnsupportedOperationException {
+        request.setAttribute(&quot;org.apache.tomcat.comet.timeout&quot;, new Integer(timeout));
+    }
+}
+</pre>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<p>这里最需要注意的是，该结构与 Tomcat 版本的代码非常类似。<code>begin</code>、<code>read</code>、<code>end</code> 和 <code>error</code> 方法都与 Tomcat 中相同的事件匹配。该 servlet 的 service 方法被覆盖为在请求第一次进入时创建一个 continuation 并暂停该请求，直到超时时间已到，或者发生导致它重新开始的事件。上面没有显示 <code>init</code> 和 <code>destroy</code> 方法，因为它们与 Tomcat 版本是一样的。该 servlet 使用与 Tomcat 相同的 <code>MessageSender</code>。因此不需要修改。注意 <code>begin</code> 方法如何创建 Weatherman 实例。对这个类的使用与 Tomcat 版本中也是完全相同的。甚至客户机代码也是一样的。只有 servlet 有更改。虽然 servlet 的变化比较大，但是与 Tomcat 中的事件模型仍是一一对应的。</p>
+<p>希望这足以鼓舞人心。虽然完全相同的代码不能同时在 Tomcat 和 Jetty 中运行，但是它是非常相似的。当然，JavaEE 吸引人的一点是可移植性。大多数在 Tomcat 中运行的代码，无需修改就可以在 Jetty 中运行，反之亦然。因此，毫不奇怪，下一个版本的 Java Servlet 规范包括异步请求处理（即 Comet 背后的底层技术）的标准化。 我们来看看这个规范：Servlet 3.0 规范。</p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('使用 Java 实现 Comet 风格的 Web 应用2_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/826.html">使用 Java 实现 Comet 风格的 Web…</a>&nbsp;&nbsp;下一条： <a href="/html/News/824.html">使用 Java 实现 Comet 风格的 Web 应用…</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1751.html" title="Windows Server 2016新功能" >Windows Server 2016新功能</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1500.html" title="MyEclipse 8.5 汉化方法" >MyEclipse 8.5 汉化方法</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1468.html" title="jquery实现无刷新分页" >jquery实现无刷新分页</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1467.html" title="什么是JSON？" >什么是JSON？</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1465.html" title="什么是回调函数" >什么是回调函数</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1446.html" title="jQuery 1.7下载" >jQuery 1.7下载</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1443.html" title="jquery加载XML文档" >jquery加载XML文档</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1390.html" title="什么是MVC(三层架构) " >什么是MVC(三层架构) </a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1362.html" title="网页中如何实现音乐和歌词同步" >网页中如何实现音乐和歌词同步…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1285.html" title="初学教程：Java&nbsp;Socket网络编程浅析">初学教程：Java Socket网络编程浅…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1143.html" title="Java随机数总结">Java随机数总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/704.html" title="java读取文本文件内容并获取文件大小">java读取文本文件内容并获取文件大…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1142.html" title="字节流和字符流Java">字节流和字符流Java</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/705.html" title="java常用图片读写程序">java常用图片读写程序</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/707.html" title="怎样成为一个优秀的Java程序员">怎样成为一个优秀的Java程序员</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/963.html" title="C++程序员转Java容易吗？难点在哪里？">C++程序员转Java容易吗？难点在哪…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1183.html" title="思科培训与华为培训在教材和内容方面的差别">思科培训与华为培训在教材和内容方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1018.html" title="Java注释的使用和定义">Java注释的使用和定义</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/825.html" title="使用&nbsp;Java&nbsp;实现&nbsp;Comet&nbsp;风格的&nbsp;Web&nbsp;应用2">使用 Java 实现 Comet 风格的 Web…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/954.html" title="利用Java实现zip压缩/解压缩">利用Java实现zip压缩/解压缩</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1019.html" title="Java&nbsp;Web三层架构的配置详解">Java Web三层架构的配置详解</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/677.html" title="Java&nbsp;Socket编程之我见">Java Socket编程之我见</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/826.html" title="使用&nbsp;Java&nbsp;实现&nbsp;Comet&nbsp;风格的&nbsp;Web&nbsp;应用3">使用 Java 实现 Comet 风格的 Web…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1082.html" title="两种J2ME网络编程的方法之一">两种J2ME网络编程的方法之一</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1751.html" title="Windows&nbsp;Server&nbsp;2016新功能" >Windows Server 2016新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1500.html" title="MyEclipse&nbsp;8.5&nbsp;汉化方法" >MyEclipse 8.5 汉化方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1468.html" title="jquery实现无刷新分页" >jquery实现无刷新分页</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1467.html" title="什么是JSON？" >什么是JSON？</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1465.html" title="什么是回调函数" >什么是回调函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1446.html" title="jQuery&nbsp;1.7下载" >jQuery 1.7下载</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1443.html" title="jquery加载XML文档" >jquery加载XML文档</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1390.html" title="什么是MVC(三层架构)&nbsp;" >什么是MVC(三层架构) </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1362.html" title="网页中如何实现音乐和歌词同步" >网页中如何实现音乐和歌词同步</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1285.html" title="初学教程：Java&nbsp;Socket网络编程浅析" >初学教程：Java Socket网络编程浅…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1183.html" title="思科培训与华为培训在教材和内容方面的差别" >思科培训与华为培训在教材和内容方…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1143.html" title="Java随机数总结" >Java随机数总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1142.html" title="字节流和字符流Java" >字节流和字符流Java</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1083.html" title="两种J2ME网络编程的方法之二" >两种J2ME网络编程的方法之二</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1082.html" title="两种J2ME网络编程的方法之一" >两种J2ME网络编程的方法之一</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "825" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

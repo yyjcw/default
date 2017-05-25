@@ -1,0 +1,469 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>FLASH与ASP通信原理入门&nbsp;_技术辅导_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="经常有人问我FLASH留言板的制作方法，无奈这东西一句两句没办法说清楚，于是就萌发了写教程的想法。可后来又一想，授人以鱼，不如授人以渔，还不如集中精力好好讲将FLASH与ASP的通讯原理，原理通了，具体项目就可以自由发挥了。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; 技术辅导
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        FLASH与ASP通信原理入门 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/10/28 12:58:30
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        经常有人问我FLASH留言板的制作方法，无奈这东西一句两句没办法说清楚，于是就萌发了写教程的想法。可后来又一想，授人以鱼，不如授人以渔，还不如集中精力好好讲将FLASH与ASP的通讯原理，原理通了，具体项目就可以自由发挥了。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        经常有人问我FLASH留言板的制作方法，无奈这东西一句两句没办法说清楚，于是就萌发了写教程的想法。可后来又一想，授人以鱼，不如授人以渔，还不如集中精力好好讲将FLASH与ASP的通讯原理，原理通了，具体项目就可以自由发挥了。<br />
+　　我这个教程面向初级群体，在开始教程之前，我假设你已经具备FLASH操作基础知识，了解IIS配置以及运行环境。尽管FLASH与ASP通信方式有很多，但这篇教程中我选择使用LoadVars类，一因为LoadVars类容易掌握，易于讲解；二是因为它不牵扯太多其他方面的知识。另外，我在ASP中采用的是JS脚本，因为JS脚本跟AS非常像，只要你有一定的AS基础，JS不用学就可以基本看懂了。最后是FLASH版本，我选择flash pro 8.0简体中文版，swf发布为AS2.0，flashplayer8.0。<br />
+　　在看我的教程之前，建议先抽出几分钟阅读一下&ldquo;<a target="_blank" eventslistuid="e3" href="http://www.blueidea.com/tech/multimedia/2006/4335.asp"><span style="LINE-HEIGHT: 1.3em; COLOR: #37708b">FLASH基础开发习惯</span><wbr></wbr></a><wbr></wbr>&rdquo;，这样更有利于理解我的代码。<br />
+目录： <br />
+LoadVars类基础讲解（LoadVars类以下简称LV） ASP中基本的输入输出 LV与ASP通讯原理 ASP操作数据库入门 LV与ASP综合运用 其它通讯方式原理浅谈 <br />
+这里我主要围绕我的教程进行讲解，区别有些全盘灌输的教程，我将有真对性的着重讲此类的两个方法和一个事件：load、loadAndSend方法，和onLoad事件。如果你需要更详细的了解LV类，建议你查一下帮助：帮助&rarr;flash帮助&rarr;全部书籍&rarr;Actionscript 2.0 语言参考&rarr;Actionscript 类&rarr;LoadVars。当然你也可以直接搜索LoadVars。<br />
+LV与TXT通讯。<br />
+不是要讲ASP吗？怎么讲起TXT了？呵呵，先别急，其实LV跟ASP通讯原理与跟TXT通讯原理是一样的。TXT大家经常用，讲起来比较容易理解。<br />
+LV跟TXT通讯需要在TXT中采用&ldquo;变量&rdquo;/&ldquo;值&rdquo;配对的数据模式。比如：wenben=我要做FLASH留言本。这里&ldquo;wenben&rdquo;就是变量，&ldquo;我要做FLASH留言本&rdquo;就是值，而&ldquo;=&rdquo;就是它们的配对方式，也就是建立联系的方式。 好了，现在我们建立一个&ldquo;lv_shiyan.txt&rdquo;文本文件，并在其中输入：neirong_txt=我要做FLASH留言本。然后在同文件夹下再建立一个&ldquo;lv_shiyan.fla&rdquo;，在第一贞写代码：<br />
+//设置编码，不然会显示乱码<br />
+System.useCodepage = true;<br />
+//实例化一个LV对象<br />
+var shiyan_lv = new LoadVars();<br />
+//载入外部文本<br />
+shiyan_lv.load(&quot;lv_shiyan.txt&quot;);<br />
+//载入成功后<br />
+shiyan_lv.onLoad = function(chenggong) {<br />
+if (chenggong) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//获取外部文本内容<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var neirong = shiyan_lv.neirong_txt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//输出文本内容<br />
+&nbsp;&nbsp;&nbsp;&nbsp;trace(&quot;您载入的文本内容是：&quot;+neirong);<br />
+}else{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//加载失败给予提示<br />
+&nbsp;&nbsp;&nbsp;&nbsp;trace(&quot;加载失败&quot;);<br />
+&nbsp;&nbsp;}<br />
+};<br />
+运行上面的代码，你会在输出面板中看到&ldquo;您载入的文本内容是：我要做FLASH留言本&rdquo;，由此可见，外部&ldquo;lv_shiyan.txt&rdquo;中的内容已经成功加载。有兴趣的朋友可以改动一下TXT文件名，试验一下加载失败的情况。<br />
+通过上面的代码，我们学到以下知识：<br />
+1，如何实例化一个LV对象（使用new关键字）<br />
+2，如何用LV对象加载外部文本文件（使用load方法）<br />
+3，如何判断外部文本文件是否加载成功（使用onLoad事件）<br />
+4，当外部文本文件加载成功后，如何获取并利用其内容。<br />
+在外部文本文件中，我们之所以使用&ldquo;变量/值&rdquo;配对的数据格式，正是为了被LV对象利用，当外部文本文件加载成功后，其中的变量就会被LV对象记录，而在AS中通过LV对象引用外部变量的方式则为：LV对象.外部文本文件中的变量名字。上面的代码中即为：shiyan_lv.neirong_txt。<br />
+上面的例子中讲了LV与TXT通讯的基本原理，现在我们来扩展一下，如果我们想在一个外部TXT中使用多个变量如何做呢？答案其实很简单，我们只需在TXT中使用多个&ldquo;变量/值&rdquo;对，并把每个&ldquo;变量/值&rdquo;对用&ldquo;&amp;&rdquo;进行分隔。我们依然利用上面示例的&ldquo;lv_shiyan.txt&rdquo;文件，这次把里面的内容换成下面的形式：<br />
+neirong1_txt=战胜LoadVar类！&amp;neirong2_txt=战胜ASP！&amp;neirong3_txt=我能做FLASH留言板了！<br />
+然后再把&ldquo;lv_shiyan.fla&rdquo;中的代码换成下面的内容：<br />
+System.useCodepage = true;<br />
+var shiyan_lv = new LoadVars();<br />
+shiyan_lv.load(&quot;lv_shiyan.txt&quot;);<br />
+shiyan_lv.onLoad = function(chenggong) {<br />
+if (chenggong) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//获取外部文本内容<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var neirong1 = shiyan_lv.neirong1_txt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var neirong2 = shiyan_lv.neirong2_txt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;var neirong3 = shiyan_lv.neirong3_txt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//输出文本内容<br />
+&nbsp;&nbsp;&nbsp;&nbsp;trace(&quot;您载入的文本内容是：&quot;+neirong1+&quot;/&quot;+neirong2+&quot;/&quot;+neirong3);<br />
+}else{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;trace(&quot;加载失败&quot;);<br />
+&nbsp;&nbsp;}<br />
+};<br />
+运行上面的代码，在输出窗口我们可以看到&ldquo;战胜LoadVar类！/战胜ASP！/我能做FLASH留言板了！&rdquo;，说明我们获得了外部TXT中全部的变量内容。<br />
+&rarr;有兴趣的朋友可以把&ldquo;lv_shiyan.txt&rdquo;中的内容改成下面的形式看输出结果有没有变化：<br />
+&amp;neirong1_txt=战胜LoadVar类！<br />
+&amp;neirong2_txt=战胜ASP！<br />
+&amp;neirong3_txt=我能做FLASH留言板了！<br />
+然后再改成下面的结果再试验一下输出结果：）<br />
+&amp;neirong1_txt=战胜LoadVar类！&amp;<br />
+&amp;neirong2_txt=战胜ASP！&amp;<br />
+&amp;neirong3_txt=我能做FLASH留言板了！&amp;<br />
+原因其实很简单，自己思考一下拉：）<br />
+&rarr;呼呼，好了，LV类先讲到这里了，下面讲讲ASP的基本格式和语法，尤其是输入输出语句。<br />
+ASP经过长时间的积淀，其内容非常丰富，但如果仅是为了开发一个简易的留言本，那只需要掌握最基本的输入输出就可以了。<br />
+我们新建一个asp_jichu.asp文件，在里面输入&ldquo;★ASP中基本的输入输出&rdquo;，然后保存。OK，这样我们就创建一个ASP文件了。怎么样？十分简单吧：）然后我们在IIS下运行这个ASP文件，就会看到网页上显示&ldquo;★ASP中基本的输入输出&rdquo;。内容虽然能显示，但这样的显示对我们几乎没有任何作用。ASP为何为ASP？主要是因为它能完成服务器与客户端的交互，比如它能接收客户端发送的变量，并根据这些变量以特定的方式显示客户需要的信息。而上面的&ldquo;asp_jichu.asp&rdquo;，并没有起到任何交互作用，也就失去了ASP的意义。<br />
+在正式开始交互讲解之前，还有必要先讲一下ASP文件的组成。ASP文件的构成只用一句话就能概括：所有的ASP语句都以&ldquo;&lt;%&rdquo;开始，以&ldquo;%&gt;&rdquo;结束。还有一点需要提示的是，在IIS中，一般默认ASP使用VBscript，但我们使用的是javascript，所以在ASP文件一开始，我们需要加上一句：<br />
+&lt;%@LANGUAGE=&quot;JAVAscript&quot;%&gt;<br />
+切入重点，首先讲如何向ASP传递变量。方法有两种，即常见的GET和POST方法。GET方法适用于传递少量内容，一般在2K以内，变量及内容会附加在网址后面，变量以&ldquo;?&rdquo;开头，变量和内容之间同样遵循上一篇中讲的&ldquo;变量/值&rdquo;配对原则。而POST方法，能够传递大量内容，且内容不会显示在网址中。虽然GET方式传递的内容少，而且不安全，但用来做教程演示却非常直观。现在我就用这种方式来演示ASP如何接收变量。还是利用我们开始建立的那个&ldquo;asp_jichu.asp&rdquo;文件，在其中输入如下内容并保存：<br />
+★ASP中基本的输入输出&lt;br&gt;<br />
+&lt;%@LANGUAGE=&quot;JAVAscript&quot;%&gt;<br />
+&lt;%<br />
+var neirong;<br />
+//获取网址中变量的内容<br />
+neir(&quot;neirong_wangzhi&quot;);<br />
+//显示变量内容<br />
+Response.Write(&quot;地址栏传递过来的内容是：&quot;+neirong);<br />
+%&gt;<br />
+然后在IIS下运行这个文件，我们会看到网页中显示：<br />
+★ASP中基本的输入输出<br />
+地址栏传递过来的内容是：undefined<br />
+首先我需要对&ldquo;asp_jichu.asp&rdquo;中的语句进行一下讲解，在ASP中，用来接收资料的是&ldquo;Request&rdquo;对象，而用来输出内容的是则是&ldquo;Response&rdquo;对象的&ldquo;Write&rdquo;方法。需要注意的是，Request接收变量时，需要加上引号，而Response输出变量时，则不需要。这样一讲，上面的代码便不难理解，一开始我们定义一个变量&ldquo;neirong&rdquo;，然后用它记录传递给ASP的变量&ldquo;neirong_wangzhi&rdquo;中的内容，最后输出&ldquo;neirong&rdquo;。但是我们并没有对&ldquo;neirong_wangzhi&rdquo;进行赋值，所以得到了&ldquo;undefined&rdquo;。现在我们就使用GET方法对变量&ldquo;neirong_wangzhi&rdquo;进行赋值，看看效果如何。<br />
+前面已经讲过了，GET方法传递的变量及内容会在浏览器网址中显示，其实这个显示是一个中间过程，ASP正是根据这个中间过程，也就是地址栏中的信息来接收变量并进行处理最后输出内容的。所以我们完全可以利用这个中间过程，直接在浏览器地址栏中进行变量赋值。打开运行中的&ldquo;asp_jichu.asp&rdquo;，并在网址最后加上下面的内容，按回车键，看网页中有何变化？<br />
+?neirong_wangzhi=我要自己做FLASH留言板<br />
+哈哈，你看到了吗？这时网页中显示：<br />
+★ASP中基本的输入输出<br />
+浏览器传递过来的内容是：我要自己做FLASH留言板<br />
+这说明了什么？我们接收到地址栏里传递的变量内容了，我们成功了：）<br />
+疑！？你楞在那里干什么？怎么不跟我一起欢呼呢？是不是你GET传递方式还是不太明白？呵呵，没关系，通过上面的演示，你只需要记住以下知识点就行了：<br />
+1，ASP文件的组成方式（所有的语句写在&ldquo;&lt;%&rdquo;和&ldquo;%&gt;&rdquo;之间）<br />
+2，ASP如何接收外界传递的变量（使用Response对象）<br />
+3，ASP如何在浏览器中显示内容（使用Response的Write方法）<br />
+怎么样，我的要求不高吧？只要记住以上三点，你就应该完全有信心看懂我下面的内容了，加油！<br />
+友情提示：<br />
+我们把&ldquo;asp_jichu.asp&rdquo;文件中的内容换成下面的形式看网页中显示的内容会不会有变化？<br />
+★ASP中基本的输入输出&lt;br&gt;<br />
+&lt;%@LANGUAGE=&quot;JAVAscript&quot;%&gt;<br />
+&lt;%<br />
+var neirong;<br />
+neir(&quot;neirong_wangzhi&quot;);<br />
+%&gt;<br />
+浏览器传递过来的内容是：&lt;%Response.Write(neirong)%&gt;<br />
+再换成如下形式看有没有变化？<br />
+★ASP中基本的输入输出&lt;br&gt;<br />
+&lt;%@LANGUAGE=&quot;JAVAscript&quot;%&gt;<br />
+&lt;%<br />
+var neirong;<br />
+neir(&quot;neirong_wangzhi&quot;);<br />
+%&gt;<br />
+浏览器传递过来的内容是：&lt;%=neirong%&gt;<br />
+我们会发现以上三种形式得到的结果都一样，由此可见ASP的写法是很灵活的，我们要抓住其本质，不要被各种表面形式迷惑：）这里需要说明的是最后一种写法的最后一行代码。&lt;%=neirong%&gt;是一种输出的简写形式，它的作用相当于Response.Write，仅适用于当ASP语句只有一行，且仅输出单纯变量的情况下。<br />
+呼呼，ASP的知识暂时知道这么多就OK了，下面激动人心的时刻来到了，我们要开始ASP和FLASH之间的交互了！<br />
+经过前两节的学习，我们已经熟悉了LV类的使用，以及ASP的基本格式和输入输出了。现在我们就来看看这两样东西是怎么融合到一起的。还记得我在讲LV类的基本知识时所举的TXT那个例子吗？LV与TXT通讯时，TXT中的数据需要写成&ldquo;变量/值&rdquo;配对的格式，其实必须写成这种格式并不是由TXT决定的，它是由LV的特性决定的，也就是说，LV与文本文件通讯需要&ldquo;变量/值&rdquo;这种数据格式。ASP文件其实也是文本文件，ASP与LV进行通讯的时候，它所输出的内容格式也就必须遵循&ldquo;变量/值&rdquo;配对的规则。<br />
+好吧，让我们从代码中来一个直观的体验吧，我们还用&ldquo;★LV类基础讲解&rdquo;那一节中举的那个传递多个变量的例子，还记得那个TXT文件的名字吧：&ldquo;lv_shiyan.txt&rdquo;，好的，现在我们直接把&ldquo;lv_shiyan.txt&rdquo;改成&ldquo;lv_shiyan.asp&rdquo;，同样把&ldquo;lv_shiyan.fla&rdquo;代码中shiyan_lv.load(&quot;lv_shiyan.txt&quot;)这句里的lv_shiyan.txt也替换为lv_shiyan.asp，然后直接在FLASH编辑环境中按Ctrl+Enter测试影片，我们发现输出窗口输出：&ldquo;战胜LoadVar类！/战胜ASP！/我能做FLASH留言板了！&rdquo;，跟修改之前一样。<br />
+昏！这样也可以！？这算什么？是FLASH与ASP的通讯吗？怎么不需要IIS都行？那是FLASH与TXT通讯吗？可人家的后缀名明明是&ldquo;.asp&rdquo;嘛！？其实这里火山也不是很明白，但我更偏向于把它理解成FLASH与ASP的通讯，只是因为这个ASP文件中没有ASP语句，不需要IIS支持就能显示内容而已。如果你非要讨个说法，最保守的回答是：FLASH与文本文件的通讯：）<br />
+呵呵：）好了，不忽悠大家了。上面那一段搞不清楚没关系，其实我从TXT过渡到ASP的目的还是想更直观的告诉大家：FLASH显示ASP中的内容跟TXT是一致的。只要我们想办法把ASP输出的数据格式捣鼓成&ldquo;变量/值&rdquo;配对就行了！<br />
+在TXT中又绕了这么长时间，大家着急了吧，好的，现在我要玩真的了，ASP正式登场：<br />
+首先我们把&ldquo;lv_shiyan.asp&rdquo;中的内容改成如下形式：<br />
+★LV与ASP通讯原理&lt;br&gt;<br />
+&lt;%@LANGUAGE=&quot;JAVAscript&quot;%&gt;<br />
+&lt;%<br />
+Response.Write(&quot;&amp;neirong1_txt=战胜LoadVar类！&amp;neirong2_txt=战胜ASP！&amp;neirong3_txt=我能做FLASH留言板了！&amp;&quot;);<br />
+%&gt;<br />
+我们先在IIS下运行一下，网页中会显示如下内容：<br />
+★LV与ASP通讯原理<br />
+&amp;neirong1_txt=战胜LoadVar类！&amp;neirong2_txt=战胜ASP！&amp;neirong3_txt=我能做FLASH留言板了！&amp;<br />
+恩！？怎么那么眼熟啊，恭喜你，答对了，这不正是&ldquo;lv_shiyan.txt&rdquo;中的内容嘛！只不过&ldquo;★&rdquo;后的标题换成这节的标题了：）好的，那么，聪明的你，现在是否已经预料到我下一步想干什么呢？恭喜你，你又答对了，你怎么那么聪明呢，下一步当然就是在FLASH中显示这些数据拉。说干就干，回到&ldquo;lv_shiyan.fla&rdquo;的编辑环境中，再次按Ctrl+Enter测试影片。哈哈，成功了！输出窗口显示：&ldquo;战胜LoadVar类！/战胜ASP！/我能做FLASH留言板了！&rdquo;，哈哈哈哈&mdash;&mdash;哎！说你呢，你笑什么？我高兴是因为我终于又把你忽悠了，你笑什么呢？看看我们的&ldquo;lv_shiyan.asp&rdquo;文件，我们明明已经写了ASP语句了啊，可怎么还是不需要IIS支持就能直接在FLASH编辑环境中显示呢？难道我们的FLASH软件是在IIS下运行的吗？这当然不可能，那到底怎么会事啊？嘿嘿：）好了，不头痛大家了，其实，在我们第一次把&ldquo;lv_shiyan.txt&rdquo;直接改成&ldquo;lv_shiyan.asp&rdquo;并运行影片测试的时候，&ldquo;lv_shiyan.asp&rdquo;中的数据已经被读入内存，后来尽管我们又把&ldquo;lv_shiyan.asp&rdquo;中的内容改成了ASP特有的输出格式，但由于文件名字没改变，运行影片测试的时候，FLASH还是会直接从内存中提取已经存储过的内容，而上次的内容正好不需要IIS就能显示，碰巧而已：）<br />
+那如何显示新内容呢？我们只需要利用随机函数给ASP传递一个没有实际意义的变量就可以了。我们可以把加载ASP的语句改成下面的样子：<br />
+shiyan_lv.load(&quot;lv_shiyan.asp?bianliang=&quot;+random(9999));<br />
+现在再次在FLASH中测试影片，发现输出窗口显示以下提示：<br />
+加载失败<br />
+Error opening URL &quot;file:///E|/flashlianxi/flash与asp练习/FLASH与ASP通讯入门级教程/lv_shiyan.asp?bianliang=5624&quot;<br />
+恩！？又有问题了，不是说&ldquo;bianliang&rdquo;没有实际意义吗？怎么会导致&ldquo;Error opening URL&rdquo;呢？呵呵：）其实这里说的&ldquo;没有实际意义&rdquo;是针对ASP来说的，更确切的说，是针对浏览器的，还记得我在&ldquo;★ASP中基本的输入输出&rdquo;一节中讲的GET传递方式吗？如果忘了一会儿可以回去复习下。其实我的建议是你先跟着我的进度把每节彻底弄明白，等我写完后，再通读一边，然后你就完全可以自己动手做个留言板了。接上面的，既然这个&ldquo;没有实际意义&rdquo;不是针对FLASH的，那FLASH肯定就不认识了，它会把&ldquo;lv_shiyan.asp?bianliang=5624&rdquo;全部当成文件名，所以当然找不到这个文件了。<br />
+是该拨开云雾见晴天的时候了。现在我们先在&ldquo;lv_shiyan.fla&rdquo;中添加一个动态文本域，并命名为&ldquo;wenben_txt&rdquo;，然后把输出代码改动一下，让本来在输出窗口显示的内容显示在动态文本域里，具体改动是把下面第一行代码换成第二行：<br />
+trace(&quot;您载入的文本内容是：&quot;+neirong1+&quot;/&quot;+neirong2+&quot;/&quot;+neirong3);<br />
+wenben_txt.text = neirong1+&quot;/&quot;+neirong2+&quot;/&quot;+neirong3;<br />
+好了，最后再发布&ldquo;lv_shiyan.swf&rdquo;和&ldquo;lv_shiyan.html&rdquo;到与ASP文件相同的文件夹下，并在IIS下运行&ldquo;lv_shiyan.html&rdquo;，你会看到SWF的动态文本域里显示&ldquo;战胜LoadVar类！/战胜ASP！/我能做FLASH留言板了！&rdquo;，现在你终于可以放心的欢呼了：我们终于可以把ASP输出的内容显示在FLASH里了，哈哈&hellip;&hellip;。<br />
+先喝口水吧，一眨眼快两个小时了，我怎么写的那么慢啊，加油加油！上面讲的其实是ASP怎么向FLASH传递资料，这不是真正意义上的交互，交互是双方互动的，现在我们就来看看FLASH怎么向ASP传递资料。在此之前请保证你还记得我在&ldquo;★ASP中基本的输入输出&rdquo;一节中讲的ASP是怎么接收一个变量的，我们还用那一节所用的&ldquo;asp_jichu.asp&rdquo;文件，当时我是通过GET方式直接在浏览器地址栏中对&ldquo;neirong_wangzhi&rdquo;进行赋值的，并且测试证明ASP确实通过Request接收到了这个变量的值。现在我们就是要让FLASH做地址栏做的事，我们要通过FLASH对&ldquo;neirong_wangzhi&rdquo;进行赋值。<br />
+在正式开始之前，我们还有以下工作要完成：<br />
+1，在&ldquo;lv_shiyan.fla&rdquo;中再添加一个按钮，命名为&ldquo;tijiao_btn&rdquo;。<br />
+2，把&ldquo;wenben_txt&rdquo;这个动态文本域改成输入文本域，取消HTML输出，并更名为：&ldquo;shuru_txt&rdquo;。<br />
+3，再添加一个动态文本域，用来接收从ASP传回的资料，命名为：&ldquo;shuchu_txt&rdquo;。<br />
+4，把&ldquo;asp_jichu.asp&rdquo;中的内容改成下面的内容：<br />
+★ASP中基本的输入输出&lt;br&gt;<br />
+&lt;<a target="_blank" href="http://www.blueidea.com/tech/multimedia/2006/'mailto:%@LANGUAGE="><span style="LINE-HEIGHT: 1.3em; COLOR: #37708b">%@LANGUAGE=&quot;JAVAscript&quot;%</span><wbr></wbr></a><wbr></wbr>&gt;<br />
+&lt;%<br />
+var neirong;<br />
+//获取从FLASH传递过来的变量<br />
+neir(&quot;neirong_flash&quot;);<br />
+//输出要返回到FLASH中的内容<br />
+Response.Write(&quot;&amp;fanhui_asp=哈，你输入的内容已经传递给ASP，并且又已经从ASP返回到FLASH了，你输入的内容是：&quot;+neirong);<br />
+%&gt;<br />
+5，最后把&ldquo;lv_shiyan.fla&rdquo;中的代码改成下面的内容：<br />
+System.useCodepage = true;<br />
+var shiyan_lv = new LoadVars();<br />
+tijiao_btn.onRelease = function() {<br />
+&nbsp;&nbsp;//获得输入的文本内容，并把这个内容记录在变量&ldquo;neirong_flash&rdquo;中<br />
+&nbsp;&nbsp;//这里相当于已经对变量&ldquo;neirong_flash&rdquo;进行了赋值<br />
+&nbsp;&nbsp;shiyan_lv.neirong_flash = shuru_txt.text;<br />
+&nbsp;&nbsp;//将LV对象中储存的所有变量都传递给ASP，不过这里我们只设定了一个，就是我们的&ldquo;neirong_flash&rdquo;<br />
+&nbsp;&nbsp;//向ASP传递成功后，我们再把从ASP传递回来的变量还储存在&ldquo;shiyan_lv&rdquo;对象中<br />
+&nbsp;&nbsp;shiyan_lv.sendAndLoad(&quot;asp_jichu.asp?bianliang=&quot;+random(9999), shiyan_lv, &quot;post&quot;);<br />
+};<br />
+shiyan_lv.onLoad = function(chenggong) {<br />
+&nbsp;&nbsp;if (chenggong) {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//输出文本内容<br />
+&nbsp;&nbsp;&nbsp;&nbsp;shuchu_txt.text = shiyan_lv.fanhui_asp;<br />
+&nbsp;&nbsp;} else {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;//输出文本内容<br />
+&nbsp;&nbsp;&nbsp;&nbsp;shuchu_txt.text = &quot;加载失败&quot;;<br />
+&nbsp;&nbsp;}<br />
+};<br />
+呼呼，改的东西真不少啊，先不讲代码了，直接发布测试一下吧，先有个直观的认识：在输入文本框中输入&ldquo;我要做FLASH留言板&rdquo;，然后点击提交按钮，你就会看到在动态文本框&ldquo;shuchu_txt&rdquo;中马上就会显示：&ldquo;哈，你输入的内容已经传递给ASP，并且又已经从ASP返回到FLASH了，你输入的内容是：我要做FLASH留言板&rdquo;。这个例子的源文件也可以直接在下面下载。<br />
+小提示：如果你在浏览器中直接点击刷新不能正确显示更新后的页面和内容，请按如下方式设置IE浏览器：&rarr;工具&rarr;Internet选项&rarr;设置&rarr;钩选&ldquo;每次访问此页时检查&rdquo;。这样我们以后就可以直接利用刷新来测试，不用再担心IIS刷新和内存问题了。<br />
+最后我们来对测试过程中的数据流程做一个系统的分析： <br />
+用户在FLASH的输入文本框&ldquo;shuru_txt&rdquo;输入&ldquo;我要做FLASH留言板&rdquo; 通过&ldquo;shiyan_lv.neirong_flash = shuru_txt.text;&rdquo;这句代码把用户输入的内容储存在&ldquo;shiyan_lv&rdquo;对象的&ldquo;neirong_flash&rdquo; 通过&ldquo;shiyan_lv&rdquo;对象的&ldquo;sendAndLoad&rdquo;方法将它记录的变量都传递给指定的ASP文件 在ASP文件中通过&ldquo;neir(&quot;neirong_flash&quot;);&rdquo;这句代码获得从FLASH的&ldquo;shiyan_lv&rdquo;对象传递过来的变量&ldquo;neirong_flash&rdquo; ASP接收变量内容后调用Response对象的Write方法利用传递过来的变量内容以&ldquo;变量/值&rdquo;配对的格式输出需要返回FLASH的新内容 FLASH在调用&ldquo;shiyan_lv&rdquo;对象的&ldquo;sendAndLoad&rdquo;方法发送变量时就已经指定&ldquo;shiyan_lv&rdquo;本身接收返回的内容 &ldquo;shiyan_lv&rdquo;接收到新返回的内容，并根据其&ldquo;变量/值&rdquo;配对的格式，将新内容储存在&ldquo;shiyan_lv.fanhui_asp&rdquo;中 当新返回的内容在FLASH中加载完成后，调用&ldquo;shiyan_lv&rdquo;对象的onLoad事件 通过&ldquo;shuchu_txt.text = shiyan_lv.fanhui_asp;&rdquo;这句代码在输出文本框中显示新返回的内容 <br />
+经过这个分析，相信大家应该可以从总体上有一个理性的认识了吧。<br />
+最后还需要重点强调的几点是： <br />
+LV对象在调用&ldquo;sendAndLoad&rdquo;方法发送变量的时候，会把LV对象中储存的所有变量都发送给ASP。 ASP在接收LV对象传递过来的变量时，只需要在Request中使用与FLASH中相同的变量名字就可以了。 ASP输出的资料一定要使用&ldquo;变量/值&rdquo;配对的格式，因为只有输出成这种格式，FLASH才能像处理TXT一样将ASP输出的资料分别记录在几个变量并保存在指定接收资料的LV对象中。 如果我们想向FLASH传递两个或者更多变量，我们可以在FLASH中这样写：（以传递三个变量为例） <br />
+shiyan_lv.bianliang1_flash=&quot;bianliang1&quot;;<br />
+shiyan_lv.bianliang2_flash=&quot;bianliang2&quot;;<br />
+shiyan_lv.bianliang3_flash=&quot;bianliang3&quot;;<br />
+shiyan_lv.sendAndLoad(&quot;asp_jichu.asp?bianliang=&quot;+random(9999), shiyan_lv, &quot;post&quot;); <br />
+传递大量资料时，必须使用POST方法。 如果我们想在FLASH中接收到多个从FLASH传递过来的变量，就按TXT的处理方式来就OK了。<br />
+呼呼，喘口气，这一节终于写完了。本来计划下次直接写&ldquo;LV与ASP综合运用&rdquo;的，但现在想想，还是很有必要加上一节&ldquo;ASP操作数据库入门&rdquo;，请继续关注。有什么好的意见也可以提一下，希望通过大家的共同努力让这篇教程能让菜鸟以最快的速度，最少的障碍自己制作出真正属于自己的FLASH留言板。<br />
+还记得我们向ASP传递的那个无意义的变量&ldquo;bianliang&rdquo;吗？既然我们向ASP传递了，那ASP就应该能接收的到，有兴趣的朋友可以在&ldquo;asp_jichu.asp&rdquo;中加一个接收变量的语句，测试一下效果。改动后的ASP代码如下：<br />
+★ASP中基本的输入输出&lt;br&gt;<br />
+&lt;%@LANGUAGE=&quot;JAVAscript&quot;%&gt;<br />
+&lt;%<br />
+var neirong;<br />
+var canshu;<br />
+//获取网址中变量的内容<br />
+neir(&quot;neirong_flash&quot;);<br />
+//获取无意义的参数<br />
+canshu=Request(&quot;bianliang&quot;);<br />
+//显示变量内容<br />
+Response.Write(&quot;&amp;fanhui_asp=哈，你输入的内容已经传递给ASP，并且又已经从ASP返回到FLASH了，你输入的内容是：&quot;+neirong+&quot;。你传递的无意义的参数是：&quot;+canshu);<br />
+%&gt;<br />
+测试后发现真的可以接收到一个数字呢，而且每次点提交这个数字几乎都不一样，在0-9999之间变化。看来我们确实接收到FLASH传递过来的随机变量了，可传递的时候，地址栏里怎么没显示呢？是因为这次我们采用了&ldquo;POST&rdquo;传递方式，这种方式用来传递大量资料，是不会在地址栏中显示变量和它的值的。 <!--v:3.2-->
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('FLASH与ASP通信原理入门 _夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/371.html">Flash中this的用法</a>&nbsp;&nbsp;下一条： <a href="/html/News/369.html">Flash Actionscript常用的几段代码 </a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码">FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/605.html" title="Flash,Actionscript,AS延时执行语句,延时播放影片">Flash,Actionscript,AS延时执行语…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0">入门Flash CS3 ActionScript 3.0</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法">播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/384.html" title="JavaScript控制Flash播放器的方法汇总&nbsp;">JavaScript控制Flash播放器的方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/379.html" title="FLASH变量和作用域[这是一篇比较好的文章]">FLASH变量和作用域[这是一篇比较好…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/283.html" title="用FLASH8.0轻松制作简易计算器">用FLASH8.0轻松制作简易计算器</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1035.html" title="FLASH动画禁止右键菜单">FLASH动画禁止右键菜单</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/523.html" title="FLASH&nbsp;AS教程：响应键盘事件的四种方法">FLASH AS教程：响应键盘事件的四种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/541.html" title="最常用的Flash语句(汇总)">最常用的Flash语句(汇总)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/278.html" title="Flash制作坦克游戏视频教程">Flash制作坦克游戏视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/998.html" title="创建FLEX自定义组件(1)">创建FLEX自定义组件(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/370.html" title="FLASH与ASP通信原理入门&nbsp;">FLASH与ASP通信原理入门 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/524.html" title="Flash教程：加载外部文本文件的3种方法">Flash教程：加载外部文本文件的3种…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/996.html" title="创建FLEX自定义组件(3)">创建FLEX自定义组件(3)</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1851.html" title="在线考试系统" >在线考试系统</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1740.html" title="2016计算机毕业设计" >2016计算机毕业设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1733.html" title="学生公寓管理系统的设计与实现" >学生公寓管理系统的设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1732.html" title="校园电话查询系统设计与实现" >校园电话查询系统设计与实现</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1731.html" title="校园机动车停车位申请系统的设计与实现" >校园机动车停车位申请系统的设计与…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1730.html" title="田径运动会管理系统的设计" >田径运动会管理系统的设计</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1729.html" title="计算机类毕业设计注意事项" >计算机类毕业设计注意事项</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1638.html" title="C#支付宝接口集成服务" >C#支付宝接口集成服务</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1619.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1482.html" title="常用UML建模工具" >常用UML建模工具</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1312.html" title="FLASH加载xml,txt,swf实例代码" >FLASH加载xml,txt,swf实例代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1250.html" title="视频教程卡住的解决办法" >视频教程卡住的解决办法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1214.html" title="播放器的制作方法" >播放器的制作方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1174.html" title="计算机类毕业设计辅导" >计算机类毕业设计辅导</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1098.html" title="入门Flash&nbsp;CS3&nbsp;ActionScript&nbsp;3.0" >入门Flash CS3 ActionScript 3.0</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "370" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

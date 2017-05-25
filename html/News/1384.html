@@ -1,0 +1,684 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>asp.net中导出Execl有两种方法_Asp.net专题(WCF/WPF/WF)_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="在asp.net中导出Execl有两种方法，一种是将导出的文件存放在服务器某个文件夹下面，然后将文件地址输出在浏览器上；一种是将文件直接将文件输出流写给浏览器。" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Asp.net专题(WCF/WPF/WF)
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        asp.net中导出Execl有两种方法
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2014/10/18 17:07:12
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        在asp.net中导出Execl有两种方法，一种是将导出的文件存放在服务器某个文件夹下面，然后将文件地址输出在浏览器上；一种是将文件直接将文件输出流写给浏览器。
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <p><font face="Arial">一、asp.net中导出Execl的方法：</font></p>
+<p><font face="Arial">在asp.net中导出Execl有两种方法，一种是将导出的文件存放在服务器某个文件夹下面，然后将文件地址输出在浏览器上；<br />
+一种是将文件直接将文件输出流写给浏览器。在Response输出时，\t分隔的数据，导出execl时，等价于分列，\n等价于换行。</font></p>
+<p><font face="Arial">1、将整个html全部输出execl</font></p>
+<p><font face="Arial">此法将html中所有的内容，如按钮，表格，图片等全部输出到Execl中。</font></p>
+<p><font face="Arial">&nbsp;&nbsp; Response.Clear();&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Response.Buffer=&nbsp;&nbsp; true;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Response.AppendHeader(&quot;Content-Disposition&quot;,&quot;attachment;filename=&quot;+DateTime.Now.ToString(&quot;yyyyMMdd&quot;)+&quot;.xls&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Response.ContentEncoding=System.Text.Encoding.UTF8;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Response.ContentType&nbsp;&nbsp; =&nbsp;&nbsp; &quot;application/vnd.ms-excel&quot;;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; this.EnableViewState&nbsp;&nbsp; =&nbsp;&nbsp; false;&nbsp;&nbsp; </font></p>
+<p><font face="Arial">这里我们利用了ContentType属性，它默认的属性为text/html，这时将输出为超文本，即我们常见的网页格式到客户端，<br />
+</font><font face="Arial">如果改为ms-excel将将输出excel格式，也就是说以电子表格的格式输出到客户端，这时浏览器将提示你下载保存。<br />
+ContentType的属性还包括：image/JPEG;text/HTML;image/GIF;vnd.ms-excel/msword 。<br />
+同理，我们也可以输出(导出)图片、word文档等。下面的方法，也均用了这个属性。</font></p>
+<p><font face="Arial">2、将DataGrid控件中的数据导出Execl</font></p>
+<p><font face="Arial">上述方法虽然实现了导出的功能，但同时把按钮、分页框等html中的所有输出信息导了进去。而我们一般要导出的是数据，DataGrid控件上的数据。</font></p>
+<p><font face="Arial">System.Web.UI.Control ctl=this.DataGrid1;<br />
+//DataGrid1是你在窗体中拖放的控件<br />
+HttpContext.Current.Response.AppendHeader(&quot;Content-Disposition&quot;,&quot;attachment;filename=Excel.xls&quot;); <br />
+HttpContext.Current.Response.Charset =&quot;UTF-8&quot;;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+HttpContext.Current.Response.ContentEncoding =System.Text.Encoding.Default; <br />
+HttpContext.Current.Response.ContentType =&quot;application/ms-excel&quot;;<br />
+ctl.Page.EnableViewState =false;&nbsp;&nbsp;&nbsp; <br />
+System.IO.StringWriter&nbsp; tw = new System.IO.StringWriter() ; <br />
+System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter (tw); <br />
+ctl.RenderControl(hw); <br />
+HttpContext.Current.Response.Write(tw.ToString()); <br />
+HttpContext.Current.Response.End(); <br />
+如果你的DataGrid用了分页，它导出的是当前页的信息，也就是它导出的是DataGrid中显示的信息。而不是你select语句的全部信息。</font></p>
+<p><font face="Arial">为方便使用,写成方法如下：</font></p>
+<p><font face="Arial">public void DGToExcel(System.Web.UI.Control ctl)&nbsp;&nbsp; <br />
+&nbsp; { <br />
+&nbsp;&nbsp; HttpContext.Current.Response.AppendHeader(&quot;Content-Disposition&quot;,&quot;attachment;filename=Excel.xls&quot;); <br />
+&nbsp;&nbsp; HttpContext.Current.Response.Charset =&quot;UTF-8&quot;;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; HttpContext.Current.Response.ContentEncoding =System.Text.Encoding.Default; <br />
+&nbsp;&nbsp; HttpContext.Current.Response.ContentType =&quot;application/ms-excel&quot;;<br />
+&nbsp;&nbsp; ctl.Page.EnableViewState =false;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; System.IO.StringWriter&nbsp; tw = new System.IO.StringWriter() ; <br />
+&nbsp;&nbsp; System.Web.UI.HtmlTextWriter hw = new System.Web.UI.HtmlTextWriter (tw); <br />
+&nbsp;&nbsp; ctl.RenderControl(hw); <br />
+&nbsp;&nbsp; HttpContext.Current.Response.Write(tw.ToString()); <br />
+&nbsp;&nbsp; HttpContext.Current.Response.End(); <br />
+&nbsp; } </font></p>
+<p><font face="Arial">&nbsp;&nbsp; 用法：DGToExcel(datagrid1);<br />
+&nbsp;&nbsp; <br />
+3、将DataSet中的数据导出Execl</font></p>
+<p><font face="Arial">有了上边的思路，就是将在导出的信息，输出（Response）客户端，这样就可以导出了。<br />
+那么把DataSet中的数据导出，也就是把DataSet中的表中的各行信息，<br />
+以ms-excel的格式Response到http流，这样就OK了。说明：参数ds应为填充有数据表的DataSet，<br />
+文件名是全名，包括后缀名，如execl2006.xls</font></p>
+<p><font face="Arial">public&nbsp; void CreateExcel(DataSet ds,string FileName)&nbsp; <br />
+{ <br />
+&nbsp;HttpResponse resp; <br />
+&nbsp;resp = Page.Response; <br />
+&nbsp;resp.ContentEncoding = System.Text.Encoding.GetEncoding(&quot;GB2312&quot;); <br />
+&nbsp;resp.AppendHeader(&quot;Content-Disposition&quot;, &quot;attachment;filename=&quot;+FileName);&nbsp;&nbsp;&nbsp; <br />
+&nbsp;string colHeaders= &quot;&quot;, ls_item=&quot;&quot;;&nbsp;&nbsp; <br />
+&nbsp;<br />
+&nbsp;//定义表对象与行对象，同时用DataSet对其值进行初始化 <br />
+&nbsp;DataTable dt=ds.Tables[0]; <br />
+&nbsp;DataRow[] myRow=dt.Select();//可以类似dt.Select(&quot;id&gt;10&quot;)之形式达到数据筛选目的<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int i=0; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int cl=dt.Columns.Count;</font></p>
+<p><font face="Arial">&nbsp;&nbsp;&nbsp; <br />
+&nbsp;//取得数据表各列标题，各标题之间以\t分割，最后一个列标题后加回车符 <br />
+&nbsp;for(i=0;i&lt;cl;i++)<br />
+&nbsp;{<br />
+&nbsp;if(i==(cl-1))//最后一列，加\n<br />
+&nbsp;{<br />
+&nbsp;colHeaders +=dt.Columns[i].Caption.ToString() +&quot;\n&quot;; <br />
+&nbsp;}<br />
+&nbsp;else<br />
+&nbsp;{<br />
+&nbsp;colHeaders+=dt.Columns[i].Caption.ToString()+&quot;\t&quot;; <br />
+&nbsp;}<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;}<br />
+&nbsp;resp.Write(colHeaders); <br />
+&nbsp;//向HTTP输出流中写入取得的数据信息 <br />
+&nbsp;&nbsp; <br />
+&nbsp;//逐行处理数据&nbsp;&nbsp; <br />
+&nbsp;foreach(DataRow row in myRow) <br />
+&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;//当前行数据写入HTTP输出流，并且置空ls_item以便下行数据&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;for(i=0;i&lt;cl;i++)<br />
+&nbsp;{<br />
+&nbsp;if(i==(cl-1))//最后一列，加\n<br />
+&nbsp;{<br />
+&nbsp;ls_item +=row[i].ToString()+&quot;\n&quot;; <br />
+&nbsp;}<br />
+&nbsp;else<br />
+&nbsp;{<br />
+&nbsp;ls_item+=row[i].ToString()+&quot;\t&quot;; <br />
+&nbsp;}<br />
+&nbsp; <br />
+&nbsp;}<br />
+&nbsp;resp.Write(ls_item); <br />
+&nbsp;ls_item=&quot;&quot;; <br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;}&nbsp;&nbsp;&nbsp; <br />
+&nbsp;resp.End();&nbsp; <br />
+&nbsp;} </font></p>
+<p><font face="Arial">4、将dataview导出execl</font></p>
+<p><font face="Arial">若想实现更加富于变化或者行列不规则的execl导出时，可用本法。</font></p>
+<p><font face="Arial">public void OutputExcel(DataView dv,string str) <br />
+{ <br />
+&nbsp;&nbsp; //dv为要输出到Excel的数据，str为标题名称 <br />
+&nbsp;&nbsp; GC.Collect(); <br />
+&nbsp;&nbsp; Application excel;// = new Application(); <br />
+&nbsp;&nbsp; int rowIndex=4; <br />
+&nbsp;&nbsp; int colIndex=1; <br />
+&nbsp;<br />
+&nbsp;&nbsp; _Workbook xBk; <br />
+&nbsp;&nbsp; _Worksheet xSt; <br />
+&nbsp;<br />
+&nbsp;&nbsp; excel= new ApplicationClass(); <br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; xBk = excel.Workbooks.Add(true); <br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; xSt = (_Worksheet)xBk.ActiveSheet; <br />
+&nbsp;<br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //取得标题 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; foreach(DataColumn col in dv.Table.Columns) <br />
+&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp; colIndex++; <br />
+&nbsp;&nbsp;&nbsp; excel.Cells[4,colIndex] = col.ColumnName; <br />
+&nbsp;&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,colIndex],excel.Cells[4,colIndex]).HorizontalAlignment = XlVAlign.xlVAlignCenter;<br />
+//设置标题格式为居中对齐 <br />
+&nbsp;&nbsp; } <br />
+&nbsp;<br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //取得表格中的数据 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; foreach(DataRowView row in dv) <br />
+&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp; rowIndex ++; <br />
+&nbsp;&nbsp;&nbsp; colIndex = 1; <br />
+&nbsp;&nbsp;&nbsp; foreach(DataColumn col in dv.Table.Columns) <br />
+&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp; colIndex ++; <br />
+&nbsp;&nbsp;&nbsp;&nbsp; if(col.DataType == System.Type.GetType(&quot;System.DateTime&quot;)) <br />
+&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; excel.Cells[rowIndex,colIndex] = (Convert.ToDateTime(row[col.ColumnName].ToString())).ToString(&quot;yyyy-MM-dd&quot;); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xSt.get_Range(excel.Cells[rowIndex,colIndex],excel.Cells[rowIndex,colIndex]).HorizontalAlignment = XlVAlign.xlVAlignCenter;<br />
+//设置日期型的字段格式为居中对齐 <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp; else <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(col.DataType == System.Type.GetType(&quot;System.String&quot;)) <br />
+&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; excel.Cells[rowIndex,colIndex] = &quot;'&quot;+row[col.ColumnName].ToString(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xSt.get_Range(excel.Cells[rowIndex,colIndex],excel.Cells[rowIndex,colIndex]).HorizontalAlignment = XlVAlign.xlVAlignCenter;<br />
+//设置字符型的字段格式为居中对齐 <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp;&nbsp; else <br />
+&nbsp;&nbsp;&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; excel.Cells[rowIndex,colIndex] = row[col.ColumnName].ToString(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp;&nbsp; } <br />
+&nbsp;&nbsp; } <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //加载一个合计行 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; int rowSum = rowIndex + 1; <br />
+&nbsp;&nbsp; int colSum = 2; <br />
+&nbsp;&nbsp; excel.Cells[rowSum,2] = &quot;合计&quot;; <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[rowSum,2],excel.Cells[rowSum,2]).HorizontalAlignment = XlHAlign.xlHAlignCenter; <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //设置选中的部分的颜色 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[rowSum,colSum],excel.Cells[rowSum,colIndex]).Select(); <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[rowSum,colSum],excel.Cells[rowSum,colIndex]).Interior.ColorIndex = 19;//设置为浅黄色，共计有56种 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //取得整个报表的标题 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; excel.Cells[2,2] = str; <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //设置整个报表的标题格式 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[2,2],excel.Cells[2,2]).Font.Bold = true; <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[2,2],excel.Cells[2,2]).Font.Size = 22; <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //设置报表表格为最适应宽度 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,2],excel.Cells[rowSum,colIndex]).Select(); <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,2],excel.Cells[rowSum,colIndex]).Columns.AutoFit(); <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //设置整个报表的标题为跨列居中 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[2,2],excel.Cells[2,colIndex]).Select(); <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[2,2],excel.Cells[2,colIndex]).HorizontalAlignment = XlHAlign.xlHAlignCenterAcrossSelection; <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //绘制边框 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,2],excel.Cells[rowSum,colIndex]).Borders.LineStyle = 1; <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,2],excel.Cells[rowSum,2]).Borders[XlBordersIndex.xlEdgeLeft].Weight = XlBorderWeight.xlThick;<br />
+//设置左边线加粗 <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,2],excel.Cells[4,colIndex]).Borders[XlBordersIndex.xlEdgeTop].Weight = XlBorderWeight.xlThick;<br />
+//设置上边线加粗 <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[4,colIndex],excel.Cells[rowSum,colIndex]).Borders[XlBordersIndex.xlEdgeRight].Weight = XlBorderWeight.xlThick;<br />
+//设置右边线加粗 <br />
+&nbsp;&nbsp; xSt.get_Range(excel.Cells[rowSum,2],excel.Cells[rowSum,colIndex]).Borders[XlBordersIndex.xlEdgeBottom].Weight = XlBorderWeight.xlThick;<br />
+//设置下边线加粗 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; //显示效果 <br />
+&nbsp;&nbsp; // <br />
+&nbsp;&nbsp; excel.Visible=true; <br />
+&nbsp;<br />
+&nbsp;&nbsp; //xSt.Export(Server.MapPath(&quot;.&quot;)+&quot;\\&quot;+this.xlfile.Text+&quot;.xls&quot;,SheetExportActionEnum.ssExportActionNone,<br />
+</font><font face="Arial">Microsoft.Office.Interop.OWC.SheetExportFormat.ssExportHTML); <br />
+&nbsp;&nbsp; xBk.SaveCopyAs(Server.MapPath(&quot;.&quot;)+&quot;\\&quot;+this.xlfile.Text+&quot;.xls&quot;); <br />
+&nbsp;<br />
+&nbsp;&nbsp; ds = null; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xBk.Close(false, null,null); <br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; excel.Quit(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Runtime.InteropServices.Marshal.ReleaseComObject(xBk); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Runtime.InteropServices.Marshal.ReleaseComObject(excel); <br />
+&nbsp;&nbsp;&nbsp; System.Runtime.InteropServices.Marshal.ReleaseComObject(xSt); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xBk = null; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; excel = null; <br />
+&nbsp;&nbsp; xSt = null; <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GC.Collect(); <br />
+&nbsp;&nbsp; string path = Server.MapPath(this.xlfile.Text+&quot;.xls&quot;); <br />
+&nbsp;<br />
+&nbsp;&nbsp; System.IO.FileInfo file = new System.IO.FileInfo(path); <br />
+&nbsp;&nbsp; Response.Clear(); <br />
+&nbsp;&nbsp; Response.Charset=&quot;GB2312&quot;; <br />
+&nbsp;&nbsp; Response.ContentEncoding=System.Text.Encoding.UTF8; <br />
+&nbsp;&nbsp; // 添加头信息，为&quot;文件下载/另存为&quot;对话框指定默认文件名 <br />
+&nbsp;&nbsp; Response.AddHeader(&quot;Content-Disposition&quot;, &quot;attachment; filename=&quot; + Server.UrlEncode(file.Name)); <br />
+&nbsp;&nbsp; // 添加头信息，指定文件大小，让浏览器能够显示下载进度 <br />
+&nbsp;&nbsp; Response.AddHeader(&quot;Content-Length&quot;, file.Length.ToString()); <br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // 指定返回的是一个不能被客户端读取的流，必须被下载 <br />
+&nbsp;&nbsp; Response.ContentType = &quot;application/ms-excel&quot;; <br />
+&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp; // 把文件流发送到客户端 <br />
+&nbsp;&nbsp; Response.WriteFile(file.FullName); <br />
+&nbsp;&nbsp; // 停止页面的执行 <br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Response.End(); <br />
+} <br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; 上面的方面，均将要导出的execl数据，直接给浏览器输出文件流，<br />
+下面的方法是首先将其存到服务器的某个文件夹中，然后把文件发送到客户端。<br />
+这样可以持久的把导出的文件存起来，以便实现其它功能。</font></p>
+<p><font face="Arial">5、将execl文件导出到服务器上，再下载。</font></p>
+<p><font face="Arial">二、winForm中导出Execl的方法：</font></p>
+<p><font face="Arial">1、方法1：</font></p>
+<p><font face="Arial">&nbsp;</font></p>
+<p><font face="Arial">public void Out2Excel(string sTableName,string url)<br />
+{<br />
+Excel.Application oExcel=new Excel.Application();<br />
+Workbooks oBooks;<br />
+Workbook oBook;<br />
+Sheets oSheets;<br />
+Worksheet oSheet;<br />
+Range oCells;<br />
+string sFile=&quot;&quot;,sTemplate=&quot;&quot;;<br />
+//<br />
+System.Data.DataTable dt=TableOut(sTableName).Tables[0];</font></p>
+<p><font face="Arial">sFile=url+&quot;\\myExcel.xls&quot;;<br />
+sTemplate=url+&quot;\\MyTemplate.xls&quot;;<br />
+//<br />
+oExcel.Visible=false;<br />
+oExcel.DisplayAlerts=false;<br />
+//定义一个新的工作簿<br />
+oBooks=oExcel.Workbooks;<br />
+oBooks.Open(sTemplate,Type.Missing,Type.Missing,Type.Missing,Type.Missing,Type.Missing,Type.Missing,<br />
+Type.Missing,Type.Missing,Type.Missing,Type.Missing,Type.Missing,Type.Missing, Type.Missing, Type.Missing);<br />
+oBook=oBooks.get_Item(1);<br />
+oSheets=oBook.Worksheets;<br />
+oSheet=(Worksheet)oSheets.get_Item(1);<br />
+//命名该sheet<br />
+oSheet.Name=&quot;Sheet1&quot;;</font></p>
+<p><font face="Arial">oCells=oSheet.Cells;<br />
+//调用dumpdata过程，将数据导入到Excel中去<br />
+DumpData(dt,oCells);<br />
+//保存<br />
+oSheet.SaveAs(sFile,Excel.XlFileFormat.xlTemplate,Type.Missing,Type.Missing, Type.Missing, Type.Missing,<br />
+Excel.XlSaveAsAccessMode.xlNoChange, Type.Missing, Type.Missing, Type.Missing);<br />
+oBook.Close(false, Type.Missing,Type.Missing);<br />
+//退出Excel，并且释放调用的COM资源<br />
+oExcel.Quit();</font></p>
+<p><font face="Arial">GC.Collect();<br />
+KillProcess(&quot;Excel&quot;);<br />
+}</font></p>
+<p><font face="Arial">private void KillProcess(string processName)<br />
+{<br />
+System.Diagnostics.Process myproc= new System.Diagnostics.Process();<br />
+//得到所有打开的进程<br />
+try<br />
+{<br />
+foreach (Process thisproc in Process.GetProcessesByName(processName))<br />
+{<br />
+if(!thisproc.CloseMainWindow())<br />
+{<br />
+thisproc.Kill();<br />
+}<br />
+}<br />
+}<br />
+catch(Exception Exc)<br />
+{<br />
+throw new Exception(&quot;&quot;,Exc);<br />
+}<br />
+}<br />
+2、方法2：</font></p>
+<font face="Arial">
+<p><br />
+protected void ExportExcel()<br />
+&nbsp; {<br />
+&nbsp;&nbsp; gridbind();</p>
+<p>&nbsp;&nbsp; if(ds1==null) return;</p>
+<p>&nbsp;&nbsp; string saveFileName=&quot;&quot;;<br />
+//&nbsp;&nbsp; bool fileSaved=false;<br />
+&nbsp;&nbsp; SaveFileDialog saveDialog=new SaveFileDialog();<br />
+&nbsp;&nbsp; saveDialog.DefaultExt =&quot;xls&quot;;<br />
+&nbsp;&nbsp; saveDialog.Filter=&quot;Excel文件|*.xls&quot;;<br />
+&nbsp;&nbsp; saveDialog.FileName =&quot;Sheet1&quot;;<br />
+&nbsp;&nbsp; saveDialog.ShowDialog();<br />
+&nbsp;&nbsp; saveFileName=saveDialog.FileName;<br />
+&nbsp;&nbsp; if(saveFileName.IndexOf(&quot;:&quot;)&lt;0) return; //被点了取消<br />
+//&nbsp;&nbsp; excelapp.Workbooks.Open&nbsp;&nbsp; (App.path &amp; \\工程进度表.xls)</p>
+<p>&nbsp;&nbsp; <br />
+&nbsp;&nbsp; Excel.Application xlApp=new Excel.Application();<br />
+&nbsp;&nbsp; object missing=System.Reflection.Missing.Value;</p>
+<p><br />
+&nbsp;&nbsp; if(xlApp==null)<br />
+&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp; MessageBox.Show(&quot;无法创建Excel对象，可能您的机子未安装Excel&quot;);<br />
+&nbsp;&nbsp;&nbsp; return;<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; Excel.Workbooks workbooks=xlApp.Workbooks;<br />
+&nbsp;&nbsp; Excel.Workbook workbook=workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);<br />
+&nbsp;&nbsp; Excel.Worksheet worksheet=(Excel.Worksheet)workbook.Worksheets[1];//取得sheet1<br />
+&nbsp;&nbsp; Excel.Range range;<br />
+&nbsp;&nbsp; </p>
+<p>&nbsp;&nbsp; string oldCaption=Title_label .Text.Trim ();<br />
+&nbsp;&nbsp; long totalCount=ds1.Tables[0].Rows.Count;<br />
+&nbsp;&nbsp; long rowRead=0;<br />
+&nbsp;&nbsp; float percent=0;</p>
+<p>&nbsp;&nbsp; worksheet.Cells[1,1]=Title_label .Text.Trim ();<br />
+&nbsp;&nbsp; //写入字段<br />
+&nbsp;&nbsp; for(int i=0;i&lt;ds1.Tables[0].Columns.Count;i++)<br />
+&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp; worksheet.Cells[2,i+1]=ds1.Tables[0].Columns.ColumnName;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; range=(Excel.Range)worksheet.Cells[2,i+1];<br />
+&nbsp;&nbsp;&nbsp; range.Interior.ColorIndex = 15;<br />
+&nbsp;&nbsp;&nbsp; range.Font.Bold = true;<br />
+&nbsp; <br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; //写入数值<br />
+&nbsp;&nbsp; Caption .Visible = true;<br />
+&nbsp;&nbsp; for(int r=0;r&lt;ds1.Tables[0].Rows.Count;r++)<br />
+&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp; for(int i=0;i&lt;ds1.Tables[0].Columns.Count;i++)<br />
+&nbsp;&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp; worksheet.Cells[r+3,i+1]=ds1.Tables[0].Rows[r];&nbsp;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; rowRead++;<br />
+&nbsp;&nbsp;&nbsp; percent=((float)(100*rowRead))/totalCount;&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; this.Caption.Text= &quot;正在导出数据[&quot;+ percent.ToString(&quot;0.00&quot;)&nbsp; +&quot;%]...&quot;;<br />
+&nbsp;&nbsp;&nbsp; Application.DoEvents();<br />
+&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; worksheet.SaveAs(saveFileName,missing,missing,missing,missing,missing,missing,missing,missing);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; this.Caption.Visible= false;<br />
+&nbsp;&nbsp; this.Caption.Text= oldCaption;</p>
+<p>&nbsp;&nbsp; range=worksheet.get_Range(worksheet.Cells[2,1],worksheet.Cells[ds1.Tables[0].Rows.Count+2,ds1.Tables[0].Columns.Count]);<br />
+&nbsp;&nbsp; range.BorderAround(Excel.XlLineStyle.xlContinuous,Excel.XlBorderWeight.xlThin,Excel.XlColorIndex.xlColorIndexAutomatic,null);<br />
+&nbsp;&nbsp; <br />
+&nbsp;&nbsp; range.Borders[Excel.XlBordersIndex.xlInsideHorizontal].ColorIndex = Excel.XlColorIndex.xlColorIndexAutomatic;<br />
+&nbsp;&nbsp; range.Borders[Excel.XlBordersIndex.xlInsideHorizontal].LineStyle =Excel.XlLineStyle.xlContinuous;<br />
+&nbsp;&nbsp; range.Borders[Excel.XlBordersIndex.xlInsideHorizontal].Weight =Excel.XlBorderWeight.xlThin;</p>
+<p>&nbsp;&nbsp; if(ds1.Tables[0].Columns.Count&gt;1)<br />
+&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp; range.Borders[Excel.XlBordersIndex.xlInsideVertical].ColorIndex=Excel.XlColorIndex.xlColorIndexAutomatic;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp; workbook.Close(missing,missing,missing);<br />
+&nbsp;&nbsp; xlApp.Quit();<br />
+&nbsp; }</p>
+<p>三、附注：</p>
+<p>虽然都是实现导出execl的功能，但在asp.net和winform的程序中，实现的代码是各不相同的。<br />
+在asp.net中，是在服务器端读取数据，在服务器端把数据以ms-execl的格式，以Response输出到浏览器（客户端)；<br />
+而在winform中，是把数据读到客户端（因为winform运行端就是客户端），<br />
+然后调用客户端安装的office组件，将读到的数据写在execl的工作簿中。<br />
+&nbsp;</p>
+<p>&nbsp;&nbsp; SqlConnection conn=new SqlConnection(System.Configuration.ConfigurationSettings.AppSettings[&quot;conn&quot;]); <br />
+&nbsp;&nbsp; SqlDataAdapter da=new SqlDataAdapter(&quot;select * from tb1&quot;,conn); <br />
+&nbsp;&nbsp; DataSet ds=new DataSet(); <br />
+&nbsp;&nbsp; da.Fill(ds,&quot;table1&quot;); <br />
+&nbsp;&nbsp; DataTable dt=ds.Tables[&quot;table1&quot;]; <br />
+&nbsp;&nbsp; string name=System.Configuration.ConfigurationSettings.AppSettings[&quot;downloadurl&quot;].ToString()+DateTime.Today.ToString(&quot;yyyyMMdd&quot;)+new Random(DateTime.Now.Millisecond).Next(10000).ToString()+&quot;.csv&quot;;<br />
+//存放到web.config中downloadurl指定的路径，文件格式为当前日期+4位随机数 <br />
+&nbsp;&nbsp; FileStream fs=new FileStream(name,FileMode.Create,FileAccess.Write); <br />
+&nbsp;&nbsp; StreamWriter sw=new StreamWriter(fs,System.Text.Encoding.GetEncoding(&quot;gb2312&quot;)); <br />
+&nbsp;&nbsp; sw.WriteLine(&quot;自动编号,姓名,年龄&quot;); <br />
+&nbsp;&nbsp; foreach(DataRow dr in dt.Rows) <br />
+&nbsp;&nbsp; { <br />
+&nbsp;&nbsp;&nbsp; sw.WriteLine(dr[&quot;ID&quot;]+&quot;,&quot;+dr[&quot;vName&quot;]+&quot;,&quot;+dr[&quot;iAge&quot;]); <br />
+&nbsp;&nbsp; } <br />
+&nbsp;&nbsp; sw.Close(); <br />
+&nbsp;&nbsp; Response.AddHeader(&quot;Content-Disposition&quot;, &quot;attachment; filename=&quot; + Server.UrlEncode(name)); <br />
+&nbsp;&nbsp; Response.ContentType = &quot;application/ms-excel&quot;;// 指定返回的是一个不能被客户端读取的流，必须被下载 <br />
+&nbsp;&nbsp; Response.WriteFile(name); // 把文件流发送到客户端 <br />
+&nbsp;&nbsp; Response.End();<br />
+&nbsp; </p>
+<p>本文来自CSDN博客，转载请标明出处：http://blog.csdn.net/jilm168/archive/2007/11/06/1869118.aspx<br />
+</p>
+</font>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('asp.net中导出Execl有两种方法_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1385.html">ASP.NET中导入和导出标准Excel文件…</a>&nbsp;&nbsp;下一条： <a href="/html/News/1380.html">ASP.NET应用程序中上传文件</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例 C# 异步HttpListener " >完全并发处理HTTP请求示例 C#…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误: (500) 内部服务器错误" >远程服务器返回错误: (500) 内…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgility…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML…</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1048.html" title="表单提交中get和post方式的区别有5点&nbsp;">表单提交中get和post方式的区别有…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1005.html" title="解决ASP中UTF-8与GB2312编码转换乱码">解决ASP中UTF-8与GB2312编码转换乱…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/865.html" title="asp数组中REDIM的用法（动态数组）">asp数组中REDIM的用法（动态数组）…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1147.html" title="生成html的新方法ASP">生成html的新方法ASP</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/899.html" title="ASP字符串函数大全">ASP字符串函数大全</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1049.html" title="ASP生成Word文件的代码">ASP生成Word文件的代码</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1146.html" title="ASP中Randomize随机函数的使用">ASP中Randomize随机函数的使用</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/697.html" title="十天学会ASP教程之第一天：安装调试ASP的环境">十天学会ASP教程之第一天：安装调…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/939.html" title="自定义的asp日期格式化函数">自定义的asp日期格式化函数</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1071.html" title="防范ASP网站漏洞的八大法则之一">防范ASP网站漏洞的八大法则之一</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/695.html" title="十天学会ASP教程之第二天：表单传送变量">十天学会ASP教程之第二天：表单传…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/838.html" title="asp中关于从utf8页面到gb2312页面出现乱码得解决">asp中关于从utf8页面到gb2312页面…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1007.html" title="ASP教程：实现长文章分页功能">ASP教程：实现长文章分页功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/672.html" title="IIS6架设网站的问题总结">IIS6架设网站的问题总结</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/945.html" title="五分钟打开&nbsp;allow_url_fopen&nbsp;的最简单方法">五分钟打开 allow_url_fopen 的最…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1674.html" title="完全并发处理HTTP请求示例&nbsp;C#&nbsp;异步HttpListener&nbsp;" >完全并发处理HTTP请求示例 C# 异步…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1673.html" title="c#实现多线程调用参数传递" >c#实现多线程调用参数传递</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1670.html" title="asp.net三层架构详解(c#)" >asp.net三层架构详解(c#)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1668.html" title="远程服务器返回错误:&nbsp;(500)&nbsp;内部服务器错误" >远程服务器返回错误: (500) 内部服…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1662.html" title="解析html的C#类库HtmlAgilityPack" >解析html的C#类库HtmlAgilityPack…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1653.html" title="C#异步编程" >C#异步编程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1641.html" title="c#如何过滤文章中的脏话" >c#如何过滤文章中的脏话</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1640.html" title="C#6.0新功能" >C#6.0新功能</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1639.html" title="使用HtmlAgilityPack解析HTML" >使用HtmlAgilityPack解析HTML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1622.html" title=".net高效代码的价值远远超出你想象" >.net高效代码的价值远远超出你想象…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1615.html" title="哪些地方需要用到委托c#版" >哪些地方需要用到委托c#版</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1614.html" title="&nbsp;直接调用、委托与反射调用的性能区别" > 直接调用、委托与反射调用的性能…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1612.html" title="C#遍历html字符串各个节点(mshtml)&nbsp;" >C#遍历html字符串各个节点(mshtml…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1611.html" title="浅析c#权限管理" >浅析c#权限管理</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1610.html" title="基于将角色与controller、action相关联来判断用户是否有权" >基于将角色与controller、action相…</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1384" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

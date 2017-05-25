@@ -1,0 +1,468 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS3&nbsp;Transitions,&nbsp;Transforms和Animation使用简介与应用展示_Css3.0_css2.0_html5_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="CSS3&nbsp;Transitions,&nbsp;Transforms和Animation使用简介与应用展示" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; Css3.0_css2.0_html5
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        CSS3 Transitions, Transforms和Animation使用简介与应用展示
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com 日期：2015/9/6 16:37:53
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        CSS3&nbsp;Transitions,&nbsp;Transforms和Animation使用简介与应用展示
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        <div style="width:600px;word-break: break-all;">
+<h2>CSS3 Transitions, Transforms和Animation使用简介与应用展示</h2>
+<p>by zhangxinxu from http://www.zhangxinxu.com<br />
+本文地址：http://www.zhangxinxu.com/wordpress/?p=1268</p>
+<h3>一、前言兼目录索引</h3>
+<p>《天龙八部》里的虚竹小和尚之前可以说是和尚的先进人物与代表模范，各类清规戒律谨记与严守。但是，后来呢，花姑娘送到跟前，什么戒律都成了浮云， 禁不住诱惑享乐去了。啊，我现在似乎有类似的感觉，本来不打算深究CSS3的一些属性的，但是其效果以及实际应用价值之诱惑实在巨大，还是抵挡不住，折腾 下了这篇文章。劳民伤财的工程越少越好，所以，这里干脆把CSS3 动画相关的几个属性凑合到一起了，这样，至少一年半载内不会再写相关的文章了。</p>
+<p>CSS3动画相关的几个属性是：transition, transform,  animation；我分别理解为过渡，变换，动画。虽意义相近，但具体角色不一。就像是SHE组合，虽然都是三个女生，都唱同一首歌，但有负责高音，和 擅长低音的，具体工作于角色还是有差异的。<span class="s">//zxx:貌似那个谁谁烧伤了，真是不幸~~<img src="http://timg.sjs.sinajs.cn/t3/style/images/common/face/ext/normal/d8/sad.gif" alt="" /></span></p>
+<p>transition指过渡啦，就是从a点都b点，就像过江坐渡轮，是有时间的，是连续的，一般针对常规CSS属性；transform指变换，就 那几个固定的属性：旋转啦，缩放啦，偏移啦什么的，与独立于远房亲戚transition使用，但是，效果就是很干涩机械的旋转移动。要是配合 transition属性，旋转啊什么的，就会很平滑。animation最先安家于Safari浏览器，自成一家，与transition和 transform有老死不相往来之感，但是要说单挑的话，animation要比transition厉害些。</p>
+<p><strong>目录索引</strong><br />
+1. 话说Transitions这厮<br />
+2. 话说Transforms这货<br />
+3. 话说Animation这物<br />
+4. 更实际综合的效果展示<br />
+5. 浏览器支持情况<br />
+6. 参考文章及延伸阅读<br />
+7. 结语这东西</p>
+<h3 id="two">二、话说Transitions这厮</h3>
+<p>CSS3 transition属性早在去年我的&ldquo;CSS3 transition实现超酷图片墙动画效果&rdquo;一文中就有过介绍。其作用是：<strong><em>平滑的改变CSS的值</em></strong>。无论是点击事件，焦点事件，还是鼠标hover，只要值改变了，就是平滑的，就是动画。于是乎，只要一个整站通用的class，就可以很轻松的渐进增强地实现动画效果，超有实用价值的说。</p>
+<p>transition有下面些具体属性：</p>
+<blockquote style="font-size:12px;">
+<p> transition-property :* //指定过渡的性质，比如transition-property:backgrond 就是指backgound参与这个过渡<br />
+transition-duration:*//指定这个过渡的持续时间<br />
+transition-delay:* //延迟过渡时间<br />
+transition-timing-function:*//指定过渡类型，有ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier </p>
+</blockquote>
+<p>例如下面这个很简单的例子：</p>
+<div class="zxx_code">
+<pre>.trans {   <br />  -webkit-transition-property: background-color;   <br />  -webkit-transition-duration: 0.3s;    <br /> -webkit-transition-timing-function: ease; }<br />&nbsp;.trans:hover {    <br /> background-color: #486AAA;    <br /> color: #fff; <br />} </pre>
+</div>
+<p>结果在Safari或是Chrome浏览器下可以看到如下效果：<br />
+<img width="92" height="40" class="alignnone" title="背景色过渡效果 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-24_222745.png" alt="背景色过渡效果 张鑫旭-鑫空间-鑫生活" /></p>
+<p>如果你正在使用或有webkit核心的浏览器，您可能狠狠地点击这里：<span class="a_link">webkit内核浏览器下背景色过渡demo</span></p>
+<p>就跟CSS2的background属性一样，平时我们都不会像上面一样，把transition的属性一个一个摊开写，而是合并。</p>
+<p>还是上面的例子，我们将transition属性合并，并扩展几个浏览器，如下CSS代码：</p>
+<div class="zxx_code">
+<pre>.trans {       <br /> -webkit-transition: background-color 0.3s ease;   <br />  -moz-transition: background-color 0.3s ease;    <br /> -o-transition: background-color 0.3s ease;   <br />  transition: background-color 0.3s ease; } <br />.trans:hover {    <br /> background-color: #486AAA;    <br /> color: #fff; } </pre>
+</div>
+<p>如下HTML代码：</p>
+<div class="zxx_code">
+<pre>&lt;a href=&quot;/&quot; class=&quot;trans&quot;&gt;经过我~~&lt;/a&gt;</pre>
+</div>
+<p>结果如下截图（截自Opera 10.6浏览器）：<br />
+<img width="295" height="114" class="alignnone" title="Opera下背景色过渡 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-24_223644.png" alt="Opera下背景色过渡 张鑫旭-鑫空间-鑫生活" /></p>
+<p>transition中的transition-timing-function属性让人心存芥蒂，其一堆ease相关的值（linear |  ease-in | ease-out | ease-in-out |  cubic-bezier），不太容易让人理解与记住。尤其其中cubic-bezier就是指贝塞尔曲线，与复杂的数学扯上的关系，不禁勾起了高中时数学的梦魇。</p>
+<p>其实呢，理一理，也还好。首先cubic-bezier这个基本上就不用鸟了，99%的情况都用不到这个东西，所以，难得清闲，直接pass掉。 linear很好记，线性嘛。至于ease-in | ease-out |  ease-in-out，就是指缓动效果啦，说白了就是指开始时候慢慢动呢还是结束的时候慢慢动。那么in和out那个先慢慢动呢？啊，我们可以联想记 忆，很好记的。我们都知道OOXX吧，ease-in中的in就表示进入，进入的时候显然一开始都是慢的，等瞄准就绪后才能快速冲刺进入，于是ease- in表示先慢后快；ease-out其out表示出来，出来肯定是先快后慢的，因为出来时临近洞口速度肯定要降下来，免得跑出来乱了节奏，于是ease- out表示先快后慢；最后，很好理解的，ease-in-out表示一进一出，也就是先慢后快再慢。</p>
+<p>有些纯洁的人可能不太明白上面邪恶的文字表示的含义，没关系，我们可以看图说话，下面截自不同运动曲线下同一时间的截图，从中可以看到哪个先快，哪个先慢（注意：最后都是同时到达）：<br />
+<img width="552" height="457" class="alignnone" title="不同过渡值效果 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-24_230441.png" alt="不同过渡值效果 张鑫旭-鑫空间-鑫生活" /></p>
+<p>要是你觉得上面的静态的截图表意不够具体，您可以狠狠地点击这里：<span class="a_link">不同缓动类效果demo</span>(Opera/Chrome/Safari)</p>
+<p>您可以观察方块的运动规律，知道不同缓动名称的效果是如何的。</p>
+<p>以上就是transition的简单介绍，要查看更详细更权威的信息，可以去官方页面查看。</p>
+<h3 id="three">三、话说transform这货</h3>
+<p>transform指变换，使用过photoshop的人应该知道里面的Ctrl+T自由变换。transform就是指的这个东西，拉伸，压缩，旋转，偏移。见下面示例代码：</p>
+<div class="zxx_code">
+<pre>.trans_skew { transform: skew(35deg); } .trans_scale { transform:scale(1, 0.5); }<br />&nbsp;.trans_rotate { transform:rotate(45deg); } .trans_translate { transform:translate(10px, 20px); } </pre>
+</div>
+<p>结果就有类似下面的些效果：<br />
+<img width="506" height="211" class="alignnone" title="transform的些效果 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_205011.png" alt="transform的些效果 张鑫旭-鑫空间-鑫生活" /></p>
+<p>您可以狠狠地点击这里：<span class="a_link">transform些属性效果demo</span></p>
+<p>transform属性要是加上transition的过渡特性，那可就是如虎添翼，樱木花道配上流川枫啊，可以产生不少美妙的火花，例如下面这个例子，关键代码如下：</p>
+<div class="zxx_code">
+<pre>.trans_effect {    <br /> -webkit-transition:all 2s ease-in-out;    <br /> -moz-transition:all 2s ease-in-out; <br />    -o-transition:all 2s ease-in-out;    <br /> -ms-transition:all 2s ease-in-out;         <br />transition:all 2s ease-in-out; } <br />.trans_effect:hover {    <br /><br /> -webkit-transform:rotate(720deg) scale(2,2);   <br />  -moz-transform:rotate(720deg) scale(2,2);    <br /> -o-transform:rotate(720deg) scale(2,2);    <br /> -ms-transform:rotate(720deg) scale(2,2);   <br /><br /> transform:rotate(720deg) scale(2,2);     <br />    } </pre>
+</div>
+<p>结果在Chrome预计Safari浏览器下就有了祖玛里面青蛙挂掉时的缩放旋转效果了：<br />
+<img width="253" height="174" class="alignnone" title="transform动画默认 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_210915.png" alt="transform动画默认 张鑫旭-鑫空间-鑫生活" /><br />
+鼠标经过时：<br />
+<img width="311" height="239" class="alignnone" title="transform动画进行时截图 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_211150.png" alt="transform动画进行时截图 张鑫旭-鑫空间-鑫生活" /></p>
+<p>如果你手上有webkit核心的浏览器，可以狠狠地点击这里：<span class="a_link">酷酷的缩放旋转动画demo</span></p>
+<p>transform还支持3D变换，怎一酷字了得。由于某些不可告人的原因，这里就不展示了。故，transform部分到此结束。</p>
+<h3 id="four">四、话说animations这物</h3>
+<p>截止2010年11月份，animations这物似乎还是只在webkit核心的浏览器上起作用，所以本段落的一些demo效果，需在webkit核心浏览器下查看，不在重复赘述。</p>
+<p>animations的介绍以实例驱动。先看简单的缩放扩展动画实例：<br />
+您可以狠狠地点击这里：<span class="a_link">animations水平弹性缩放变色动画</span></p>
+<p>效果大致如下，默认是个很规矩很安静的矩形框：<br />
+<img width="261" height="199" class="alignnone" title="安静的矩形 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_213757.png" alt="安静的矩形 张鑫旭-鑫空间-鑫生活" /></p>
+<p>鼠标移上去后显示慢慢的宽度增加，然后突然快速的宽度增加，同时背景色加深，下为动画过程中的截图：<br />
+<img width="370" height="202" class="alignnone" title="animate动画过程中截图 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_214152.png" alt="animate动画过程中截图 张鑫旭-鑫空间-鑫生活" /></p>
+<p>关键的CSS代码如下：</p>
+<div class="zxx_code">
+<pre>@-webkit-keyframes resize {     0% {         padding: 0;     }     <br />50% {        <br /> padding: 0 20px;       <br />  background-color:rgba(190, 206, 235, 0.2);            <br /> }     100% {         padding: 0 100px;        <br /> background-color:rgba(190, 206, 235, 0.9);     } }<br />&nbsp;.anim_box:hover {     -webkit-animation-name: resize;    <br /> -webkit-animation-duration: 1.5s;    <br /> -webkit-animation-iteration-count: 4;    <br /> -webkit-animation-direction: alternate;    <br /> -webkit-animation-timing-function: ease-in-out; } </pre>
+</div>
+<p>此例子中，鼠标悬停时动画只执行4次。</p>
+<p>animations不仅适用于CSS2中的属性，CSS3也是支持的，例如box-shadow盒阴影效果，所以，我们可以实现外发光效果的。使 用过web qq的人应该有印象，当鼠标移到聊天对象脑袋上的时候会有蓝色外发光的动画，但是那是gif动画图片实现的（现在自动跳转到web qq  2.0已看不到效果）。gif动画实现的效果类似于下面（很兼容）：</p>
+<p><a class="gif_img" href="http://www.zhangxinxu.com/wordpress/?p=1268"><img width="71" height="71" src="http://image.zhangxinxu.com/image/study/head/s50/14.jpeg" alt="" /></a> <span style="font-size:12px; color:#666;">摸左边张含韵</span></p>
+<p>但是gif的重用性有限而且制作破费功夫，如果简单几行CSS代码就可以实现高性能高扩展的效果岂不更加，现在animations就可以搞定这一些。</p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201011/css3-transition-animate-demo-7.html" target="_blank" class="a_link">animations下的外发光动画demo</a></p>
+<p>发光效果如下：<br />
+<img width="229" height="224" class="alignnone" title="外发光效果demo 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_220852.png" alt="外发光效果demo 张鑫旭-鑫空间-鑫生活" /></p>
+<p>主要的CSS代码如下：</p>
+<div class="zxx_code">
+<pre>@-webkit-keyframes glow {    <br /> 0% {        <br /> -webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 0.5);        <br /> border-color: rgba(160, 179, 214, 0.5);              <br />}     <br />100% {        <br /> -webkit-box-shadow: 0 0 12px rgba(72, 106, 170, 1.0), 0 0 18px rgba(0, 140, 255, 1.0);        <br /> border-color: rgba(160, 179, 214, 1.0);      } } <br />.anim_image {     <br />padding:3px;    <br /> border:1px solid #beceeb;    <br /> background-color:white;    <br /> -moz-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);    <br /> -webkit-box-shadow: 0 0 8px rgba(72, 106, 170, 0.5);     <br />box-shadow: 0 0 8px rgba(72, 106, 170, 0.5); } .anim_image:hover {     <br />background-color:#f0f3f9;    <br /> -webkit-animation-name: glow;    <br /> -webkit-animation-duration: 1s;     <br />-webkit-animation-iteration-count: infinite;     <br />-webkit-animation-direction: alternate;     <br />-webkit-animation-timing-function: ease-in-out;     } </pre>
+</div>
+<p>animation展示结束，的说~~</p>
+<h3 id="five">五、更实际综合的效果展示</h3>
+<p>首先，<strong>鼠标悬停的淡入淡出</strong>效果。</p>
+<p>您可以狠狠地点击这里：<span class="a_link">鼠标悬停的淡入淡出demo</span></p>
+<p>目前，非webkit核心浏览器下面，鼠标悬停仅仅是透明与不透明，只有在webkit核心浏览器下面才有平滑的动画效果，如下图：<br />
+<img width="321" height="222" class="alignnone" title="淡入淡出过程截图 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_221854.png" alt="淡入淡出过程截图 张鑫旭-鑫空间-鑫生活" /></p>
+<p>相关主要CSS代码如下：</p>
+<div class="zxx_code">
+<pre>.anim_fade_image {     position:absolute;     <br />-webkit-transition: opacity 1s ease-in-out;    <br /> -moz-transition: opacity 1s ease-in-out;    <br /> -o-transition: opacity 1s ease-in-out;     <br />transition: opacity 1s ease-in-out; }<br />&nbsp;.anim_fade_image:hover, .anim_fade_image_hover {     opacity:0;     filter: alpha(opacity=0); } </pre>
+</div>
+<p>当然，我们也可以辅助JavaScript，添加<strong>点击图片淡出淡出</strong>。JavaScript负责的只是终了的透明度值，中间的动画直接交给CSS就可以了。</p>
+<p>您可以狠狠地点击这里：<span class="a_link">点击下的淡入淡出demo</span></p>
+<p>效果类似，就不展示截图了，代码类似，就不展示代码了。</p>
+<p>当然，我们还可以做些小动画，让<strong>图片自动淡入淡出</strong>的播放，不停地播放。要不停播放只要将animation-iteration-count设为infinite(无限)就ok的啦。于是，我们修改下CSS代码，如下：</p>
+<div class="zxx_code">
+<pre>@-webkit-keyframes fadeInOut {    <br /> 0% {         opacity:1;      }    <br /> 25% {         opacity:0;     }    <br /> 50% {         opacity: 0;         }    <br /> 75% {         opacity:1;     } }<br />&nbsp;.anim_fade_image {    <br /> position:absolute;        <br /> -webkit-animation-name: fadeInOut;    <br /> -webkit-animation-timing-function: ease-in-out;    <br /> -webkit-animation-iteration-count: infinite;    <br /> -webkit-animation-duration: 12s;    <br /> -webkit-animation-direction: alternate; } </pre>
+</div>
+<p>于是乎，图片就稀里糊涂的不停地淡入淡出了。您有兴趣可以狠狠地点击这里：<span class="a_link">图片无限自动fade效果demo</span></p>
+<p>以上些效果都是与透明度打交道的。下面这个实例是与图片位置，比例尺寸挂钩的，聪明的你是不是想到了transform属性呢。对 的，transform+tranisition，双剑合璧，天下无敌。下面这个效果是很酷很酷的，以前基本上只能在Flash中可以看到。当当当当，您 可以狠狠地点击这里：<span class="a_link">图片轮转缩放显示动画demo</span>（鼠标经过图片有惊喜的说，非webkit绕道，搜狗等浏览器可切换到高速模式亦可）。</p>
+<p>效果截图如下，为动画过程中：<br />
+<img width="317" height="219" class="alignnone" title="图片大小轮换动画截图 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_224100.png" alt="图片大小轮换动画截图 张鑫旭-鑫空间-鑫生活" /></p>
+<p>相关的核心的CSS代码如下：</p>
+<div class="zxx_code">
+<pre>.anim_image {    <br /> -webkit-transition: all 1s ease-in-out;    <br /> -moz-transition: all 1s ease-in-out;    <br /> -o-transition: all 1s ease-in-out;    <br /> transition: all 1s ease-in-out;     cursor:pointer; <br />} .anim_image_top {     position: absolute;     -webkit-transform: scale(0, 0);     opacity: 0;     <br />filter: Alpha(opacity=0); } .anim_box:hover .anim_image_top , .anim_box_hover .anim_image_top {    <br /> opacity: 1;     filter: Alpha(opacity=100);    <br /> -webkit-transform: scale(1, 1);    <br /> -webkit-transform-origin: top right;         }<br />&nbsp;.anim_box:hover .anim_image_bottom, .anim_box_hover<br />&nbsp;.anim_image_bottom {     -webkit-transform: scale(0, 0);     -webkit-transform-origin: bottom left; } </pre>
+</div>
+<p>HTML代码如下：</p>
+<div class="zxx_code">
+<pre>&lt;div id=&quot;testBox&quot; class=&quot;anim_box&quot;&gt;    <br /> &lt;img class=&quot;anim_image anim_image_top&quot; src=&quot;http://image.zhangxinxu.com/image/study/p/s200/ps6.jpg&quot; /&gt;    <br /> &lt;img class=&quot;anim_image anim_image_bottom&quot; src=&quot;http://image.zhangxinxu.com/image/study/p/s200/ps4.jpg&quot; /&gt; <br />&lt;/div&gt; </pre>
+</div>
+<p>当然，这里应用transform的旋转，水平垂直缩放效果也是很赞的，如下图所示：<br />
+<img width="313" height="200" class="alignnone" title="图片旋转切换动画截图 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_224543.png" alt="图片旋转切换动画截图 张鑫旭-鑫空间-鑫生活" /></p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201011/css3-transition-animate-demo-12.html" target="_blank" class="a_link">图片旋转切换动画demo</a></p>
+<p>CSS代码与上面的例子大同小异，这里就不展示了，您可以去demo页面查看。</p>
+<p>下面，展示的是更加实际更加靠谱的例子，<strong>选项卡切换</strong>。<br />
+我们平时的选项卡切换基本上都是很生硬的，直接啪啪啪，切换过来了，没有点过渡啊什么的（毕竟写JavaScript动画成本较高），现在，有了transitions，实现过渡效果就是几行CSS代码的事情，不多说了，直接上实例。</p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201011/css3-transition-animate-demo-13.html" target="_blank" class="a_link">平滑选项卡切换demo</a></p>
+<p>在demo中，点击下面的几个图片文字按钮状的东西，就可以看到图片水平滑过来，再滑过去，再滑过来，让人爱不释手啊。下图为截图：<br />
+<img width="451" height="368" class="alignnone" title="选项卡平滑切换demo 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_225422.jpg" alt="选项卡平滑切换demo 张鑫旭-鑫空间-鑫生活" /></p>
+<p>CSS其作用的就是那个值以all开头的transition属性，如下：</p>
+<div class="zxx_code">
+<pre>.trans_image_box {     width: 2000px;     height: 300px;    <br /> -webkit-transition: all 1s ease-in-out;    <br /> -moz-transition: all 1s ease-in-out;    <br /> -o-transition: all 1s ease-in-out;    <br /> transition: all 1s ease-in-out; } </pre>
+</div>
+<p>transitionCSS代码组很吃得开的。</p>
+<p>只要是CSS值变换的，只要是额外有transition属性设置的，都是平滑效果，都是动画。所以，我们看看如何以动画形式实现经典的手风琴切换效果。</p>
+<p>您可以狠狠地点击这里：<a href="http://www.zhangxinxu.com/study/201011/css3-transition-animate-demo-14.html" target="_blank" class="a_link">手风琴效果demo</a>（点击水平标题有惊喜）</p>
+<p>下为截图：<br />
+<img width="426" height="256" class="alignnone" title="手风琴效果截图 张鑫旭-鑫空间-鑫生活" src="http://image.zhangxinxu.com/image/blog/201011/2010-11-25_230006.png" alt="手风琴效果截图 张鑫旭-鑫空间-鑫生活" /></p>
+<p>其中JavaScript扮演的角色只是变变高度值而已，动画，都是CSS一人挑大梁完成的，很赞吧。下面的代码就是动画效果那段div上的CSS代码：</p>
+<div class="zxx_code">
+<pre>.acco_content {     height:0;     padding:0 10px;   <br />  -webkit-transition: all 1s ease-in-out;    <br /> -moz-transition: all 1s ease-in-out;  <br />   -o-transition: all 1s ease-in-out;    <br /> transition: all 1s ease-in-out;     <br />overflow:hidden; } </pre>
+</div>
+<p>JavaScript的作用不过是变变高度而已：</p>
+<div class="zxx_code">
+<pre>$$(&quot;.acco_title&quot;).click(function() <br />{     var rel = this.lang, cl = this.className, oOn = $$(&quot;.acco_title_on&quot;)[0], rel_on = oOn.lang;     <br />if (!/on/.test(cl) &amp;&amp; rel &amp;&amp; rel_on) {        <span style="color:green;"><br /> $$(&quot;#&quot; + rel)[0].style.height = &quot;140px&quot;;         <br />$$(&quot;#&quot; + rel_on)[0].style.height = &quot;0&quot;;</span>        <br /> this.className = &quot;acco_title acco_title_on&quot;;        <br /> oOn.className = &quot;acco_title&quot;;     } }); </pre>
+</div>
+<h3 id="six">六、浏览器支持情况</h3>
+<div class="half left">
+<h4 style="margin-bottom:0;">CSS Transitions</h4>
+<p>首次引入</p>
+<ul id="ul">
+    <li>Safari 3.2: 13/11/2008</li>
+    <li>Firefox 4.0: Late 2010</li>
+    <li>Chrome 1.0: 02/09/2008</li>
+    <li>Opera 10.5: 02/03/2010</li>
+</ul>
+<h4 style="margin-bottom:0;">CSS 2D Transformations</h4>
+<p>首次引入</p>
+<ul id="ul">
+    <li>Safari 3.2: 13/11/2008</li>
+    <li>Firefox 3.5: 30/06/2009</li>
+    <li>Chrome 1.0: 02/09/2008</li>
+    <li>Opera 10.5: 02/03/2010</li>
+    <li>Internet Explore 9: 09/2010</li>
+</ul>
+</div>
+<div class="half right">
+<h4 style="margin-bottom:0;">CSS Animations</h4>
+<p>首次引入</p>
+<ul id="ul">
+    <li>Safari 4.0: 11/06/2008</li>
+    <li>Chrome 1.0: 02/09/2008</li>
+</ul>
+<h4 style="margin-bottom:0;">CSS 3D Transformations</h4>
+<p>首次引入</p>
+<ul id="ul">
+    <li>Safari 4.0: 11/06/2008</li>
+    <li>Chrome: 28/08/2010</li>
+</ul>
+</div>
+<h3 id="seven">七、参考文章以及延伸阅读</h3>
+<ul id="ul">
+    <li><a href="http://www.alistapart.com/articles/understanding-css3-transitions/">Understanding CSS3 Transitions</a></li>
+    <li><a href="http://css3.bradshawenterprises.com/">Using CSS3 Transitions, Transforms and Animation Intro</a></li>
+    <li><a href="http://www.w3.org/TR/css3-transitions/">W3C: CSS Transitions Module Level 3</a></li>
+    <li><a href="http://www.w3.org/TR/css3-2d-transforms/">W3C: CSS 2D Transforms Module Level 3</a></li>
+    <li><a href="http://www.w3.org/TR/css3-3d-transforms/">W3C: CSS 3D Transforms Module Level 3</a></li>
+    <li><a href="http://www.w3.org/TR/css3-animations/">W3C: CSS Animations Module Level 3</a></li>
+    <li><a href="http://webkit.org/blog/">Surfin&rsquo; Safari (check the archives)</a></li>
+    <li><a href="http://www.opera.com/docs/specs/presto23/css/transitions/">CSS3 Transitions support in Opera Presto 2.3</a></li>
+</ul>
+<h3 id="eight">八、差点忘掉的结语</h3>
+<p>虽然目前很多浏览器还没有完全支持transition, transform,  animation这些属性，但是在渐进增强的原则下，其高效的动画实现方式还是有很实际的应用价值的。你可以不妨试试，点亮你的页面。内容较多，时间有 限，文章难免有表述不准确的地方，欢迎指正。</p>
+<p>原创文章，转载请注明来自<a href="http://www.zhangxinxu.com/">张鑫旭-鑫空间-鑫生活</a>[<a href="http://www.zhangxinxu.com/">http://www.zhangxinxu.com</a>]<br />
+本文地址：<a href="http://www.zhangxinxu.com/wordpress/?p=1268">http://www.zhangxinxu.com/wordpress/?p=1268</a></p>
+<p>（本篇完）</p>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('CSS3 Transitions, Transforms和Animation使用简介与应用展示_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/1583.html">弹性盒子按比例分配的列的宽度不对…</a>&nbsp;&nbsp;下一条： <a href="/html/News/1578.html">如何做1像素细边框的table</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1854.html" title="你必须知道的HTML5的新特性" >你必须知道的HTML5的新特性</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1846.html" title="html5 js控制音乐播放" >html5 js控制音乐播放</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1844.html" title="HTML+CSS代码规范" >HTML+CSS代码规范</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1843.html" title="css3学习笔记 transition与animation" >css3学习笔记 transition与an…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1842.html" title="css3学习笔记Transform" >css3学习笔记Transform</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1841.html" title="css3学习笔记2D或3D转换" >css3学习笔记2D或3D转换</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1840.html" title="css3学习笔记文本特效" >css3学习笔记文本特效</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1839.html" title="css3学习笔记颜色和透明度" >css3学习笔记颜色和透明度</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1838.html" title="css3学习笔记二" >css3学习笔记二</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/440.html" title="什么是css框架">什么是css框架</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/394.html" title="meta标签实现页面的动感效果">meta标签实现页面的动感效果</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/389.html" title="CSS半透明滤镜在FIREFOX和IE下面的能够通用的写法&nbsp;">CSS半透明滤镜在FIREFOX和IE下面的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/640.html" title="div+css鼠标悬停在div上,div背景色改变">div+css鼠标悬停在div上,div背景色…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/889.html" title="纯css下拉菜单特效">纯css下拉菜单特效</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/390.html" title="div+css的浏览器兼容问题">div+css的浏览器兼容问题</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/393.html" title="CSS定义表格线为单一线&nbsp;">CSS定义表格线为单一线 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/793.html" title="CSS滤镜效果收集(全)">CSS滤镜效果收集(全)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1329.html" title="列表显示文字和图片垂直居中对齐">列表显示文字和图片垂直居中对齐</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/395.html" title="在固定位置显示背景图片">在固定位置显示背景图片</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/608.html" title="网站变换图片的显示方法">网站变换图片的显示方法</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/396.html" title="在select外面套一个div或span,&nbsp;select自身要margin:-2px;&nbsp;">在select外面套一个div或span, se…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/391.html" title="常用的CSS命名规则&nbsp;">常用的CSS命名规则 </a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/397.html" title="闪字闪字闪字闪字闪字闪字闪字闪字小标签解决大问题一&nbsp;">闪字闪字闪字闪字闪字闪字闪字闪字…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1109.html" title="css让图片自动适应表格大小">css让图片自动适应表格大小</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1854.html" title="你必须知道的HTML5的新特性" >你必须知道的HTML5的新特性</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1846.html" title="html5&nbsp;js控制音乐播放" >html5 js控制音乐播放</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1844.html" title="HTML+CSS代码规范" >HTML+CSS代码规范</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1843.html" title="css3学习笔记&nbsp;transition与animation" >css3学习笔记 transition与animat…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1842.html" title="css3学习笔记Transform" >css3学习笔记Transform</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1841.html" title="css3学习笔记2D或3D转换" >css3学习笔记2D或3D转换</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1840.html" title="css3学习笔记文本特效" >css3学习笔记文本特效</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1839.html" title="css3学习笔记颜色和透明度" >css3学习笔记颜色和透明度</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1838.html" title="css3学习笔记二" >css3学习笔记二</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1837.html" title="css3学习笔记一" >css3学习笔记一</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1834.html" title="HTML5触摸事件详解(touchstart、touchmove和touchend)" >HTML5触摸事件详解(touchstart、t…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1828.html" title="canvas制作奥运五环视频教程" >canvas制作奥运五环视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1827.html" title="canvas制作时钟视频教程" >canvas制作时钟视频教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1825.html" title="有人预测H5或成为未来应用的核心" >有人预测H5或成为未来应用的核心</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1824.html" title="H5技术打造的轻应用无限可能" >H5技术打造的轻应用无限可能</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "1580" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+

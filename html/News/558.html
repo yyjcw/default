@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>XML&nbsp;Schema学习笔记(2)_web前端技术_夜鹰教程网 </title>
+    <meta name="keywords" content="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 移动互联网app开发 asp.net+C#+vs2008/vs2010/vs2012/vs2015+MSsql2005/2008+Jquery+3G移动互联网解决方案" />
+    <meta name="description" content="XML&nbsp;Schema学习笔记" />
+    <meta name="author" content="夜鹰教程网" />
+    <meta name="Copyright" content="www.yyjcw.com " />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <link href="/css/Common20121012.css" rel="stylesheet" type="text/css" />
+    <link href="/css/NewsView20121012.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" language="javascript" src="/js/tangyan.js"></script>
+    <script type="text/javascript" language="javascript" src="/js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" id="aspnetForm">
+  <div class="outcontainer"><div class="incontainner" style="background-image:url(/images/TopDate.gif); border:solid 1px #ccc; border-top:0; border-bottom:0; "><div id="topleft">&nbsp;本站业务范围：1、PC端软件开发、网站开发 2、移动端APP、网站、微信接口、微商城开发 3、视频教程、毕业设计辅导</div> <div id="topright">·<a href="javascript:void(0);" onclick="setHomepage('http://www.yyjcw.com');return false;">设为首页</a>·<a href="javascript:void(0);" onclick="addCookie('夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">加入收藏</a>&nbsp;<span id="now"></span>&nbsp;<a href="/xml/rss.xml" target="_blank"><img src="/images/rss.gif" alt="" style="border: 0;" /></a>&nbsp;</div></div></div>
+<div class="outcontainer"><div class="incontainner" style=" background-image:url(/images/logoinline.gif); background-repeat:repeat-x;border:solid 1px #ccc;background-position:0 -7px; "><img src="/images/linklogo.gif" alt="" /><div id="nav"><p><a href="/index.html">本站首页</a><a href="/list.html">优惠活动</a><a href="/html/News/AboutUs_5.html">技术辅导</a><a href="/html/News/AboutUs_4.html">网站开发</a><a href="/ac/cloud/" style="">教程介绍</a><a target="_blank" href="/ac/vip/">尊贵服务</a><a href="/html/News/NewsList_2_1.html">技术文章</a><a target="_blank" href="/tuangou.html">最新活动</a><a target="_blank" href="/ac/tx/xuyuanqiang/">最新评论</a><a href="/mulu.html">教程目录</a><a target="_blank" href="/ac/piclist/">视频截图</a><a target="_blank" href="/ac/lucky/">在线抽奖</a></p></div><div id="buyvideo">你好，欢迎来到夜鹰网！【<a href="http://www.yyjcw.com/tuangou.html" target="_blank">去购买教程</a>】</div></div></div>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner" id="search" >
+<div style="clear:both;position:relative;"><div class="topNotice"><ul><li><a href="/html/News/1461.html">《夜鹰教程网sql2008视频教程》后记：任何企业都有很多的数据需要处理,学习数据库知识，提高数据处理能力，势在必行，志在必得。</a></li><li><a href="/html/News/1409.html">《原创OA视频教程》火热销售中技术不等人，发了工资就来买教程 ^_^!</a></li><li><a href="/html/News/1317.html">《asp.net+sql server制作信息发布系统》 个性签名：配角？不做！助理？不做！要做就做买得起房，开得起车，拒绝裸婚的新好青年！</a></li><li><a href="/html/News/1334.html">Asp.net培训教程视频【C#版】 举一反三，发散思维，逆水行舟，不进则退。</a></li><li><a href="/html/News/1342.html">《Asp.Net+Sql Server制作企业网站》视频教程,我们在这里等您。</a></li><li><a href="/html/News/1396.html">《Asp.Net制作带购物车的电子商务网站》尊贵服务，从夜鹰教程开始。</a></li><li><a href="/html/News/1364.html">视频教程《C#语法基础视频教程》最直接的视频教程，开门见山的视频教程。</a></li><li><a href="/html/News/1397.html">《Asp.net编程技巧范例大全》 熟能生巧，提高效率，要讲技巧。</a></li><li><a href="/html/News/1420.html">夜鹰教程网前端开发视频教程 注重用户体验，改善用户体验，提高性能，改善性能，优化结构。 </a></li><li><a href="/html/News/1454.html">【强烈推荐】jquery基础视频教程，做得多，写得少。do more,write less!兼容性好，效率高，各种特效，插件多。</a></li><li><a href="/html/News/1338.html">Asp.net+sql制作留言板</a></li><li><a href="/html/News/1331.html">《Asp.net+sql制作音乐网站》FLASH与asp.net通讯，xml作为桥梁</a></li></ul></div><a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" style=" display:inline; clear:both;  right:3px; position:absolute; line-height:22px;top:3px; background-color:White; border:solid 1px green; ">&nbsp;购买教程&nbsp;QQ:1416759661&nbsp;<img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程" align="absmiddle">&nbsp;</a></div>
+</div>
+</div>
+<div class="outcontainer">
+<div class="incontainner">
+<a href="/tuangou.html"><img src="/images/03.jpg" alt="" style=" width:987px; margin-top:2px;"/></a>
+<div style=" clear:both;"></div>
+</div>
+</div>
+<table id="nei_body" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <table cellspacing="0" cellpadding="0" id="nei_tbtitle">
+                    <tr>
+                        <td colspan="2" align="left" valign="middle" class="nei_title">
+                            &nbsp;<img src="/images/greendiamond.gif" alt="" />当前位置：<a href="/html/News/NewsList_0_1.html" target="_blank">文章中心</a> &gt;&gt; web前端技术
+                        </td>
+                    </tr>
+                </table>
+                <table align="center" cellpadding="0" cellspacing="0" id="nei_tbcenter">
+                    <tr>
+                        <td class="tdboder_ccc" id="nei_content_left">
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_title">
+                                        XML Schema学习笔记(2)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td id="td_date">
+                                        <a href="http://www.yyjcw.com" target="_blank" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">夜鹰教程网</a> 来源：www.yyjcw.com                                      日期：2014/11/11 20:03:58
+          
+<div id="ckepop" style="float:right;"><span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+	siteNum:10,
+	sm:"tsina,tqq,t163,douban,tsohu,xiaoyou,tianya,hi,renren,copy",
+	summary:"",
+	boldNum:6,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+           </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        XML&nbsp;Schema学习笔记
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        <p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title">
+                                <tr>
+                                    <td id="td_content">
+                                        13、anyType是所有Schema类型的基类型，和Java中的Object类似。因此，以下定义： <br />
+&lt;xsd:element&nbsp;name=&quot;anything&quot;&nbsp;type=&quot;xsd:anyType&quot;/&gt; <br />
+可以写成： <br />
+&lt;xsd:element&nbsp;name=&quot;anything&quot;/&gt; <br />
+<br />
+14、Schema中用annotation、document、appInfo三个元素来进行注释，其中appI和document都是作为annotation的子元素来处理的。并且annotation一般是作为schema的顶层子元素、element的构造、类型定义的顶层子元素的。 <br />
+如： <br />
+&lt;xsd:element&nbsp;name=&quot;internationalPrice&quot;&gt; <br />
+&lt;xsd:annotation&gt; <br />
+&lt;xsd:documentation&nbsp;xml:lang=&quot;en&quot;&gt; <br />
+element&nbsp;declared&nbsp;with&nbsp;anonymous&nbsp;type <br />
+&lt;/xsd:documentation&gt; <br />
+&lt;/xsd:annotation&gt; <br />
+&lt;xsd:complexType&gt; <br />
+&lt;xsd:annotation&gt; <br />
+&lt;xsd:documentation&nbsp;xml:lang=&quot;en&quot;&gt; <br />
+empty&nbsp;anonymous&nbsp;type&nbsp;with&nbsp;2&nbsp;attributes <br />
+&lt;/xsd:documentation&gt; <br />
+&lt;/xsd:annotation&gt; <br />
+&lt;xsd:complexContent&gt; <br />
+&lt;xsd:restriction&nbsp;base=&quot;xsd:anyType&quot;&gt; <br />
+&lt;xsd:attribute&nbsp;name=&quot;currency&quot;&nbsp;type=&quot;xsd:string&quot;/&gt; <br />
+&lt;xsd:attribute&nbsp;name=&quot;value&quot;type=&quot;xsd:decimal&quot;/&gt; <br />
+&lt;/xsd:restriction&gt; <br />
+&lt;/xsd:complexContent&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+&lt;/xsd:element&gt; <br />
+<br />
+15、choice仅允许在实例文档中使用其中一个子元素；在all中的所有元素都可以出现一次或一次都不出现，并且其中元素实例是没有顺序约束的，而且all必须放在任何内容模型的最顶层，为了说明这个问题，下面先列出一个合法的，然后列出一个不合法的以供对照说明： <br />
+&lt;xsd:complexType&nbsp;name=&quot;PurchaseOrderType&quot;&gt; <br />
+&lt;xsd:all&gt; <br />
+&lt;xsd:element&nbsp;name=&quot;shipTo&quot;&nbsp;type=&quot;USAddress&quot;/&gt; <br />
+&lt;xsd:element&nbsp;name=&quot;billTo&quot;&nbsp;type=&quot;USAddress&quot;/&gt;
+<p align="left"><br />
+<font color="#0000ff"><strong>&lt;xsd:element&nbsp;ref=&quot;comment&quot;&nbsp;minOccurs=&quot;0&quot;/&gt; <br />
+&lt;xsd:element&nbsp;name=&quot;items&quot;type=&quot;Items&quot;/&gt; <br />
+&lt;/xsd:all&gt; <br />
+&lt;xsd:attribute&nbsp;name=&quot;orderDate&quot;&nbsp;type=&quot;xsd:date&quot;/&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+下面是一个不合法的： <br />
+&lt;xsd:complexType&nbsp;name=&quot;PurchaseOrderType&quot;&gt; <br />
+&lt;xsd:sequence&gt; <br />
+&lt;xsd:all&gt; <br />
+&lt;xsd:element&nbsp;name=&quot;shipTo&quot;&nbsp;type=&quot;USAddress&quot;/&gt; <br />
+&lt;xsd:element&nbsp;name=&quot;billTo&quot;&nbsp;type=&quot;USAddress&quot;/&gt; <br />
+&lt;xsd:element&nbsp;name=&quot;items&quot;type=&quot;Items&quot;/&gt; <br />
+&lt;/xsd:all&gt; <br />
+&lt;xsd:sequence&gt; <br />
+&lt;xsd:element&nbsp;ref=&quot;comment&quot;&nbsp;/&gt; <br />
+&lt;/xsd:sequence&gt; <br />
+&lt;/xsd:sequence&gt; <br />
+&lt;xsd:attribute&nbsp;name=&quot;orderDate&quot;&nbsp;type=&quot;xsd:date&quot;/&gt; <br />
+&lt;/xsd:complexType&gt;</strong></font></p>
+<p align="left"><font color="#0000ff" size="3"><strong>16、在存在很多类型中都有几个相同的类型的情况，可以采用属性组的方式来进行重用，属性组定义的格式是： <br />
+&lt;xsd:attributeGroup&nbsp;name=&rdquo;attrGroupName&rdquo;&gt; <br />
+&lt;xsd:attribute&nbsp;name=&rdquo;attrName1&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:attribute&nbsp;name=&rdquo;attrName2&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&hellip; <br />
+&lt;/xsd:attributeGroup&gt; <br />
+使用可以采用以下方式： <br />
+&lt;xsd:element&nbsp;name=&rdquo;testAttrGroup&rdquo;&gt; <br />
+&lt;xsd:comlexType&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;element1&rdquo;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:attributeGroup&nbsp;ref=&rdquo;attrGroupName&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+&lt;/xsd:element&gt; <br />
+<br />
+1、关于include的用法 <br />
+include元素可以将外部的定义和声明引入到文档中，并且作为新Schema文档的一部分，但必须注意的一点是，被包含成员的目标命名空间必须和包含的目标命名空间一样。具体写法例子是： <br />
+&lt;include&nbsp;schemaLocation=&ldquo;http://www.example.com/schemas/address.xsd&rdquo;&nbsp;/&gt; <br />
+<br />
+2、如果一个类型是从另一个类型扩展而来的，那么定义为父类型的element,在实例文档中，可以通过符合子类型的element实例来代替，但必须通过xsi:type指明此元素的具体类型。例如： <br />
+&lt;xsd:complexType&nbsp;name=&rdquo;Person&rdquo;&gt; <br />
+&lt;xsd:sequence&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;FirstName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; </strong></font></p>
+<p align="left"><br />
+<font color="#0000ff" size="3"><strong>&lt;xsd:element&nbsp;name=&rdquo;LastName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:sequence&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+&lt;!--&nbsp;扩展类型定义&nbsp;--&gt; <br />
+&lt;xsd:complexType&nbsp;name=&rdquo;Father&rdquo;&gt; <br />
+&lt;complexContent&gt; <br />
+&lt;xsd:extension&nbsp;base=&rdquo;Person&rdquo;&gt; <br />
+&lt;xsd:sequence&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;gender&rdquo;&gt; <br />
+&lt;xsd:restriction&nbsp;base=&rdquo;string&rdquo;&gt; <br />
+&lt;xsd:enumeration&nbsp;value=&rdquo;male&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:restriction&gt; <br />
+&lt;/xsd:element&gt; <br />
+&lt;/xsd:sequence&gt; <br />
+&lt;/xsd:extension&gt; <br />
+&lt;/complexContent&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+&lt;!--&nbsp;类型的声明&nbsp;--&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;human&rdquo;&nbsp;type=&rdquo;Person&rdquo;&nbsp;/&gt; <br />
+在XML实例文档中针对human可以是这样的(和面向对象有类似的概念): <br />
+&lt;human&nbsp;xsi:type=&rdquo;Father&rdquo;&gt; <br />
+&lt;name&gt;xiaogen&lt;/name&gt; <br />
+&lt;gender&gt;male&lt;/gender&gt; <br />
+&lt;/human&gt; <br />
+<br />
+3、关于置换组 <br />
+XML&nbsp;Schema提供了一种机制叫置换组，允许原先定义好的元素被其他元素所替换。更明确的，这个置换组包含了一系列的元素，这个置换组中的每一个元素都被定义为可以替换一个指定的元素，这个指定的元素称为头元素(Head&nbsp;Element)，需要注意的是头元素必须作为全局元素声明,注意，当一个实例文档包含置换元素时替换元素的类型时从它们的头元素那里派生的，此时并不需要使用我们前面所说的xsi:type来识别这些被派生的类型，当定义了置换组之后，并非意味着不能使用头元素，而只能使用这个置换组中的元素，它只是提供了一个允许元素可替换使用的机制。例如： </strong></font></p>
+<p align="left"><br />
+<font color="#0000ff" size="3"><strong>&lt;xsd:schema&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;comment&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;shipComment&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo; <br />
+?substitutionGroup=&rdquo;comment&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;customerComment&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp; <br />
+substituionGroup=&rdquo;comment&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;order&rdquo;&gt; <br />
+&lt;xsd:complexType&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;productName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;price&rdquo;&nbsp;type=&rdquo;xsd:decimal&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;ref=&rdquo;comment&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;shipDate&rdquo;&nbsp;type=&rdquo;xsd:date&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+&lt;/xsd:element&gt; <br />
+&lt;/xsd:schema&gt; <br />
+下面是实例文档的一个例子： <br />
+&lt;order&gt; <br />
+&lt;productName&gt;Lapis&nbsp;necklace&lt;/productName&gt; <br />
+&lt;price&gt;999&lt;/price&gt; <br />
+&lt;shipComment&gt;Use&nbsp;gold&nbsp;wrap&nbsp;if&nbsp;possible&lt;/shipComment&gt; <br />
+&lt;customerComment&gt;Want&nbsp;this&nbsp;for&nbsp;the&nbsp;holidays!&lt;/customerComment&gt; <br />
+&lt;shipDate&gt;2004-08-15&lt;/shipDate&gt; <br />
+&lt;/order&gt; <br />
+<br />
+4、抽象元素和抽象类型 <br />
+当一个元素或者类型被声明为&ldquo;abstract&rdquo;时，那么它就不能在实例文档中使用。当一个元素被声明为&rdquo;abstract&rdquo;的时候，元素的置换组的成员必须出现在实例文档中。当一个元素相应的类型被定义声明为&quot;abstract&quot;时，所有关联该元素的实例必须使用&quot;xsi:type&quot;来指明一个类型，这个类型必须是非抽象的，同时是在定义中声明的抽象类型的派生类型。 <br />
+一、如将上面的comment元素的声明更改成： <br />
+&lt;xsd:element&nbsp;name=&rdquo;comment&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;abstract=&rdquo;true&rdquo;&nbsp;/&gt; <br />
+那么上面的order实例中就只能包含customerComment和shipComment才是有效的。 <br />
+二、如果有下面的类型定义： <br />
+&lt;schema&nbsp;xmlns=&quot;http://www.w3.org/2001/XMLSchema&quot;&nbsp; <br />
+targetNamespace=&quot;http://cars.example.com/schema&quot;&nbsp; <br />
+xmlns:target=&quot;http://cars.example.com/schema&quot;&gt;&nbsp; <br />
+&lt;complexType&nbsp;name=&quot;Vehicle&quot;&nbsp;abstract=&quot;true&quot;/&gt;&nbsp; <br />
+&lt;complexType&nbsp;name=&quot;Car&quot;&gt;&nbsp; <br />
+&lt;complexContent&gt; <br />
+&lt;extension&nbsp;base=&quot;target:Vehicle&quot;/&gt; </strong></font></p>
+<p align="left"><br />
+<font color="#0000ff" size="3"><strong>&lt;/complexContent&gt; <br />
+&lt;/complexType&gt; <br />
+&lt;complexType&nbsp;name=&quot;Plane&quot;&gt;&nbsp; <br />
+&lt;complexContent&gt; <br />
+&lt;extension&nbsp;base=&quot;target:Vehicle&quot;/&gt; <br />
+&lt;/complexContent&gt; <br />
+&lt;/complexType&gt; <br />
+&lt;element&nbsp;name=&quot;transport&quot;&nbsp;type=&quot;target:Vehicle&quot;/&gt;&nbsp; <br />
+&lt;/schema&gt; <br />
+根据以上的定义和声明，下面的实例片断就是不能通过验证的： <br />
+&lt;transport&nbsp;xmlns=&quot;http://cars.example.com/schema&quot;&nbsp;/&gt; <br />
+下面经过修改的就可以通过验证了。 <br />
+&lt;transport&nbsp;xmlns=&ldquo;http://cars.example.com/schema&rdquo; <br />
+?xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;&nbsp;xsi:type=&quot;Car&quot;/&gt; <br />
+<br />
+5、为了阻止类型被派生（包括通过限制派生和通过扩展派生），可以使用final来设置（有点和java中的final的概念类似），其值有三个：restriction,extension,#all。在模式文件的根元素schema元素中有一个可选的finalDefault属性，它的值能够取为final属性所允许的几个值之一。指定finalDefault属性的值的效果等于在模式文档中每个类型定义和元素声明中指定final属性，同时其值为finalDefault属性的值。如果想阻止前面的Person被限制派生，我们需要修改定义为如下： <br />
+&lt;xsd:complexType&nbsp;name=&rdquo;Person&rdquo;&nbsp;final=&rdquo;restriction&rdquo;&gt; <br />
+&lt;xsd:sequence&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;FirstName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;LastName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:sequence&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+<br />
+6、因为在实例文档中与父类型关联的元素（也就是声明为父类型的元素）可以通过派生的子类型来替代，这在2中已经有详细的说明和例子。同时，XML&nbsp;Schema也提供了一种机制来控制派生类型以及置换组在实例文档中使用的机制。这种机制是通过类型的block属性来控制的，该属性可以取值为：restriction,extension,#all。和final属性一样，在模式文档的根元素schema元素里有一个可选的属性blockDefault，它的值为block属性所允许的值中的一个。指定blockDefault属性的作用等价于在模式文档中为每个类型定义和元素声明指定block属性。如在前面例子中我们想阻止在使用Father来替代Person的话我们需要修改Person的定义如下： <br />
+&lt;xsd:complexType&nbsp;name=&rdquo;Person&rdquo;&nbsp;block=&rdquo;extension&rdquo;&gt; <br />
+&lt;xsd:sequence&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;FirstName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;xsd:element&nbsp;name=&rdquo;LastName&rdquo;&nbsp;type=&rdquo;xsd:string&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:sequence&gt; <br />
+&lt;/xsd:complexType&gt; <br />
+取值为&ldquo;extension&rdquo;的block属性将阻止在实例文档中使用通过扩展的派生类型来替换Person(即可以阻止Father来替换Person)，然而它不会阻止通过约束的派生来替换Person。 <br />
+<br />
+7、另外一种派生类型的控制机制是应用于简单类型方面的派生。当定义一个简单类型的时候，我们可以使用fixed属性对它的所有定义的参数进行修饰，以阻止这些参数在类型派生中被修改，例如： <br />
+&lt;xsd:simpleType&nbsp;name=&rdquo;Postcode&rdquo;&gt; <br />
+&lt;xsd:restriction&nbsp;base=&rdquo;xsd:string&rdquo;&gt; <br />
+&lt;&nbsp;xsd:length&nbsp;value=&rdquo;7&rdquo;&nbsp;fixed=&rdquo;true&rdquo;&nbsp;/&gt; <br />
+&lt;/xsd:restriction&gt; <br />
+&lt;/xsd:simpleType&gt; <br />
+当这个简单类型被定义之后，我们能够派生出一个新的邮编类型，在其中我们使用了一个没有在基本类型中固定的参数： <br />
+&lt;xsd:simpleType&nbsp;name=&quot;UKPostcode&quot;&gt; <br />
+&lt;xsd:restriction&nbsp;base=&quot;&nbsp;Postcode&quot;&gt; <br />
+&lt;xsd:pattern&nbsp;value=&quot;[A-Z]{2}\d\s\d[A-Z]{2}&quot;/&gt; <br />
+&lt;/xsd:restriction&gt; <br />
+&lt;/xsd:simpleType&gt; <br />
+然而，我们不能购派生出一个这样的新的邮编类型：在其中我们重新定义了任何在基类型中已经被固定(fixed)的参数: <br />
+&lt;xsd:simpleType&nbsp;name=&quot;UKPostcode&quot;&gt; <br />
+&lt;xsd:restriction&nbsp;base=&quot;ipo:Postcode&quot;&gt; <br />
+&lt;xsd:pattern&nbsp;value=&quot;[A-Z]{2}\d\d[A-Z]{2}&quot;/&gt; <br />
+&lt;!--&nbsp;illegal&nbsp;attempt&nbsp;to&nbsp;modify&nbsp;facet&nbsp;fixed&nbsp;in&nbsp;base&nbsp;type&nbsp;--&gt;&nbsp; <br />
+&lt;xsd:length&nbsp;value=&quot;6&quot;&nbsp;fixed=&quot;true&quot;/&gt; <br />
+&lt;/xsd:restriction&gt; <br />
+&lt;/xsd:simpleType&gt;</strong></font></p>
+                                    </td>
+                                </tr>
+                            </table>
+							
+							
+							
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="tdright" id="bottomoption">
+                                        <a href="/ac/tx/xuyuanqiang/">复制链接</a> <a href="/ac/tx/xuyuanqiang/">网友评论</a> <a href="#" onclick="addCookie('XML Schema学习笔记(2)_夜鹰教程网欢迎您!','http://www.yyjcw.com');return false;">
+                                            收藏本文</a> <a href="###" onclick="window.close()">关闭此页</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="tb_title" style="margin: 5px auto 5px auto;">
+                                <tr>
+                                    <td class="td_brief tdcenter" style="width: 100%;">
+                                        上一条： <a href="/html/News/578.html">XML</a>&nbsp;&nbsp;下一条： <a href="/html/News/557.html">XML Schema学习笔记(1)</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                        
+                                        <a href="http://www.yyjcw.com/list.html">购买夜鹰教程网视频教程</a>
+                                    </td>
+                                </tr>
+                            </table>
+							<table class="tb_title">
+                                <tr>
+                                    <td class="td_brief" style="border: solid 1px #ccc; width: 100%;">
+                                   <ul style="width:100%; clear:both;" id="RelationList"><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1878.html" title="git常用命令汇总" >git常用命令汇总</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1877.html" title="Git 常用命令介绍" >Git 常用命令介绍</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1875.html" title="Grunt.js学习教程" >Grunt.js学习教程</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1874.html" title="webpack学习指南" >webpack学习指南</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1873.html" title="Webpack教程01" >Webpack教程01</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1853.html" title="微信小程序第一批吃螃蟹的人" >微信小程序第一批吃螃蟹的人</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1803.html" title="前端面试题-事件监听、继承、闭包、跨域、性能" >前端面试题-事件监听、继承、…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1781.html" title="HTML5 Canvas学习笔记-处理鼠标事件" >HTML5 Canvas学习笔记-处理鼠…</a></li><li><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1780.html" title="canvas学习笔记" >canvas学习笔记</a></li></ul>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                        </td>
+                        <td align="center" valign="top" class="tdboder_ccc" id="nei_content_right">
+							 <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/list.html">热门服务</a>/<a href="/mulu.html">教程目录</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                    <br/>
+                                    <div style="line-height:24px;">&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/html/News/AboutUs_8.html">&nbsp;新手必看，详细又全面。</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a target="_blank" href="/tuangou.html">&nbsp;购买教程</a>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;在线支付-方便</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/list.html">&nbsp;担保交易-快捷安全</a> &nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;闪电发货</a><br />
+&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;<a title="购买全套asp.net(c#)视频教程" target="_blank" href="/tuangou.html">&nbsp;电话和QQ随时可以联系我们。</a><br/>&nbsp;&nbsp;<img alt="夜鹰教程网" align="absMiddle" src="/images/arr11.gif" />&nbsp;不会的功能都可以找我们，按工作量收费。<br />
+</div>
+<div style="BORDER-BOTTOM: green 1px solid; TEXT-ALIGN: center; BORDER-LEFT: green 1px solid; MARGIN: 10px auto 0px; WIDTH: 236px; BORDER-TOP: green 1px solid; BORDER-RIGHT: green 1px solid">
+<h3 style="FONT-SIZE: 18px">客服电话：153 9760 0032</h3>
+购买教程QQ：1416759661&nbsp;&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+</div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/html/News/NewsList_2_1.html">热点推荐</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/557.html" title="XML&nbsp;Schema学习笔记(1)">XML Schema学习笔记(1)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/558.html" title="XML&nbsp;Schema学习笔记(2)">XML Schema学习笔记(2)</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/540.html" title="C#对XML文档的操作">C#对XML文档的操作</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/612.html" title="ASP操作XMLDOM">ASP操作XMLDOM</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/239.html" title="XML入门教程：分析XML">XML入门教程：分析XML</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/241.html" title="百度新闻开放协议XML文档制作方法简述">百度新闻开放协议XML文档制作方法…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/528.html" title="XSL&nbsp;语言">XSL 语言</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/848.html" title="用RSS做五分钟一自动更新的网站">用RSS做五分钟一自动更新的网站</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/240.html" title="XML入门教程：文档类型声明">XML入门教程：文档类型声明</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/242.html" title="XML教程:通过一个例子来学习XML的语法">XML教程:通过一个例子来学习XML的…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/236.html" title="XML节点相关知识">XML节点相关知识</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/758.html" title="把XML文件绑定到列表控件">把XML文件绑定到列表控件</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/892.html" title="XML+XSLT+CSS+JQuery+WebService组建Asp.Net网站">XML+XSLT+CSS+JQuery+WebService组…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/847.html" title="XHTML头部Doctype声明必不可少！">XHTML头部Doctype声明必不可少！</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/244.html" title="历数Firefox2.0对XML处理的改进">历数Firefox2.0对XML处理的改进</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+							
+                              <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/ac/vip/">尊贵服务</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <a href="/ac/vip/" style=" margin-left:5px; margin-top:5px; float:left;"><img src="/images/zq.jpg" alt="夜鹰教程网 承接业务：软件开发 网站开发 网页设计 .Net+C#+VS2008+MSsql+Jquery+ExtJs" style="width:258px; border:0;" /></a><a href="/tuangou.html" style="display:block;clear:both; line-height:24px; font-family:微软雅黑; text-align:center; ">夜鹰教程祝福大家新年快乐</a>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/news/NewsList.aspx?ClassID=24" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">最近更新</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content">
+                                        <table style="margin: 5px 0 5px 0"><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1878.html" title="git常用命令汇总" >git常用命令汇总</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1877.html" title="Git&nbsp;常用命令介绍" >Git 常用命令介绍</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1875.html" title="Grunt.js学习教程" >Grunt.js学习教程</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1874.html" title="webpack学习指南" >webpack学习指南</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1873.html" title="Webpack教程01" >Webpack教程01</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1853.html" title="微信小程序第一批吃螃蟹的人" >微信小程序第一批吃螃蟹的人</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1803.html" title="前端面试题-事件监听、继承、闭包、跨域、性能" >前端面试题-事件监听、继承、闭包…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1781.html" title="HTML5&nbsp;Canvas学习笔记-处理鼠标事件" >HTML5 Canvas学习笔记-处理鼠标事…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1780.html" title="canvas学习笔记" >canvas学习笔记</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1776.html" title="自行制作网页的图标ICON" >自行制作网页的图标ICON</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1773.html" title="MVC,&nbsp;MVP,&nbsp;MVVM区别" >MVC, MVP, MVVM区别</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1770.html" title="HBuilder为什么无法设置Courier&nbsp;New字体？" >HBuilder为什么无法设置Courier N…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1769.html" title="DIV&nbsp;自动滚动及滚动条颜色设置" >DIV 自动滚动及滚动条颜色设置</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1768.html" title="移动互联网大环境下如何学习前端开发" >移动互联网大环境下如何学习前端开…</a></td></tr><tr><td style="line-height: 24px;"><img src="/images/arrow2.gif" alt="" style="margin-left: 3px;" /><a href="/html/News/1765.html" title="Javascript模块化开发详解" >Javascript模块化开发详解</a></td></tr></table>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table cellspacing="0" cellpadding="0" class="nei_rightList">
+                                <tr>
+                                    <td align="left" valign="middle" class="c_title">
+                                        &nbsp;<img src="/images/nei_title.gif" alt="" />&nbsp;<a href="/aboutus/AboutUs.aspx?id=10" title="最便宜的网站建设_视频教程_FLASH__ASP_ASP.NET_SQL2000_SQL2005_AJAX_FLEX_3ds max_Photoshop cs4_夜鹰教程网_www.yyjcw.com">工具下载</a>&nbsp;&nbsp;需要远程协助?&nbsp;<a style="DISPLAY: inline" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;" target="_blank" href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"><img border="0" alt="购买教程" src="http://wpa.qq.com/pa?p=1:1416759661:10" /></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nei_Right_Content ">
+                                    <div style=" margin-top:3px; margin-left:3px; ">
+                                      <p><a target="_blank" href="http://www.yyjcw.com/html/News/1461.html"><span style="color:#0000ff;font-size:12px"><strong>sql2008视频教程</strong></span></a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/list.html"><span style="color:#0000ff;font-size:12px"><strong>c#视频教程</strong></span></a><br/></p><h3>VIP服务：如果您的某个功能不会做，可以加我们QQ，给你做DEMO！</h3><h3><a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">JQUERY</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html" style="font-size: 16px;">中文排名第51888位</a><span style="font-size: 16px;"> </span><span style="font-size: 16px; color: rgb(0, 0, 255);"><a href="http://www.yyjcw.com/tuangou.html"><span style="font-size:12px"><strong>Asp.net教程</strong></span></a></span></h3><p><span style="color:#0000ff"><strong><span style="font-size:12px"><a href="http://www.yyjcw.com/html/News/1582.html">MVC视频教程</a>&nbsp;</span></strong></span> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010<br/></a><strong><span style="color:#0000ff;font-size:12px"><a href="http://www.yyjcw.com/tuangou.html">.NET+sql开发、同行业最低价&nbsp; </a><a href="http://www.yyjcw.com/ac/lucky/">幸运大抽奖</a><br/></span></strong><span style="color:#0000ff">手机：15397600032 </span><a target="_blank" href="http://www.yyjcw.com/tuangou.html"><span style="color:#0000ff">C#视频教程下载</span></a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2012</a> <a target="_blank" href="http://www.yyjcw.com/html/News/AboutUs_3.html">vs2008</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">vs2010</a> <a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2008</a>&nbsp;<a target="_blank" href="http://www.yyjcw.com/tuangou.html">sql2005</a><br/><a target="_blank" href="http://www.yyjcw.com/tuangou.html">Asp.Net <span style="color:#ff0000;font-size:16px"><strong>购买</strong></span> <br/></a><a style="COLOR: red; FONT-SIZE: 14px" target="_blank" href="http://www.yyjcw.com/ting.html">视频教程试听</a>购买教程QQ:1416759661</p><p><br/></p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+</table>
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews">
+<div style="margin: 10px;">
+<p><img src="/images/2Code.jpg" style="float:right;"/></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">计算机技术辅导。</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">QQ：1416759661 &nbsp; 新手求救QQ群：7835003</span></p><p><span style="color: rgb(192, 80, 77); font-size: 18px; font-family: 微软雅黑, &quot;Microsoft YaHei&quot;;">如果您遇到技术难题，</span><span style="color: rgb(192, 80, 77); font-family: 微软雅黑, &quot;Microsoft YaHei&quot;; font-size: 18px;">需要远程调试都可以加我们QQ</span></p><p>技术咨询： <a target="_blank" href="http://www.taobao.com/webww/ww.php?ver=3&touid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&siteid=cntaobao&status=1&charset=utf-8"><img border="0" src="http://amos.alicdn.com/realonline.aw?v=2&uid=%E5%A4%9C%E9%B9%B0%E9%97%AA%E5%AE%A2%E8%A7%86%E9%A2%91%E6%95%99%E7%A8%8B%E7%BD%91&site=cntaobao&s=1&charset=utf-8" alt="购买教程"/></a>
+ &nbsp;技术咨询：<a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d" target="_blank" onclick="var tempSrc=&#39;http://sighttp.qq.com/wpa.js?rantime=&#39;+Math.random()+&#39;&amp;sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d&#39;;var oldscript=document.getElementById(&#39;testJs&#39;);var newscript=document.createElement(&#39;script&#39;);newscript.setAttribute(&#39;type&#39;,&#39;text/javascript&#39;); newscript.setAttribute(&#39;id&#39;, &#39;testJs&#39;);newscript.setAttribute(&#39;src&#39;,tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" src="http://wpa.qq.com/pa?p=1:1416759661:10" alt="购买教程"/></a></p>
+</div>
+<div style="clear: both;"></div>
+</div>
+</div>
+
+<div class="outcontainer" style="border: solid 1px white;border-left:0;border-right: 0;">
+<div class="incontainner indexnews bottom">
+<p><a href="/html/News/AboutUs_1.html" title="夜鹰教程网">关于我们</a> | <a href="/html/News/AboutUs_2.html" title="夜鹰教程网">广告投放</a> | <a href="/html/News/AboutUs_3.html" title="夜鹰教程网">购买教程</a> | <a href="/html/News/AboutUs_4.html" title="夜鹰教程网">网站建设</a> | <a href="/html/News/AboutUs_5.html" title="夜鹰教程网">技术辅导</a> | <a href="/html/News/AboutUs_8.html" title="夜鹰教程网">常见问题</a> | <a href="/html/News/AboutUs_6.html" title="夜鹰教程网">联系我们</a> | <a href="/html/News/AboutUs_7.html">友情链接</a> | <a href="http://sighttp.qq.com/cgi-bin/check?sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d"; target="_blank" onclick="var tempSrc='http://sighttp.qq.com/wpa.js?rantime='+Math.random()+'&sigkey=05a95cdf3fa1602e580171226ada682ed2d4a1cb451bf047f1e4969e5fc7b62d';var oldscript=document.getElementById('testJs');var newscript=document.createElement('script');newscript.setAttribute('type','text/javascript'); newscript.setAttribute('id', 'testJs');newscript.setAttribute('src',tempSrc);if(oldscript == null){document.body.appendChild(newscript);}else{oldscript.parentNode.replaceChild(newscript, oldscript);}return false;"><img border="0" SRC='http://wpa.qq.com/pa?p=1:1416759661:10' alt="购买教程"></a>
+<p><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_951426'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D951426%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>Nighthawk Tutorials Network <a href="/list.html">快捷购买教程</a></p>
+<p><a href="http://www.yyjcw.com" style="color:#801326;">夜鹰教程网</a> 版权所有 <a href="http://www.yyjcw.com" style="color:#801326;">www.yyjcw.com</a> All rights reserved 备案号：<a href="http://www.miibeian.gov.cn/" style="color:#801326;" target="_blank">蜀ICP备08011740号3</a></p>
+                            <p>&nbsp;</p>
+</div>
+</div>                           
+
+    
+    </form>
+
+    <script type="text/javascript">
+        function AutoScroll(obj) {
+            $(obj).find("ul:first").animate({
+                marginTop: "-24px"
+            }, 500, function() {
+                $(this).css({ marginTop: "0px" }).find("li:first").appendTo(this);
+            });
+        }
+        
+        $(function() {
+            var sliding=setInterval('AutoScroll(".topNotice")', 5000);
+            $(".topNotice").hover(function() {
+                clearInterval(sliding);
+            }, function() {
+                sliding = setInterval('AutoScroll(".topNotice")', 5000);
+            });        
+        })     
+
+        
+        
+        //更新浏览次数
+        UpdateVisitCount();
+        function UpdateVisitCount() {
+
+            $.post("/common/ajax/ajax.aspx?" + Math.random(), { w: "UpdateVisitCount", _id: "558" }, function(data) {
+
+            })
+        }
+        t();
+    </script>
+	
+
+ <div style="background-color:Black; width:100%; height:30px;position:fixed;left:0;bottom:0;filter:alpha(opacity=80); z-index:100; text-align:center; color:White; font-size:14px; font-weight:bolder; line-height:30px;"> <a href="http://www.yyjcw.com/list.html" style="color:White;">出售</a><a href="http://www.yyjcw.com/list.html" style="color:White;">asp.net系列视频教程</a> <a href="http://www.yyjcw.com/list.html" style="color:White;">高清原创版</a>
+每天晚上20：30--23：00在线
+<a href="http://www.yyjcw.com/list.html" style="color:White;">按照编号从简单到高级</a>
+<a href="http://www.yyjcw.com/list.html" style="color:White;">http://www.yyjcw.com/list.html</a> </div>
+</body>
+</html>
+
